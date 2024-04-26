@@ -1,0 +1,106 @@
+/*アーカイブページここから*/
+.archive {
+    background:$bk-page;
+
+    .archive_container {
+        width:80vw;
+        margin: 0 auto;
+
+         /*アーカイブページコンテンツ*/
+         .archive_news {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:10rem 4rem;
+            place-content: center;
+            margin-bottom:10%;
+
+
+            @media all and (max-width:768px) {
+                grid-template-columns: 1fr 1fr;
+                margin-top:8%;
+            }
+
+            @media all and (max-width:414px) {
+                grid-template-columns: 1fr;
+                gap:4em;
+                margin-bottom:30%;
+            }
+
+            &_list {
+                color:$font-default-c;
+
+                /* サムネイル */
+                .item_pic {
+                    margin-bottom:0.6em;
+                    transition:all .3s;
+
+                    &:hover {
+                        scale:0.95;
+                        filter: brightness(50%);
+                    }
+
+                    a {
+                        display:block;
+                        width:100%;
+                    }
+                }
+
+                /* タイトル */
+                .item_title {
+                    font-size:1.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    margin-bottom:0.2em;
+                }
+
+                .item_inner {
+                    display:flex;
+                    justify-content: space-between;
+                    margin-bottom:0.5em;
+
+                    @media all and (max-width:1024px) {
+                        display:block;
+                    }
+                }
+   
+                /* カテゴリー */
+                .post-categories {
+                    display:flex;
+                    gap:0.3em;
+
+                    @media all and (max-width:1024px) {
+                        margin-bottom:0.3em;
+                    }
+
+                    li {
+                        a {
+                            font-size:1.2rem;
+                            letter-spacing: 0.1em;
+                            color:$blue-c;
+                            border:solid 1px $blue-c;
+                            border-radius: 3em;
+                            padding:0.1em 0.6em;
+                        }
+                    }
+                }
+    
+
+                /* 日時 */
+                .item_time {
+                    font-size:1.2rem;
+                    letter-spacing: 0.1em;
+                }
+
+                /* 本文抜粋表示 */
+                .item_excerpt {
+                    font-size:1.2rem;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+    }
+}
+
+/*アーカイブページここまで*/
+
+

@@ -1,0 +1,343 @@
+.company_main .page_content {
+    width:100%;
+    max-width: none;
+    margin:0;
+}
+
+.page_company_h2 {
+    position:relative;
+    display:inline-block;
+    width:60%;
+    margin-bottom:5%;
+    font-size:3rem;
+    color:#fff;
+    letter-spacing: 0.2em;
+    padding:0.5em 1em 0.5em 3em;
+    text-align: left;
+
+    @media all and (max-width:768px) {
+        font-size:(28/768)*100vw;
+    }
+}
+
+.page_company_h2.pattern01 {
+    background:$company-h2-bk_pt01;
+
+    &:after {
+        display:inline-block;
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        width:(70/1440)*100vw;
+        height:100%;
+        background:$company-h2-bk_pt01-2;
+    }
+}
+/*====================================================
+　　Philosophy　代表挨拶
+=====================================================*/
+.page_message {
+    margin-top:0;
+
+    .message_top {
+        position:relative;
+        padding-top:(1000/1440)*100vw;
+
+        .message_pic {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:(1000/1440)*100vw;
+            overflow: hidden;
+        }
+
+        .page_company_h2 {
+            position:absolute;
+            top:(200/1440)*100vw;
+            right:0;
+            z-index:2;
+            width:50%;
+            background:$company-h2-bk;
+            font-size:(30/1440)*100vw;
+
+            &:after {
+                display:inline-block;
+                content:'';
+                position:absolute;
+                top:0;
+                right:0;
+                width:(60/1440)*100vw;
+                height:100%;
+                background:$company-h2-bk_02;
+            }
+        }
+
+        .company_name {
+            position:absolute;
+            top:(550/1440)*100vw;
+            left:(100/1440)*100vw;
+            color:#fff;
+            font-size:(30/1440)*100vw;
+            font-weight: bold;
+        }
+
+        .name {
+            position:absolute;
+            top:(680/1440)*100vw;
+            right:(120/1440)*100vw;
+            color:#fff;
+            font-size:(30/1440)*100vw;
+            font-weight: bold;
+        }
+    }
+
+    .message_bottom {
+        max-width:1200px;
+        width:80vw;
+        margin:8% auto;
+
+        &_text {
+            margin:0;
+
+            dt {
+                text-align: center;
+                font-weight: bold;
+                margin-bottom:5%;
+            }
+
+            dd {
+                margin:0;
+            }
+
+            .post {
+                margin-top:5%;
+                text-align: end;
+            }
+        }
+    }
+}
+
+/*====================================================
+　　Philosophy　企業理念
+=====================================================*/
+.rinen {
+    width:80vw;
+    max-width:1200px;
+    margin:10% auto;
+
+    @media all and (max-width:540px) {
+        margin-top:20%;
+    }
+
+    &_list {
+        display:flex;
+        flex-direction: column;
+        gap:1.5em;
+        margin:5%;
+
+        li {
+            position:relative;
+            background:#fff;
+            padding-left:1.5em;
+
+            &:after {
+                content:'';
+                display:inline-block;
+                position:absolute;
+                top:50%;
+                left:0;
+                transform: translate(-50%);
+                width:0.8em;
+                height:1px;
+                background:$font-default-c;
+            }
+        }
+    }
+
+    &_item {
+        width:(870/1440)*100vw;
+        height:(195/1440)*100vw;
+        margin-left:auto;
+    }
+}
+
+
+/*====================================================
+　　Overview　会社概要
+=====================================================*/
+.page_overview {
+}
+
+.overview_table {
+    width:80vw;
+    max-width:1200px;
+    margin:0 auto;
+
+    th {
+        width:12em;
+        border-collapse: separate;
+        border-spacing: 5px 10px;
+        text-align: start;
+        padding:1.5em 2.5em;
+        font-weight:bold;
+    }
+
+    td {
+        padding:1.5em 2.5em;
+    }
+
+    &_address {
+        dd {
+            margin:0 0 1.5em 0;
+        }
+    }
+
+    &_scale {
+        display:flex;
+        gap:2em;
+
+        dt {
+            width:9em;
+        }
+
+        dd {
+            margin:0;
+        }
+    }
+}
+
+
+/*====================================================
+　　History　沿革
+=====================================================*/
+
+.history {
+    background:#fff;
+    margin-right:-10vw;
+    padding:6% 0 10%;
+    border-radius: 2rem 0 0 2rem;
+    margin-top:5%;
+
+    @media all and (max-width:768px) {
+        grid-template-columns: 1fr;
+        padding:10% 0 15%;
+        margin-right:-5vw;
+    }
+
+    &_content {
+        width:80vw;
+        max-width:1440px;
+        margin:0 auto;
+        padding:0 15vw 0 5vw;
+    
+        @media all and (max-width: 768px) {
+            width:90vw;
+            padding: 0 5vw 0 5vw;
+        }
+
+        .history_pic{
+            position:relative;
+            margin-bottom:10%;
+            width:100%;
+            height:(400/1440)*100vw;
+            overflow: hidden;
+            border-radius: 0.5em;
+
+            @media all and (max-width:768px) {
+                height:(300/768)*100vw;
+            }
+
+            img {
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%, -50%);
+            }
+        }
+
+        &_list {
+            li {
+                display:grid;
+                grid-template-columns:1fr 6.6fr;
+
+                span {
+                    align-self:center;
+                }
+
+                .years {
+                    width:5.5em;
+                    font-size:2.2rem;
+                    color:$green-c;
+
+                    @media all and (max-width:768px) {
+                        font-size:1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*====================================================
+　　Access　アクセス
+=====================================================*/
+.page_access {
+    &_list {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:4em;
+        max-width:1440px;
+        margin:0 auto;
+
+        @media all and (max-width:540px) {
+            grid-template-columns: 1fr;
+        }
+
+        &_dl {
+            dd {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        li {
+            dl {
+                dt {
+                    position:relative;
+                    border-bottom:solid 1px $font-c-gray;
+                    padding:1em 1em 1em 2.2em;
+                    margin-bottom:1em;
+                    font-size:1.6rem;
+        
+                    &:after {
+                        display:inline-block;
+                        content:'';
+                        position:absolute;
+                        top:50%;
+                        left:1em;
+                        transform: translatey(-50%);
+                        width:6px;
+                        height:35%;
+                        background:$bk-g-c;
+                    }
+                }
+
+                dd {
+                    margin:0;
+                }
+
+                .map {
+                    margin-top:2em;
+                    iframe {
+                        width:100%;
+                        height:300px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+/*===============================================================
+  common
+===============================================================*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /*ページ内をスムーススクロール*/
+
+    @media all and (max-width: 414px) {
+        font-size: 54.7%;
+    }
+
+    body {
+        font-size: 1.5em;
+        margin: 0;
+        font-family: $font-default;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
+  
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+  
+a {
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+       vertical-align:top;
+}
+  
+p, a, ul, li {
+    margin:0;
+    padding:0;
+}
+
+.longurl {
+    word-break: break-all;
+}
+
+
+/*
+LOADING
+================================================ */
+#loading {
+    background-color:#fff;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+#loading-screen {
+    background-color: #fff;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    translate: 0 100vh;
+}
+#loading p {
+    font-size: 2rem;
+}
+
+
+/*折り返し*/
+.sp_br {
+    display:none;
+ 
+    @media all and (max-width:540px) {
+        display:block;
+    }
+}
+
+.tab_br {
+    display:none;
+
+    @media all and (max-width:820px) {
+        display:block;
+    }
+}

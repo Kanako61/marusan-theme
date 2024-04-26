@@ -1,0 +1,95 @@
+/*===============================================================
+
+  contact　お問い合わせ
+
+===============================================================*/
+.contact {
+  form {
+    padding:10%;
+    background:#fff;
+    border-radius: 1em;
+    margin:5% 0;
+
+    @media all and (max-width:540px) {
+      padding:5%;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .contact-item {
+      padding:1em 0;
+      display:flex;
+      border-bottom:solid 1px #ccc;
+
+      @media all and (max-width:768px) {
+        flex-direction: column;
+      }
+    }
+
+    .contact-item, .contact-item2 {
+      padding:1.5em 0;
+      border-bottom:solid 1px $border-c-gray2;
+    }
+
+    .border-none {
+      border:none;
+    }
+
+    .beside, .beside-none{
+      width:12em;
+      color:$font-c-blue;
+      font-weight:bold;
+    }
+
+    .required {
+      color:red;
+    }
+
+    .privacy-policy_check {
+      padding-left:2.8em;
+      margin-top:-0.8em;
+
+      a {
+        border-bottom:solid 1px $font-c-blue;
+        color:$font-c-blue;
+      }
+    }
+
+    .wpcf7-form-control {
+      @media all and (max-width:540px) {
+        width:100%;
+      }
+    }
+
+    .wpcf7-form-control-wrap {
+      input {
+        padding:0.5em 0;
+      }
+    }
+
+    .select {
+      @media all and (max-width:540px) {
+        width:100%;
+      }
+    }
+
+    .sendBtn {
+      text-align:center;
+      margin:2em auto 0;
+
+      input {
+        padding:0.8em 5em;
+        border-radius: 3em;
+        border:none;
+        background:$bk-g-c;
+        color:#fff;
+        font-weight:bold;
+        letter-spacing: 0.1em;
+        cursor:pointer;
+        
+      }
+    }
+  }
+}

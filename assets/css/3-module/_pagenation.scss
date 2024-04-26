@@ -1,0 +1,84 @@
+/*ページネーション*/
+.pagination {
+    margin:0 0 15%;
+
+    .page-numbers {
+        display:flex;
+        justify-content: center;
+        gap:0.6em;
+        align-items: center;
+        padding-left:0;
+        margin:0;
+
+        & li {
+            list-style-type:none;
+            font-weight: bold;
+            border:solid 1px $blue-c;
+            width:2em;
+            height:2em;
+            text-align: center;
+            border-radius: 3em;
+
+            & a {
+                width:100%;
+                height:100%;
+                text-decoration: none;
+                font-family: $font-1;
+                @include gradation-font;
+                border-radius: 3em;
+            }
+
+            .prev {
+                position: relative;
+                 
+                &::after {
+                    content:'';
+                    display:inline-block;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    width:12px;
+                    height:12px;
+                    transform: translate(-60%, -50%) rotate(-180deg);
+                    background-image: url(assets/images/common/arrow-icon-02.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .next {
+                position:relative;
+
+                &::after {
+                    content:'';
+                    display:inline-block;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    width:12px;
+                    height:12px;
+                    transform: translate(-40%, -50%);
+                    background-image: url(assets/images/arrow-icon-02.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                   
+            }
+
+            & span {
+                width:100%;
+                height:100%;
+            }
+
+            & .current {
+                background:$bk-g-c;
+                color:#fff;
+                border-radius: 3em;
+            }
+        }
+    }
+
+    .pagination__item.is-current:after, .pagination__item:not(.is-dot):hover:after {
+        display:none;
+    }
+}

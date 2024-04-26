@@ -1,0 +1,480 @@
+/*固定ページ共通*/
+
+.free-area {
+    .content-body {
+        p, ol, li, table, dl {
+            @media all and (max-width:540px) {
+                font-size:1.3rem;
+            }
+        }
+
+        h2 {
+            background:$page-h2-bk;
+            padding:0.5em 1em;
+            color:$font-default-title-c;
+            margin-top:2em;
+            border-top:solid 2px $footer-border;
+            border-bottom:solid 2px $footer-border;
+
+            @media all and (max-width:540px) {
+                font-size:2rem;
+            }
+        }
+
+        h3 {
+            position:relative;
+            font-size:2rem;
+            color:$font-default-title-c;
+            border-bottom: dotted 2px $btn;
+            padding:0.5em 0.5em 0.5em 1em;
+
+            @media all and (max-width:540px) {
+                font-size:1.8rem;
+            }
+
+            &:after {
+                display: inline-block;
+                content: "";
+                position: absolute;
+                top: 55%;
+                left: 0;
+                transform: translatey(-50%);
+                width: 6px;
+                height: 35%;
+                background: $btn;
+            }
+        }
+
+        h4 {
+            font-size:1.8rem;
+            color:$font-default-title-c;
+            padding:0.5em 1em;
+            background:$link-btn-c;
+
+            @media all and (max-width:540px) {
+                font-size:1.6rem;
+            }
+        }
+
+        h5 {
+            font-size:1.8rem;
+            color:$btn;
+            padding:0em 1em;
+            margin:0.8em 0;
+
+            @media all and (max-width:540px) {
+                font-size:1.6rem;
+            }
+        }
+
+        h6 {
+            font-size:1.6rem;
+            color:$font-default-title-c;
+            border-bottom:dotted 1px $font-default-title-c;
+            padding:0.8em 1em;
+            margin:0.5em 0;
+
+            @media all and (max-width:540px) {
+                font-size:1.5rem;
+            }
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left:2em;
+            margin:1.5em 0;
+        }
+
+        ol {
+            padding-left:2em;
+            margin:1.5em 0;
+        }
+
+        p {
+            /*padding:0 1em;*/
+            margin:1em 0.5em;
+        }
+
+        img {
+            width:auto;
+        }
+
+        table {
+            th, td {
+                border:solid 1px #ccc;
+                color:$font-default-c;
+                padding:0.5em;
+            }
+
+            th {
+                background:$bk-2;
+            }
+        }  
+
+        .page_header_title {
+            p {
+                padding:0;
+            }
+        }
+
+        .wp-block-table my-table th {
+            background: #f5f5f5;
+        }
+    }
+}
+
+.content-title {
+    width:80vw;
+    margin:8% auto 10%;
+    line-height: 1;
+    font-size:4.2rem;
+    font-family: $font-3;
+    font-weight:500;
+    color:$font-default-title-c;
+
+    @media all and (max-width:768px) {
+        width:90vw;
+        font-size:3.2rem;
+        margin:20% auto 12%;
+    }
+
+    .en {
+        display:inline-block;
+        font-size:2rem;
+        font-family: $font-1;
+        font-weight:800;
+        @include gradation-font;
+
+        @media all and (max-width:768px) {
+            font-size:1.8rem;
+        }
+
+        @media all and (max-width:540px) {
+            font-size:1.6rem;
+        }
+    }
+
+    .ja {
+        font-size:4.2rem;
+        color:$font-default-c;
+        line-height:1.4;
+
+        @media all and (max-width:768px) {
+            font-size:3.6rem;
+        }
+
+        @media all and (max-width:540px) {
+            font-size:3.2rem;
+        }
+    }
+}
+
+.page {
+    background:#fff;
+    letter-spacing: 0.1em;
+
+    &_main{
+        overflow: hidden;
+        line-height: 1.8;
+    }
+
+    &_section {
+        margin:15% 0;
+        color:$font-default-c;
+
+        @media all and (max-width:1024px) {
+            margin:20% 0;
+        }
+
+        @media all and (max-width:540px) {
+            margin:25% 0;
+        }
+
+        /*&_h2 {
+            display:inline-block;
+            position:relative;
+            left:50%;
+            transform:translatex(-50%);
+            margin:2% auto;
+            font-family: $font-3;
+            text-align:center;
+            line-height: 1.4;
+
+            @media all and (max-width:540px) {
+                margin:4% 0 8%;
+            }
+
+            .en {
+                font-size:1.8rem;
+                font-family: $font-1;
+                font-weight: 800;
+                @include gradation-font;
+
+                @media all and (max-width:768px) {
+                    font-size:1.6rem;
+                }
+            }
+
+            .ja {
+                font-size:3.2rem;
+                letter-spacing: 0.15em;
+                margin-top:0.5rem;
+
+                @media all and (max-width:768px) {
+                    font-size:2.4rem;
+                }
+
+                @media all and (max-width:540px) {
+                    font-size:2.4rem;
+                }
+            }
+        }*/
+    }
+
+    &_content {
+        max-width:1440px;
+        width:80vw;
+        margin:5% auto 10%;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+        }
+    }
+
+    &_nav {
+        &_list {
+            width:auto;
+            display:grid;
+            grid-template-columns: repeat( auto-fill, minmax(200px,16%));
+            place-content: center;
+            text-align: center;
+            gap:2rem 0;
+            border-radius: 0.5em;
+            color:$font-default-title-c;
+            background:#fff; 
+            padding:1.5em 2em;
+            margin:5% auto 5%;
+            text-align: center;
+
+            @media all and (max-width:540px) {
+                grid-template-columns: 1fr 1fr;
+                padding:1.5em 0;
+                gap:1rem 1rem;
+                background:inherit;
+            }
+
+            li {
+                position:relative;
+                text-align:center;
+
+
+                @media all and (max-width:540px) {
+                    padding-right:1.6em;
+                    background:#fff;
+                    border-radius: 0.2em;
+                }
+
+                &:after {
+                    content:'';
+                    display:inline-block;
+                    position:absolute;
+                    top:55%;
+                    right:0;
+                    transform:translatey(-50%) rotate(90deg);
+                    width:6px;
+                    height:13px;
+                    background-image:url(assets/images/common/arrow-brown.svg);
+                    background-repeat: no-repeat;
+                    background-size:contain;
+
+                    @media all and (max-width:540px) {
+                        right:1em;
+                    }
+                }
+                a {
+                    position:relative;
+                    padding:0.5em;
+
+                    @media all and (max-width:540px) {
+                        display:block;
+                        position:relative;
+                        top:50%;
+                        transform: translatey(-50%);
+                        padding:0.6em 0.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    &_title-pic {
+        margin-right:-10vw;
+
+        @media all and (max-width:768px) {
+            margin-right:-10vw;
+        }
+
+        .parallax-img {
+            width:90vw;
+            height:(490/1440)*100vw;
+            overflow: hidden;
+            margin:0 auto;
+
+            @media all and (max-width:768px) {
+                width:100vw;
+            }
+
+            @media all and (max-width:540px) {
+                height:(250/540)*100vw;
+            }
+      
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+/**====================================================
+    list　リンクリスト
+=====================================================**/
+.pageOther {
+    width:80vw;
+    max-width:1440px;
+    margin:0 auto;
+
+    @media all and (max-width:768px) {
+        width:90vw;
+    }
+
+    &_list {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1.5em;
+        place-content: center;
+        max-width:80%;
+        margin:0 auto;
+
+        @media all and (max-width:768px) {
+            max-width:100%;
+        }
+
+        @media all and (max-width:540px) {
+            grid-template-columns:1fr;
+        }
+
+        li {
+            a {
+                display:block;
+                background:#fff;
+                border-radius: 0.5em;
+                padding:1.4em 2.2em 1.6em;
+                letter-spacing: 0.1em;
+                line-height:1.6;
+                box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
+                transition:transform .3s;
+
+                &:hover {
+                    transform: translatey(-6px);
+                    filter: brightness(0.96);
+                }
+
+                .en {
+                    display: inline-block;
+                    @include gradation-font;
+                    font-size:(32/1440)*100vw;
+                    font-family: $font-1;
+                    font-weight:800;
+
+                    @media all and (max-width:1024px) {
+                        font-size:2.8rem;
+                      }
+                }
+
+                .ja {
+                    width:90%;
+                    position:relative;
+                    font-size:1.4rem;
+
+                    &:after {
+                        position:absolute;
+                        top:50%;
+                        right: -14%;
+                        transform: translatey(-50%);
+                        display:block;
+                        content:'';
+                        width:24px;
+                        height:24px;
+                        background-image:url(assets/images/common/b-icon.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        @media all and (max-width:540px) {
+                            top: -35%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/**====================================================
+    table　スクロールヒント
+=====================================================**/
+.js-scrollable-wrap {
+    white-space: nowrap;
+}
+.js-scrollable {
+    word-break: break-all;
+    table-layout: fixed;
+    display: block;
+    overflow: scroll;
+}
+
+
+/**====================================================
+    table　style
+=====================================================**/
+.page_table {
+    border-collapse: separate;
+    border-spacing: 1em 0;
+    max-width:1440px;
+
+    tbody {
+        -webkit-text-size-adjust: 100%;
+      }
+
+
+    th {
+        border-collapse: separate;
+        border-spacing: 5px 10px;
+        padding:1.5em 2.5em;
+    }
+
+    td {
+        padding:1.5em 2.5em;
+        max-width:1000px;
+        min-width:300px;
+        white-space:normal;
+        word-wrap:break-word!important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

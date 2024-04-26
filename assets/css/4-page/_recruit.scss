@@ -1,0 +1,179 @@
+/*====================================================
+　　recruitページ全体
+=====================================================*/
+.page_recruit {
+    &_item {
+        background:#fff;
+        border-radius: 2rem;
+        padding:4em 5% 6em;
+
+        @media all and (max-width:768px) {
+            padding:2em 5% 3em;
+        }
+    }
+}
+
+.recruit_h2 {
+    margin-bottom:5%;
+
+    @media all and (max-width:540px) {
+        margin-bottom:8%;
+    }
+}
+ 
+.page_recruit_pic {
+    width:100%;
+    margin:0 auto;
+    height:(450/1440)*100vw;
+    overflow: hidden;
+    border-radius: 0.5em;
+
+    @media all and (max-width:768px) {
+        height:(300/768)*100vw;
+    }
+}
+
+.page_recruit_text {
+        margin:5% 0 5%;
+        
+        dt {
+            font-size:2.4rem;
+            color:$font-c-blue;
+            margin-bottom:1em;
+            line-height: 1.4;
+    
+            @media all and (max-width:768px) {
+                font-size:2rem;
+            }
+    
+            @media all and (max-width:540px) {
+                font-size:1.8rem;
+            }
+        }
+    
+        dd {
+            margin:0;
+        }
+}
+
+/*見出し h3*/
+.page_h3 {
+    background:$h2-b-c;
+    padding:1em 1.5em;
+    font-size:1.8rem;
+}
+
+/*見出し　h3-02*/
+.page_h3-02 {
+    position:relative;
+    border-bottom:solid 1px $blue-c;
+    font-size:1.8rem;
+    padding:0 1em 0.5em 1.5em;
+    
+    &:after {
+        display:inline-block;
+        content:'';
+        position:absolute;
+        top:50%;
+        left:0.5em;
+        transform: translatey(-50%);
+        width:6px;
+        height:18px;
+        background:$bk-g-c;
+
+    }
+}
+
+
+.recruit_section {
+    margin:10% auto;
+
+    dl {
+        dd {
+            margin:0;
+        }
+    }
+}
+
+.page_recruit_h2 {
+    background:$h2-b-c;
+    padding:0.5em 1.5em;
+}
+
+
+/*1日の流れ*/
+.page_recruit {
+    &_schedul {
+        background:$content-b-c;
+        padding:3% 6%;
+
+        .schedule_dl {
+            display:grid;
+            grid-template-columns: 1fr 10fr;
+
+            dt {
+                display:block;
+                width:4em;
+            }
+
+            dd {
+                margin:0;
+            }
+        }
+    }
+
+    &_question {
+        background:$content-b-c;
+        padding:3% 6%;
+    }
+}
+
+/*よくある質問*/
+.question {
+    position:relative;
+    cursor: pointer;
+    background:$h2-b-c;
+    padding:1em 2.2em 1em 1.2em;
+    margin-bottom:0.5em;
+
+    &:before {
+        content:'';
+        display: inline-block;
+        position:absolute;
+        top:50%;
+        transform:translatey(-50%);
+        right:1.5em;
+        width: 2px;
+        height: 15px;
+        background: $font-default-c;
+      }
+      
+    &:after{
+        content: '';
+        display: inline-block;
+        position:absolute;
+        top:50%;
+        transform:translatey(-50%);
+        right:calc(1.5em - 6.5px);
+        width: 15px;
+        height: 2px;
+        background: $font-default-c;
+      }
+}
+
+.question.active {
+    margin-bottom:0;
+
+    &:before {
+        display: none;
+    }
+}
+.question:hover {
+    filter:brightness(0.95);
+}
+.answer {
+    display: none;
+    background: #fff;
+    padding:1em;
+    margin-bottom:0.5em;
+}

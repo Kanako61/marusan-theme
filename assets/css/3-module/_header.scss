@@ -1,0 +1,56 @@
+/*===============================================================
+  
+      common
+  
+===============================================================*/
+.l-site_header {
+    position:relative;
+    z-index:3;
+    width:100%;
+    margin:0;
+    display:flex;
+    gap:0 2em;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+    padding:1.5rem 3rem;
+    transition:all .3s;
+
+
+    @media all and (max-width:540px) {
+        padding:1.5rem 1rem;
+    }
+}
+
+
+/*トップページのみ*/
+.home .l-site_header {
+    background:rgba(122, 148, 159, 0.6);
+
+    &:after {
+        display:inline-block;
+        content:'';
+        width:100%;
+        height:0.5em;
+        background:rgba(255, 255, 255, 0.5);
+        z-index:-1;
+        content:'';
+        position:absolute;
+        bottom:-0.5em;
+        left:0;
+    }
+}
+
+/*ロゴ*/
+.logo {
+    max-width:180px;
+
+    @media all and (max-width:768px) {
+        max-width:140px;
+    }
+
+    img {
+    padding:1em 0;
+    }
+}
+

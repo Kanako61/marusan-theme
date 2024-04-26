@@ -1,0 +1,143 @@
+.initiatives_dl {
+    dt {
+        position:relative;
+        font-size:2.4rem;
+        color:$font-c-blue;
+        margin-bottom:1em;
+        line-height: 1.4;
+        padding:0.5em 0.6em 0.5em 4rem;
+        vertical-align: middle;
+        border-bottom: solid 1px $border-c-gray;
+
+        &:after {
+            display: inline-block;
+            content: "";
+            position: absolute;
+            top: 55%;
+            left: 1em;
+            transform: translatey(-50%);
+            width: 6px;
+            height: 35%;
+            background: $bk-g-c;
+        }
+
+        @media all and (max-width:768px) {
+            font-size:2rem;
+        }
+
+        @media all and (max-width:540px) {
+            font-size:1.8rem;
+        }
+    }
+
+    dd {
+        margin:0;
+    }
+}
+
+.initiatives_h2 {
+    margin-bottom:4em;
+}
+
+
+
+/*--====================================================
+    Quality Initiatives　品質への取り組み
+=====================================================*/
+.quality {
+    dl {
+        margin:0 0 6% 0;
+
+        dt {
+            margin-bottom:1em;
+        }
+        dd {
+            margin:0;
+        }
+    }
+
+    &_inner {
+        display:grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap:2em;
+
+        @media all and (max-width:768px) {
+            display:block;
+
+            .quality_table {
+                margin-top:2em;
+            }
+        }
+
+        &_pic {
+            width:(375/1440)*100vw;
+            height:(166/1440)*100vw;
+            
+            @media all and (max-width:768px) {
+                width:60vw;
+                height:auto;
+            }
+        }
+    }
+}
+
+/*--====================================================
+   Environmental Initiatives　環境への取り組み
+=====================================================*/
+.sdgs-all_text {
+    margin-bottom:3em;
+}
+.page_sdgs {
+    &_list {
+        display:flex;
+        flex-direction: column;
+        gap:6em;
+
+        &_item {
+            background:#fff;
+            padding:2em 2em 3em;
+            border-radius: 2rem;
+        }
+    }
+    .columns2 {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        gap:3em;
+
+        @media all and (max-width:1000px) {
+            grid-template-columns:1fr;
+        }
+
+        .page_sdgs_pic {
+            max-width:400px;
+            height:auto;
+        }
+    }
+
+    @media all and (max-width:1000px) {
+        .sp-layout {
+            .page_sdgs_pic {
+                order:1;
+            }
+        }
+    }
+
+    .margin-style {
+        margin-top:4em;
+    }
+
+    /*SDGsアイコン*/
+    .sdgs_icon {
+        display:flex;
+        gap:1em;
+        flex-wrap:wrap;
+
+        img {
+            max-width:80px;
+            max-height:80px;
+
+        }
+    }
+}
+

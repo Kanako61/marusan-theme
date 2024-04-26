@@ -1,0 +1,191 @@
+/*===============================================================
+
+  contact　お問い合わせ
+
+===============================================================*/
+
+/*section共通*/
+p, a, li, dl dt, dl dd {
+  line-height:1.8;
+  letter-spacing: 0.2em;
+  color:$font-default-c;
+} 
+
+/*section見出し*/
+.top_h2 {
+  text-align:center;
+  color:$h2-c;
+  line-height:1.8;
+  letter-spacing: 0.2em;
+
+  @media all and (max-width:768px) {
+    margin-bottom:1.5em;
+    line-height: 1.4;
+  }
+}
+
+.contact {
+  max-width:980px;
+  margin:0 auto 30%;
+  position:relative;
+  z-index:2;
+
+  @media all and (max-width:1000px) {
+    margin:0 8vw 30%;
+  }
+
+  @media all and (max-width:540px) {
+    margin:20% 8vw 30%;
+  }
+
+  &:before {
+    content:'';
+    display:inline-block;
+    position:absolute;
+    top:5vw;
+    right:-8vw;
+    width:(305/1440)*100vw;
+    height:(164/1440)*100vw;
+    max-width:305px;
+    max-height:164px;
+    background:$bk-3;
+    z-index:-1;
+  }
+
+  &:after {
+    content:'';
+    display:inline-block;
+    position:absolute;
+    bottom:-10vw;
+    left:-5vw;
+    width:(400/1440)*100vw;
+    height:(190/1440)*100vw;
+    max-width:400px;
+    max-height:190px;
+    background-image:url(assets/images/top/contact-item3.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .top_h2 {
+    position:relative;
+    margin-bottom:20%;
+
+    &:after {
+      content:'';
+      display:inline-block;
+      position:absolute;
+      bottom:1vw;
+      right:-10vw;
+      width:(230/1440)*100vw;
+      height:1px;
+      background:$border-c;
+    }
+  }
+
+  &_inner {
+    position:relative;
+    max-width:980px;
+    margin:0 auto;
+    z-index:2;
+
+    &:before {
+      content:'';
+      display:inline-block;
+      position:absolute;
+      top:2.5vw;
+      left:-10vw;
+      width:(385/1440)*100vw;
+      height:(535/1440)*100vw;
+      background-image:url(assets/images/top/contact-item1.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:after {
+      content:'';
+      display:inline-block;
+      position:absolute;
+      bottom:-16vw;
+      right:-8vw;
+      width:(504/1440)*100vw;
+      height:(535/1440)*100vw;
+      background-image:url(assets/images/top/contact-item2.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &_text {
+    margin-bottom:8%;
+    text-align: center;
+  }
+
+  &_content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:8%;
+
+    @media all and (max-width:768px) {
+      flex-direction: column;
+      gap:2em;
+    }
+  }
+
+  &_tel {
+    text-align: center;
+  }
+
+  .tel_num {
+    position:relative;
+    margin-top:1em;
+    padding-left:2.2em;
+
+    &:before {
+      content:'';
+      display:inline-block;
+      position:absolute;
+      top:50%;
+      left:0;
+      transform: translatey(-50%);
+      width:30px;
+      height:30px;
+      background-image:url(assets/images/common/phone-icon.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .contact_mail {
+    a {
+      position:relative;
+      display:inline-block;
+      background:$btn;
+      color:#fff;
+      padding:1em 2em 1em 4.5em;
+      border-radius: 0.6em;
+      transition:all .2s;
+
+      &:before {
+        content:'';
+        display:inline-block;
+        position:absolute;
+        top:50%;
+        left:2em;
+        transform: translatey(-50%);
+        width:31px;
+        height:25px;
+        background-image:url(assets/images/common/mail-icon.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &:hover {
+        filter:brightness(0.96);
+        transform:translatey(-8px);
+        letter-spacing: 0.15em;
+      }
+    }
+  }
+}

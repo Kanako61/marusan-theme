@@ -1,0 +1,108 @@
+@charset "UTF-8";
+:root {
+    --page-h2-bk:#FEF6E1;
+    --font-default-title-c:#4A2020;
+    --footer-border:#656565;
+    --green-c:#35AF8A;
+    --link-btn-c:#FCF5EB;
+    --font-2:'Noto Sans JP', sans-serif;
+}
+
+.editor-styles-wrapper {
+    font-family:var(--font-2);
+}
+
+h1 {
+    font-family:var(--font-2);
+    color:var(--font-default-title-c);
+    line-height:1.6;
+}
+
+h2 {
+    font-family:var(--font-2);
+    background:var(--page-h2-bk);
+    padding:0.5em 1em;
+    color:var(--font-default-title-c);
+    margin-top:2em;
+    border-top:solid 2px var(--footer-border);
+    border-bottom:solid 2px var(--footer-border);
+    line-height:1.8;
+}
+
+h3 {
+    font-family:var(--font-2);
+    position:relative;
+    font-size:20px;
+    color:var(--font-default-title-c);
+    border-bottom: dotted 2px var(--green-c);
+    padding:0.5em 0.5em 0.5em 1em;
+    line-height:1.6;
+}
+
+h3:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translatey(-50%);
+    width: 6px;
+    height: 35%;
+    background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
+}
+
+h4 {
+    font-family:var(--font-2);
+    font-size:18px;
+    color:var(--font-default-title-c);
+    padding:0.5em 1em;
+    background:var(--link-btn-c);
+    line-height:1.4;
+}
+
+h5 {
+    font-family:var(--font-2);
+    font-size:18px;
+    color:var(--green-c);
+    padding:0em 1em;
+    margin:0.8em 0;
+    line-height:1.4;
+}
+
+h6 {
+    font-family:var(--font-2);
+    font-size:16px;
+    color:var(--font-default-title-c);
+    border-bottom:dotted 1px var(--font-default-title-c);
+    padding:0.8em 1em;
+    margin:0.5em 0;
+    line-height:1.4;
+}
+
+ul {
+    font-family:var(--font-2);
+    list-style-type: disc;
+    padding-left:2em;
+    margin:1.5em 0;
+}
+
+ol {
+    font-family:var(--font-2);
+    padding-left:2em;
+    margin:1.5em 0;
+}
+
+p {
+    font-family:var(--font-2);
+    padding:0 1em;
+}
+
+table {
+    font-family:var(--font-2);
+} 
+
+img {
+    width:auto!important;
+}
+
+

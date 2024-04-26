@@ -1,0 +1,77 @@
+/******************* New *******************/
+
+/*common*/
+$font-default-c:#736a5f;
+$item-c:#bfb9b1;
+
+/*メインビジュアル*/
+$movie-bk:rgba(255, 255, 255, 0.6);
+
+/*top*/
+$bk-1:#fcf3e4;
+$bk-2:#e2f1f2;
+$bk-3:#98c0cc;
+$h2-c:#736a5f;
+$bk-4:#98C0CC;
+$border-c:#BFB9B1;
+
+/*header*/
+$header-bk:#7a949f;
+
+/*ボタン*/
+$btn:#768d96;
+
+/*footer*/
+$footer-bk:#7c9aa4;
+
+/*company*/
+$company-h2-bk:rgba(111, 121, 131, 0.8);
+$company-h2-bk_02:rgba(82, 116, 228, 0.75);
+$company-h2-bk_pt01:#98C0CC;
+$company-h2-bk_pt01-2:#FCF3E4;
+
+
+/******************* old *******************/
+$bk-color:#ffffff;
+@mixin gradation-font{
+    background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:#524A46;
+}
+$bk-g-c:-webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
+$green-c:#35AF8A;
+$blue-c:#42B7E7;
+$font-default-title-c:#4A2020;
+$font-c-blue:#064868;
+$border-c-gray:#F1F1F1;
+$border-c-gray2:#DEDEDE;
+$font-c-gray:#999999;
+$section-bk-c:#F9EEE1;
+$text-shadow:#656565;
+
+/*Top_構造計算*/
+$kozo-bk:#F4EFEA;
+
+/*Top_movie*/
+$top-bk-gray:rgba(56, 56, 56, 0.8);
+
+/*footer*/
+$footer-border:#656565;
+
+/*page*/
+$bk-page:#f0e9e1;
+$p-nav-color:#064868;
+$link-btn-c:#FCF5EB;
+$page-h2-bk:#FEF6E1;
+
+/*company*/
+$table_th:#FCF2E3;
+$table_border:#552D2D;
+
+/*recruit*/
+$h2-b-c:#FEF6E1;
+$content-b-c:#FFFCF6;
+
+/*contact*/
+$contaact-bk-c:#FFFBF6;

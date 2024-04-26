@@ -1,0 +1,160 @@
+.precut_pic {
+    display:flex;
+    gap:3rem;
+
+    img {
+        max-width:390px;
+        max-height:280px;
+    }
+}
+
+.precut_dl {
+    margin-bottom:5%;
+    
+    dt {
+        font-size:2.4rem;
+        color:$font-c-blue;
+        margin-bottom:1em;
+        line-height: 1.4;
+
+        @media all and (max-width:768px) {
+            font-size:2rem;
+        }
+
+        @media all and (max-width:540px) {
+            font-size:1.8rem;
+        }
+    }
+
+    dd {
+        margin:0;
+    }
+}
+
+.precut_h2 {
+    margin-bottom:6%;
+}
+
+/*--====================================================
+    What PreCut　プレカットとは
+=====================================================*/
+
+
+/*====================================================
+    precut-advantage プレカットのメリット
+=====================================================*/
+.precut-advantage {
+    &_list {
+        li {
+            background:#fff;
+            padding:1% 5% 3%;
+            margin:2% 0;
+
+            .advantage_title {
+                border-bottom:solid 1px $border-c-gray;
+                vertical-align: middle;
+
+                .number {
+                    font-size:3.6rem;
+                    @include gradation-font;
+                    margin-right:0.3em;
+                }
+            }
+
+            dl {
+                dt {
+                    color:$font-c-blue;
+                    font-size:1.8rem;
+                    margin-bottom:0.5em;
+
+                    @media all and (max-width:768px) {
+                        line-height: 1.4;
+                    }
+                }
+
+                dd {
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+
+
+/*====================================================
+    precut-type プレカットの種類
+=====================================================*/
+.precut-type {
+    &_list {
+        display:flex;
+        flex-direction: column;
+        gap:2em;
+
+        li {
+            background:#fff;
+            padding:5% 5% 8%;
+            border-radius: 2rem;
+
+            .precut_h3 {
+                position:relative;
+                color:$font-c-blue;
+                font-size:2.2rem;
+                border-bottom: solid 1px $border-c-gray;
+                padding:0.5em 0.6em 0.5em 4rem;
+                vertical-align: middle;
+
+                &:after {
+                    display: inline-block;
+                    content: "";
+                    position: absolute;
+                    top: 55%;
+                    left: 1em;
+                    transform: translatey(-50%);
+                    width: 6px;
+                    height: 35%;
+                    background: $bk-g-c;
+                }
+            }
+        }
+
+        &_top {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:3rem;
+            margin-bottom:3rem;
+
+            @media all and (max-width:768px) {
+                grid-template-columns: 1fr;
+            }
+
+            &_pic {
+                max-width:585px;
+                max-height:auto;
+                margin:0 auto;
+            }
+        }
+
+        &_bottom {
+            &_pic {
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap:2rem;
+            }
+        }
+    }
+}
+
+/*====================================================
+    facility 設備
+=====================================================-*/
+.page_facility {
+    &_pic {
+        display:flex;
+        gap:2rem;
+        margin-top:5%;
+    }
+}
+
+
+
+

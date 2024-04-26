@@ -1,0 +1,42 @@
+/*
+Theme Name: marusan Co., Ltd
+Author: marusan Co., Ltd
+*/
+
+/*
+* 1-setting
+*/
+@import "assets/css/1-setting/color";
+@import "assets/css/1-setting/font";
+
+/*
+* 2-layout
+*/
+@import "assets/css/2-layout/common";
+@import "assets/css/2-layout/page";
+@import "assets/css/2-layout/archive";
+@import "assets/css/2-layout/single";
+
+/*
+* 3-module
+*/
+@import "assets/css/3-module/header";
+@import "assets/css/3-module/footer";
+@import "assets/css/3-module/contact";
+@import "assets/css/3-module/nav";
+@import "assets/css/3-module/button";
+@import "assets/css/3-module/animation";
+@import "assets/css/3-module/pagenation";
+@import "assets/css/3-module/slider";
+
+/*
+* 4-page
+*/
+@import "assets/css/4-page/top";
+@import "assets/css/4-page/company";
+@import "assets/css/4-page/service";
+@import "assets/css/4-page/contact";
+@import "assets/css/4-page/recruit";
+@import "assets/css/4-page/effort";
+@import "assets/css/4-page/workflow";
+@import "assets/css/4-page/case";
