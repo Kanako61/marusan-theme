@@ -84,10 +84,21 @@ Template Name: Company
         Overview　会社概要
     =====================================================-->
     <section class="page_section page_overview" id="overview">
-    <h2 class="page_section_h2 page_company_h2">
-        <p class="ja">会社概要</p>
-    </h2>
+    <!-- 背景の色 -->
+    <div class="overview_bk-01"></div>
+    <div class="overview_bk-02"></div>
 
+    <div class="page_overview_inner">
+        <h2 class="page_section_h2 page_company_h2">
+            <p class="ja">会社概要</p>
+        </h2>
+        <div class="page_pic overview_pic">
+            <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-overview.webp" type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-overview.jpg" alt="会社概要">
+            </picture>
+        </div>
+    </div>
 
     <div class="js-scrollable-wrap">
     <table class="overview_table page_table page_overview_table js-scrollable">
