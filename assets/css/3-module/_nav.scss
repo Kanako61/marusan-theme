@@ -184,7 +184,7 @@
 
 
 /*トップページのみ*/
-.home {
+/*.home {*/
     .l-site_header {
         position:fixed;
         padding:0 2rem;
@@ -214,7 +214,7 @@
 
     /*スクロールしたらグロナビのスタイル変える*/
     @media all and (min-width:901px) {
-        .l-site_header:has(+ .main_top.classActive) {
+        .l-site_header:has(+ .main.classActive) {
             background:#fff;
 
             ul {
@@ -229,7 +229,7 @@
     }
 
     @media all and (max-width:900px) {
-        .l-site_header:has(+ .main_top.classActive) {
+        .l-site_header:has(+ .main.classActive) {
             background:none;
 
             &:after {
@@ -245,4 +245,4 @@
             }
         }       
     }
-}
+/*}*/

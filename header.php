@@ -25,21 +25,28 @@
 	<?php wp_body_open(); ?>
 
 	<header class="l-site_header">
-		<?php if ( is_home() || is_front_page() ) : ?>
+		<!--<?php if ( is_home() || is_front_page() ) : ?>-->
 		<!--トップページのみ-->
+		<!--<div class="logo">
+			<a href="<?php echo esc_url(home_url() ); ?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.png" alt="<?php bloginfo('name'); ?>">
+			</a>
+		</div>
+		<?php else : ?>-->
+		<!--トップページそれ以外-->
+		<!--<div class="logo">
+			<a href="<?php echo esc_url(home_url() ); ?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-black.png" alt="<?php bloginfo('name'); ?>">
+			</a>
+		</div>
+		<?php endif; ?>-->
+
+
 		<div class="logo">
 			<a href="<?php echo esc_url(home_url() ); ?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-white.png" alt="<?php bloginfo('name'); ?>">
 			</a>
 		</div>
-		<?php else : ?>
-		<!--トップページそれ以外-->
-		<div class="logo">
-			<a href="<?php echo esc_url(home_url() ); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-black.png" alt="<?php bloginfo('name'); ?>">
-			</a>
-		</div>
-		<?php endif; ?>
 
 		<!--ハンバーガーボタン-->
 		<div class="hamburger_button">
