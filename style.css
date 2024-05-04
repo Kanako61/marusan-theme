@@ -570,7 +570,7 @@ LOADING
 
 /*アーカイブページここから*/
 .archive {
-  background: #f0e9e1;
+  background: #fff;
 }
 .archive .archive_container {
   width: 80vw;
@@ -662,8 +662,11 @@ LOADING
 /*アーカイブページここまで*/
 /*記事ページここから*/
 .single {
-  background: #f0e9e1;
+  background: #fff;
   /*記事ページ入力エリアここから*/
+}
+.single .content-title {
+  margin: 0;
 }
 .single_main {
   line-height: 1.8;
@@ -3625,140 +3628,91 @@ p, a, li, dl dt, dl dd {
   }
 }
 
-.precut_pic {
-  display: flex;
-  gap: 3rem;
+.precut_list {
+  width: 80vw;
+  max-width: 1050px;
+  margin: auto;
 }
-.precut_pic img {
-  max-width: 390px;
-  max-height: 280px;
+.precut_list .l-inner {
+  width: 100%;
+  padding: 0;
 }
-
-.precut_dl {
-  margin-bottom: 5%;
+.precut_list .swiper,
+.precut_list .thumb-wrapper {
+  width: 100%;
 }
-.precut_dl dt {
-  font-size: 2.4rem;
-  color: #064868;
-  margin-bottom: 1em;
-  line-height: 1.4;
+.precut_list .swiper {
+  overflow: visible;
 }
-@media all and (max-width: 768px) {
-  .precut_dl dt {
-    font-size: 2rem;
-  }
+.precut_list .swiper-fade .swiper-slide {
+  transition-property: opacity, transform !important;
+  pointer-events: none;
 }
-@media all and (max-width: 540px) {
-  .precut_dl dt {
-    font-size: 1.8rem;
-  }
+.precut_list .swiper-fade .swiper-slide-active {
+  pointer-events: auto;
 }
-.precut_dl dd {
-  margin: 0;
-}
-
-.precut_h2 {
-  margin-bottom: 6%;
-}
-
-/*--====================================================
-    What PreCut　プレカットとは
-=====================================================*/
-/*====================================================
-    precut-advantage プレカットのメリット
-=====================================================*/
-.precut-advantage_list li {
-  background: #fff;
-  padding: 1% 5% 3%;
-  margin: 2% 0;
-}
-.precut-advantage_list li .advantage_title {
-  border-bottom: solid 1px #F1F1F1;
-  vertical-align: middle;
-}
-.precut-advantage_list li .advantage_title .number {
-  font-size: 3.6rem;
-  background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #524A46;
-  margin-right: 0.3em;
-}
-.precut-advantage_list li dl dt {
-  color: #064868;
-  font-size: 1.8rem;
-  margin-bottom: 0.5em;
-}
-@media all and (max-width: 768px) {
-  .precut-advantage_list li dl dt {
-    line-height: 1.4;
-  }
-}
-.precut-advantage_list li dl dd {
-  margin: 0;
-}
-
-/*====================================================
-    precut-type プレカットの種類
-=====================================================*/
-.precut-type_list {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-.precut-type_list li {
-  background: #fff;
-  padding: 5% 5% 8%;
-  border-radius: 2rem;
-}
-.precut-type_list li .precut_h3 {
-  position: relative;
-  color: #064868;
-  font-size: 2.2rem;
-  border-bottom: solid 1px #F1F1F1;
-  padding: 0.5em 0.6em 0.5em 4rem;
-  vertical-align: middle;
-}
-.precut-type_list li .precut_h3:after {
-  display: inline-block;
-  content: "";
+.precut_list .swiper-controller {
   position: absolute;
-  top: 55%;
-  left: 1em;
-  transform: translatey(-50%);
-  width: 6px;
-  height: 35%;
-  background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 62.5%;
 }
-.precut-type_list_top {
+.precut_list .slide {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  overflow: hidden;
 }
-@media all and (max-width: 768px) {
-  .precut-type_list_top {
-    grid-template-columns: 1fr;
+.precut_list .slide-media {
+  display: block;
+  padding-top: 62.5%;
+  border-radius: 4px;
+  width: 100%;
+}
+.precut_list .slide-media img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.precut_list .slide-title {
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 3.2rem 0;
+}
+.precut_list .thumb-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3em;
+}
+@media only screen and (max-width: 599px) {
+  .precut_list .thumb-wrapper {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
-.precut-type_list_top_pic {
-  max-width: 585px;
-  max-height: auto;
-  margin: 0 auto;
+.precut_list .thumb-media {
+  padding-top: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+  height: 15vw;
+  margin-bottom: 10em;
+  overflow: inherit;
 }
-.precut-type_list_bottom_pic {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+@media only screen and (min-width: 1025px) {
+  .precut_list .thumb-media:hover {
+    transform: scale(0.9);
+  }
+  .precut_list .thumb-media:hover img {
+    transform: scale(1.1);
+  }
 }
-
-/*====================================================
-    facility 設備
-=====================================================-*/
-.page_facility_pic {
-  display: flex;
-  gap: 2rem;
-  margin-top: 5%;
+.precut_list .thumb-media img {
+  transition: var(--transition);
+}
+.precut_list .thumb-media-active {
+  transform: scale(0.9);
+  opacity: 0.3;
+}
+.precut_list .thumb-media-active img {
+  transform: scale(1.1);
 }
 
 /*===============================================================
@@ -4367,4 +4321,67 @@ p, a, li, dl dt, dl dd {
   }
 }
 
-/*case*/
+/* case 共通 */
+.case_main .page_content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/*リスト*/
+.category-case .category_header_title p {
+  font-size: 2.4rem;
+  text-align: center;
+}
+.category-case_pic {
+  overflow: hidden;
+}
+.category-case_ct {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto 8%;
+  gap: 4em 3em;
+}
+.category-case_list {
+  position: relative;
+  /*サムネイル*/
+  /*タイトル*/
+}
+.category-case_list:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: -1em;
+  right: -1.5em;
+  width: 1px;
+  height: calc(100% + 1em);
+  background: #736a5f;
+}
+.category-case_list:nth-child(3n):after {
+  display: none;
+}
+.category-case_list .item_pic {
+  margin-bottom: 1em;
+}
+.category-case_list .item_title {
+  text-align: center;
+}
+
+/*アクセス非表示*/
+.category-case .address {
+  display: none;
+}
+
+/* case 共通 */
+.case_main .page_content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/*アクセス非表示*/
+.category-case .address {
+  display: none;
+}

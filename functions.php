@@ -88,7 +88,7 @@ add_filter('body_class', 'add_class_page_slug');
 //共通CSS読み込み
 function theme_enqueue_styles() {
     wp_enqueue_style( 'vegas.min.css', get_template_directory_uri() . '/assets/css/vegas.min.css');
-	wp_enqueue_style( 'swiper.min.css', get_template_directory_uri() . '/assets/css/swiper.min.css');
+	wp_enqueue_style( 'swiper-bundle.min.css', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css');
 	wp_enqueue_style( 'scroll-hint.css', get_template_directory_uri() . '/assets/css/scroll-hint.css');
 	//wp_enqueue_style( 'normalize.css', get_template_directory_uri() . '/assets/css/normalize.css');
 	//wp_enqueue_style( 'locomotive-scroll.min.css', get_template_directory_uri() . '/assets/css/locomotive-scroll.min.css');
@@ -99,11 +99,11 @@ function theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles');
 
 //GSAP読み込み
-function theme_gsap_script(){
+/* function theme_gsap_script(){
 	wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js', array(), false, true);
 	wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js', array('gsap-js'), false, true );
   }
-  add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
+  add_action( 'wp_enqueue_scripts', 'theme_gsap_script' ); */
   
 
 //jsファイルの読み込み  bodyタグの直前で読み込む
@@ -116,9 +116,9 @@ function themes_file_scripts() {
     wp_enqueue_script('jquery-3.6.0.min.js', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js', array(), '3.6.0', false);
 
     // その他のスクリプト
+	wp_enqueue_script('swiper-bundle.min.js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '1.0', false);
     wp_enqueue_script('vegas.min.js', get_template_directory_uri() . '/assets/js/vegas.min.js', array(), '1.0', true);
 	wp_enqueue_script('scroll-hint.min.js', get_template_directory_uri() . '/assets/js/scroll-hint.min.js', array(), '1.0', true);
-	wp_enqueue_script('swiper-bundle.min.js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), '1.0', true);
 	wp_enqueue_script('jquery-modal-video.min.js', get_template_directory_uri() . '/assets/js/jquery-modal-video.min.js', array(), '1.0', true);
 	wp_enqueue_script('sticky-sidebar.min.js', get_template_directory_uri() . '/assets/js/sticky-sidebar.min.js', array(), '1.0', true);
     wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0', true);

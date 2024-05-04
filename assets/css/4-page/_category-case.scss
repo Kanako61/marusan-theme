@@ -1,0 +1,68 @@
+/* case 共通 */
+.case_main .page_content {
+    width:100%;
+    max-width: none;
+    margin:0;
+}
+
+/*リスト*/
+.category-case {
+    .category_header_title {
+        p {
+            font-size:2.4rem;
+            text-align: center;
+        }
+    }
+
+    &_pic {
+        overflow: hidden;
+    }
+
+    &_ct {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width:80vw;
+        max-width:1200px;
+        margin:0 auto 8%;
+        gap:4em 3em;
+    }
+
+    &_list {
+        position:relative;
+
+        &:after {
+            display:inline-block;
+            content:'';
+            position:absolute;
+            top:-1em;
+            right:-1.5em;
+            width:1px;
+            height:calc(100% + 1em);
+            background:$font-default-c;
+        }
+
+        &:nth-child(3n):after{
+            display:none;
+        }
+
+        /*サムネイル*/
+        .item_pic {
+            margin-bottom:1em;
+        }
+
+
+        /*タイトル*/
+        .item_title {
+            text-align: center;
+        }
+
+    }
+}
+
+
+
+/*アクセス非表示*/
+.category-case .address {
+    display:none;
+}
+

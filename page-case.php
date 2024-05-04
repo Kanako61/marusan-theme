@@ -17,57 +17,32 @@ Template Name: Company
     <div id="loading-screen"></div>
 </div>-->
 
-<main class="l-contents-main page_main company_main">
+<main class="l-contents-main page_main case_main">
 
 <!--page title-->
 <!--<h1 class="page_header_title content-title company_title fadein">
-    <p class="en">Company</p>
+    <p class="en">Case</p>
     <p class="ja"><?php the_title(); ?></p>
 </h1>-->
 <!--page titleここまで-->
 
 
-<div class="company_content page_content">
+<div class="case_content page_content">
 
     <!--====================================================
-        Top Message　代表挨拶
+        case　導入事例
     =====================================================-->
-    <section class="page_section page_message" id="message">
+    <section class="page_section page_message" id="case">
 
-    <div class="message_top">
-        <h2 class="page_section_h2 page_company_h2">社長挨拶</h2>
-        <div class="page_pic message_pic">
-            <picture>
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/message.jpg" alt="代表取締役前田英俊社長">
-            </picture>
-        </div>
-        <p class="company_name">
-            株式会社マルサン<br>
-            代表取締役 社長
-        </p>
-        <p class="name">
-            <span class="name_ja">前田 英俊</span><br>
-            <span class="name_en">MAEDA HIDETOSHI</span>
-        </p>
+	<div class="page_pic _pic">
+		<picture>
+			<source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message.webp" type="image/webp">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/message.jpg" alt="代表取締役前田英俊社長">
+		</picture>
     </div>
 
-    <div class="message_bottom">
-        <dl class="message_bottom_text">
-            <dt>お客様第一で「高品質な製品」を作り続ける</dt>
-            <dd>
-                <p>当社は昭和10 年に下駄作りで創業しました。その後、住宅用木材の製材、木造住宅部材のプレカット加工と、長きにに渡り木材の加工に携わってきました。近年では、パネルの加工や、金物工法のプレカット等にも加工範囲を広げております。これらの製品をつくる上で、創業以来、我が社が拘ってきたことは、「お客様第一」ということ、そして、それを実現するために「高品質な製品」をつくり続けることです。これからも当社は、「高品質、高性能な木造住宅部材を供給し、安心、安全な住まいづくりに貢献する」こと、「精度の良い木造住宅部材を短納期、かつタイムリーに供給し、工期の短縮と職人不足の解消に貢献する」こと、「住宅産業界のあらたなニーズに対応し、木造住宅の更なる工業化の促進に貢献する」ことを我が社の使命とし、全社員一丸となって「お客様お役立ち企業」を目指してまいります。</p>
-            </dd>
-            <dd class="post">代表取締役社長<span class="name">前田 英俊</span></dd>
-        </dl>
-    </div>
-    </section>
-
-    <!--====================================================
-        Philosophy　企業理念
-    =====================================================-->
     <section class="page_section rinen" id="rinen">
-        <h2 class="page_section_h2 page_company_h2 pattern01">企業理念</h2>
+        <h2 class="page_section_h2 page_company_h2 pattern01">導入事例</h2>
 
         <ul class="rinen_list">
             <li>私達はお客様に信頼される誠実な仕事をします。</li>
@@ -75,9 +50,6 @@ Template Name: Company
             <li>私達はすべての協力者と相互の繁栄を願い自信と情熱を持って行動します。</li>
         </ul>
 
-        <div class="page_pic rinen_item">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/rinen-item.png" alt="">
-        </div>
     </section>
 
     <!--====================================================

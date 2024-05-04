@@ -1,157 +1,108 @@
-.precut_pic {
-    display:flex;
-    gap:3rem;
+.precut_list {
+  width:80vw;
+  max-width: 1050px;
+  margin: auto;
 
-    img {
-        max-width:390px;
-        max-height:280px;
-    }
-}
+  .l-inner {
+    width:100%;
+    padding:0;
+  }
 
-.precut_dl {
-    margin-bottom:5%;
-    
-    dt {
-        font-size:2.4rem;
-        color:$font-c-blue;
-        margin-bottom:1em;
-        line-height: 1.4;
-
-        @media all and (max-width:768px) {
-            font-size:2rem;
-        }
-
-        @media all and (max-width:540px) {
-            font-size:1.8rem;
-        }
+    .swiper,
+    .thumb-wrapper {
+        width:100%;
     }
 
-    dd {
-        margin:0;
+    .swiper {
+        overflow: visible;
     }
-}
 
-.precut_h2 {
-    margin-bottom:6%;
-}
+    .swiper-fade .swiper-slide {
+        -webkit-transition-property: opacity, -webkit-transform !important;
+        transition-property: opacity, -webkit-transform !important;
+        transition-property: opacity, transform !important;
+        transition-property: opacity, transform, -webkit-transform !important;
+        pointer-events: none;
+    }
 
-/*--====================================================
-    What PreCut　プレカットとは
-=====================================================*/
+    .swiper-fade .swiper-slide-active {
+        pointer-events: auto;
+    }
 
+    .swiper-controller {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 62.5%;
+    }
 
-/*====================================================
-    precut-advantage プレカットのメリット
-=====================================================*/
-.precut-advantage {
-    &_list {
-        li {
-            background:#fff;
-            padding:1% 5% 3%;
-            margin:2% 0;
+    .slide {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
 
-            .advantage_title {
-                border-bottom:solid 1px $border-c-gray;
-                vertical-align: middle;
+    .slide-media {
+        display: block;
+        padding-top: 62.5%;
+        border-radius: 4px;
+        width:100%;
 
-                .number {
-                    font-size:3.6rem;
-                    @include gradation-font;
-                    margin-right:0.3em;
-                }
-            }
-
-            dl {
-                dt {
-                    color:$font-c-blue;
-                    font-size:1.8rem;
-                    margin-bottom:0.5em;
-
-                    @media all and (max-width:768px) {
-                        line-height: 1.4;
-                    }
-                }
-
-                dd {
-                    margin:0;
-                }
-            }
+        img {
+            object-fit: contain;
         }
     }
-}
 
+    .slide-title {
+      font-weight: bold;
+      line-height: 1.6;
+      padding: 3.2rem 0;
+    }
 
-/*====================================================
-    precut-type プレカットの種類
-=====================================================*/
-.precut-type {
-    &_list {
-        display:flex;
-        flex-direction: column;
-        gap:2em;
+    .thumb-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3em;
 
-        li {
-            background:#fff;
-            padding:5% 5% 8%;
-            border-radius: 2rem;
-
-            .precut_h3 {
-                position:relative;
-                color:$font-c-blue;
-                font-size:2.2rem;
-                border-bottom: solid 1px $border-c-gray;
-                padding:0.5em 0.6em 0.5em 4rem;
-                vertical-align: middle;
-
-                &:after {
-                    display: inline-block;
-                    content: "";
-                    position: absolute;
-                    top: 55%;
-                    left: 1em;
-                    transform: translatey(-50%);
-                    width: 6px;
-                    height: 35%;
-                    background: $bk-g-c;
-                }
-            }
-        }
-
-        &_top {
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            gap:3rem;
-            margin-bottom:3rem;
-
-            @media all and (max-width:768px) {
-                grid-template-columns: 1fr;
-            }
-
-            &_pic {
-                max-width:585px;
-                max-height:auto;
-                margin:0 auto;
-            }
-        }
-
-        &_bottom {
-            &_pic {
-                display:grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap:2rem;
-            }
+        @media only screen and (max-width: 599px) {
+            grid-template-columns: repeat(5, 1fr);
         }
     }
-}
 
-/*====================================================
-    facility 設備
-=====================================================-*/
-.page_facility {
-    &_pic {
-        display:flex;
-        gap:2rem;
-        margin-top:5%;
+    .thumb-media {
+      padding-top: 100%;
+      cursor: pointer;
+      -webkit-transition: var(--transition);
+      transition: var(--transition);
+      height:15vw;
+      margin-bottom:10em;
+      overflow: inherit;
+    }
+
+    @media only screen and (min-width: 1025px) {
+        .thumb-media:hover {
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+        }
+        .thumb-media:hover img {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        }
+    }
+
+    .thumb-media img {
+      -webkit-transition: var(--transition);
+      transition: var(--transition);
+    }
+    .thumb-media-active {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+      opacity: 0.3;
+    }
+    .thumb-media-active img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
     }
 }
 

@@ -347,6 +347,7 @@ Template Name: Company
         </tr>
     </table>
     </div>
+    </div>
 
     </section>
 

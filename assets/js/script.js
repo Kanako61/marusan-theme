@@ -65,6 +65,45 @@ window.addEventListener('load',() => {
 
 
 /*---------------------------------------------------------------
+	事業内容スライド
+---------------------------------------------------------------*/
+
+(function() {
+  const thumb = document.querySelectorAll('.precut_list .thumb-media');
+  
+  const switchThumb = (index) => {
+    document.querySelector('.precut_list .thumb-media-active').classList.remove('thumb-media-active');
+    thumb[index].classList.add('thumb-media-active');
+  }
+  
+  const mySwiper = new Swiper('.precut_list .swiper', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 500,
+    navigation: {
+      nextEl: '.precut_list .swiper-button-next',
+      prevEl: '.precut_list .swiper-button-prev',
+    },
+    on: {
+      afterInit: (swiper) => {
+        thumb[swiper.realIndex].classList.add('thumb-media-active');
+        for (let i = 0; i < thumb.length; i++) {
+          thumb[i].onclick = () => {
+            swiper.slideTo(i);
+          };
+        }
+      },
+      slideChange: (swiper) => {
+        switchThumb(swiper.realIndex);
+      },
+    }
+  });
+  }());
+
+
+/*---------------------------------------------------------------
 	背景パララックス
 ---------------------------------------------------------------*/
 
@@ -209,15 +248,6 @@ function activateIndex(element) {
   const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
   newActiveIndex.classList.add('is-active');
 }
-
-
-
-/*===============================================================
-
-	お知らせ一覧ページ
-
-===============================================================*/
-
 
 
 
