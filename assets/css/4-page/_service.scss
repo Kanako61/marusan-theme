@@ -1,3 +1,20 @@
+/*--====================================================
+   事業案内共通
+=====================================================*/
+.service {
+    p, dl dt, dl dd {
+        line-height:2.2;
+    }
+}
+
+.page_precut_h2 {
+    text-align:center;
+}
+
+/*--====================================================
+   プレカットリスト
+=====================================================*/
+
 .precut_list {
   width:80vw;
   max-width: 1050px;
@@ -106,6 +123,95 @@
     }
 }
 
+/*--====================================================
+    その他の事業内容
+=====================================================*/
+
+.page_other-precut {
+    margin:0 auto;
+
+    &_inner {
+        max-width:1050px;
+        margin:0 auto 6%;
+
+        dt {
+            text-align:center;
+            font-size:2rem;
+            margin-bottom:8%;
+        }
+
+        dd {
+            margin:0;
+        }
+    }
+}
+
+.other-precut_box {
+    position:relative;
+    background:$bk-2;
+    padding:10% 0;
+
+    &:after {
+        position:absolute;
+        top:0;
+        left:70%;
+        transform:translatex(-50%);
+        display:inline-block;
+        content:'';
+        background:$bk-1;
+        width:15vw;
+        height:100%;
+    }
+}
+
+.other-precut_list {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    gap:5em;
+    max-width:1050px;
+    margin:0 auto;
+    z-index:2;
+
+    li {
+        display:flex;
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+    }   
+
+    &_dl {
+        width:50%;
+        background:#fff;
+        padding:8% 8%;
+        margin:0;
+
+        dt {
+            margin-bottom:14%;
+            text-align:center;
+            font-size:2rem;
+        }
+
+        dd {
+            margin:0;
+        }
+    }
+
+    &_img {
+        width:50%;
+
+        img {
+            object-fit: contain;
+        }
+
+    }
+}
+
+/*アクセス非表示*/
+.service .address {
+    display:none;
+}
 
 
 

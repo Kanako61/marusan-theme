@@ -1,143 +1,216 @@
-.initiatives_dl {
-    dt {
-        position:relative;
+/*--====================================================
+   取り組み共通
+=====================================================*/
+.effort {
+    p, dl dt, dl dd {
+        line-height:2.2;
+    }
+}
+
+/* トップ画像 */
+.page_title-pic {
+    position:relative;
+
+    .copy {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
         font-size:2.4rem;
-        color:$font-c-blue;
-        margin-bottom:1em;
-        line-height: 1.4;
-        padding:0.5em 0.6em 0.5em 4rem;
-        vertical-align: middle;
-        border-bottom: solid 1px $border-c-gray;
+        color:#fff;
+        text-align:center;
+        z-index:2;
 
         &:after {
-            display: inline-block;
-            content: "";
-            position: absolute;
-            top: 55%;
-            left: 1em;
-            transform: translatey(-50%);
-            width: 6px;
-            height: 35%;
-            background: $bk-g-c;
+            content:'';
+            display:inline-block;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width:(586/1440)*100vw;
+            height:(196/1440)*100vw;
+            background-image: url(assets/images/effort/main-image-item.svg);
+            background-repeat: no-repeat;
+            background-size:contain;
+            z-index:-1;
+        }
+    }
+}
+
+.effort_text {
+    max-width:1050px;
+    margin:8% auto;
+
+    dl {
+        position:relative;
+
+        &:before {
+            content:"";
+            display:inline-block;
+            position:absolute;
+            top:-5vw;
+            left:-10vw;
+            width:(311/1440)*100vw;
+            height:(580/1440)*100vw;
+            background-image:url(assets/images/effort/circle-item-01.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
-        @media all and (max-width:768px) {
-            font-size:2rem;
+        &:after {
+            content:"";
+            display:inline-block;
+            position:absolute;
+            top:-5vw;
+            right:-10vw;
+            width:(295/1440)*100vw;
+            height:(613/1440)*100vw;
+            background-image:url(assets/images/effort/circle-item-02.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
+    }
 
-        @media all and (max-width:540px) {
-            font-size:1.8rem;
-        }
+    dt {
+        text-align: center;
+        font-size:1.8rem;
+        margin-bottom:4%;
     }
 
     dd {
-        margin:0;
-    }
-}
-
-.initiatives_h2 {
-    margin-bottom:4em;
-}
-
-
-
-/*--====================================================
-    Quality Initiatives　品質への取り組み
-=====================================================*/
-.quality {
-    dl {
-        margin:0 0 6% 0;
-
-        dt {
-            margin-bottom:1em;
-        }
-        dd {
-            margin:0;
-        }
+        margin:0 auto;
     }
 
-    &_inner {
-        display:grid;
-        grid-template-columns: 1fr 1.6fr;
-        gap:2em;
+    &_pic {
+        width:60%;
+        max-width:618px;
+        margin:5% auto 2%!important;
 
-        @media all and (max-width:768px) {
-            display:block;
-
-            .quality_table {
-                margin-top:2em;
-            }
-        }
-
-        &_pic {
-            width:(375/1440)*100vw;
-            height:(166/1440)*100vw;
-            
-            @media all and (max-width:768px) {
-                width:60vw;
-                height:auto;
-            }
+        p {
+            text-align: center;
         }
     }
 }
 
-/*--====================================================
-   Environmental Initiatives　環境への取り組み
-=====================================================*/
-.sdgs-all_text {
-    margin-bottom:3em;
+.effort_img_pic {
+    position:relative;
+    max-width:930px;
+    margin:0 auto;
+
+    .copy {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        color:#fff;
+        font-size:2.4rem;
+        text-align: center;
+    }
 }
+
+
 .page_sdgs {
     &_list {
         display:flex;
         flex-direction: column;
         gap:6em;
 
-        &_item {
-            background:#fff;
-            padding:2em 2em 3em;
-            border-radius: 2rem;
-        }
-    }
-    .columns2 {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        place-content: center;
-        gap:3em;
 
-        @media all and (max-width:1000px) {
-            grid-template-columns:1fr;
-        }
+        li {
+            border-bottom:solid 1px $font-default-c;
+            padding-bottom:6em;
 
-        .page_sdgs_pic {
-            max-width:400px;
-            height:auto;
-        }
-    }
-
-    @media all and (max-width:1000px) {
-        .sp-layout {
-            .page_sdgs_pic {
-                order:1;
+            h2 {
+                width:50%;
+                font-size:1.8rem;
+                text-align: center;
             }
-        }
-    }
+            .list_item_inner-01 {
+                display:flex;
+                justify-content: space-between;
+                gap:2em;
+                margin-bottom:8%;
 
-    .margin-style {
-        margin-top:4em;
-    }
+                .sdgs_icon {
+                    display:flex;
 
-    /*SDGsアイコン*/
-    .sdgs_icon {
-        display:flex;
-        gap:1em;
-        flex-wrap:wrap;
+                    img {
+                        max-width:112px;
+                        max-height:112px;
+                    }
+                }
+            }
 
-        img {
-            max-width:80px;
-            max-height:80px;
+            .list_item_inner-02 {
+                display:flex;
+                gap:4em;
 
+                p {
+                    width:45%;
+                }
+
+                &_img {
+                    max-width:465px;
+                }
+            }
         }
     }
 }
 
+.quality {
+    max-width:1050px;
+    margin:0 auto;
+
+    h2 {
+        text-align:center;
+        margin-bottom:8%;
+    }
+
+    .quality_aq {
+        display:flex;
+        justify-content: space-between;
+        gap:4em;
+        margin-bottom:6%;
+
+        &_text {
+            width:45%;
+            border-bottom:solid 1px $font-default-c;
+        }
+
+        &_pic {
+            max-width:254px;
+            margin:0 auto;
+        }
+    }
+
+    .quality_more {
+        display:flex;
+        justify-content: space-between;
+        gap:4em;
+
+        &_list {
+            width:45%;
+
+            li {
+                dl {
+                    display:grid;
+                    grid-template-columns: 1fr 2fr;
+                    gap:3em;
+                    margin:0.5em 0;
+                }
+            }
+        }
+
+        &_pic {
+            max-width:342px;
+            margin:0 auto;
+        }
+    }
+}
+
+
+/*アクセス非表示*/
+.effort .address {
+    display:none;
+}

@@ -18,8 +18,8 @@ Template Name: service
 <!--page img-->
 <div class="page_title-pic">
 <picture>
-    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="プレカット">
+    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/page-service-bk.webp" type="image/webp">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/page-service-bk.jpg" alt="プレカット">
 </picture>
 </div>
 
@@ -36,7 +36,7 @@ Template Name: service
     プレカット
 =====================================================-->
 <section class="page_section page_precut">
-  <h2>プレカット</h2>
+  <h2 class="page_section_h2 page_precut_h2">プレカット</h2>
   <p>今や日本の住宅建築の当たり前となったプレカットは1995年に発生した阪神・淡路大震災の復興をきっかけに普及が広がりました。1935年創業以来、様々な住宅建築に携わってきたマルサンでは、プレカットが普及する前の1989年にプレカット工場を設立。35年以上に渡ってプレカットの先駆者としてプレカットの普及に尽力して参りました。対応可能な工法は在来工法だけでなく、あらゆる金物工法やパネル工法、2×4工法にも対応。今ではプレカットのみならず、吹付断熱の施工や建方工事の請負など、住宅建築を多方面にてサポート、ご提案致します。</p>
 </section>
 
@@ -49,8 +49,8 @@ Template Name: service
     <li class="thumb-media">
       <div class="thumb-media_img">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="在来工法">  
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-01.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-01.jpg" alt="在来工法">  
         </picture>
       </div>
       <p>在来工法</p>
@@ -59,8 +59,8 @@ Template Name: service
     <li class="thumb-media">
       <div class="thumb-media_img">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="金物工法">  
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-02.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-02.jpg" alt="金物工法">  
         </picture>
       </div>
       <p>金物工法</p>
@@ -69,8 +69,8 @@ Template Name: service
     <li class="thumb-media">
       <div class="thumb-media_img">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="パネル工法">  
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-03.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-03.jpg" alt="パネル工法">  
         </picture>
       </div>
       <p>パネル工法</p>
@@ -79,8 +79,8 @@ Template Name: service
     <li class="thumb-media">
       <div class="thumb-media_img">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="2×4工法">  
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-04.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-04.jpg" alt="2×4工法">  
         </picture>
       </div>
       <p>2×4工法</p>
@@ -94,8 +94,8 @@ Template Name: service
         <div class="slide">
           <div class="slide-media">
             <picture>
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="2×4工法">  
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-01.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-01.jpg" alt="2×4工法">  
             </picture>
           </div>
           <dl class="slide-title">
@@ -109,8 +109,8 @@ Template Name: service
         <div class="slide">
           <div class="slide-media">
             <picture>
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="2×4工法">  
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-02.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-02.jpg" alt="2×4工法">  
             </picture>
           </div>
           <dl class="slide-title">
@@ -124,8 +124,8 @@ Template Name: service
         <div class="slide">
           <div class="slide-media">
             <picture>
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="2×4工法">  
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-03.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-03.jpg" alt="2×4工法">  
             </picture>
           </div>
           <dl class="slide-title">
@@ -139,8 +139,8 @@ Template Name: service
         <div class="slide">
           <div class="slide-media">
             <picture>
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="2×4工法">  
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-04.webp" type="image/webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/slide-media-04.jpg" alt="2×4工法">  
             </picture>
           </div>
           <dl class="slide-title">
@@ -165,37 +165,79 @@ Template Name: service
   その他の事業
 
 =====================================================-->
-<section class="page_section page_precut">
-  <h2>プレカットを超えた取り組み</h2>
-  <p>プレカット工場設立から35年以上、住宅を取り巻く環境は時代と共に大きく変化してきました。住宅ニーズや働き手の環境、法改正など、様々な変化に対応していく必要が出てきています。マルサンでは住宅建築を多方面からサポート出来るように様々な事業を展開し続けていきます。</p>
+<section class="page_section page_other-precut">
+  <dl class="page_other-precut_inner">
+    <dt>プレカットを超えた取り組み</dt>
+    <dd>プレカット工場設立から35年以上、住宅を取り巻く環境は時代と共に大きく変化してきました。住宅ニーズや働き手の環境、法改正など、様々な変化に対応していく必要が出てきています。マルサンでは住宅建築を多方面からサポート出来るように様々な事業を展開し続けていきます。</dd>
+</dl>
 
-  <ul>
+<div class="other-precut_box">
+  <ul class="other-precut_list">
+    <!--建築資材-->
     <li>
-      <dl class="slide-title">
-        <dt>在来工法</dt>
-        <dd>日本で古くから伝わる伝統的工法。現代の建築基準に合わせて発展してきました。大工職人が現場で行っていた仕口や継手の加工をマルサンの工場にて完全自動化。職人技を機械化することで、伝統的工法を受け継ぎ、現代の住宅建築の安全・効率化を根本から支えます。</dd>  
+      <dl class="other-precut_list_dl">
+        <dt>建築資材</dt>
+        <dd>やり方材から住宅設備まで、建築に係るあらゆる部材を取り扱っております。短納期での配達も対応できますので、資材に関することは何でもお気軽にご相談ください。</dd>  
       </dl>
 
-      <div class="slide-media">
+      <div class="other-precut_list_img">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product/product-b.jpg" alt="2×4工法">  
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-01.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-01.jpg" alt="建築資材">  
         </picture>
       </div>
     </li>
+
+    <!--構造計算-->
+    <li>
+      <dl class="other-precut_list_dl">
+        <dt>構造計算</dt>
+        <dd>建築基準法改正によって構造計算を要する建物の範囲が拡大される見通しです。マルサンでは工務店様や建築事務所様に代わって構造計算業務をサポートすることが可能です。</dd>  
+      </dl>
+
+      <div class="other-precut_list_img">
+        <picture>
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-02.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-02.jpg" alt="構造計算">  
+        </picture>
+      </div>
+    </li>
+
+    <!--吹付断熱-->
+    <li>
+      <dl class="other-precut_list_dl">
+        <dt>吹付断熱</dt>
+        <dd>気密・断熱・防音性・耐久性に優れた吹付断熱によってより性能の高い家づくりが可能です。熱伝導率0.036W/mk、業界最高基準での施工をマルサンが行います。</dd>  
+      </dl>
+
+      <div class="other-precut_list_img">
+        <picture>
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-03.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-03.jpg" alt="吹付断熱">  
+        </picture>
+      </div>
+    </li>
+
+    <!--建て方-->
+    <li>
+      <dl class="other-precut_list_dl">
+        <dt>建方</dt>
+        <dd>マルサンで大工経験のある社員で建方班を結成。人手不足が深刻な建築現場をマルサンがプレカットから建方まで一貫して請け負います。</dd>  
+      </dl>
+
+      <div class="other-precut_list_img">
+        <picture>
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-04.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-04.jpg" alt="吹付断熱">  
+        </picture>
+      </div>
+    </li>
+
   </ul>
+</div>
 </section>
- 
 
 </div>
-
-<!--====================================================
-
-  Contact
-  お問い合わせ
-
-=====================================================-->
-<?php get_template_part('contact'); ?>
 
 </main>
 
