@@ -132,6 +132,19 @@ add_action('wp_enqueue_scripts', 'themes_file_scripts');
 
 
 
+// 記事ページのテンプレート設定
+function custom_load_single_template($template) {
+    if (is_single() && in_category('news')) {
+        return locate_template(array('single-news.php'));
+    } elseif (is_single() && in_category('case')) {
+        return locate_template(array('single-case.php'));
+    }
+    return $template;
+}
+add_filter('single_template', 'custom_load_single_template');
+
+
+
 
 
 

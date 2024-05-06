@@ -94,3 +94,18 @@ LOADING
         display:block;
     }
 }
+
+/*横幅*/
+.w-80v {
+    width:80vw;
+    margin:0 auto;
+
+    @media all and (max-width:768px) {
+        width:90vw;
+    }
+}
+
+/*行揃え*/
+.text-c {
+    text-align: center;
+}

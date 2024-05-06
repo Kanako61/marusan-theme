@@ -1,12 +1,74 @@
-/* case 共通 */
+/* news 共通 */
 .case_main .page_content {
     width:100%;
     max-width: none;
     margin:0;
 }
 
+.archive_news {
+    max-width:1050px;
+}
+
+/*トップ画像*/
+.category-news_pic {
+    position:relative;
+
+    .copy {
+        position:absolute;
+        top:40%;
+        transform: translatey(-50%);
+        right:20%;
+        font-size:2.4rem;
+
+        &:before {
+            position:absolute;
+            top:-3vw;
+            right:-4vw;
+            transform:translatey(-50%);
+            display:inline-block;
+            content:'';
+            width:(61/1440)*100vw;
+            height:(61/1440)*100vw;
+            background-image:url(assets/images/news/news-item-01.svg);
+            background-repeat: no-repeat;
+            background-size:contain;
+            z-index:2;
+        }
+
+        &:after {
+            position:absolute;
+            bottom:-9vw;
+            left:-4vw;
+            transform:translatey(-50%);
+            display:inline-block;
+            content:'';
+            width:(81/1440)*100vw;
+            height:(70/1440)*100vw;
+            background-image:url(assets/images/news/news-item-02.svg);
+            background-repeat: no-repeat;
+            background-size:contain;
+        }
+
+        &_text {
+            color:#fff;
+
+            &:after {
+                position:absolute;
+                bottom:-0.5vw;
+                right:-3vw;
+                transform:translatey(-50%);
+                display:inline-block;
+                content:'';
+                width:80%;
+                height:2px;
+                background:#fff;
+            }
+        }
+    }
+}
+
 /*リスト*/
-.category-case {
+.category-news {
     .category_header_title {
         p {
             font-size:2.4rem;
@@ -17,45 +79,89 @@
     &_pic {
         overflow: hidden;
     }
+}
 
-    &_ct {
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        width:80vw;
-        max-width:1200px;
-        margin:0 auto 8%;
-        gap:4em 3em;
+/*タイトル*/
+.category_news_title {
+    position:relative;
+    font-size:2.4rem;
+
+    &:before {
+        position:absolute;
+        top:50%;
+        left:0;
+        transform:translatey(-50%);
+        display:inline-block;
+        content:'';
+        width:(268/1440)*100vw;
+        height:(92/1440)*100vw;
+        background-image:url(assets/images/news/news-item-03.svg);
+        background-repeat: no-repeat;
+        background-size:contain;
+    }
+
+    &:after {
+        position:absolute;
+        top:50%;
+        right:0;
+        transform:translatey(-50%) rotate(180deg);
+        display:inline-block;
+        content:'';
+        width:(268/1440)*100vw;
+        height:(92/1440)*100vw;
+        max-width:268px;
+        max-height:92px;
+        background-image:url(assets/images/news/news-item-03.svg);
+        background-repeat: no-repeat;
+        background-size:contain;
+    }
+}
+
+
+/*リスト一覧*/
+.category_news {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    margin-bottom:10%;
+
+    .news_link {
+        position:relative;
+        display:block;
+        padding:1.5em 0 1em;
+
+        &:after {
+            position:absolute;
+            bottom:2em;
+            right:1em;
+            /*transform:translatey(-50%);*/
+            display:inline-block;
+            content:'';
+            width:21px;
+            height:15px;
+            background-image:url(assets/images/news/news-arrow-icon.svg);
+            background-repeat: no-repeat;
+            background-size:contain;
+        }
     }
 
     &_list {
-        position:relative;
+        border-bottom:solid 1px $border-c;
 
-        &:after {
-            display:inline-block;
-            content:'';
-            position:absolute;
-            top:-1em;
-            right:-1.5em;
-            width:1px;
-            height:calc(100% + 1em);
-            background:$font-default-c;
+        .item_meta {
+            li {
+                line-height: 2.8;
+            }
         }
 
-        &:nth-child(3n):after{
-            display:none;
+        .item_inner {
+            display:flex;
+            gap:2em;
+
+            .new-icon {
+                width:4em;
+            }
         }
-
-        /*サムネイル*/
-        .item_pic {
-            margin-bottom:1em;
-        }
-
-
-        /*タイトル*/
-        .item_title {
-            text-align: center;
-        }
-
     }
 }
 

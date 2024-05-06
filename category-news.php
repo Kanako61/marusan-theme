@@ -4,58 +4,57 @@
  */
 
 get_header(); ?>
-<main class="l-contents-main archive_main">
-<div class="archive_container">
-	<div class="content__wrap">
-    <h1 class="archive_header_title content-title fadein">
-	<!--archiveのタイトル取得-->
-	<p class="en">NEWS</p><br>
-	<p class="ja"><?php if ( is_category() ) : ?>
-		<?php single_cat_title(); ?>
-		<?php else: ?>		
-	<?php endif; ?></p>
+<main class="l-contents-main category_main category-news_main">
+<div class="category_container">
+	<!--トップの画像-->
+	<div class="page_pic category-news_pic">
+		<picture>
+			<source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/page-news-bk.webp" type="image/webp">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/npage-news-bk.jpg" alt="お知らせ">
+		</picture>
+		<div class="copy">
+			<p class="copy_text">明日の家づくりを創る</p>
+		</div>
+    </div>
+	
+    <h1 class="category_header_title content-title category_news_title text-c">
+		<!--categoryのタイトル取得-->
+		<p class="ja"><?php if ( is_category() ) : ?>
+			<?php single_cat_title(); ?>
+			<?php else: ?>		
+		<?php endif; ?></p>
     </h1>
 
-	<!-- ローディング画面 -->
-	<!--
-	<div id="loading">
-    	<p>Loading...</p>
-    	<div id="loading-screen"></div>
-	</div>
-	-->
 		
-	<article class="archive_news">
+	<article class="category_news w-80v">
 	<?php if(have_posts() ) : ?>
 		<?php
 			while (have_posts() ) :
 			the_post();
 		?>
-        <ul class="archive_news_list">
-			<li class="archive__list_item fadein">
+        <ul class="category_news_list">
+		<a href="<?php the_permalink(); ?>" class="news_link">
+			<li class="category__list_item">
 				<ul class="item_meta">
-
-                    <!--アイキャッチ画像表示-->
-					<li class="item_pic">
-						<a href="<?php the_permalink(); ?>">
-						<?php if(has_post_thumbnail() ): ?>
-							<?php the_post_thumbnail('item_meta_thumbnail'); ?>
-								<?php else: ?>
-									<img src="<?php echo esc_url(get_template_directory_uri() ); ?>/assets/images/dummy-image.png" alt="">
-						<?php endif; ?>
-						</a>
-                    </li>
-
 					<li class="item_inner">
-                    	<div id="post-<?php the_ID(); ?>"<?php post_class('item_category'); ?>><?php the_category(''); ?></div>
-						<time class="item_time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d')?></time>
+						<time class="item_time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d')?></time>
+						<div class="new-icon">
+						<?php
+							$day  = 7; // 表示させる期間の日数を入れます
+							$today = date_i18n('U');
+							$post_day = get_the_time('U');
+							$term = date('U',($today - $post_day)) / 86400;
+							if( $day > $term ){
+								echo 'new!';
+							}
+							?>
+						</div>
 					</li>
 
-					<li class="item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-
-                    <!--本文抜粋表示-->
-					<!--<li class="item_excerpt"><?php echo mb_substr( get_the_excerpt(), 0, 40); ?></li>-->
+					<li class="item_title"><?php the_title(); ?></li>
 				</ul>
 			</li>
+			</a>
 		</ul>
 		<?php endwhile; ?>
 	<?php endif; ?>
@@ -65,7 +64,7 @@ get_header(); ?>
 </main>
 
 <!--ページネーションここから-->
-<nav class="navigation pagination" role="navigation" aria-label="投稿">
+<nav class="navigation pagination news" role="navigation" aria-label="投稿">
 <?php the_posts_pagination(
     array(
         'mid_size'  => 5, // 現在ページの左右に表示するページ番号の数

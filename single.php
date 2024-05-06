@@ -1,4 +1,16 @@
 <?php
+$post = $wp_query->post;
+if ( in_category('news') ):
+    include(TEMPLATEPATH . '/single-news.php'); 
+elseif ( in_category('case') ):
+    include(TEMPLATEPATH . '/single-case.php'); 
+else:
+    include(TEMPLATEPATH . '/single.php'); 
+endif;
+?>
+
+
+<?php
 /**
  * 投稿詳細ページテンプレート
 

@@ -1,14 +1,39 @@
-/* case 共通 */
-.case_main .page_content {
+/* news 共通 */
+.single_main .page_content {
     width:100%;
     max-width: none;
     margin:0;
 }
 
+.single-news_main {
+    padding-top:10em;
+}
 
+.single_news_title {
+    margin:0;
+
+     p {
+        font-size:2.4rem;
+     }
+}
+
+.single-news {
+    &_list {
+        border-bottom: solid 2px $border-c;
+        padding:1em 0;
+    }
+
+    &_title {
+        font-size:2rem;
+    }
+
+    &_time {
+        text-align:end;
+    }
+}
 
 /*アクセス非表示*/
-.category-case .address {
+.category-news .address {
     display:none;
 }
 
