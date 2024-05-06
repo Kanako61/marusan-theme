@@ -13,7 +13,7 @@ Template Name: service
     <div id="loading-screen"></div>
 </div>-->
 
-<main class="l-contents-main page_main">
+<main class="l-contents-main page_main service_main">
 
 <!--page img-->
 <div class="page_title-pic">
@@ -53,7 +53,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-01.jpg" alt="在来工法">  
         </picture>
       </div>
-      <p>在来工法</p>
+      <p class="precut_tit">在来工法</p>
     </li>
 
     <li class="thumb-media">
@@ -63,7 +63,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-02.jpg" alt="金物工法">  
         </picture>
       </div>
-      <p>金物工法</p>
+      <p class="precut_tit">金物工法</p>
     </li>
 
     <li class="thumb-media">
@@ -73,7 +73,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-03.jpg" alt="パネル工法">  
         </picture>
       </div>
-      <p>パネル工法</p>
+      <p class="precut_tit">パネル工法</p>
     </li>
 
     <li class="thumb-media">
@@ -83,11 +83,11 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-04.jpg" alt="2×4工法">  
         </picture>
       </div>
-      <p>2×4工法</p>
+      <p class="precut_tit">2×4工法</p>
     </li>
   </ul><!-- /thumb -->
 
-    <ul class="swiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden">
+    <ul class="swiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden precut_list_c">
       <div class="swiper-wrapper" id="swiper-wrapper-8311066e659334865" aria-live="polite" style="transition-duration: 0ms;">
 
       <li class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 10" style="width: 720px; opacity: 0; transform: translate3d(-4320px, 0px, 0px); transition-duration: 0ms;">
@@ -99,7 +99,7 @@ Template Name: service
             </picture>
           </div>
           <dl class="slide-title">
-            <dt>在来工法</dt>
+            <dt class="text-c">在来工法</dt>
             <dd>日本で古くから伝わる伝統的工法。現代の建築基準に合わせて発展してきました。大工職人が現場で行っていた仕口や継手の加工をマルサンの工場にて完全自動化。職人技を機械化することで、伝統的工法を受け継ぎ、現代の住宅建築の安全・効率化を根本から支えます。</dd>  
           </dl>
         </div>
@@ -114,7 +114,7 @@ Template Name: service
             </picture>
           </div>
           <dl class="slide-title">
-            <dt>金物工法</dt>
+            <dt class="text-c">金物工法</dt>
             <dd>在来工法における継手や仕口を金物同士によって接合させる工法。在来工法と比較すると、木材の断面欠損が少ない為、より高強度で安定した建築が可能です。金物は工場にてあらかじめ取り付けられ、現場ではドリフトピンを打つのみの為、熟練技術を必要としない施工が可能です。</dd>  
           </dl>
         </div>
@@ -129,7 +129,7 @@ Template Name: service
             </picture>
           </div>
           <dl class="slide-title">
-            <dt>パネル工法</dt>
+            <dt class="text-c">パネル工法</dt>
             <dd>在来工法に加えて構造用合板を用いて耐震性向上を図る工法です。構造用合板と柱材等を組み立てることでパネルを作成します。パネルにあらかじめ断熱材を接着するため、現場での工期短縮や気密・断熱性能の向上を実現します。また、あらゆるパネル工法にも対応が可能です。</dd>  
           </dl>
         </div>
@@ -144,8 +144,8 @@ Template Name: service
             </picture>
           </div>
           <dl class="slide-title">
-            <dt>在来工法</dt>
-            <dd>日本で古くから伝わる伝統的工法。現代の建築基準に合わせて発展してきました。大工職人が現場で行っていた仕口や継手の加工をマルサンの工場にて完全自動化。職人技を機械化することで、伝統的工法を受け継ぎ、現代の住宅建築の安全・効率化を根本から支えます。</dd>  
+            <dt class="text-c">2×4工法</dt>
+            <dd>2×4材を用いて枠組を作成し、構造用合板を用いてパネルを構成していきます。床・壁・屋根を一体化させ「六面体構造」を形成することで高い耐震性と耐久性を実現可能です。マルサンの工場にてパネルを作成するため、現場ではパネルを組み合わせるだけで施工が可能になります。</dd>  
           </dl>
         </div>
       </li>

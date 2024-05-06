@@ -11,18 +11,45 @@
     text-align:center;
 }
 
+.service_main .page_content {
+    width:100%;
+    max-width: none;
+    margin:0;
+}
+
+/*--====================================================
+   プレカット
+=====================================================*/
+.page_precut {
+    width:80vw;
+    max-width: 1050px;
+    margin:10% auto;
+}
+
 /*--====================================================
    プレカットリスト
 =====================================================*/
-
 .precut_list {
-  width:80vw;
-  max-width: 1050px;
-  margin: auto;
+    position:relative;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom:(140/1440)*100vw;
+        left: 0;
+        width: 100%;
+        height:(489/1440)*100vw;
+        background-image: url(assets/images/service/page-service-item-02.svg);
+        background-repeat:repeat-x;
+        background-size: contain;
+    }
 
   .l-inner {
-    width:100%;
     padding:0;
+    width:80vw;
+    max-width: 1050px;
+    margin: auto;
   }
 
     .swiper,
@@ -42,10 +69,6 @@
         pointer-events: none;
     }
 
-    .swiper-fade .swiper-slide-active {
-        pointer-events: auto;
-    }
-
     .swiper-controller {
         position: absolute;
         top: 0;
@@ -62,9 +85,10 @@
 
     .slide-media {
         display: block;
-        padding-top: 62.5%;
+        /*padding-top: 62.5%;*/
         border-radius: 4px;
         width:100%;
+        height:auto;
 
         img {
             object-fit: contain;
@@ -72,33 +96,102 @@
     }
 
     .slide-title {
-      font-weight: bold;
-      line-height: 1.6;
-      padding: 3.2rem 0;
+      padding: 26% 18%;
+      background:#fff;
+
+      dt {
+        font-size:2rem;
+        margin-bottom:26%;
+      }
+
+      dd {
+        margin:0;
+        line-height: 2.4;
+      }
+    }
+
+    .thumb-media.swiper-slide-active {
+        pointer-events: auto;
     }
 
     .thumb-wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 3em;
+        margin-bottom:15%;
 
         @media only screen and (max-width: 599px) {
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
     .thumb-media {
-      padding-top: 100%;
-      cursor: pointer;
-      -webkit-transition: var(--transition);
-      transition: var(--transition);
-      height:15vw;
-      margin-bottom:10em;
-      overflow: inherit;
+        position:relative;
+        /*padding-top: 100%;*/
+        cursor: pointer;
+        -webkit-transition: var(--transition);
+        transition: var(--transition);
+        width:100%;
+        height:auto;
+        overflow:inherit;
+
+        &_img {
+            position:relative;
+            margin-bottom:2em;
+        }
+
+      img {
+        position:relative;
+      }
+
+      .precut_tit {
+        position:relative;
+        display:inline-block;
+        left:50%;
+        transform: translatex(-50%);
+        padding:0.5em 0.5em;
+      }
+    }
+
+
+    .thumb-media-active {
+        .thumb-media_img {
+            position:relative;
+
+            &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: -8%;
+                left: -8%;
+                width: 116%;
+                height: 116%;
+                background-image: url(assets/images/service/page-service-item-01.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .precut_tit {
+            position:relative;
+            border-bottom: solid 2px $border-c;
+
+            &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -6vw;
+                left: 50%;
+                transform: translatex(-50%);
+                width: 2px;
+                height: 4vw;
+                background: $border-c;
+            }
+        }
     }
 
     @media only screen and (min-width: 1025px) {
-        .thumb-media:hover {
+        /*.thumb-media:hover {
         -webkit-transform: scale(0.9);
                 transform: scale(0.9);
         }
@@ -106,9 +199,9 @@
         -webkit-transform: scale(1.1);
                 transform: scale(1.1);
         }
-    }
+    }*/
 
-    .thumb-media img {
+    /*.thumb-media img {
       -webkit-transition: var(--transition);
       transition: var(--transition);
     }
@@ -120,9 +213,9 @@
     .thumb-media-active img {
       -webkit-transform: scale(1.1);
               transform: scale(1.1);
+    }*/
     }
 }
-
 /*--====================================================
     その他の事業内容
 =====================================================*/
