@@ -37,7 +37,7 @@
         position:absolute;
         top:0;
         right:0;
-        width:(70/1440)*100vw;
+        width:4vw;
         height:100%;
         background:$company-h2-bk_pt01-2;
     }
@@ -112,6 +112,17 @@
         position:relative;
         padding-top:(1000/1440)*100vw;
 
+        &:after {
+            content:'';
+            display:inline-block;
+            width:100%;
+            height:(45/1440)*100vw;
+            position:absolute;
+            bottom:-3.125vw;
+            left:0;
+            background:$main-bottom;
+        }
+
         .message_pic {
             position:absolute;
             top:0;
@@ -119,16 +130,23 @@
             width:100%;
             height:(1000/1440)*100vw;
             overflow: hidden;
+
+            img {
+                height:100%;
+            }
         }
 
         .page_company_h2 {
             position:absolute;
-            top:(200/1440)*100vw;
+            top:(280/1440)*100vw;
             right:0;
             z-index:2;
             width:50%;
             background:$company-h2-bk;
-            font-size:(30/1440)*100vw;
+
+            @media all and (min-width:1440px) {
+                font-size:(30/1440)*100vw;
+            }
 
             &:after {
                 display:inline-block;
@@ -164,13 +182,18 @@
     .message_bottom {
         max-width:1200px;
         width:80vw;
-        margin:8% auto;
+        margin:10% auto 8%;
+
+        @media all and (max-width:768px) {
+            margin:16% auto 10%;
+        }
 
         &_text {
             margin:0;
 
             dt {
                 text-align: center;
+                font-size:1.8rem;
                 font-weight: bold;
                 margin-bottom:5%;
             }
@@ -276,13 +299,16 @@
         .page_company_h2 {
             position:absolute;
             z-index:2;
-            width:30vw;
+            width:40vw;
             top:45%;
-            left:calc(50% + 5em);
-            transform: translatey(-50%, -50%);
+            right:0;
+            transform: translatey(-50%);
             background:rgba(0, 0 ,0, 0.3);
-            max-width:670px;
             padding:0.2em (70/1440)*100vw 0.2em 0em;
+
+            @media all and (min-width:1440px) {
+                font-size:(30/1440)*100vw;
+            }
 
             &:before {
                 display:inline-block;
@@ -293,6 +319,11 @@
                 border-top: 2.2em solid rgba(0, 0 ,0, 0.3);
                 border-bottom: 2.2em solid transparent;
                 border-left: 2.2em solid transparent;
+                line-height: 0;
+
+                @media all and (max-width:1439px) {
+                    left:-2.19em;
+                }
             }
 
             &:after {
@@ -301,7 +332,7 @@
                 position:absolute;
                 top:0;
                 right:0;
-                width:(70/1440)*100vw;
+                width:4vw;
                 height:100%;
                 background:$bk-4;
             }
@@ -321,13 +352,17 @@
     }
 }
 
-.overview_table {
+.company_table {
     position:relative;
     width:80vw;
     max-width:1200px;
     margin:0 auto;
     padding:12% 0;
     background:#fff;
+
+    @media all and (max-width:768px) {
+        width:90vw;
+    }
 
     th {
         position:relative;
@@ -339,6 +374,11 @@
         font-weight:bold;
         vertical-align: baseline;
 
+        @media all and (max-width:768px) {
+            width:6em;
+            padding:1.5em;
+        }
+
         &:after {
             position:absolute;
             top:1.5em;
@@ -348,11 +388,19 @@
             width:3px;
             height:2em;
             background:$border-c;
+
+            @media all and (max-width:768px) {
+                width:1.5px;
+            }
         }
     }
 
     td {
         padding:0em 2.5em;
+
+        @media all and (max-width:768px) {
+            padding: 0 1.5em;
+        }
     }
 
     &_address {
@@ -392,6 +440,10 @@
         width:4vw;
         height:100%;
         z-index:-1;
+
+        @media all and (max-width:768px) {
+            display:none;
+        }
     }
 
     .page_company_h2.pattern02 {
@@ -406,7 +458,7 @@
             position:absolute;
             top:0;
             left:0;
-            width:(70/1440)*100vw;
+            width:4vw;
             height:100%;
             background:$company-h2-bk_pt02-2;
         }
@@ -421,7 +473,6 @@
     width:80vw;
     max-width:1200px;
     margin:0 auto;
-    background:#fff;
 
     @media all and (max-width: 768px) {
         width:90vw;
@@ -438,30 +489,43 @@
 
             dl {
                 display:grid;
-                grid-template-columns: 1fr 4fr;
-                align-items: self-start;
+                grid-template-columns:1fr 9fr;
                 gap:6em;
                 margin:0;
 
+                @media all and (max-width:768px) {
+                    gap:3em;
+                }
+
                 dt {
+                    width:6.5em;
                     position:relative;
                     padding:0 0 2em;
+
+                    @media all and (max-width:768px) {
+                        font-size:1.3rem;
+                    }
 
                     &:before {
                         position:absolute;
                         top:0;
-                        right:0;
+                        right:-3em;
                         content:'';
                         display:inline-block;
                         background:$border-c;
                         width:3px;
                         height:100%;
+
+                        @media all and (max-width:768px) {
+                            right:-1.5em;
+                            width:1.5px;
+                        }
                     }
 
                     &:after {
                         position:absolute;
                         top:0;
-                        right:-0.5em;
+                        right:-3.5em;
                         content:'';
                         display:inline-block;
                         background:#fff;
@@ -469,11 +533,20 @@
                         height:1.2em;
                         border:solid 3px $border-c;
                         border-radius: 3em;
+
+                        @media all and (max-width:768px) {
+                            right:-2em;
+                            border:solid 2px $border-c;
+                        }
                     }
 
                     .year {
                         font-size:2.6rem;
                         padding:1em 0;
+
+                        @media all and (max-width:768px) {
+                            font-size:2rem;
+                        }
                     }
                 }
 
@@ -489,7 +562,7 @@
 
 
 /*====================================================
-　　History　設備
+　　Facility　設備
 =====================================================*/
 .page_facility {
     position:relative;
@@ -497,17 +570,10 @@
 
     .page_company_h2 {
         margin-top:10%;
-    }
 
-    &:before {
-        position:absolute;
-        top:40%;
-        right:4vw;
-        content:'';
-        background:$bk-1;
-        width:4vw;
-        height:60%;
-        z-index:-1;
+        @media all and (max-width:768px) {
+            transform:translatex(0);
+        }
     }
 
     &:after {
@@ -519,21 +585,46 @@
         width:4vw;
         height:60%;
         z-index:-1;
+
+        @media all and (max-width:768px) {
+            display:none;
+        }
     }
 
     &_inner {
         width:80vw;
         max-width:1200px;
         margin:0 auto;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+        }
     }
 
     .company_table {
+        background:inherit;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+            margin-bottom:10%;
+        }
+
+        th {
+            width:8em;
+        }
+
         &_scale {
-            display:flex;
-            gap:3em;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:2.5em;
+
+            @media all and (max-width:1000px) {
+                grid-template-columns:1fr;
+                gap:0;
+            }
 
             dt {
-                width:14em;
+                width:18em;
             }
     
             dd {
