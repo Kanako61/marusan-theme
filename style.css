@@ -114,6 +114,15 @@ LOADING
   }
 }
 
+.pc_br {
+  display: block;
+}
+@media all and (max-width: 540px) {
+  .pc_br {
+    display: none;
+  }
+}
+
 .tab_br {
   display: none;
 }
@@ -992,6 +1001,12 @@ LOADING
 .address_list li .address_dl_list li dl dt {
   width: 5em;
 }
+.address_list li .address_dl_list li dl dd {
+  color: #fff;
+}
+.address_list li .address_dl_list li dl dd a {
+  color: #fff;
+}
 
 /*===============================================================
 　footernav
@@ -1115,7 +1130,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 540px) {
   .contact {
-    margin: 20% 8vw 30%;
+    margin: 25% 8vw 40%;
   }
 }
 .contact:before {
@@ -1163,7 +1178,7 @@ p, a, li, dl dt, dl dd {
   position: relative;
   max-width: 980px;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 3;
 }
 .contact_inner:before {
   content: "";
@@ -1190,14 +1205,18 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
 }
 .contact_text {
+  position: relative;
   margin-bottom: 8%;
   text-align: center;
+  z-index: 2;
 }
 .contact_content {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8%;
+  z-index: 2;
 }
 @media all and (max-width: 768px) {
   .contact_content {
@@ -1249,9 +1268,8 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
 }
 .contact .contact_mail a:hover {
-  filter: brightness(0.96);
+  filter: brightness(0.8);
   transform: translatey(-8px);
-  letter-spacing: 0.15em;
 }
 
 /*グロナビここから*/
@@ -1480,9 +1498,8 @@ p, a, li, dl dt, dl dd {
   transition: all 0.2s;
 }
 .top-button a:hover {
-  filter: brightness(0.96);
+  filter: brightness(0.8);
   transform: translatey(-8px);
-  letter-spacing: 0.15em;
 }
 
 /*Google Mapボタン*/
@@ -1592,7 +1609,7 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
 }
 .page_recruit_btn a:hover {
-  filter: brightness(0.96);
+  filter: brightness(0.8);
   transform: translatey(-8px);
 }
 
@@ -1637,7 +1654,7 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
 }
 .mail-form a:hover {
-  filter: brightness(0.96);
+  filter: brightness(0.8);
   transform: translatey(-8px);
 }
 
@@ -2246,7 +2263,8 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 540px) {
   .top_company .company_c {
-    margin: 40% 10vw 30%;
+    margin: 40% 5vw 30%;
+    text-align: left;
   }
 }
 .top_company .company_c:after {
@@ -2311,7 +2329,8 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .top_service_c {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    margin: 0 5vw;
     gap: 3em;
   }
 }
@@ -2337,6 +2356,11 @@ p, a, li, dl dt, dl dd {
   background: #fff;
   padding: 10% 12%;
 }
+@media all and (max-width: 540px) {
+  .top_service_left {
+    padding: 10% 10%;
+  }
+}
 .top_service_left_text {
   max-width: 330px;
   margin: 0 auto 20%;
@@ -2354,7 +2378,9 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 768px) {
   .top_service_img {
-    height: 50vh;
+    height: 60vw;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
   }
 }
 .top_service_img img {
@@ -2394,8 +2420,11 @@ p, a, li, dl dt, dl dd {
   margin: 10% auto;
   padding: 10% 0 10%;
   background-image: url(assets/images/top/top-workflow-bk.svg);
-  background-repeat: repeat-x;
-  background-size: 100% cover;
+}
+@media all and (max-width: 540px) {
+  .top_workflow {
+    padding: 15% 0 15%;
+  }
 }
 .top_workflow .top_h2 {
   position: relative;
@@ -2433,6 +2462,11 @@ p, a, li, dl dt, dl dd {
     gap: 3em;
   }
 }
+@media all and (max-width: 540px) {
+  .top_workflow_inner {
+    margin: 0 5vw;
+  }
+}
 .top_workflow .inner_box {
   padding: 35% 12% 15%;
   background: #fff;
@@ -2443,23 +2477,32 @@ p, a, li, dl dt, dl dd {
     padding: 20% 12% 15%;
   }
 }
+@media all and (max-width: 540px) {
+  .top_workflow .inner_box {
+    padding: 20% 10% 15%;
+  }
+}
 .top_workflow_img {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   grid-area: a;
-}
-@media all and (max-width: 768px) {
-  .top_workflow_img {
+  /*@media all and (max-width:768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  li {
+    @media all and (max-width:768px) {
+      width:48%;
+      gap:1em;
+    }
+  }*/
 }
-@media all and (max-width: 768px) {
-  .top_workflow_img li {
-    width: 48%;
-    gap: 1em;
+@media all and (max-width: 540px) {
+  .top_workflow_img {
+    width: 90vw;
   }
 }
 .top_workflow_dl dt {
@@ -2492,16 +2535,41 @@ p, a, li, dl dt, dl dd {
 
 ===============================================================*/
 .top_case {
+  position: relative;
   max-width: 1220px;
   margin: 0 auto;
+  z-index: 2;
+}
+.top_case .top_h2 {
+  margin-bottom: 8%;
+}
+@media all and (max-width: 768px) {
+  .top_case .top_h2 {
+    margin-bottom: 15%;
+  }
 }
 @media all and (max-width: 1200px) {
   .top_case {
     margin: 0 8vw 8%;
   }
 }
+@media all and (max-width: 540px) {
+  .top_case {
+    margin: 20% 5vw 28%;
+  }
+}
 .top_case_img {
   margin-bottom: 10%;
+}
+@media all and (max-width: 768px) {
+  .top_case_img {
+    height: 38vw;
+  }
+}
+@media all and (max-width: 768px) {
+  .top_case_img img {
+    height: 100%;
+  }
 }
 .top_case_text {
   position: relative;
@@ -2516,6 +2584,11 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 1000px) {
   .top_case_text {
     width: 80%;
+  }
+}
+@media all and (max-width: 540px) {
+  .top_case_text {
+    width: 94%;
   }
 }
 .top_case_text:before {
@@ -2561,9 +2634,6 @@ p, a, li, dl dt, dl dd {
   .top_case_text:after {
     right: -6vw;
   }
-}
-.top_case .top_h2 {
-  margin-bottom: 5%;
 }
 
 .top_case_bk {
@@ -2667,13 +2737,19 @@ p, a, li, dl dt, dl dd {
     padding: 5% 6% 8%;
   }
 }
+@media all and (max-width: 540px) {
+  .top_effort_inner {
+    margin: 0 5vw;
+    padding: 15% 6% 18%;
+  }
+}
 .top_effort_text {
   max-width: 520px;
   margin: 0 auto 18%;
 }
 .top_effort .top-button {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 /*===============================================================
@@ -2685,6 +2761,11 @@ p, a, li, dl dt, dl dd {
   position: relative;
   padding: 15% 0;
   z-index: 2;
+}
+@media all and (max-width: 540px) {
+  .top_news {
+    padding: 25% 0;
+  }
 }
 .top_news:before {
   content: "";
@@ -2736,6 +2817,11 @@ p, a, li, dl dt, dl dd {
     margin: 0 8vw;
   }
 }
+@media all and (max-width: 540px) {
+  .top_news_inner {
+    margin: 0 5vw;
+  }
+}
 .top_news_content {
   position: relative;
   margin-bottom: 25%;
@@ -2766,6 +2852,11 @@ p, a, li, dl dt, dl dd {
   .top_news_meta {
     background: #fff;
     padding: 0 5% 10%;
+  }
+}
+@media all and (max-width: 540px) {
+  .top_news_meta {
+    padding: 0 0 10%;
   }
 }
 .top_news_meta_list {
@@ -2803,6 +2894,11 @@ p, a, li, dl dt, dl dd {
 ===============================================================*/
 .top_recruit {
   margin: 12% auto;
+}
+@media all and (max-width: 540px) {
+  .top_recruit {
+    margin: 22% auto 20%;
+  }
 }
 .top_recruit_inner {
   position: relative;
@@ -2853,6 +2949,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 540px) {
   .top_recruit_text {
+    width: 90%;
     padding: 15% 5%;
   }
 }
@@ -2952,6 +3049,11 @@ p, a, li, dl dt, dl dd {
 .top_recruit .recruit_text {
   text-align: center;
   margin-bottom: 8%;
+}
+@media all and (max-width: 540px) {
+  .top_recruit .recruit_text {
+    text-align: left;
+  }
 }
 
 /* Company 共通 */

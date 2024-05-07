@@ -87,6 +87,14 @@ LOADING
     }
 }
 
+.pc_br {
+    display:block;
+ 
+    @media all and (max-width:540px) {
+        display:none;
+    }
+}
+
 .tab_br {
     display:none;
 

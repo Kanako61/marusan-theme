@@ -51,7 +51,7 @@
 <section class="top_company top_section">
   <div class="company_c">
     <h2 class="top_h2">創業90年</h2>
-    <p class="company_c_text">これまで住宅業界の課題をプレカットによって解決してきました。<br class="pc_br">これからは住宅・非住宅問わず、<br class="pc_br">建築業界の未来を支える会社として活躍していきます。</p>
+    <p class="company_c_text">これまで住宅業界の課題をプレカットによって解決してきました。<br>これからは住宅・非住宅問わず、<br class="pc_br">建築業界の未来を支える会社として活躍していきます。</p>
     <div class="top-button">
       <a href="<?php echo home_url('/'); ?>company">会社概要</a>
     </div>
@@ -151,11 +151,11 @@
 <!--====================================================
 
   Case Studies
-  導入事例
+  納入う事例
 
 ====================================================-->
 <section class="top_case top_section">
-  <h2 class="top_h2">導入事例</h2>
+  <h2 class="top_h2">納入事例</h2>
   <div class="top_case_img">
     <picture>
       <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.webp" type="image/webp">
@@ -164,7 +164,7 @@
   </div>
   <p class="top_case_text">これまで当社のプレカットによって建てられた建物は4万棟以上。<br class="pc_br">日本における近代住宅建築の発展と共に歩んできました。数えきれない導入の一例と、住宅の垣根を超えた建築の実例を紹介します。</p>
   <div class="top-button">
-    <a href="<?php echo home_url('/'); ?>case">より詳しく</a>
+    <a href="<?php echo get_term_link('case', 'category'); ?>">より詳しく</a>
   </div>
 </section>
 

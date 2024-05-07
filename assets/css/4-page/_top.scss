@@ -197,7 +197,8 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     }
 
     @media all and (max-width:540px) {
-      margin:40% 10vw 30%;
+      margin:40% 5vw 30%;
+      text-align:left;
     }
 
     &:after {
@@ -263,7 +264,8 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
     @media all and (max-width:768px) {
       display:flex;
-      flex-direction: column-reverse;
+      flex-direction:column;
+      margin:0 5vw;
       gap:3em;
     }
 
@@ -292,6 +294,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   background:#fff;
   padding:10% 12%;
 
+  @media all and (max-width:540px) {
+    padding:10% 10%;
+  }
+
   &_text {
     max-width:330px;
     margin:0 auto 20%;
@@ -312,7 +318,9 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
  &_img {
   @media all and (max-width:768px) {
-    height:50vh;
+    height:60vw;
+    width: 100vw;
+    margin:0 calc(50% - 50vw);
   }
 
   img {
@@ -361,8 +369,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   margin:10% auto;
   padding:10% 0 10%;
   background-image:url(assets/images/top/top-workflow-bk.svg);
-  background-repeat: repeat-x;
-  background-size: 100% cover;
+
+  @media all and (max-width:540px) {
+    padding:15% 0 15%;
+  }
 
   .top_h2 {
     position:relative;
@@ -399,6 +409,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
       flex-direction: column;
       gap:3em;
     }
+
+    @media all and (max-width:540px) {
+      margin:0 5vw;
+    }
   }
 
   .inner_box {
@@ -408,7 +422,11 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
     @media all and (max-width:768px) {
       padding:20% 12% 15%;
-   }
+    }
+
+    @media all and (max-width:540px) {
+      padding:20% 10% 15%;
+    }
   }
 
   &_img {
@@ -417,7 +435,11 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     gap:0.5em;
     grid-area:a;
 
-    @media all and (max-width:768px) {
+    @media all and (max-width:540px) {
+      width:90vw;
+    }
+
+    /*@media all and (max-width:768px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -428,7 +450,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
         width:48%;
         gap:1em;
       }
-    }
+    }*/
   }
 
   &_dl {
@@ -468,15 +490,40 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
 ===============================================================*/
 .top_case {
+  position:relative;
   max-width:1220px;
   margin:0 auto;
+  z-index:2;
+
+  .top_h2 {
+    margin-bottom:8%;
+
+    @media all and (max-width:768px) {
+      margin-bottom:15%;
+    }
+  }
+
 
   @media all and (max-width:1200px) {
     margin:0 8vw 8%;
   }
 
+  @media all and (max-width:540px) {
+    margin:20% 5vw 28%;
+  }
+
   &_img {
     margin-bottom:10%;
+
+    @media all and (max-width:768px) {
+      height:38vw;
+    }
+
+    img {
+      @media all and (max-width:768px) {
+        height:100%;
+      }
+    }
   }
 
   &_text {
@@ -490,6 +537,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
     @media all and (max-width:1000px) {
       width:80%;
+    }
+
+    @media all and (max-width:540px) {
+      width:94%;
     }
 
     &:before {
@@ -533,10 +584,6 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
         right:-6vw;
       }
     }
-  }
-
-  .top_h2 {
-    margin-bottom:5%;
   }
 }
 
@@ -645,6 +692,11 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
       margin:0 8vw;
       padding:5% 6% 8%;
     }
+
+    @media all and (max-width:540px) {
+      margin:0 5vw;
+      padding:15% 6% 18%;
+    }
   }
 
   &_text {
@@ -654,7 +706,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
   .top-button {
     position:relative;
-    z-index:3;
+    z-index:2;
   }
 }
 
@@ -669,6 +721,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   position:relative;
   padding:15% 0;
   z-index:2;
+
+  @media all and (max-width:540px) {
+    padding:25% 0;
+  }
 
   &:before {
     content:'';
@@ -722,6 +778,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     @media all and (max-width:1050px) {
       margin:0 8vw;
     }
+
+    @media all and (max-width:540px) {
+      margin:0 5vw;
+    }
   }
 
   &_content {
@@ -756,6 +816,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     @media all and (max-width:768px) {
       background:#fff;
       padding:0 5% 10%;
+    }
+
+    @media all and (max-width:540px) {
+      padding:0 0 10%;
     }
 
 
@@ -797,6 +861,10 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 ===============================================================*/
 .top_recruit {
   margin:12% auto;
+
+  @media all and (max-width:540px) {
+    margin:22% auto 20%;
+  }
 
   &_inner {
     position:relative;
@@ -852,6 +920,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     padding:8% 5%;
 
     @media all and (max-width:540px) {
+      width:90%;
       padding:15% 5%;
     }
 
@@ -951,5 +1020,9 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   .recruit_text{
     text-align: center;
     margin-bottom:8%;
+
+    @media all and (max-width:540px) {
+      text-align: left;
+    }
   }
 }
