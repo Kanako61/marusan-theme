@@ -43,7 +43,7 @@ Template Name: effort
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-logo.webp" type="image/webp">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-logo.png" alt="マルサン×DUDTAINABLE DEVELOPMENT GOALS">
         </picture>
-        <p class="ffort_text_pic_p">私たちは持続可能な開発目標（SDGs）を支援しています。</p>
+        <p class="effort_text_pic_p">私たちは持続可能な開発目標（SDGs）を支援しています。</p>
     </dd>
 </dl>
 </section>
@@ -64,9 +64,9 @@ Template Name: effort
 
 <ul class="page_sdgs_list">
 <!--ワークライフバランスと健康経営-->
-<li class="page_sdgs_list_item 01">
+<li class="page_sdgs_list_item item-01">
     <div class="list_item_inner-01">
-        <h2>ワークライフバランスと健康経営</h2>
+        <h2 class="page_sdgs_h2">ワークライフバランスと健康経営</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-03.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-05.png">
@@ -76,7 +76,7 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-02">
-        <p>長時間労働の抑制や有給休暇の取得を会社から社員へ促し、社員のライフスタイルに応じた職場環境の整備を推進しています。  定期健康診断やメンタルヘルスチェック等の健康増進への支援や外国人技能実習生の労働環境整備を通じて社員の健康維持を大切にしています。</p>
+        <p class="item-01_text">長時間労働の抑制や有給休暇の取得を会社から社員へ促し、社員のライフスタイルに応じた職場環境の整備を推進しています。  定期健康診断やメンタルヘルスチェック等の健康増進への支援や外国人技能実習生の労働環境整備を通じて社員の健康維持を大切にしています。</p>
 
         <div class="list_item_inner-02_img">
             <picture>
@@ -87,16 +87,16 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-03">
-        <p>健康経営優良法人認定制度とは、地域の健康課題に即した取組や日本健康会議が進める健康増進の取組をもとに、特に優良な健康経営を実践している大企業や中小企業等の法人を顕彰する制度です。<br>
+        <p class="item-01_text02">健康経営優良法人認定制度とは、地域の健康課題に即した取組や日本健康会議が進める健康増進の取組をもとに、特に優良な健康経営を実践している大企業や中小企業等の法人を顕彰する制度です。<br>
         当社は2021年度から継続して健康経営優良法人の認定を受けています。</p>
     </div>
 </li>
 
 
 <!--社会問題の解決-->
-<li class="page_sdgs_list_item 02">
+<li class="page_sdgs_list_item item-02">
     <div class="list_item_inner-01">
-        <h2>社会問題の解決</h2>
+        <h2 class="page_sdgs_h2">社会問題の解決</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-08.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-09.png">
@@ -107,15 +107,15 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-03">
-        <p>プレカット部材の導入により、建設現場での生産性向上や工期短縮による人手不足の解消に貢献しています。また、工場でプレカット加工を行うことで、建設現場での廃棄物の削減や騒音問題の解決に貢献しています。</p>
+        <p class="item-01_text01">プレカット部材の導入により、建設現場での生産性向上や工期短縮による人手不足の解消に貢献しています。<br>また、工場でプレカット加工を行うことで、建設現場での廃棄物の削減や騒音問題の解決に貢献しています。</p>
     </div>
 </li>
 
 
 <!--DXの推進​-->
-<li class="page_sdgs_list_item 03">
+<li class="page_sdgs_list_item item-03">
     <div class="list_item_inner-01">
-        <h2>DXの推進</h2>
+        <h2 class="page_sdgs_h2">DXの推進</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-08.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-09.png">
@@ -125,16 +125,17 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-03">
-        <p>ＤＸ推進室を設置し、年度計画の中で取組み方針を策定。各種業務のＩＴ化を推進しています。<br>
+        <p class="item-01_text01">ＤＸ推進室を設置し、年度計画の中で取組み方針を策定。各種業務のＩＴ化を推進しています。<br>
         また、情報を一元管理する社内管理システムを構築し、全社での情報共有、業務効率の改善に取組んでいます。</p>
     </div>
 </li>
 
 
 <!--資源循環型社会の実現と省エネ-->
-<li class="page_sdgs_list_item 04">
+<li class="page_sdgs_list_item
+item-04">
     <div class="list_item_inner-01">
-        <h2>資源循環型社会の実現と省エネ</h2>
+        <h2 class="page_sdgs_h2">資源循環型社会の実現と省エネ</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-07.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-12.png">
@@ -144,7 +145,7 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-02">
-        <p>プレカット加工時に発生するおがくずを畜産農家に提供し、堆肥として再利用しています。また、端材についても間柱等のオリジナル製品や、家庭用暖房の燃料として再利用しています。<br>照明設備や製造ライン等を導入する際は、省エネ設備を積極的に採用し、エネルギー使用量の削減に取組みます。</p>
+        <p class="item-01_text01">プレカット加工時に発生するおがくずを畜産農家に提供し、堆肥として再利用しています。また、端材についても間柱等のオリジナル製品や、家庭用暖房の燃料として再利用しています。<br>照明設備や製造ライン等を導入する際は、省エネ設備を積極的に採用し、エネルギー使用量の削減に取組みます。</p>
 
         <div class="list_item_inner-02_img">
             <picture>
@@ -157,7 +158,7 @@ Template Name: effort
 
 
 <!--地域経済の活性化-->
-<li class="page_sdgs_list_item 04">
+<li class="page_sdgs_list_item item-05">
     <div class="list_item_inner-01">
         <h2>地域経済の活性化</h2>
         <div class="sdgs_icon">
@@ -169,7 +170,7 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-02">
-        <p>県産材や国産材の利用を推奨し、地域資源の有効活用を促進します。<br>さらに、就業体験や工場見学会を開催し、地元福島県で開催される地域イベントへの参加を通じて地域活性化への貢献を行っています。</p>
+        <p class="item-01_text01">県産材や国産材の利用を推奨し、地域資源の有効活用を促進します。<br>さらに、就業体験や工場見学会を開催し、地元福島県で開催される地域イベントへの参加を通じて地域活性化への貢献を行っています。</p>
 
         <div class="list_item_inner-02_img">
             <picture>
