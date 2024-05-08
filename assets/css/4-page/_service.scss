@@ -5,6 +5,26 @@
     p, dl dt, dl dd {
         line-height:2.2;
     }
+
+    /*トップ画像*/
+    .page_title-pic {
+
+        @media all and (min-width:1000px) {
+            height:80vh;
+
+            img {
+                height:100%;
+            }
+        }
+
+        @media all and (max-width:768px) {
+            height:50vh;
+
+            img {
+                height:100%;
+            }
+        }
+    }
 }
 
 .page_precut_h2 {
@@ -17,6 +37,14 @@
     margin:0;
 }
 
+.service .p_br {
+    display:none;
+    
+    @media all and (max-width:540px) {
+        display:block;
+    }
+}
+
 /*--====================================================
    プレカット
 =====================================================*/
@@ -24,32 +52,29 @@
     width:80vw;
     max-width: 1050px;
     margin:10% auto;
-}
+
+    @media all and (max-width:768px) {
+        margin:20% auto;
+    }
+ }
 
 /*--====================================================
    プレカットリスト
 =====================================================*/
 .precut_list {
     position:relative;
+    margin-bottom:8%;
 
-    &:after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        bottom:(140/1440)*100vw;
-        left: 0;
-        width: 100%;
-        height:(489/1440)*100vw;
-        background-image: url(assets/images/service/page-service-item-02.svg);
-        background-repeat:repeat-x;
-        background-size: contain;
+    @media all and (max-width:768px) {
+        margin-bottom:20%;
     }
 
   .l-inner {
+    width:100%;
     padding:0;
-    width:80vw;
-    max-width: 1050px;
-    margin: auto;
+    background-image: url(assets/images/service/page-service-item-02.svg);
+    background-repeat: repeat-x;
+    background-position:bottom 20% left 0;
   }
 
     .swiper,
@@ -59,6 +84,28 @@
 
     .swiper {
         overflow: visible;
+        width:80vw;
+        max-width: 1050px;
+        margin: auto;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+        }
+    }
+
+    .swiper-wrapper {
+        position:relative;
+
+        &:after {
+            position:absolute;
+            top:0;
+            left:0;
+            content:'';
+            display:inline-block;
+            width:65%;
+            height:2px;
+            background:$border-c;
+        }
     }
 
     .swiper-fade .swiper-slide {
@@ -81,32 +128,64 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         overflow: hidden;
+
+        @media all and (max-width:768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .slide-media {
         display: block;
-        /*padding-top: 62.5%;*/
         border-radius: 4px;
         width:100%;
         height:auto;
 
+        @media all and (max-width:768px) {
+            padding-top: 62.5%;
+        }
+
         img {
-            object-fit: contain;
+            object-fit: cover;
         }
     }
 
     .slide-title {
+      position:relative;
       padding: 26% 18%;
       background:#fff;
+      margin:0;
+
+      @media all and (max-width:768px) {
+        padding: 18% 8%;
+      }
+
+      &:after {
+        position:absolute;
+        bottom:0;
+        right:0;
+        content:'';
+        width:70%;
+        height:2px;
+        display:inline-block;
+        background:$border-c;
+    }
 
       dt {
         font-size:2rem;
         margin-bottom:26%;
+
+        @media all and (max-width:768px) {
+            margin-bottom:10%;
+          }
       }
 
       dd {
         margin:0;
         line-height: 2.4;
+
+        p {
+            font-size:1.5rem!important;
+        }
       }
     }
 
@@ -118,16 +197,27 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 3em;
-        margin-bottom:15%;
+        width:80vw;
+        max-width: 1050px;
+        margin: auto;
+        margin-bottom:6em;
 
-        @media only screen and (max-width: 599px) {
-            grid-template-columns: repeat(4, 1fr);
+        @media all and (max-width:768px) {
+            width:90vw;
+            gap:1.5em;
+        }
+
+        @media all and (max-width:540px) {
+            margin-bottom:3.5em;
+        }
+
+        @media all and (max-width:375px) {
+            gap:0.6em;
         }
     }
 
     .thumb-media {
         position:relative;
-        /*padding-top: 100%;*/
         cursor: pointer;
         -webkit-transition: var(--transition);
         transition: var(--transition);
@@ -138,6 +228,10 @@
         &_img {
             position:relative;
             margin-bottom:2em;
+
+            @media all and (max-width:540px) {
+                margin-bottom:1em;
+            }
         }
 
       img {
@@ -150,6 +244,12 @@
         left:50%;
         transform: translatex(-50%);
         padding:0.5em 0.5em;
+
+        @media all and (max-width:540px) {
+            font-size:12px;
+            text-align: center;
+            line-height:1.6;
+        }
       }
     }
 
@@ -174,18 +274,38 @@
 
         .precut_tit {
             position:relative;
-            border-bottom: solid 2px $border-c;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -0.5em;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: $border-c;
+
+                @media all and (max-width:540px) {
+                   display:none;
+                }
+            }
 
             &:after {
                 content: "";
                 display: inline-block;
                 position: absolute;
-                bottom: -6vw;
+                bottom: -6em;
                 left: 50%;
                 transform: translatex(-50%);
                 width: 2px;
-                height: 4vw;
+                height: 3.5em;
                 background: $border-c;
+
+                @media all and (max-width:540px) {
+                    width: 1.5px;
+                    bottom: -3.5em;
+                    height: 3em;
+                }
             }
         }
     }
@@ -224,13 +344,23 @@
     margin:0 auto;
 
     &_inner {
+        width:80vw;
         max-width:1050px;
         margin:0 auto 6%;
+
+        @media all and (max-width:768px) {
+            margin:0 auto 15%;
+        }
 
         dt {
             text-align:center;
             font-size:2rem;
-            margin-bottom:8%;
+            margin-bottom:4%;
+
+            @media all and (max-width:768px) {
+                margin-bottom:8%;
+                line-height:1.8!important;
+            }
         }
 
         dd {
@@ -243,6 +373,10 @@
     position:relative;
     background:$bk-2;
     padding:10% 0;
+
+    @media all and (max-width:768px) {
+        padding:15% 0;
+    }
 
     &:after {
         position:absolute;
@@ -262,15 +396,29 @@
     display:flex;
     flex-direction: column;
     gap:5em;
+    width:80vw;
     max-width:1050px;
     margin:0 auto;
     z-index:2;
 
+    @media all and (max-width:768px) {
+        width:90vw;
+        gap:3em;
+    }
+
     li {
         display:flex;
 
+        @media all and (max-width:540px) {
+            flex-direction: column-reverse;
+        }
+
         &:nth-child(2n) {
             flex-direction: row-reverse;
+
+            @media all and (max-width:540px) {
+                flex-direction: column-reverse;
+            }
         }
     }   
 
@@ -280,10 +428,20 @@
         padding:8% 8%;
         margin:0;
 
+        @media all and (max-width:540px) {
+            width:100%;
+            padding:12% 8%;
+        }
+
         dt {
             margin-bottom:14%;
             text-align:center;
             font-size:2rem;
+
+            @media all and (max-width:768px) {
+                margin-bottom:8%;
+            }
+
         }
 
         dd {
@@ -294,8 +452,14 @@
     &_img {
         width:50%;
 
+        @media all and (max-width:540px) {
+            width:100%;
+            height:60vw;
+        }
+
         img {
-            object-fit: contain;
+            object-fit: cover;
+            height:100%;
         }
 
     }

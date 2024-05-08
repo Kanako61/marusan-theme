@@ -3758,8 +3758,27 @@ p, a, li, dl dt, dl dd {
 /*--====================================================
    事業案内共通
 =====================================================*/
+.service {
+  /*トップ画像*/
+}
 .service p, .service dl dt, .service dl dd {
   line-height: 2.2;
+}
+@media all and (min-width: 1000px) {
+  .service .page_title-pic {
+    height: 80vh;
+  }
+  .service .page_title-pic img {
+    height: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .service .page_title-pic {
+    height: 50vh;
+  }
+  .service .page_title-pic img {
+    height: 100%;
+  }
 }
 
 .page_precut_h2 {
@@ -3772,6 +3791,15 @@ p, a, li, dl dt, dl dd {
   margin: 0;
 }
 
+.service .p_br {
+  display: none;
+}
+@media all and (max-width: 540px) {
+  .service .p_br {
+    display: block;
+  }
+}
+
 /*--====================================================
    プレカット
 =====================================================*/
@@ -3780,30 +3808,30 @@ p, a, li, dl dt, dl dd {
   max-width: 1050px;
   margin: 10% auto;
 }
+@media all and (max-width: 768px) {
+  .page_precut {
+    margin: 20% auto;
+  }
+}
 
 /*--====================================================
    プレカットリスト
 =====================================================*/
 .precut_list {
   position: relative;
+  margin-bottom: 8%;
 }
-.precut_list:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  bottom: 9.7222222222vw;
-  left: 0;
-  width: 100%;
-  height: 33.9583333333vw;
-  background-image: url(assets/images/service/page-service-item-02.svg);
-  background-repeat: repeat-x;
-  background-size: contain;
+@media all and (max-width: 768px) {
+  .precut_list {
+    margin-bottom: 20%;
+  }
 }
 .precut_list .l-inner {
+  width: 100%;
   padding: 0;
-  width: 80vw;
-  max-width: 1050px;
-  margin: auto;
+  background-image: url(assets/images/service/page-service-item-02.svg);
+  background-repeat: repeat-x;
+  background-position: bottom 20% left 0;
 }
 .precut_list .swiper,
 .precut_list .thumb-wrapper {
@@ -3811,6 +3839,27 @@ p, a, li, dl dt, dl dd {
 }
 .precut_list .swiper {
   overflow: visible;
+  width: 80vw;
+  max-width: 1050px;
+  margin: auto;
+}
+@media all and (max-width: 768px) {
+  .precut_list .swiper {
+    width: 90vw;
+  }
+}
+.precut_list .swiper-wrapper {
+  position: relative;
+}
+.precut_list .swiper-wrapper:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 65%;
+  height: 2px;
+  background: #BFB9B1;
 }
 .precut_list .swiper-fade .swiper-slide {
   transition-property: opacity, transform !important;
@@ -3828,28 +3877,62 @@ p, a, li, dl dt, dl dd {
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
 }
+@media all and (max-width: 768px) {
+  .precut_list .slide {
+    grid-template-columns: 1fr;
+  }
+}
 .precut_list .slide-media {
   display: block;
-  /*padding-top: 62.5%;*/
   border-radius: 4px;
   width: 100%;
   height: auto;
 }
+@media all and (max-width: 768px) {
+  .precut_list .slide-media {
+    padding-top: 62.5%;
+  }
+}
 .precut_list .slide-media img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .precut_list .slide-title {
+  position: relative;
   padding: 26% 18%;
   background: #fff;
+  margin: 0;
+}
+@media all and (max-width: 768px) {
+  .precut_list .slide-title {
+    padding: 18% 8%;
+  }
+}
+.precut_list .slide-title:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: inline-block;
+  background: #BFB9B1;
 }
 .precut_list .slide-title dt {
   font-size: 2rem;
   margin-bottom: 26%;
 }
+@media all and (max-width: 768px) {
+  .precut_list .slide-title dt {
+    margin-bottom: 10%;
+  }
+}
 .precut_list .slide-title dd {
   margin: 0;
   line-height: 2.4;
+}
+.precut_list .slide-title dd p {
+  font-size: 1.5rem !important;
 }
 .precut_list .thumb-media.swiper-slide-active {
   pointer-events: auto;
@@ -3858,16 +3941,29 @@ p, a, li, dl dt, dl dd {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3em;
-  margin-bottom: 15%;
+  width: 80vw;
+  max-width: 1050px;
+  margin: auto;
+  margin-bottom: 6em;
 }
-@media only screen and (max-width: 599px) {
+@media all and (max-width: 768px) {
   .precut_list .thumb-wrapper {
-    grid-template-columns: repeat(4, 1fr);
+    width: 90vw;
+    gap: 1.5em;
+  }
+}
+@media all and (max-width: 540px) {
+  .precut_list .thumb-wrapper {
+    margin-bottom: 3.5em;
+  }
+}
+@media all and (max-width: 375px) {
+  .precut_list .thumb-wrapper {
+    gap: 0.6em;
   }
 }
 .precut_list .thumb-media {
   position: relative;
-  /*padding-top: 100%;*/
   cursor: pointer;
   transition: var(--transition);
   width: 100%;
@@ -3878,6 +3974,11 @@ p, a, li, dl dt, dl dd {
   position: relative;
   margin-bottom: 2em;
 }
+@media all and (max-width: 540px) {
+  .precut_list .thumb-media_img {
+    margin-bottom: 1em;
+  }
+}
 .precut_list .thumb-media img {
   position: relative;
 }
@@ -3887,6 +3988,13 @@ p, a, li, dl dt, dl dd {
   left: 50%;
   transform: translatex(-50%);
   padding: 0.5em 0.5em;
+}
+@media all and (max-width: 540px) {
+  .precut_list .thumb-media .precut_tit {
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.6;
+  }
 }
 .precut_list .thumb-media-active .thumb-media_img {
   position: relative;
@@ -3905,18 +4013,39 @@ p, a, li, dl dt, dl dd {
 }
 .precut_list .thumb-media-active .precut_tit {
   position: relative;
-  border-bottom: solid 2px #BFB9B1;
+}
+.precut_list .thumb-media-active .precut_tit:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #BFB9B1;
+}
+@media all and (max-width: 540px) {
+  .precut_list .thumb-media-active .precut_tit:before {
+    display: none;
+  }
 }
 .precut_list .thumb-media-active .precut_tit:after {
   content: "";
   display: inline-block;
   position: absolute;
-  bottom: -6vw;
+  bottom: -6em;
   left: 50%;
   transform: translatex(-50%);
   width: 2px;
-  height: 4vw;
+  height: 3.5em;
   background: #BFB9B1;
+}
+@media all and (max-width: 540px) {
+  .precut_list .thumb-media-active .precut_tit:after {
+    width: 1.5px;
+    bottom: -3.5em;
+    height: 3em;
+  }
 }
 @media only screen and (min-width: 1025px) {
   .precut_list {
@@ -3952,13 +4081,25 @@ p, a, li, dl dt, dl dd {
   margin: 0 auto;
 }
 .page_other-precut_inner {
+  width: 80vw;
   max-width: 1050px;
   margin: 0 auto 6%;
+}
+@media all and (max-width: 768px) {
+  .page_other-precut_inner {
+    margin: 0 auto 15%;
+  }
 }
 .page_other-precut_inner dt {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 8%;
+  margin-bottom: 4%;
+}
+@media all and (max-width: 768px) {
+  .page_other-precut_inner dt {
+    margin-bottom: 8%;
+    line-height: 1.8 !important;
+  }
 }
 .page_other-precut_inner dd {
   margin: 0;
@@ -3968,6 +4109,11 @@ p, a, li, dl dt, dl dd {
   position: relative;
   background: #e2f1f2;
   padding: 10% 0;
+}
+@media all and (max-width: 768px) {
+  .other-precut_box {
+    padding: 15% 0;
+  }
 }
 .other-precut_box:after {
   position: absolute;
@@ -3986,15 +4132,32 @@ p, a, li, dl dt, dl dd {
   display: flex;
   flex-direction: column;
   gap: 5em;
+  width: 80vw;
   max-width: 1050px;
   margin: 0 auto;
   z-index: 2;
 }
+@media all and (max-width: 768px) {
+  .other-precut_list {
+    width: 90vw;
+    gap: 3em;
+  }
+}
 .other-precut_list li {
   display: flex;
 }
+@media all and (max-width: 540px) {
+  .other-precut_list li {
+    flex-direction: column-reverse;
+  }
+}
 .other-precut_list li:nth-child(2n) {
   flex-direction: row-reverse;
+}
+@media all and (max-width: 540px) {
+  .other-precut_list li:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
 }
 .other-precut_list_dl {
   width: 50%;
@@ -4002,10 +4165,21 @@ p, a, li, dl dt, dl dd {
   padding: 8% 8%;
   margin: 0;
 }
+@media all and (max-width: 540px) {
+  .other-precut_list_dl {
+    width: 100%;
+    padding: 12% 8%;
+  }
+}
 .other-precut_list_dl dt {
   margin-bottom: 14%;
   text-align: center;
   font-size: 2rem;
+}
+@media all and (max-width: 768px) {
+  .other-precut_list_dl dt {
+    margin-bottom: 8%;
+  }
 }
 .other-precut_list_dl dd {
   margin: 0;
@@ -4013,9 +4187,16 @@ p, a, li, dl dt, dl dd {
 .other-precut_list_img {
   width: 50%;
 }
+@media all and (max-width: 540px) {
+  .other-precut_list_img {
+    width: 100%;
+    height: 60vw;
+  }
+}
 .other-precut_list_img img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 /*アクセス非表示*/

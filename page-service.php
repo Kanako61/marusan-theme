@@ -53,7 +53,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-01.jpg" alt="在来工法">  
         </picture>
       </div>
-      <p class="precut_tit">在来工法</p>
+      <p class="precut_tit">在来<br class="p_br">工法</p>
     </li>
 
     <li class="thumb-media">
@@ -63,7 +63,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-02.jpg" alt="金物工法">  
         </picture>
       </div>
-      <p class="precut_tit">金物工法</p>
+      <p class="precut_tit">金物<br class="p_br">工法</p>
     </li>
 
     <li class="thumb-media">
@@ -73,7 +73,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-03.jpg" alt="パネル工法">  
         </picture>
       </div>
-      <p class="precut_tit">パネル工法</p>
+      <p class="precut_tit">パネル<br class="p_br">工法</p>
     </li>
 
     <li class="thumb-media">
@@ -83,7 +83,7 @@ Template Name: service
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/thumb-media-04.jpg" alt="2×4工法">  
         </picture>
       </div>
-      <p class="precut_tit">2×4工法</p>
+      <p class="precut_tit">2×4<br class="p_br">工法</p>
     </li>
   </ul><!-- /thumb -->
 
@@ -100,7 +100,7 @@ Template Name: service
           </div>
           <dl class="slide-title">
             <dt class="text-c">在来工法</dt>
-            <dd>日本で古くから伝わる伝統的工法。現代の建築基準に合わせて発展してきました。大工職人が現場で行っていた仕口や継手の加工をマルサンの工場にて完全自動化。職人技を機械化することで、伝統的工法を受け継ぎ、現代の住宅建築の安全・効率化を根本から支えます。</dd>  
+            <dd><p>日本で古くから伝わる伝統的工法。現代の建築基準に合わせて発展してきました。大工職人が現場で行っていた仕口や継手の加工をマルサンの工場にて完全自動化。職人技を機械化することで、伝統的工法を受け継ぎ、現代の住宅建築の安全・効率化を根本から支えます。</p></dd>  
           </dl>
         </div>
       </li>
@@ -115,7 +115,7 @@ Template Name: service
           </div>
           <dl class="slide-title">
             <dt class="text-c">金物工法</dt>
-            <dd>在来工法における継手や仕口を金物同士によって接合させる工法。在来工法と比較すると、木材の断面欠損が少ない為、より高強度で安定した建築が可能です。金物は工場にてあらかじめ取り付けられ、現場ではドリフトピンを打つのみの為、熟練技術を必要としない施工が可能です。</dd>  
+            <dd><p>在来工法における継手や仕口を金物同士によって接合させる工法。在来工法と比較すると、木材の断面欠損が少ない為、より高強度で安定した建築が可能です。金物は工場にてあらかじめ取り付けられ、現場ではドリフトピンを打つのみの為、熟練技術を必要としない施工が可能です。</p></dd>  
           </dl>
         </div>
       </li>
@@ -130,7 +130,7 @@ Template Name: service
           </div>
           <dl class="slide-title">
             <dt class="text-c">パネル工法</dt>
-            <dd>在来工法に加えて構造用合板を用いて耐震性向上を図る工法です。構造用合板と柱材等を組み立てることでパネルを作成します。パネルにあらかじめ断熱材を接着するため、現場での工期短縮や気密・断熱性能の向上を実現します。また、あらゆるパネル工法にも対応が可能です。</dd>  
+            <dd><p>在来工法に加えて構造用合板を用いて耐震性向上を図る工法です。構造用合板と柱材等を組み立てることでパネルを作成します。パネルにあらかじめ断熱材を接着するため、現場での工期短縮や気密・断熱性能の向上を実現します。また、あらゆるパネル工法にも対応が可能です。</p></dd>  
           </dl>
         </div>
       </li>
@@ -145,19 +145,20 @@ Template Name: service
           </div>
           <dl class="slide-title">
             <dt class="text-c">2×4工法</dt>
-            <dd>2×4材を用いて枠組を作成し、構造用合板を用いてパネルを構成していきます。床・壁・屋根を一体化させ「六面体構造」を形成することで高い耐震性と耐久性を実現可能です。マルサンの工場にてパネルを作成するため、現場ではパネルを組み合わせるだけで施工が可能になります。</dd>  
+            <dd><p>2×4材を用いて枠組を作成し、構造用合板を用いてパネルを構成していきます。床・壁・屋根を一体化させ「六面体構造」を形成することで高い耐震性と耐久性を実現可能です。マルサンの工場にてパネルを作成するため、現場ではパネルを組み合わせるだけで施工が可能になります。</p></dd>  
           </dl>
         </div>
       </li>
+    </div>
     </ul><!-- /swiper-wrapper -->
 
       <!--<div class="swiper-controller">
         <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-8311066e659334865" aria-disabled="false"></div>
         <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-8311066e659334865" aria-disabled="false"></div>
       </div>-->
-    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><!-- /swiper-main -->
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
 
-  </div>
+  </div><!-- /swiper-main -->
 </section>
 
 <!--====================================================
@@ -167,9 +168,9 @@ Template Name: service
 =====================================================-->
 <section class="page_section page_other-precut">
   <dl class="page_other-precut_inner">
-    <dt>プレカットを超えた取り組み</dt>
+    <dt>プレカットを超えた<br class="sp_br">取り組み</dt>
     <dd>プレカット工場設立から35年以上、住宅を取り巻く環境は時代と共に大きく変化してきました。住宅ニーズや働き手の環境、法改正など、様々な変化に対応していく必要が出てきています。マルサンでは住宅建築を多方面からサポート出来るように様々な事業を展開し続けていきます。</dd>
-</dl>
+  </dl>
 
 <div class="other-precut_box">
   <ul class="other-precut_list">
