@@ -1,14 +1,96 @@
-/* case 共通 */
-.case_main .page_content {
+/*single 共通*/
+.single-post .single_content {
+    margin:5% auto 30%;
+}
+
+.single_main .page_content {
     width:100%;
     max-width: none;
     margin:0;
 }
 
+.single-case_main {
+    padding-top:10em;
+
+    .single_container {
+        max-width:900px;
+        margin:0 auto;
+    }
+}
+
+/*カテゴリータイトル*/
+.single_case_title {
+    position:relative;
+    margin:0;
+    padding:0 0 8% 0;
+
+    &:after {
+        content:'';
+        display:inline-block;
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%);
+        background:$border-c;
+        width:60%;
+        height:1px;
+    }
+
+     p {
+        font-size:2.4rem;
+     }
+}
+
+/*タイトル*/
+.single_case_h2 {
+    background:none!important;
+    border:none!important;
+    font-size:2rem!important;
+    font-weight:400!important;
+    text-align:center;
+    color:$font-default-c!important;
+    letter-spacing: 0.2em!important;
+    margin:0 auto 2em!important;
+
+    @media all and (max-width:768px) {
+        font-size:1.6rem!important;
+    }
+}
+
+/*画像*/
+.single_case_image {
+    width:100vw;
+    margin: 0 calc(50% - 50vw) 15%;
+    position:relative;
+    padding:10% 0 10%;
+    background-image:url(assets/images/news/case-item-bk.svg);
+    background-position:top 18vw left 0;
+    background-repeat: repeat-x;
+}
+
+.single_case_gallery {
+    width:80vw;
+    max-width:900px;
+    display:flex;
+    flex-direction: column;
+    gap:3em;
+    margin:0 auto;
+
+    @media all and (max-width:768px) {
+        width:90vw;
+        gap:1.5em;
+    }
+}
+
+/*テキスト*/
+.single_case_text {
+    line-height:2;
+    letter-spacing: 0.2em;
+}
 
 
 /*アクセス非表示*/
-.category-case .address {
+.single-post .address {
     display:none;
 }
 

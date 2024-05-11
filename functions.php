@@ -144,6 +144,17 @@ function custom_load_single_template($template) {
 add_filter('single_template', 'custom_load_single_template');
 
 
+//Lazy BlocksのText Areaの出力に改行を入れる
+function my_custom_lazyblock_handlebars_helper ( $handlebars )
+{
+    //  {{{nl2br hoge}}}
+    $handlebars->registerHelper('nl2br', function ($data) {
+        return nl2br($data);
+    });
+}
+add_action( 'lzb_handlebars_object', 'my_custom_lazyblock_handlebars_helper' );
+
+
 
 
 

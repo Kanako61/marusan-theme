@@ -62,7 +62,6 @@ get_header(); ?>
 	</article>
 	</div>
 </div><!-- .container -->
-</main>
 
 <!--ページネーションここから-->
 <nav class="navigation pagination" role="navigation" aria-label="投稿">
@@ -86,5 +85,7 @@ get_header(); ?>
 =====================================================-->
 
 <?php get_template_part('contact'); ?>
+
+</main>
 
 <?php get_footer(); ?>

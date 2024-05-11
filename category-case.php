@@ -52,7 +52,6 @@ get_header(); ?>
 	<?php endif; ?>
 	</article>
 </div><!-- .container -->
-</main>
 
 <!--ページネーションここから-->
 <nav class="navigation pagination" role="navigation" aria-label="投稿">
@@ -67,5 +66,7 @@ get_header(); ?>
 ); ?>
 </nav>
 <!--ページネーションここまで-->
+
+</main>
 
 <?php get_footer(); ?>
