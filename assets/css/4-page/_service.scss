@@ -170,18 +170,21 @@
         background:$border-c;
     }
 
-      dt {
+      .c-tit {
         font-size:2rem;
         margin-bottom:26%;
+        text-align:center;
+        -webkit-text-size-adjust: 100%; 
 
         @media all and (max-width:768px) {
             margin-bottom:10%;
           }
       }
 
-      dd {
+      .c-text {
         margin:0;
         line-height: 2.4;
+        -webkit-text-size-adjust: 100%; 
 
         p {
             font-size:1.5rem!important;
@@ -308,32 +311,6 @@
                 }
             }
         }
-    }
-
-    @media only screen and (min-width: 1025px) {
-        /*.thumb-media:hover {
-        -webkit-transform: scale(0.9);
-                transform: scale(0.9);
-        }
-        .thumb-media:hover img {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-        }
-    }*/
-
-    /*.thumb-media img {
-      -webkit-transition: var(--transition);
-      transition: var(--transition);
-    }
-    .thumb-media-active {
-      -webkit-transform: scale(0.9);
-              transform: scale(0.9);
-      opacity: 0.3;
-    }
-    .thumb-media-active img {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
-    }*/
     }
 }
 /*--====================================================

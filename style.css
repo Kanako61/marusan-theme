@@ -226,12 +226,12 @@ LOADING
 }
 .free-area .content-body ul {
   list-style-type: disc;
-  padding-left: 2em;
+  padding-left: 1em;
   margin: 1.5em 0;
 }
 .free-area .content-body ol {
-  padding-left: 2em;
   margin: 1.5em 0;
+  padding-left: 2em;
 }
 .free-area .content-body p {
   /*padding:0 1em;*/
@@ -690,11 +690,9 @@ LOADING
   background: #fff;
   /*記事ページ入力エリアここから*/
 }
-.single .content-title {
-  margin: 0;
-}
 .single_main {
   line-height: 1.8;
+  overflow: hidden;
 }
 .single_container {
   margin: 0 auto;
@@ -708,7 +706,7 @@ LOADING
 }
 .single_header_title {
   width: 100%;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   margin: 12% auto 2%;
   border-bottom: solid 1px #736a5f;
   padding: 0.5em 0;
@@ -1735,7 +1733,7 @@ p, a, li, dl dt, dl dd {
 
 /*ページネーション*/
 .pagination {
-  margin: 0 0 15%;
+  padding: 0 0 6%;
 }
 .pagination .page-numbers {
   display: flex;
@@ -3915,20 +3913,23 @@ p, a, li, dl dt, dl dd {
   display: inline-block;
   background: #BFB9B1;
 }
-.precut_list .slide-title dt {
+.precut_list .slide-title .c-tit {
   font-size: 2rem;
   margin-bottom: 26%;
+  text-align: center;
+  -webkit-text-size-adjust: 100%;
 }
 @media all and (max-width: 768px) {
-  .precut_list .slide-title dt {
+  .precut_list .slide-title .c-tit {
     margin-bottom: 10%;
   }
 }
-.precut_list .slide-title dd {
+.precut_list .slide-title .c-text {
   margin: 0;
   line-height: 2.4;
+  -webkit-text-size-adjust: 100%;
 }
-.precut_list .slide-title dd p {
+.precut_list .slide-title .c-text p {
   font-size: 1.5rem !important;
 }
 .precut_list .thumb-media.swiper-slide-active {
@@ -4042,32 +4043,6 @@ p, a, li, dl dt, dl dd {
     width: 1.5px;
     bottom: -3.5em;
     height: 3em;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .precut_list {
-    /*.thumb-media:hover {
-        -webkit-transform: scale(0.9);
-                transform: scale(0.9);
-        }
-        .thumb-media:hover img {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-        }
-    }*/
-    /*.thumb-media img {
-      -webkit-transition: var(--transition);
-      transition: var(--transition);
-    }
-    .thumb-media-active {
-      -webkit-transform: scale(0.9);
-              transform: scale(0.9);
-      opacity: 0.3;
-    }
-    .thumb-media-active img {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1);
-    }*/
   }
 }
 
@@ -5544,7 +5519,7 @@ p, a, li, dl dt, dl dd {
 }
 
 /*single 共通*/
-.single-post .single_content {
+.single-case .single_content {
   margin: 5% auto 30%;
 }
 
@@ -5648,19 +5623,19 @@ p, a, li, dl dt, dl dd {
   padding-top: 10em;
 }
 
-.single_news_title {
-  margin: 0;
-}
-.single_news_title p {
-  font-size: 2.4rem;
-}
-
 .single-news_list {
   border-bottom: solid 2px #BFB9B1;
   padding: 1em 0;
+  margin-top: 15%;
 }
 .single-news_title {
   font-size: 2rem;
+}
+@media all and (max-width: 540px) {
+  .single-news_title {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
 }
 .single-news_time {
   text-align: end;

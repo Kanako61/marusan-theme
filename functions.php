@@ -85,6 +85,23 @@ function add_class_page_slug($classes) {
 add_filter('body_class', 'add_class_page_slug');
 
 
+// bodyにスラッグのclassをつける(singleページ)
+function add_category_class_to_body( $classes ) {
+    if ( is_single() ) {
+        $categories = get_the_category();
+        foreach( $categories as $category ) {
+            if ( $category->slug == 'case' ) {
+                $classes[] = 'single-case';
+            } elseif ( $category->slug == 'news' ) {
+                $classes[] = 'single-news';
+            }
+        }
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'add_category_class_to_body' );
+
+
 //共通CSS読み込み
 function theme_enqueue_styles() {
     wp_enqueue_style( 'vegas.min.css', get_template_directory_uri() . '/assets/css/vegas.min.css');

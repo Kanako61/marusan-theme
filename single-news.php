@@ -14,11 +14,10 @@ get_header(); ?>
 <main class="l-contents-main single_main single-news_main free-area">
 <div class="single_container">
 
-	<h1 class="single_news_title text-c">
+	<h1 class="category_header_title category_news_title text-c">
 		<!--categoryのタイトル取得-->
 		<p class="ja">
 		<?php
-			// 現在の投稿のカテゴリー情報を取得します
 			$categories = get_the_category();
 
 			// カテゴリーが存在する場合は、最初のカテゴリーの名前を表示します
