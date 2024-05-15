@@ -95,12 +95,20 @@
         /*サムネイル*/
         .item_pic {
             margin-bottom:1em;
-        }
+            overflow: hidden;
 
+            img {
+                transition: all .3s;
+            }
+        }
 
         /*タイトル*/
         .item_title {
             text-align: center;
+
+            a {
+                transition: all .3s;
+            }
         }
     }
 
@@ -109,7 +117,25 @@
             display:none;
         }
     }
+    
+    .item_meta:hover {
+        /*タイトル*/
+        .item_title {
+            a {
+                color:$bk-4;
+            }
+        }
+
+                /*サムネイル*/
+        .item_pic {
+            img {
+                scale:(1.1);
+                filter: brightness(0.6);
+            }
+        }
+    }
 }
+
 
 
 

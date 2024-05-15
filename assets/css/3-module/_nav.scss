@@ -246,3 +246,36 @@
         }       
     }
 /*}*/
+
+
+/*カレント表示*/
+@media all and (min-width:900px) {
+    .l-site_header .current-menu-item, .l-site_header .current-post-ancestor {
+        position:relative;
+        z-index:2;
+
+        &:before {
+            display:inline-block;
+            content:'';
+            position:absolute;
+            bottom:-1.8em;
+            left:-1em;
+            width:calc(100% + 2em);
+            height:0.8em;
+            background:$header-current-nav02;
+            z-index:2;
+        }
+
+        &:after {
+            display:inline-block;
+            content:'';
+            position:absolute;
+            top:-2em;
+            left:-1em;
+            width:calc(100% + 2em);
+            height:4.8em;
+            background:$header-current-nav01;
+            z-index:-1;
+        }
+    }
+}

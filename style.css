@@ -11,6 +11,7 @@ Author: marusan Co., Ltd
 /*メインビジュアル*/
 /*top*/
 /*header*/
+/*ナビ*/
 /*ボタン*/
 /*footer*/
 /*company*/
@@ -1115,23 +1116,23 @@ p, a, li, dl dt, dl dd {
   }
 }
 
-.contact {
+.contact-box {
   max-width: 980px;
   margin: 0 auto 30%;
   position: relative;
   z-index: 2;
 }
 @media all and (max-width: 1000px) {
-  .contact {
+  .contact-box {
     margin: 0 8vw 30%;
   }
 }
 @media all and (max-width: 540px) {
-  .contact {
+  .contact-box {
     margin: 25% 8vw 40%;
   }
 }
-.contact:before {
+.contact-box:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1144,7 +1145,7 @@ p, a, li, dl dt, dl dd {
   background: #98c0cc;
   z-index: -1;
 }
-.contact:after {
+.contact-box:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1158,11 +1159,11 @@ p, a, li, dl dt, dl dd {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.contact .top_h2 {
+.contact-box .top_h2 {
   position: relative;
   margin-bottom: 20%;
 }
-.contact .top_h2:after {
+.contact-box .top_h2:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1172,13 +1173,13 @@ p, a, li, dl dt, dl dd {
   height: 1px;
   background: #BFB9B1;
 }
-.contact_inner {
+.contact-box_inner {
   position: relative;
   max-width: 980px;
   margin: 0 auto;
   z-index: 3;
 }
-.contact_inner:before {
+.contact-box_inner:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1190,7 +1191,7 @@ p, a, li, dl dt, dl dd {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.contact_inner:after {
+.contact-box_inner:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1202,13 +1203,13 @@ p, a, li, dl dt, dl dd {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.contact_text {
+.contact-box_text {
   position: relative;
   margin-bottom: 8%;
   text-align: center;
   z-index: 2;
 }
-.contact_content {
+.contact-box_content {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1217,20 +1218,20 @@ p, a, li, dl dt, dl dd {
   z-index: 2;
 }
 @media all and (max-width: 768px) {
-  .contact_content {
+  .contact-box_content {
     flex-direction: column;
     gap: 2em;
   }
 }
-.contact_tel {
+.contact-box_tel {
   text-align: center;
 }
-.contact .tel_num {
+.contact-box .tel_num {
   position: relative;
   margin-top: 1em;
   padding-left: 2.2em;
 }
-.contact .tel_num:before {
+.contact-box .tel_num:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1243,7 +1244,7 @@ p, a, li, dl dt, dl dd {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.contact .contact_mail a {
+.contact-box .contact-box_mail a {
   position: relative;
   display: inline-block;
   background: #768d96;
@@ -1252,7 +1253,7 @@ p, a, li, dl dt, dl dd {
   border-radius: 0.6em;
   transition: all 0.2s;
 }
-.contact .contact_mail a:before {
+.contact-box .contact-box_mail a:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1265,7 +1266,7 @@ p, a, li, dl dt, dl dd {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.contact .contact_mail a:hover {
+.contact-box .contact-box_mail a:hover {
   filter: brightness(0.8);
   transform: translatey(-8px);
 }
@@ -1482,6 +1483,35 @@ p, a, li, dl dt, dl dd {
   }
 }
 /*}*/
+/*カレント表示*/
+@media all and (min-width: 900px) {
+  .l-site_header .current-menu-item, .l-site_header .current-post-ancestor {
+    position: relative;
+    z-index: 2;
+  }
+  .l-site_header .current-menu-item:before, .l-site_header .current-post-ancestor:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    bottom: -1.8em;
+    left: -1em;
+    width: calc(100% + 2em);
+    height: 0.8em;
+    background: rgba(110, 188, 201, 0.8);
+    z-index: 2;
+  }
+  .l-site_header .current-menu-item:after, .l-site_header .current-post-ancestor:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: -2em;
+    left: -1em;
+    width: calc(100% + 2em);
+    height: 4.8em;
+    background: rgba(99, 130, 142, 0.8);
+    z-index: -1;
+  }
+}
 /*section ボタン*/
 .top-button {
   text-align: center;
@@ -5310,14 +5340,32 @@ p, a, li, dl dt, dl dd {
 }
 .category-case_list .item_pic {
   margin-bottom: 1em;
+  overflow: hidden;
+}
+.category-case_list .item_pic img {
+  transition: all 0.3s;
 }
 .category-case_list .item_title {
   text-align: center;
+}
+.category-case_list .item_title a {
+  transition: all 0.3s;
 }
 @media all and (max-width: 414px) {
   .category-case .category-case_list:after {
     display: none;
   }
+}
+.category-case .item_meta:hover {
+  /*タイトル*/
+  /*サムネイル*/
+}
+.category-case .item_meta:hover .item_title a {
+  color: #98C0CC;
+}
+.category-case .item_meta:hover .item_pic img {
+  scale: 1.1;
+  filter: brightness(0.6);
 }
 
 /*アクセス非表示*/
