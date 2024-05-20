@@ -142,7 +142,7 @@
             right:0;
             z-index:2;
             width:50%;
-            background:$company-h2-bk;
+            background:$message-h2-bk;
 
             @media all and (min-width:1440px) {
                 font-size:(30/1440)*100vw;
@@ -303,7 +303,7 @@
             top:45%;
             right:0;
             transform: translatey(-50%);
-            background:rgba(0, 0 ,0, 0.3);
+            background:$overview-h2-bk;
             padding:0.2em (70/1440)*100vw 0.2em 0em;
 
             @media all and (min-width:1440px) {
@@ -315,15 +315,11 @@
                 content:'';
                 position:absolute;
                 top:0;
-                left:-2.2em;
-                border-top: 2.2em solid rgba(0, 0 ,0, 0.3);
+                left:-2.17em;
+                border-top: 2.2em solid $overview-h2-bk;
                 border-bottom: 2.2em solid transparent;
                 border-left: 2.2em solid transparent;
                 line-height: 0;
-
-                @media all and (max-width:1439px) {
-                    left:-2.19em;
-                }
             }
 
             &:after {

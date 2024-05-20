@@ -202,6 +202,23 @@
             }
         }
     }
+
+    @media all and (min-width:768px) {
+        .news_link {
+            &:hover {
+                .item_title {
+                    transition:all .3s;
+                    padding-left:1.2em;
+                    color:$bk-4;
+                }
+            }   
+
+            &:hover:after {
+                transition:all .5s;
+                right:1.8em;
+            }
+        }
+    }
 }
 
 

@@ -3359,7 +3359,7 @@ p, a, li, dl dt, dl dd {
   top: 45%;
   right: 0;
   transform: translatey(-50%);
-  background: rgba(0, 0, 0, 0.3);
+  background: #6988A8;
   padding: 0.2em 4.8611111111vw 0.2em 0em;
 }
 @media all and (min-width: 1440px) {
@@ -3372,16 +3372,11 @@ p, a, li, dl dt, dl dd {
   content: "";
   position: absolute;
   top: 0;
-  left: -2.2em;
-  border-top: 2.2em solid rgba(0, 0, 0, 0.3);
+  left: -2.17em;
+  border-top: 2.2em solid #6988A8;
   border-bottom: 2.2em solid transparent;
   border-left: 2.2em solid transparent;
   line-height: 0;
-}
-@media all and (max-width: 1439px) {
-  .page_overview_inner .page_company_h2:before {
-    left: -2.19em;
-  }
 }
 .page_overview_inner .page_company_h2:after {
   display: inline-block;
@@ -5559,6 +5554,17 @@ p, a, li, dl dt, dl dd {
 }
 .category_news_list .item_inner .new-icon {
   width: 4em;
+}
+@media all and (min-width: 768px) {
+  .category_news .news_link:hover .item_title {
+    transition: all 0.3s;
+    padding-left: 1.2em;
+    color: #98C0CC;
+  }
+  .category_news .news_link:hover:after {
+    transition: all 0.5s;
+    right: 1.8em;
+  }
 }
 
 /*アクセス非表示*/
