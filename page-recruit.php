@@ -25,11 +25,11 @@ Template Name: recruit
 </picture>
 </div>
 
-<h1 class="recruit_main_copy">
+<p class="recruit_main_copy">
   家づくりを<br>
   縁の下から支える<br>
   プロになる。
-</h1>
+</p>
 </section>
 
 <!-- トップテキスト -->
@@ -52,15 +52,15 @@ Template Name: recruit
 
 <div class="recruit_content page_content">
 
-
 <!-- タブ切り替え -->
 <section class="pageRecruit">
   <div class="pageRecruit_list">
-    <ul class="tab-button">
-      <li class="tab tab-01 is-active">加工機オペレーター</li>
-      <li class="tab tab-02">CADオペレーター</li>
-      <li class="tab tab-03">セールスオペレーター</li>
-    </ul>
+    <h1 class="page_recruit_h1">職種紹介</h1>
+      <ul class="tab-button">
+        <li class="tab tab-01 is-active">加工機オペレーター</li>
+        <li class="tab tab-02">CADオペレーター</li>
+        <li class="tab tab-03">セールスオペレーター</li>
+      </ul>
 
     <!--タブを切り替えて表示するコンテンツ-->
     <ul class="tab-contents">
@@ -69,59 +69,66 @@ Template Name: recruit
         加工機おペーレータ
       ===================ー-->
       <li class="pageRecruit_content tab-01 is-display">
-        <div class="pageRecruit_content_topBox">
-        <!--インタビュー-->
-        <div class="gaiyou">
-          <div class="pageRecruit_list_text gaiyou_box">
-            <h2 class="pageRecruit_list_h2">加工機オペレーター</h2>
-            <dl class="pageRecruit_list_dl">
-              <dt>ハウスロジスティクスの中心</dt>
-              <dd>質の高い製品づくりを通じて、家づくりの安心・安全を支えます。</dd>
-            <dl>
-          </div>
-          <picture>
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work01-1.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work01-1.jpg" alt="加工機オペレーター">
-          </picture>
+        <div class="pageRecruit_top_content">
+          <!--概要-->
+          <section class="page_recruit_gaiyou recruit_section">
+            <div class="pageRecruit_list_text gaiyou_box">
+              <h2 class="gaiyou_h2 page_recruit_h2 color">加工機オペレーター</h2>
+              <dl class="pageRecruit_list_dl">
+                <dt>ハウスロジスティクスの中心</dt>
+                <dd>質の高い製品づくりを通じて、<br class="pc_br">家づくりの安心・安全を支えます。</dd>
+              </dl>
+            </div>
+            <div class="gaiyou_pic">
+              <picture>
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work01-1.webp" type="image/webp">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work01-1.jpg" alt="加工機オペレーター">
+              </picture>
+            </div>
+          </section>
+
+          <!-- 先輩社員インタビュー -->
+          <section class="page_recruit_interview recruit_section">
+              <h2 class="interview_h2 page_recruit_h2 color">先輩社員インタビュー</h2>
+              <div class="pageRecruit_list_text interview_box">
+                <div class="gaiyou_pic">
+                  <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work01-2.webp" type="image/webp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work01-2.jpg" alt="先輩社員インタビュー">
+                  </picture>
+                </div>
+                <dl class="pageRecruit_list_dl">
+                  <dt class="senior_name"><span class="name">池田 佳裕</span><br>製造部 製造二課</dt>
+                  <dd>
+                    <dl>
+                      <dt>勤続年数：</dt>
+                      <dd>7年</dd>
+                    </dl>
+                    <dl>
+                      <dt>出身高校：</dt>
+                      <dd>福島商業高校</dd>
+                    </dl>
+                    <dl>
+                      <dt>趣味：</dt>
+                      <dd>歌うこと</dd>
+                    </dl>
+                    <dl>
+                      <dt>性格：</dt>
+                      <dd>無理はしない</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </div>
+              <p class="interview_text">
+              頑張りすぎず程々に、とは思っていますが、工場である以上、生産性は常に考えないといけません。いまより精度と効率を上げる働き方、段取りを考えながら仕事をこなします。現状、景気の良い業界とは言えませんが、成果が出ればやりがいも生まれてきます。
+              </p>
+          </section>
         </div>
 
-        <!-- 先輩社員インタビュー -->
-        <div class="interview">
-          <div class="pageRecruit_list_text interview_box">
-            <h2 class="pageRecruit_list_h2">先輩社員インタビュー</h2>
-            <dl class="pageRecruit_list_dl">
-              <dt>池田 佳裕<br>製造部 製造二課</dt>
-              <dd>
-                <dl>
-                  <dt>勤続年数：</dt>
-                  <dd>7年</dd>
-                </dl>
-                <dl>
-                  <dt>出身高校：</dt>
-                  <dd>福島商業高校</dd>
-                </dl>
-                <dl>
-                  <dt>趣味：</dt>
-                  <dd>歌うこと</dd>
-                </dl>
-                <dl>
-                  <dt>性格：</dt>
-                  <dd>無理はしない</dd>
-                </dl>
-              </dd>
-            <dl>
-            
-            <p class="interview_text">
-            頑張りすぎず程々に、とは思っていますが、工場である以上、生産性は常に考えないといけません。いまより精度と効率を上げる働き方、段取りを考えながら仕事をこなします。現状、景気の良い業界とは言えませんが、成果が出ればやりがいも生まれてきます。
-            </p>
-          </div>
-        </div>  
-        </div>
-
+        <div class="recruit_bk_blue02">
         <!-- 募集要項 -->
-        <div class="job">
-          <h2 class="job_h2">募集要項</h2>
-          <section class="page_section recruit_section">
+        <section class="page_recruit_job recruit_section">
+          <h2 class="job_h2 page_recruit_h2">募集要項</h2>
             <div class="js-scrollable-wrap">
               <table class="recruit_table page_table page_box js-scrollable">
                 <colgroup>
@@ -178,12 +185,11 @@ Template Name: recruit
                 </tr>
               </table>
             </div>
-          </section>
 
-          <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
-          </div>
-        </div>
+            <div class="entry-button">
+              <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+            </div>
+          </section>
 
         <!-- 採用の流れ -->
         <section class="page_recruit_flow recruit_section">
@@ -192,21 +198,21 @@ Template Name: recruit
             実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
           </p>
 
-          <ul>
+          <ul class="recruit_flow_list">
             <li>
-              <div><p>エントリー</p></div>
+              <div class="flow_item"><p>エントリー</p></div>
               <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
             </li>
             <li>
-              <div><p>履歴書送付<br>書類審査</p></div>
+              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
               <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
             </li>
             <li>
-              <div><p>筆記試験<br>面接</p></div>
+              <div class="flow_item"><p>筆記試験<br>面接</p></div>
               <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
             </li>
             <li>
-              <div><p>内定</p></div>
+              <div class="flow_item"><p>内定</p></div>
               <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
             </li>
           </ul>
@@ -215,23 +221,23 @@ Template Name: recruit
         <!-- 仕事内容 -->
         <section class="page_recruit_work recruit_section">
           <h2 class="work_h2 page_recruit_h2">仕事内容</h2>
-          <p>加工機と制御用のP C を操作して、製材品を加工して木造住宅用の部材を生産します。C A D で出力されたデータの取り込み、加工順に合わせた材料の準備と加工機への投入、加工された製品( 完成品) の検品・梱包と出荷ヤードへの搬出を行います。加工機で対応できない特殊加工が必要となる場合もあり、そういった加工は大工技能を持つベテラン作業員が作業を担当しています。また、今後に備えて若手への技術継承も行っています。シフト制のため、予定が組みやすい。業務上必要な資格は会社負担で取得可能。木材の知識が身に付き、余暇、趣味に役立ちます。
+          <p class="page_recruit_work_text">加工機と制御用のP C を操作して、製材品を加工して木造住宅用の部材を生産します。C A D で出力されたデータの取り込み、加工順に合わせた材料の準備と加工機への投入、加工された製品( 完成品) の検品・梱包と出荷ヤードへの搬出を行います。加工機で対応できない特殊加工が必要となる場合もあり、そういった加工は大工技能を持つベテラン作業員が作業を担当しています。また、今後に備えて若手への技術継承も行っています。シフト制のため、予定が組みやすい。業務上必要な資格は会社負担で取得可能。木材の知識が身に付き、余暇、趣味に役立ちます。
           </p>
         </section>
 
         <!-- この仕事の良いところ -->
         <section class="page_recruit_merit recruit_section">
           <h2 class="merit_h2 page_recruit_h2">この仕事の良いところ</h2>
-          <ul>
-            <li><span>01</span>シフト制のため、予定が組みやすい。</li>
-            <li><span>02</span>業務上必要な資格は会社負担で取得可能。</li>
-            <li><span>03</span>木材の知識が身に付き、余暇、趣味に役立ちます。</li>
+          <ul class="page_recruit_merit_list">
+            <li><span class="num">01</span>シフト制のため、予定が組みやすい。</li>
+            <li><span class="num">02</span>業務上必要な資格は会社負担で取得可能。</li>
+            <li><span class="num">03</span>木材の知識が身に付き、余暇、趣味に役立ちます。</li>
           </ul> 
         </section>
 
         <!-- 1日の流れ -->
         <section class="page_recruit_schedul recruit_section">
-          <h2 class="schedul_h2 page_recruit_h2">1日の流れ</h2>
+          <h2 class="schedul_h2 page_recruit_h2">一日の流れ</h2>
           <dl class="schedule_dl">
             <dt>7:45</dt>
             <dd>毎朝のラジオ体操～全体朝礼～各部署ごとのミーティング</dd>
@@ -334,6 +340,7 @@ Template Name: recruit
             </div>
           </li>
         </ul>
+        </div>
       </li>
 
       <!--===================
@@ -346,9 +353,10 @@ Template Name: recruit
       <li class="pageRecruit_content tab-03">
       <p>テキスト</p>
       </li>
+
     </ul>
   </div>
-<section>
+</section>
 
 </div>
 

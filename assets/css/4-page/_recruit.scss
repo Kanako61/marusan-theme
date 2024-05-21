@@ -1,8 +1,35 @@
 /*====================================================
 　　recruitページ全体
 =====================================================*/
+.page_recruit_h1 {
+    text-align: center;
+    color:#fff;
+    font-size:3rem;
+    letter-spacing: 0.15em;
+    margin:0 0 8% 0;
+}
+
 .recruit_bk_blue {
     background:$bk-4;
+}
+
+.recruit_bk_blue02 {
+    background:$bk-2;
+    width:100vw;
+    margin-left: calc(50% - 50vw);
+    padding:8vw 0;
+}
+
+.recruit_main .page_content {
+    width:100%;
+    max-width: none;
+    margin:0;
+}
+
+.page_recruit_h2 {
+    text-align:center;
+    letter-spacing: 0.2em;
+    margin-bottom:8%;
 }
 
 /*====================================================
@@ -59,8 +86,8 @@
 .recruit_top_text { 
     width:80vw;
     max-width:680px;
-    margin:12% auto 5%;
-    padding-left:8%;
+    margin:12% auto 0;
+    padding:0 0 8% 8%;
 
     @media all and (max-width:768px) {
         padding-left:11vw;
@@ -99,15 +126,38 @@
 /*====================================================
 　　タブ切り替え
 =====================================================*/
+
+.pageRecruit {
+    background:$bk-4;
+    margin-bottom:15%;
+}
+
 .pageRecruit_list {
     width: 80vw;
     margin:0 auto;
 
+    @media all and (max-width:768px) {
+        width: 90vw;
+    }
+
     .tab-button {
+        position:relative;
         display: flex;
         justify-content: space-between;
-        gap:1em;
+        gap:1.5em;
         cursor: pointer;
+        margin-bottom:4em;
+
+        &:after {
+            position:absolute;
+            bottom:-2em;
+            left:0;
+            content:'';
+            display:inline-block;
+            width:100%;
+            height:4px;
+            background:#fff;
+        }
     }
 
     .tab-button .is-active {
@@ -117,16 +167,17 @@
     .tab {
         width: calc(100% / 3);
         text-align: center;
+        background:#fff;
+        font-size:2rem;
+        padding:1em 0;
     }
     
     .tab-contents {
         border-top: none;
-        background: #fff;
     }
     
     .pageRecruit_content {
         display: none;
-        padding: 8px;
         text-align: left;
     }
     
@@ -147,86 +198,371 @@
     }
 }
 
+.tab-contents {
+    .pageRecruit_top_content {
+        padding:8%;
+        background:#fff;
+        margin-bottom:8vw;
 
+        @media all and (max-width:768px) {
+            padding:8% 4%;
+        }
+    }
 
-/*====================================================
-　　recruit 1日の流れ
-=====================================================*/
-.page_recruit {
-    &_schedul {
-        background:$content-b-c;
-        padding:3% 6%;
+    /*概要*/
+    .page_recruit_gaiyou {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2em;
+        margin-bottom:10%;
 
-        .schedule_dl {
-            display:grid;
-            grid-template-columns: 1fr 10fr;
+        @media all and (max-width:768px) {
+            grid-template-columns: 1fr;
+        }
 
+        .pageRecruit_list_dl {
             dt {
-                display:block;
-                width:4em;
+                font-size:2.4rem;
+                margin-bottom:10%;
             }
-
             dd {
                 margin:0;
             }
         }
     }
 
-    &_question {
-        background:$content-b-c;
-        padding:3% 6%;
+
+    /*インタビュー*/
+    .page_recruit_interview {
+        .interview_box {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:3em;
+            margin-bottom:5%;
+
+            @media all and (max-width:768px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pageRecruit_list_dl {
+            .senior_name {
+                font-size:1.8rem;
+                margin-bottom:8%;
+                .name {
+                    font-size:2rem;
+                }
+            }
+            dd {
+                margin:0;
+                dl {
+                    display:flex;
+                    margin:0.4em 0;
+                }
+            }
+        }
+    }
+
+    .page_recruit_h2.color {
+        margin-bottom:5%;
+        text-align:left;
+    }
+
+    /*加工機オペレーター*/
+    .tab-01 {
+        .page_recruit_h2.color {
+            color:$tab-01;
+            font-size:3rem;
+        }
+    }
+
+    /*CADオペレーター*/
+    .tab-02 {
+        .page_recruit_h2.color {
+            color:$tab-02;
+        }
+    }
+
+    /*セールスオペレーター*/
+    .tab-03 {
+        .page_recruit_h2.color {
+            color:$tab-03;
+        }
+    }
+
+    /*募集要項*/
+    .page_recruit_job {
+        width:80vw;
+        margin:0 auto;
+        background:#fff;
+        padding:8%;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+            padding:8% 4%;
+        }
+
+        .recruit_table {
+            tr {
+                display:grid;
+                grid-template-columns: 1fr 6fr;
+                gap:3em;
+                margin:3em 0;
+
+                @media all and (max-width:768px) {
+                    gap:1.5em;
+                }
+
+                th {
+                    width:8em;
+                    padding:0;
+                }
+            }
+            td {
+                padding:0;
+                dd {
+                    margin:0;
+                }
+            }
+        }
+
+        .entry-button {
+            margin-top:8%;
+        }
+    }
+
+    /*採用の流れ*/
+    .page_recruit_flow {
+        background:#fff;
+        width:80vw;
+        margin:8vw auto 0;
+        padding:8%;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+            padding:8% 5%;
+        }
+
+        .recruit_flow_list {
+            margin:10% auto 0;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            max-width:874px;
+            gap:3em;
+
+            .flow_item {
+                position:relative;
+                margin-bottom:2em;
+                width:80%;
+                margin:0 auto 3.5em;
+
+                &:before {
+                    content:'';
+                    display:inline-block;
+                    position:absolute;
+                    top:50%;
+                    right:-4.3em;
+                    transform:translateY(-50%);
+                    width:(57/1440)*100vw;
+                    height:(54/1440)*100vw;
+                    background-image:url(assets/images/recruit/recruit-item02.svg);
+                    background-size:contain;
+                    background-repeat: no-repeat;
+                }
+
+                &:after {
+                    content:'';
+                    display:inline-block;
+                    position:absolute;
+                    top:-28%;
+                    left:-10%;
+                    width:100%;
+                    height:156%;
+                    background-image:url(assets/images/recruit/recruit-flow01.svg);
+                    background-size:contain;
+                    background-repeat: no-repeat;
+                }
+
+                p {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    background:$bk-1;
+                    text-align:center;
+                    border-radius: 0.5em;
+                    padding:1em 0.2em;
+                    height:5em;
+                    font-size:2rem;
+                    letter-spacing: 0.1em;
+
+                }
+            }
+
+            li:last-child .flow_item:before {
+                display:none;
+            }
+        }
+    }
+
+    /*仕事の内容*/
+    .page_recruit_work {
+        background:#fff;
+        width:80vw;
+        margin:8vw auto 0;
+        padding:8%;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+        }
+
+        &_text {
+            line-height:2.2;
+        }
+    }
+
+
+    /*この仕事の良いところ*/
+    .page_recruit_merit {
+        background:#fff;
+        width:80vw;
+        margin:8vw auto 0;
+        padding:8%;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+        }
+
+        &_list {
+            li {
+                margin:0.8em;
+
+                .num {
+                    font-size:1.9rem;
+                    font-weight:bold;
+                    margin-right:1em;
+                }
+            }
+        }
+    }
+
+    /*1日の流れ*/
+    .page_recruit {
+        &_schedul {
+            background:$content-b-c;
+            padding:3% 6%;
+    
+            .schedule_dl {
+                display:grid;
+                grid-template-columns: 1fr 10fr;
+    
+                dt {
+                    display:block;
+                    width:4em;
+                }
+    
+                dd {
+                    margin:0;
+                }
+            }
+        }
+    
+        &_question {
+            background:$content-b-c;
+            padding:3% 6%;
+        }
+    }
+
+    .page_recruit_schedul {
+        width:80vw;
+        margin:8vw auto 0;
+        padding:8%;
+        background:#fff;
+
+        @media all and (max-width:768px) {
+            width:90vw;
+        }
+    }
+
+    /*よくある質問*/
+    .page_recruit_question {
+        width:80vw;
+        margin:8vw auto;
+        background:#fff;
+        padding:8%;
+
+        @media all and (max-width:768px) {
+            width:90vw; 
+            padding:8% 4%;
+        }
+
+        .question {
+            position:relative;
+            cursor: pointer;
+            padding:1.5em 2.2em 1em 4em;
+            margin-bottom:0.5em;
+            border-bottom: solid 2px $border-c;
+            text-indent: -3em;
+        
+            &:before {
+                content:'';
+                display: inline-block;
+                position:absolute;
+                top:50%;
+                transform:translatey(-50%);
+                right:1.5em;
+                width: 2px;
+                height: 15px;
+                background: $font-default-c;
+              }
+              
+            &:after{
+                content: '';
+                display: inline-block;
+                position:absolute;
+                top:50%;
+                transform:translatey(-50%);
+                right:calc(1.5em - 6.5px);
+                width: 15px;
+                height: 2px;
+                background: $font-default-c;
+              }
+        }
+        
+        .question.active {
+            margin-bottom:0;
+            border:none;
+        
+            &:before {
+                display: none;
+            }
+        }
+        .question:hover {
+            filter:brightness(0.95);
+        }
+        .answer {
+            display: none;
+            background: #fff;
+            padding:1em 1em 1em 4em;
+            margin-bottom:0.5em;
+            text-indent: -3em;
+            border-bottom: solid 2px $border-c;
+        }    
+        
+        .qa {
+            margin-right:2em;
+        }
+    }
+
+    .other_list {
+        width:80vw;
+        margin:8vw auto;
+        display:flex;
+        justify-content: center;
+        gap:2em;
     }
 }
 
-
-/*====================================================
-　　recruit よくある質問
-=====================================================*/
-.question {
-    position:relative;
-    cursor: pointer;
-    background:$h2-b-c;
-    padding:1em 2.2em 1em 1.2em;
-    margin-bottom:0.5em;
-
-    &:before {
-        content:'';
-        display: inline-block;
-        position:absolute;
-        top:50%;
-        transform:translatey(-50%);
-        right:1.5em;
-        width: 2px;
-        height: 15px;
-        background: $font-default-c;
-      }
-      
-    &:after{
-        content: '';
-        display: inline-block;
-        position:absolute;
-        top:50%;
-        transform:translatey(-50%);
-        right:calc(1.5em - 6.5px);
-        width: 15px;
-        height: 2px;
-        background: $font-default-c;
-      }
-}
-
-.question.active {
-    margin-bottom:0;
-
-    &:before {
-        display: none;
-    }
-}
-.question:hover {
-    filter:brightness(0.95);
-}
-.answer {
-    display: none;
-    background: #fff;
-    padding:1em;
-    margin-bottom:0.5em;
+/*アクセス非表示*/
+.recruit .address {
+    display:none;
 }

@@ -126,6 +126,8 @@
         content:'';
         width:(268/1440)*100vw;
         height:(92/1440)*100vw;
+        max-width:268px;
+        max-height:92px;
         background-image:url(assets/images/news/news-item-03.svg);
         background-repeat: no-repeat;
         background-size:contain;
