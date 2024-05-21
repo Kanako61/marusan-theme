@@ -42,6 +42,14 @@
     transition:all .2s;
     font-size:2.4rem;
 
+    @media all and (max-width:768px) {
+      font-size:2rem;
+    }
+
+    @media all and (max-width:540px) {
+      font-size:1.8rem;
+    }
+
     &:hover {
       filter:brightness(0.8);
       transform:translatey(-8px);
@@ -54,10 +62,14 @@
   a {
       display:block;
       background:#fff;
-      padding:1em 2em;
+      padding:1em 1em;
       text-align:center;
       font-size:2rem;
       transition: all .3s;
+
+      @media all and (max-width:768px) {
+        font-size:(24/768)*100vw;
+      }
 
       &:hover {
         filter:brightness(0.9);

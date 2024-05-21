@@ -1545,6 +1545,16 @@ p, a, li, dl dt, dl dd {
   transition: all 0.2s;
   font-size: 2.4rem;
 }
+@media all and (max-width: 768px) {
+  .entry-button a {
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 540px) {
+  .entry-button a {
+    font-size: 1.8rem;
+  }
+}
 .entry-button a:hover {
   filter: brightness(0.8);
   transform: translatey(-8px);
@@ -1554,10 +1564,15 @@ p, a, li, dl dt, dl dd {
 .other_list_btn a {
   display: block;
   background: #fff;
-  padding: 1em 2em;
+  padding: 1em 1em;
   text-align: center;
   font-size: 2rem;
   transition: all 0.3s;
+}
+@media all and (max-width: 768px) {
+  .other_list_btn a {
+    font-size: 3.125vw;
+  }
 }
 .other_list_btn a:hover {
   filter: brightness(0.9);
@@ -4353,6 +4368,11 @@ p, a, li, dl dt, dl dd {
   letter-spacing: 0.2em;
   margin-bottom: 8%;
 }
+@media all and (max-width: 768px) {
+  .page_recruit_h2 {
+    font-size: 2rem;
+  }
+}
 
 /*====================================================
 　　recruitメインビジュアル
@@ -4697,21 +4717,39 @@ p, a, li, dl dt, dl dd {
   max-width: 874px;
   gap: 3em;
 }
+@media all and (max-width: 768px) {
+  .tab-contents .page_recruit_flow .recruit_flow_list {
+    gap: 1em;
+  }
+}
 .tab-contents .page_recruit_flow .recruit_flow_list .flow_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-bottom: 2em;
-  width: 80%;
-  margin: 0 auto 3.5em;
+  width: 9.0277777778vw;
+  height: 6.9444444444vw;
+  max-width: 130px;
+  max-height: 100px;
+  min-width: 60px;
+  min-height: 30px;
+  text-align: center;
+  border-radius: 0.5em;
+  margin: 0 auto 3em;
+  padding: 1em 0.2em;
+  background: #fcf3e4;
 }
 .tab-contents .page_recruit_flow .recruit_flow_list .flow_item:before {
   content: "";
   display: inline-block;
   position: absolute;
   top: 50%;
-  right: -4.3em;
+  right: -60%;
   transform: translateY(-50%);
   width: 3.9583333333vw;
   height: 3.75vw;
+  max-width: 57px;
+  max-height: 54px;
   background-image: url(assets/images/recruit/recruit-item02.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -4720,25 +4758,27 @@ p, a, li, dl dt, dl dd {
   content: "";
   display: inline-block;
   position: absolute;
-  top: -28%;
-  left: -10%;
-  width: 100%;
-  height: 156%;
+  top: -30%;
+  left: -8%;
+  width: 140%;
+  height: 150%;
   background-image: url(assets/images/recruit/recruit-flow01.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 .tab-contents .page_recruit_flow .recruit_flow_list .flow_item p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fcf3e4;
-  text-align: center;
-  border-radius: 0.5em;
-  padding: 1em 0.2em;
-  height: 5em;
   font-size: 2rem;
   letter-spacing: 0.1em;
+}
+@media all and (max-width: 1200px) {
+  .tab-contents .page_recruit_flow .recruit_flow_list .flow_item p {
+    font-size: 1.3888888889vw;
+  }
+}
+@media all and (max-width: 900px) {
+  .tab-contents .page_recruit_flow .recruit_flow_list .flow_item p {
+    font-size: 1.2rem;
+  }
 }
 .tab-contents .page_recruit_flow .recruit_flow_list li:last-child .flow_item:before {
   display: none;
@@ -4770,6 +4810,8 @@ p, a, li, dl dt, dl dd {
 }
 .tab-contents .page_recruit_merit_list li {
   margin: 0.8em;
+  text-indent: -3em;
+  padding-left: 3em;
 }
 .tab-contents .page_recruit_merit_list li .num {
   font-size: 1.9rem;
@@ -4875,6 +4917,20 @@ p, a, li, dl dt, dl dd {
   display: flex;
   justify-content: center;
   gap: 2em;
+}
+@media all and (max-width: 800px) {
+  .tab-contents .other_list {
+    width: 90vw;
+    gap: 1em;
+  }
+}
+.tab-contents .other_list li {
+  width: 40%;
+}
+@media all and (max-width: 768px) {
+  .tab-contents .other_list li {
+    width: auto;
+  }
 }
 
 /*アクセス非表示*/
