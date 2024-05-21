@@ -7,6 +7,10 @@
     font-size:3rem;
     letter-spacing: 0.15em;
     margin:0 0 8% 0;
+
+    @media all and (max-width:540px) {
+        font-size:2.6rem;
+    }
 }
 
 .recruit_bk_blue {
@@ -148,6 +152,14 @@
         cursor: pointer;
         margin-bottom:4em;
 
+        @media all and (max-width:768px) {
+            gap:0.5em;
+        }
+
+        @media all and (max-width:540px) {
+            flex-direction: column;
+        }
+
         &:after {
             position:absolute;
             bottom:-2em;
@@ -170,6 +182,19 @@
         background:#fff;
         font-size:2rem;
         padding:1em 0;
+
+        @media all and (max-width:1000px) {
+            font-size:(28/1440)*100vw;
+        }
+
+        @media all and (max-width:768px) {
+            font-size:(17/768)*100vw;
+        }
+
+        @media all and (max-width:540px) {
+            width: 100%;
+            font-size:1.6rem;
+        }
     }
     
     .tab-contents {
@@ -218,13 +243,30 @@
 
         @media all and (max-width:768px) {
             grid-template-columns: 1fr;
+            gap:1em;
+            margin-bottom:20%;
+        }
+
+        .gaiyou_box {
+            @media all and (max-width:768px) {
+                order:2;
+            }
         }
 
         .pageRecruit_list_dl {
             dt {
-                font-size:2.4rem;
+                font-size:2.2rem;
                 margin-bottom:10%;
+
+                @media all and (max-width:768px) {
+                    margin-bottom:3%;
+                }
+
+                @media all and (max-width:540px) {
+                    font-size:1.8rem;
+                }
             }
+
             dd {
                 margin:0;
             }
@@ -242,6 +284,7 @@
 
             @media all and (max-width:768px) {
                 grid-template-columns: 1fr;
+                gap:1em;
             }
         }
 
@@ -251,6 +294,10 @@
                 margin-bottom:8%;
                 .name {
                     font-size:2rem;
+
+                    @media all and (max-width:540px) {
+                        font-size:1.8rem;
+                    }
                 }
             }
             dd {
@@ -266,13 +313,17 @@
     .page_recruit_h2.color {
         margin-bottom:5%;
         text-align:left;
+        font-size:2.4rem;
+
+        @media all and (max-width:540px) {
+            font-size:2rem;
+        }
     }
 
     /*加工機オペレーター*/
     .tab-01 {
         .page_recruit_h2.color {
             color:$tab-01;
-            font-size:3rem;
         }
     }
 

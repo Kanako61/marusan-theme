@@ -4325,6 +4325,11 @@ p, a, li, dl dt, dl dd {
   letter-spacing: 0.15em;
   margin: 0 0 8% 0;
 }
+@media all and (max-width: 540px) {
+  .page_recruit_h1 {
+    font-size: 2.6rem;
+  }
+}
 
 .recruit_bk_blue {
   background: #98C0CC;
@@ -4463,6 +4468,16 @@ p, a, li, dl dt, dl dd {
   cursor: pointer;
   margin-bottom: 4em;
 }
+@media all and (max-width: 768px) {
+  .pageRecruit_list .tab-button {
+    gap: 0.5em;
+  }
+}
+@media all and (max-width: 540px) {
+  .pageRecruit_list .tab-button {
+    flex-direction: column;
+  }
+}
 .pageRecruit_list .tab-button:after {
   position: absolute;
   bottom: -2em;
@@ -4482,6 +4497,22 @@ p, a, li, dl dt, dl dd {
   background: #fff;
   font-size: 2rem;
   padding: 1em 0;
+}
+@media all and (max-width: 1000px) {
+  .pageRecruit_list .tab {
+    font-size: 1.9444444444vw;
+  }
+}
+@media all and (max-width: 768px) {
+  .pageRecruit_list .tab {
+    font-size: 2.2135416667vw;
+  }
+}
+@media all and (max-width: 540px) {
+  .pageRecruit_list .tab {
+    width: 100%;
+    font-size: 1.6rem;
+  }
 }
 .pageRecruit_list .tab-contents {
   border-top: none;
@@ -4535,11 +4566,28 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_gaiyou {
     grid-template-columns: 1fr;
+    gap: 1em;
+    margin-bottom: 20%;
+  }
+}
+@media all and (max-width: 768px) {
+  .tab-contents .page_recruit_gaiyou .gaiyou_box {
+    order: 2;
   }
 }
 .tab-contents .page_recruit_gaiyou .pageRecruit_list_dl dt {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 10%;
+}
+@media all and (max-width: 768px) {
+  .tab-contents .page_recruit_gaiyou .pageRecruit_list_dl dt {
+    margin-bottom: 3%;
+  }
+}
+@media all and (max-width: 540px) {
+  .tab-contents .page_recruit_gaiyou .pageRecruit_list_dl dt {
+    font-size: 1.8rem;
+  }
 }
 .tab-contents .page_recruit_gaiyou .pageRecruit_list_dl dd {
   margin: 0;
@@ -4553,6 +4601,7 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_interview .interview_box {
     grid-template-columns: 1fr;
+    gap: 1em;
   }
 }
 .tab-contents .page_recruit_interview .pageRecruit_list_dl .senior_name {
@@ -4561,6 +4610,11 @@ p, a, li, dl dt, dl dd {
 }
 .tab-contents .page_recruit_interview .pageRecruit_list_dl .senior_name .name {
   font-size: 2rem;
+}
+@media all and (max-width: 540px) {
+  .tab-contents .page_recruit_interview .pageRecruit_list_dl .senior_name .name {
+    font-size: 1.8rem;
+  }
 }
 .tab-contents .page_recruit_interview .pageRecruit_list_dl dd {
   margin: 0;
@@ -4572,10 +4626,15 @@ p, a, li, dl dt, dl dd {
 .tab-contents .page_recruit_h2.color {
   margin-bottom: 5%;
   text-align: left;
+  font-size: 2.4rem;
+}
+@media all and (max-width: 540px) {
+  .tab-contents .page_recruit_h2.color {
+    font-size: 2rem;
+  }
 }
 .tab-contents .tab-01 .page_recruit_h2.color {
   color: #379F77;
-  font-size: 3rem;
 }
 .tab-contents .tab-02 .page_recruit_h2.color {
   color: #E67744;
