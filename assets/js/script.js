@@ -64,6 +64,37 @@ window.addEventListener('load',() => {
 });*/
 
 /*---------------------------------------------------------------
+	タブ切り替え
+---------------------------------------------------------------*/
+function activateIndex(element) {
+  const currentActiveIndex = document.querySelector('#js-index__list .is-active');
+  if(currentActiveIndex !== null) {
+      currentActiveIndex.classList.remove('is-active');
+  }
+  const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
+  newActiveIndex.classList.add('is-active');
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const targets = document.getElementsByClassName('tab');
+  for (let i = 0; i < targets.length; i++) {
+      targets[i].addEventListener('click', changeTab, false);
+  }
+  // タブメニューボタンをクリックすると実行
+  function changeTab() {
+      // タブのclassを変更
+      document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+      this.classList.add('is-active');
+      // コンテンツのclassの値を変更
+      document.getElementsByClassName('is-display')[0].classList.remove('is-display');
+      const arrayTabs = Array.prototype.slice.call(targets);
+      const index = arrayTabs.indexOf(this);
+      document.getElementsByClassName('pageRecruit_content')[index].classList.add('is-display');
+  };
+}, false);
+
+/*---------------------------------------------------------------
 	事業内容スライド
 ---------------------------------------------------------------*/
 
@@ -233,18 +264,8 @@ function doWhenIntersect(entries) {
       }
   });
 }
-/**
-* 目次の色を変える関数
-* @param element
-*/
-function activateIndex(element) {
-  const currentActiveIndex = document.querySelector('#js-index__list .is-active');
-  if(currentActiveIndex !== null) {
-      currentActiveIndex.classList.remove('is-active');
-  }
-  const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
-  newActiveIndex.classList.add('is-active');
-}
+
+
 
 
 

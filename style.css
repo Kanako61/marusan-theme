@@ -15,6 +15,7 @@ Author: marusan Co., Ltd
 /*ボタン*/
 /*footer*/
 /*company*/
+/*recruit*/
 /******************* old *******************/
 /*Top_構造計算*/
 /*Top_movie*/
@@ -4284,101 +4285,144 @@ p, a, li, dl dt, dl dd {
 /*====================================================
 　　recruitページ全体
 =====================================================*/
-.page_recruit_item {
-  background: #fff;
-  border-radius: 2rem;
-  padding: 4em 5% 6em;
-}
-@media all and (max-width: 768px) {
-  .page_recruit_item {
-    padding: 2em 5% 3em;
-  }
+.recruit_bk_blue {
+  background: #98C0CC;
 }
 
-.recruit_h2 {
-  margin-bottom: 5%;
-}
-@media all and (max-width: 540px) {
-  .recruit_h2 {
-    margin-bottom: 8%;
-  }
-}
-
-.page_recruit_pic {
-  width: 100%;
-  margin: 0 auto;
-  height: 31.25vw;
-  overflow: hidden;
-  border-radius: 0.5em;
-}
-@media all and (max-width: 768px) {
-  .page_recruit_pic {
-    height: 39.0625vw;
-  }
-}
-
-.page_recruit_text {
-  margin: 5% 0 5%;
-}
-.page_recruit_text dt {
-  font-size: 2.4rem;
-  color: #064868;
-  margin-bottom: 1em;
-  line-height: 1.4;
-}
-@media all and (max-width: 768px) {
-  .page_recruit_text dt {
-    font-size: 2rem;
-  }
-}
-@media all and (max-width: 540px) {
-  .page_recruit_text dt {
-    font-size: 1.8rem;
-  }
-}
-.page_recruit_text dd {
-  margin: 0;
-}
-
-/*見出し h3*/
-.page_h3 {
-  background: #FEF6E1;
-  padding: 1em 1.5em;
-  font-size: 1.8rem;
-}
-
-/*見出し　h3-02*/
-.page_h3-02 {
+/*====================================================
+　　recruitメインビジュアル
+=====================================================*/
+.recruit_main_img {
   position: relative;
-  border-bottom: solid 1px #42B7E7;
-  font-size: 1.8rem;
-  padding: 0 1em 0.5em 1.5em;
+  width: 92vw;
+  margin: 0 auto 7vw;
+  z-index: 2;
 }
-.page_h3-02:after {
+.recruit_main_img:after {
+  position: absolute;
+  top: 24%;
+  left: -4vw;
   display: inline-block;
   content: "";
+  background: #fcf3e4;
+  width: 100vw;
+  height: 9.7222222222vw;
+  z-index: -1;
+}
+@media all and (max-width: 1000px) {
+  .recruit_main_img {
+    padding-top: 5em;
+  }
+}
+.recruit_main_img .recruit_pic {
+  position: relative;
+  width: 72.9166666667vw;
+  height: 49.1666666667vw;
+  max-height: 90vh;
+  margin: 0 0 0 auto;
+  overflow: hidden;
+}
+.recruit_main_img .recruit_main_copy {
   position: absolute;
-  top: 50%;
-  left: 0.5em;
-  transform: translatey(-50%);
-  width: 6px;
-  height: 18px;
-  background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
-}
-
-.recruit_section {
-  margin: 10% auto;
-}
-.recruit_section dl dd {
+  bottom: -7vw;
+  left: 0;
+  font-size: 6.9444444444vw;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: 900;
   margin: 0;
 }
-
-.page_recruit_h2 {
-  background: #FEF6E1;
-  padding: 0.5em 1.5em;
+@media all and (min-width: 1440px) {
+  .recruit_main_img .recruit_main_copy {
+    font-size: 10rem;
+  }
 }
 
-/*1日の流れ*/
+.recruit_top_text {
+  width: 80vw;
+  max-width: 680px;
+  margin: 12% auto 5%;
+  padding-left: 8%;
+}
+@media all and (max-width: 768px) {
+  .recruit_top_text {
+    padding-left: 11vw;
+  }
+}
+.recruit_top_text .item_after {
+  position: relative;
+}
+.recruit_top_text .item_after:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -8vw;
+  left: -26vw;
+  width: 39.0277777778vw;
+  height: 23.6111111111vw;
+  background-image: url(assets/images/recruit/recruit-item01.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media all and (max-width: 768px) {
+  .recruit_top_text .item_after:after {
+    bottom: -8vw;
+    left: -20vw;
+    width: 32.0833333333vw;
+    height: 16.6666666667vw;
+  }
+}
+.recruit_top_text p {
+  color: #fff;
+  margin: 3em 0;
+}
+
+/*====================================================
+　　タブ切り替え
+=====================================================*/
+.pageRecruit_list {
+  width: 80vw;
+  margin: 0 auto;
+}
+.pageRecruit_list .tab-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  cursor: pointer;
+}
+.pageRecruit_list .tab-button .is-active {
+  color: #FFF;
+}
+.pageRecruit_list .tab {
+  width: 33.3333333333%;
+  text-align: center;
+}
+.pageRecruit_list .tab-contents {
+  border-top: none;
+  background: #fff;
+}
+.pageRecruit_list .pageRecruit_content {
+  display: none;
+  padding: 8px;
+  text-align: left;
+}
+.pageRecruit_list .pageRecruit_content.is-display {
+  display: block;
+}
+.pageRecruit_list .tab-01.is-active {
+  background: #379F77;
+}
+.pageRecruit_list .tab-02.is-active {
+  background: #E67744;
+}
+.pageRecruit_list .tab-03.is-active {
+  background: #5279F4;
+}
+
+/*====================================================
+　　recruit 1日の流れ
+=====================================================*/
 .page_recruit_schedul {
   background: #FFFCF6;
   padding: 3% 6%;
@@ -4399,7 +4443,9 @@ p, a, li, dl dt, dl dd {
   padding: 3% 6%;
 }
 
-/*よくある質問*/
+/*====================================================
+　　recruit よくある質問
+=====================================================*/
 .question {
   position: relative;
   cursor: pointer;
