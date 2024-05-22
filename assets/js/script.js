@@ -236,6 +236,7 @@ $('.movie_btn').modalVideo({
 /*---------------------------------------------------------------
 	サイドバー追従
 ---------------------------------------------------------------*/
+
 const sidebar = new StickySidebar('.sidebar', {
   containerSelector: '.precut-box',
   innerWrapperSelector: '.sidebar-inner',

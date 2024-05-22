@@ -28,10 +28,18 @@ Template Name: contact
 					the_post();
 				?>
 					<article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
-                    <h1 class="page_header_title content-title contact_title">
-                        <p class="en">Contact</p><br>
-                        <p class="ja"><?php the_title(); ?></p>
-                    </h1>
+						<h1 class="page_header_title content-title contact_title">
+							<p class="ja"><?php the_title(); ?></p>
+						</h1>
+
+						<!-- コメント -->
+						<p>株式会社マルサンのウェブサイトをご覧頂き、誠にありがとうございます。<br>フォームの項目（ ＊ は必須）についてご入力の上で送信してください。</p>
+
+						<!-- 電話 -->
+						<div class="page_contact_tel">
+							
+						</div>
+
                         <div class="content-body">
 							<?php if ( has_post_thumbnail() ) : ?>
                             	<div class="content-eyecatch">

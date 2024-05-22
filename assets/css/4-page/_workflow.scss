@@ -105,6 +105,7 @@
             }
         }
 
+        /*
         &_item:nth-child(even) {
             position:relative;
 
@@ -171,8 +172,9 @@
                 }
             }
         }
+        */
 
-        &_item:nth-child(odd) {
+        &_item {
             position:relative;
 
             .page_flow_content {

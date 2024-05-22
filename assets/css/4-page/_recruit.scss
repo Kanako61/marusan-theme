@@ -18,10 +18,12 @@
 }
 
 .recruit_bk_blue02 {
+    position:relative;
     background:$bk-2;
     width:100vw;
     margin-left: calc(50% - 50vw);
     padding:8vw 0;
+    z-index:-1;
 }
 
 .recruit_main .page_content {
@@ -136,8 +138,10 @@
 =====================================================*/
 
 .pageRecruit {
+    position:relative;
     background:$bk-4;
     margin-bottom:15%;
+    z-index:2;
 }
 
 .pageRecruit_list {
@@ -206,8 +210,10 @@
     }
     
     .pageRecruit_content {
+        position:relative;
         display: none;
         text-align: left;
+        z-index:2;
     }
     
     .pageRecruit_content.is-display {
@@ -234,7 +240,7 @@
         margin-bottom:8vw;
 
         @media all and (max-width:768px) {
-            padding:8% 4%;
+            padding:10% 8%;
         }
     }
 
@@ -347,10 +353,25 @@
 
     /*募集要項*/
     .page_recruit_job {
+        position:relative;
         width:80vw;
         margin:0 auto;
         background:#fff;
         padding:8%;
+
+        &:after {
+            position:absolute;
+            top:50%;
+            left:0;
+            transform:translatey(-50%);
+            content:'';
+            display:inline-block;
+            width:100vw;
+            margin: 0 calc(50% - 50vw);
+            height:30vw;
+            background:$bk-1;
+            z-index:-1;
+        }
 
         @media all and (max-width:768px) {
             width:90vw;
@@ -405,8 +426,36 @@
             max-width:874px;
             gap:3em;
 
-            @media all and (max-width:768px) {
-                gap:1em;
+            @media all and (max-width:1000px) {
+                width:80%;
+                grid-template-columns: 1fr;
+                gap:4em;
+            }
+
+            li {
+                position:relative;
+
+                &:after {
+                    @media all and (max-width:1000px) {
+                        content:'';
+                        display:inline-block;
+                        position:absolute;
+                        bottom:-3em;
+                        left:50%;
+                        transform:translatex(-50%) rotate(90deg);
+                        width:(77/1440)*100vw;
+                        height:(74/1440)*100vw;
+                        min-width:37px;
+                        min-height:34px;
+                        background-image:url(assets/images/recruit/recruit-item02.svg);
+                        background-size:contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+                &:last-child::after {
+                    display:none;
+                }
             }
 
             .flow_item {
@@ -426,6 +475,14 @@
                 padding:1em 0.2em;
                 background:$bk-1;
 
+                @media all and (max-width:1000px) {
+                    width:100%;
+                    height:inherit;
+                    max-width:inherit;
+                    margin-bottom:1em;
+    
+                }
+
                 &:before {
                     content:'';
                     display:inline-block;
@@ -440,6 +497,10 @@
                     background-image:url(assets/images/recruit/recruit-item02.svg);
                     background-size:contain;
                     background-repeat: no-repeat;
+
+                    @media all and (max-width:1000px) {
+                        display:none;
+                    }
                 }
 
                 &:after {
@@ -453,18 +514,22 @@
                     background-image:url(assets/images/recruit/recruit-flow01.svg);
                     background-size:contain;
                     background-repeat: no-repeat;
+
+                    @media all and (max-width:1000px) {
+                        display:none;
+                    }
                 }
 
                 p {
                     font-size:2rem;
                     letter-spacing: 0.1em;
 
-                    @media all and (max-width:1200px) {
+                    @media all and (max-width:1300px) {
                         font-size:(20/1440)*100vw;
                     }
 
-                    @media all and (max-width:900px) {
-                        font-size:1.2rem;
+                    @media all and (max-width:1000px) {
+                        font-size:1.8rem;
                     }
                 }
             }
@@ -477,10 +542,25 @@
 
     /*仕事の内容*/
     .page_recruit_work {
+        position:relative;
         background:#fff;
         width:80vw;
         margin:8vw auto 0;
         padding:8%;
+
+        &:after {
+            position:absolute;
+            top:30%;
+            left:0;
+            transform:translatey(-50%);
+            content:'';
+            display:inline-block;
+            width:100vw;
+            margin: 0 calc(50% - 50vw);
+            height:8vw;
+            background:$bk-4;
+            z-index:-1;
+        }
 
         @media all and (max-width:768px) {
             width:90vw;
@@ -494,10 +574,25 @@
 
     /*この仕事の良いところ*/
     .page_recruit_merit {
+        position:relative;
         background:#fff;
         width:80vw;
         margin:8vw auto 0;
         padding:8%;
+
+        &:after {
+            position:absolute;
+            top:50%;
+            left:0;
+            transform:translatey(-50%);
+            content:'';
+            display:inline-block;
+            width:100vw;
+            margin: 0 calc(50% - 50vw);
+            height:20vw;
+            background:$bk-1;
+            z-index:-1;
+        }
 
         @media all and (max-width:768px) {
             width:90vw;
