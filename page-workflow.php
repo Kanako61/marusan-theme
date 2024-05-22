@@ -119,18 +119,6 @@ Template Name: Work Flow
 </ul>
 </section>
 
-
-
-<!--====================================================
-    list　リンクリスト
-=====================================================-->
-<aside class="pageOther">
-    <ul class="pageOther_list">
-        <li><a href="<?php echo home_url('/'); ?>company"><p class="en">Company</p><p class="ja">会社情報</p></a></li>
-        <li><a href="<?php echo home_url('/'); ?>product"><p class="en">Product</p><p class="ja">商品情報</p></a></li>
-    </ul>
-</aside>
-
 </div>
 
 <!--====================================================
