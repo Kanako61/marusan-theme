@@ -53,7 +53,7 @@ Template Name: recruit
 <div class="recruit_content page_content">
 
 <!-- タブ切り替え -->
-<section class="pageRecruit">
+<section class="pageRecruit" id="pageRecruit">
   <div class="pageRecruit_list">
     <h1 class="page_recruit_h1">職種紹介</h1>
       <ul class="tab-button">
@@ -70,7 +70,7 @@ Template Name: recruit
         加工機オペレーター
 
       ======================================================================ー-->
-      <li class="pageRecruit_content tab-01 is-display">
+      <li class="pageRecruit_content tab-01 is-display" id="tab-01">
         <div class="pageRecruit_top_content">
           <!--概要-->
           <section class="page_recruit_gaiyou recruit_section">
@@ -191,6 +191,10 @@ Template Name: recruit
             <div class="entry-button">
               <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
             </div>
+
+            <div class="topBK-btn">
+              <a href="#pageRecruit">上部に戻る</a>
+            </div>
           </section>
 
         <!-- 採用の流れ -->
@@ -218,6 +222,9 @@ Template Name: recruit
               <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
             </li>
           </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- 仕事内容 -->
@@ -225,6 +232,9 @@ Template Name: recruit
           <h2 class="work_h2 page_recruit_h2">仕事内容</h2>
           <p class="page_recruit_work_text">加工機と制御用のP C を操作して、製材品を加工して木造住宅用の部材を生産します。C A D で出力されたデータの取り込み、加工順に合わせた材料の準備と加工機への投入、加工された製品( 完成品) の検品・梱包と出荷ヤードへの搬出を行います。加工機で対応できない特殊加工が必要となる場合もあり、そういった加工は大工技能を持つベテラン作業員が作業を担当しています。また、今後に備えて若手への技術継承も行っています。シフト制のため、予定が組みやすい。業務上必要な資格は会社負担で取得可能。木材の知識が身に付き、余暇、趣味に役立ちます。
           </p>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- この仕事の良いところ -->
@@ -235,6 +245,9 @@ Template Name: recruit
             <li><span class="num">02</span>業務上必要な資格は会社負担で取得可能。</li>
             <li><span class="num">03</span>木材の知識が身に付き、余暇、趣味に役立ちます。</li>
           </ul> 
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- 1日の流れ -->
@@ -280,6 +293,9 @@ Template Name: recruit
             <dt>17:30</dt>
             <dd>終業 帰宅</dd>
           </dl>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- よくある質問 -->
@@ -324,6 +340,9 @@ Template Name: recruit
               <p class="answer"><span class="qa">A</span>作業のムリ・ムラ・ムダの改善のための提案は大歓迎です。また、4半期毎に教育目的の個人面談を実施していますので、その折に相談・提案することで仕事に反映することも出来ます。</p>
             </li>
           </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <div class="entry-button">
@@ -332,13 +351,13 @@ Template Name: recruit
 
         <ul class="other_list">
           <li>
-            <div class="other_list_btn">
-              <a href="<?php echo home_url('/'); ?>contact">CADオペレーター</a>
+            <div class="other_list_btn other_btn_02">
+              <a href="#tab-02">CADオペレーター</a>
             </div>
           </li>
           <li>
-            <div class="other_list_btn">
-              <a href="<?php echo home_url('/'); ?>contact">セールスドライバー</a>
+            <div class="other_list_btn other_btn_03">
+              <a href="#tab-03">セールスドライバー</a>
             </div>
           </li>
         </ul>
@@ -351,7 +370,7 @@ Template Name: recruit
         CADオペレーター
 
       ======================================================================ー-->
-      <li class="pageRecruit_content tab-02">
+      <li class="pageRecruit_content tab-02" id="tab-02">
         <div class="pageRecruit_top_content">
           <!--概要-->
           <section class="page_recruit_gaiyou recruit_section">
@@ -472,6 +491,10 @@ Template Name: recruit
             <div class="entry-button">
               <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
             </div>
+
+            <div class="topBK-btn">
+              <a href="#pageRecruit">上部に戻る</a>
+            </div>
           </section>
 
         <!-- 採用の流れ -->
@@ -499,6 +522,9 @@ Template Name: recruit
               <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
             </li>
           </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- 仕事内容 -->
@@ -506,6 +532,9 @@ Template Name: recruit
           <h2 class="work_h2 page_recruit_h2">仕事内容</h2>
           <p class="page_recruit_work_text">お客様(取引先工務店様)が作成した図面を元に、プレカット専用CADを使い図面のデータ入力をしていく仕事です。CADの入力にあたってお客様との打合せに伺ったり、加工の詳細について電話やメールを使ったやり取りも行います。入力したデータは、お客様への見積りの元データとしても使われ、工場では、CADで入力したデータや図面を元にして加工が行われます。
           </p>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- この仕事の良いところ -->
@@ -516,6 +545,9 @@ Template Name: recruit
             <li><span class="num">02</span>自分で家を新築する際に、仕事で得た知識を活かすことができます。</li>
             <li><span class="num">03</span>CAD以外のPCソフトを使用する機会も多く、スキルアップに繋がります。</li>
           </ul> 
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- 1日の流れ -->
@@ -561,6 +593,9 @@ Template Name: recruit
             <dt>17:30</dt>
             <dd>終業 帰宅</dd>
           </dl>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- よくある質問 -->
@@ -585,6 +620,9 @@ Template Name: recruit
               <p class="answer"><span class="qa">A</span>産休・育休を取得後、復職した方が複数名在職しています。また、他部門にも育児都合で時短(パート)勤務をされている方もいます。</p>
             </li>
           </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <div class="entry-button">
@@ -593,19 +631,19 @@ Template Name: recruit
 
         <ul class="other_list">
           <li>
-            <div class="other_list_btn">
-              <a href="<?php echo home_url('/'); ?>contact">加工機オペレーター</a>
+            <div class="other_list_btn other_btn_01">
+              <a href="#tab-01">加工機オペレーター</a>
             </div>
           </li>
           <li>
-            <div class="other_list_btn">
-              <a href="<?php echo home_url('/'); ?>contact">セールスドライバー</a>
+            <div class="other_list_btn other_btn_03">
+              <a href="#tab-03">セールスドライバー</a>
             </div>
+
           </li>
         </ul>
         </div>
       </li>
-
 
       <!--=======================================================================
 
@@ -613,7 +651,7 @@ Template Name: recruit
 
       ======================================================================ー-->
 
-      <li class="pageRecruit_content tab-03">
+      <li class="pageRecruit_content tab-03" id="tab-03">
         <div class="pageRecruit_top_content">
           <!--概要-->
           <section class="page_recruit_gaiyou recruit_section">
@@ -738,6 +776,10 @@ Template Name: recruit
             <div class="entry-button">
               <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
             </div>
+
+            <div class="topBK-btn">
+              <a href="#pageRecruit">上部に戻る</a>
+            </div>
           </section>
 
         <!-- 採用の流れ -->
@@ -765,6 +807,9 @@ Template Name: recruit
               <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
             </li>
           </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- 仕事内容 -->
@@ -772,6 +817,9 @@ Template Name: recruit
           <h2 class="work_h2 page_recruit_h2">仕事内容</h2>
           <p class="page_recruit_work_text">工場で加工した製品(プレカット材)や、一部の住宅資材を建築現場にお届け するお仕事です。プレカット材は現場作業予定に応じて搬入しますが、朝イチ(8:00)までに現場にお届けする場合が多く、距離によっては折り返して1日に何度か搬入する場合もあります。現場搬入時はユニックによる荷降ろしが基本となります。また、その他に小口の素材品(加工していない製材品)の受注品の配達も行います。
           </p>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- この仕事の良いところ -->
@@ -781,6 +829,9 @@ Template Name: recruit
             <li><span class="num">01</span>業務上必要な資格は会社負担で取得可能</li>
             <li><span class="num">02</span>色々な住宅建築の現場に行くので、家が建つ過程や構造を知ることができます。</li>
           </ul> 
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- 1日の流れ -->
@@ -826,6 +877,9 @@ Template Name: recruit
             <dt>17:30</dt>
             <dd>終業 帰宅</dd>
           </dl>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <!-- よくある質問 -->
@@ -853,6 +907,9 @@ Template Name: recruit
               <p class="answer"><span class="qa">A</span>出荷が少ない場合などに工場内での作業（積み込みや材料集め）をしていただくことがあります。</p>
             </li>
           </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
         </section>
 
         <div class="entry-button">
@@ -861,20 +918,18 @@ Template Name: recruit
 
         <ul class="other_list">
           <li>
-            <div class="other_list_btn">
-              <a href="<?php echo home_url('/'); ?>contact">加工機オペレーター</a>
+            <div class="other_list_btn other_btn_01">
+              <a href="#tab-01">加工機オペレーター</a>
             </div>
           </li>
           <li>
-            <div class="other_list_btn">
-              <a href="<?php echo home_url('/'); ?>contact">CADオペレーター</a>
+            <div class="other_list_btn other_btn_02">
+              <a href="#tab-02">CADオペレーター</a>
             </div>
           </li>
         </ul>
         </div>
       </li>
-
-
     </ul>
   </div>
 </section>

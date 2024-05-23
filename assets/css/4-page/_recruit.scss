@@ -42,6 +42,30 @@
     }
 }
 
+/*上部に戻るボタン*/
+.topBK-btn {
+    margin-top:3em;
+    text-align: end;
+
+    a {
+        position:relative;
+        font-size:1.3rem;
+
+        &:after {
+            position: absolute;
+            top: -3em;
+            left: 50%;
+            transform: translatex(-50%) rotate(180deg);
+            content: "";
+            display: inline-block;
+            border-top: 1.2em solid $btn;
+            border-right: 0.7em solid transparent;
+            border-bottom: 1.2em solid transparent;
+            border-left: 0.7em solid transparent;
+          }
+        }
+    }
+
 /*====================================================
 　　recruitメインビジュアル
 =====================================================*/

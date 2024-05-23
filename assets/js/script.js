@@ -66,33 +66,64 @@ window.addEventListener('load',() => {
 /*---------------------------------------------------------------
 	タブ切り替え
 ---------------------------------------------------------------*/
-function activateIndex(element) {
-  const currentActiveIndex = document.querySelector('#js-index__list .is-active');
-  if(currentActiveIndex !== null) {
-      currentActiveIndex.classList.remove('is-active');
-  }
-  const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
-  newActiveIndex.classList.add('is-active');
-}
-
 
 document.addEventListener('DOMContentLoaded', function () {
-  const targets = document.getElementsByClassName('tab');
-  for (let i = 0; i < targets.length; i++) {
-      targets[i].addEventListener('click', changeTab, false);
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.pageRecruit_content');
+
+  function activateTab(index) {
+    // すべてのタブとコンテンツからクラスを削除
+    tabs.forEach(tab => tab.classList.remove('is-active'));
+    contents.forEach(content => content.classList.remove('is-display'));
+
+    // 指定されたタブとコンテンツにクラスを追加
+    if (tabs[index]) {
+      tabs[index].classList.add('is-active');
+    }
+    if (contents[index]) {
+      contents[index].classList.add('is-display');
+      contents[index].scrollIntoView({ behavior: 'smooth' });
+    }
   }
-  // タブメニューボタンをクリックすると実行
-  function changeTab() {
-      // タブのclassを変更
-      document.getElementsByClassName('is-active')[0].classList.remove('is-active');
-      this.classList.add('is-active');
-      // コンテンツのclassの値を変更
-      document.getElementsByClassName('is-display')[0].classList.remove('is-display');
-      const arrayTabs = Array.prototype.slice.call(targets);
-      const index = arrayTabs.indexOf(this);
-      document.getElementsByClassName('pageRecruit_content')[index].classList.add('is-display');
-  };
-}, false);
+
+  // 各タブにクリックイベントを追加
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (event) => {
+      event.preventDefault(); // デフォルトの動作をキャンセル
+      activateTab(index);
+    });
+  });
+
+  // ボタンのクリックイベントを設定する関数
+  function addClickListener(buttonClass, tabIndex) {
+    const buttons = document.querySelectorAll(buttonClass);
+    if (buttons) {
+      buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault(); // デフォルトの動作をキャンセル
+          activateTab(tabIndex);
+        });
+      });
+    }
+  }
+
+  // 各ボタンにイベントリスナーを追加
+  addClickListener('.other_btn_01', 0); // .other_btn_01ボタンは最初のタブ（インデックス0）をアクティブにする
+  addClickListener('.other_btn_02', 1); // .other_btn_02ボタンは2番目のタブ（インデックス1）をアクティブにする
+  addClickListener('.other_btn_03', 2); // .other_btn_03ボタンは3番目のタブ（インデックス2）をアクティブにする
+
+  // ページ内リンクのクリックイベントを調整
+  const pageLinks = document.querySelectorAll('a[href*="#"]');
+  pageLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target && !target.classList.contains('tab-03')) { // tab-03 の場合はスクロールしない
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
 
 /*---------------------------------------------------------------
 	事業内容スライド

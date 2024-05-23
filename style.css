@@ -16,6 +16,7 @@ Author: marusan Co., Ltd
 /*footer*/
 /*company*/
 /*recruit*/
+/*workflow*/
 /******************* old *******************/
 /*Top_構造計算*/
 /*Top_movie*/
@@ -4377,6 +4378,28 @@ p, a, li, dl dt, dl dd {
   }
 }
 
+/*上部に戻るボタン*/
+.topBK-btn {
+  margin-top: 3em;
+  text-align: end;
+}
+.topBK-btn a {
+  position: relative;
+  font-size: 1.3rem;
+}
+.topBK-btn a:after {
+  position: absolute;
+  top: -3em;
+  left: 50%;
+  transform: translatex(-50%) rotate(180deg);
+  content: "";
+  display: inline-block;
+  border-top: 1.2em solid #768d96;
+  border-right: 0.7em solid transparent;
+  border-bottom: 1.2em solid transparent;
+  border-left: 0.7em solid transparent;
+}
+
 /*====================================================
 　　recruitメインビジュアル
 =====================================================*/
@@ -5593,6 +5616,154 @@ p, a, li, dl dt, dl dd {
   display: none;
 }
 
+/*トップ画像・タイトル*/
+.page_title-pic {
+  position: relative;
+}
+@media all and (min-width: 1000px) {
+  .page_title-pic {
+    height: 70vh;
+  }
+  .page_title-pic img {
+    height: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_title-pic {
+    height: 50vh;
+  }
+  .page_title-pic img {
+    height: 100%;
+  }
+}
+
+.page_workflow_h1 {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .page_workflow_h1 {
+    font-size: 2.4rem;
+  }
+}
+
+.page_flow {
+  /*ご注文の流れ見出し*/
+  /*各項目の見出し*/
+}
+.page_flow .page_workflow_h2 {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translatex(-50%);
+  margin-bottom: 8%;
+}
+@media all and (max-width: 768px) {
+  .page_flow .page_workflow_h2 {
+    margin-bottom: 12%;
+    font-size: 2rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_flow .page_workflow_h2 {
+    margin-bottom: 18%;
+    font-size: 2rem;
+  }
+}
+.page_flow .page_workflow_h2:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: -130%;
+  transform: translatey(-50%);
+  background: #BFB9B1;
+  width: 120%;
+  height: 1px;
+}
+@media all and (max-width: 768px) {
+  .page_flow .page_workflow_h2:before {
+    width: 60%;
+    left: -70%;
+  }
+}
+.page_flow .page_workflow_h2:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: -130%;
+  transform: translatey(-50%);
+  background: #BFB9B1;
+  width: 120%;
+  height: 1px;
+}
+@media all and (max-width: 768px) {
+  .page_flow .page_workflow_h2:after {
+    width: 60%;
+    right: -70%;
+  }
+}
+.page_flow .page_workflow_h2 p {
+  text-align: center;
+  font-weight: 400;
+}
+.page_flow .page_flow_tit {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #736a5f;
+  margin: 0 0 4em;
+}
+@media all and (max-width: 768px) {
+  .page_flow .page_flow_tit {
+    font-size: 1.8rem;
+    margin: 0 0 2em;
+  }
+}
+.page_flow .page_flow_tit:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  width: 100%;
+  height: 48%;
+  background: #e2f1f2;
+  z-index: -1;
+}
+.page_flow .page_flow_tit_num {
+  position: relative;
+  display: inline-block;
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #736a5f;
+  padding-right: 0.3em;
+}
+@media all and (max-width: 768px) {
+  .page_flow .page_flow_tit_num {
+    font-size: 2.4rem;
+  }
+}
+.page_flow .page_flow_tit_num:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -10%;
+  left: -50%;
+  width: 124%;
+  height: 108%;
+  background: #B4D1DA;
+  z-index: -1;
+}
 @media all and (max-width: 540px) {
   .page_flow_list {
     position: relative;
@@ -5600,6 +5771,7 @@ p, a, li, dl dt, dl dd {
     flex-direction: column;
     padding-left: 4em;
     gap: 6em;
+    /*スマホ時の線*/
   }
   .page_flow_list:after {
     display: inline-block;
@@ -5618,90 +5790,141 @@ p, a, li, dl dt, dl dd {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-content: start space-evenly;
-  gap: 10em;
+  gap: 16em;
+  padding-bottom: 6em;
+  /*PCのみグレー背景*/
+  /*PC時の線*/
+}
+@media all and (max-width: 1100px) {
+  .page_flow_list_item {
+    gap: 10em;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_flow_list_item {
+    gap: 6em;
+  }
+}
+@media all and (max-width: 540px) {
+  .page_flow_list_item {
+    padding-bottom: 0;
+  }
+}
+.page_flow_list_item:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 3em;
+  right: -3%;
+  background: #EFF2F2;
+  width: 84%;
+  height: 8em;
+  z-index: -1;
+}
+.page_flow_list_item:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 0.2em;
+  height: 100%;
+  background: #736a5f;
+}
+@media all and (max-width: 1100px) {
+  .page_flow_list_item:after {
+    right: -5em;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_flow_list_item:after {
+    right: -3em;
+    width: 0.15em;
+  }
+}
+@media all and (max-width: 540px) {
+  .page_flow_list_item:after {
+    display: none;
+  }
 }
 @media all and (max-width: 540px) {
   .page_flow_list_item {
     position: relative;
     grid-template-columns: 1fr;
     gap: 0em;
+    /*スマホ時点線*/
+    /*スマホ時丸*/
   }
   .page_flow_list_item:before {
     border-top: 3px dotted #736a5f;
     content: "";
     position: absolute;
-    top: 50%;
+    top: 74%;
     transform: translatey(-50%);
     left: -4em;
-    width: 5em;
+    width: 4em;
     height: 3px;
   }
   .page_flow_list_item:after {
     display: inline-block;
     content: "";
     position: absolute;
-    top: 50%;
+    top: 74%;
     transform: translatey(-50%);
-    left: -4.6em;
-    width: 1.6em;
-    height: 1.6em;
+    left: -4.5em;
+    width: 1.2em;
+    height: 1.2em;
     background: #fff;
     border: solid 3px #736a5f;
     border-radius: 3em;
+    z-index: 2;
   }
-}
-.page_flow_list_item .page_flow_h3 {
-  font-size: 2rem;
-  color: #736a5f;
-  margin-top: 0;
-}
-.page_flow_list_item .page_flow_h3_num {
-  display: inline-block;
-  font-size: 3.6rem;
-  font-weight: 800;
-  color: #736a5f;
-  padding-right: 0.3em;
-}
-.page_flow_list_item .page_flow_content {
-  position: relative;
-  padding: 3em 0;
 }
 @media all and (max-width: 540px) {
   .page_flow_list_item .page_flow_content {
-    padding: 0;
-  }
-}
-.page_flow_list_item .page_flow_content:after {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translatey(-50%);
-  right: -5.2em;
-  width: 0.2em;
-  height: 100%;
-  background: #736a5f;
-}
-@media all and (max-width: 540px) {
-  .page_flow_list_item .page_flow_content:after {
-    display: none;
+    margin-bottom: 2em;
   }
 }
 .page_flow_list_item .page_flow_pic {
   position: relative;
-  height: 26vw;
-  min-height: 300px;
-  padding: 3em 0;
+  /*PC時点線*/
+  /*PC時丸*/
+}
+.page_flow_list_item .page_flow_pic_box {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translatey(-50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 29.5138888889vw;
+  max-width: 425px;
+  min-width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 .page_flow_list_item .page_flow_pic:before {
-  border-top: 3px solid #736a5f;
+  border-top: 3px dotted #736a5f;
   content: "";
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
-  left: -5em;
-  width: 5em;
+  left: -8em;
+  width: 8em;
   height: 3px;
+}
+@media all and (max-width: 1100px) {
+  .page_flow_list_item .page_flow_pic:before {
+    left: -5em;
+    width: 5em;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_flow_list_item .page_flow_pic:before {
+    left: -3em;
+    width: 3em;
+  }
 }
 @media all and (max-width: 540px) {
   .page_flow_list_item .page_flow_pic:before {
@@ -5714,31 +5937,88 @@ p, a, li, dl dt, dl dd {
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
-  left: -5.8em;
+  left: -8.8em;
   width: 1.6em;
   height: 1.6em;
   border: solid 3px #736a5f;
   background: #fff;
   border-radius: 3em;
+  z-index: 2;
+}
+@media all and (max-width: 1100px) {
+  .page_flow_list_item .page_flow_pic:after {
+    left: -5.8em;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_flow_list_item .page_flow_pic:after {
+    left: -3.6em;
+    width: 1.2em;
+    height: 1.2em;
+  }
 }
 @media all and (max-width: 540px) {
   .page_flow_list_item .page_flow_pic:after {
     display: none;
   }
 }
-.page_flow_list_item .page_flow_pic_box {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+
+.page_flow_other {
+  max-width: 800px;
+  margin: 0 auto;
 }
-@media all and (max-width: 540px) {
-  .page_flow_list_item .page_flow_pic_box {
-    padding: 0;
+@media all and (max-width: 768px) {
+  .page_flow_other {
+    margin: 0 auto 20%;
   }
 }
-.page_flow_list_item .page_flow_pic_box img {
+.page_flow_other_h2 {
+  width: 80%;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #736a5f;
+  margin: 0 auto 4em;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .page_flow_other_h2 {
+    font-size: 1.8rem;
+  }
+}
+.page_flow_other_h2:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -60%;
+  left: -5%;
+  width: 14%;
+  height: 190%;
+  background: #B4D1DA;
+  z-index: -1;
+}
+.page_flow_other_h2:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -60%;
+  right: 0;
   width: 100%;
-  height: auto;
+  height: 1.8em;
+  background: #e2f1f2;
+  z-index: -1;
+}
+.page_flow_other_text {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.page_flow_other_h3 {
+  text-align: center;
+}
+
+/*アクセス非表示*/
+.workflow .address {
+  display: none;
 }
 
 /* case 共通 */
