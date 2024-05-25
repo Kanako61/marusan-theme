@@ -145,6 +145,8 @@ p, a, li, dl dt, dl dd {
     position:relative;
     margin-top:1em;
     padding-left:2.2em;
+    font-size:1.8rem;
+    font-weight:bold;
 
     &:before {
       content:'';

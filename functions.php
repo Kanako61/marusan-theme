@@ -121,28 +121,36 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles');
 	wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js', array('gsap-js'), false, true );
   }
   add_action( 'wp_enqueue_scripts', 'theme_gsap_script' ); */
+
   
 
 //jsファイルの読み込み  bodyタグの直前で読み込む
+
 function themes_file_scripts() {
-    if (is_admin()) return; // 管理画面ではスクリプトは読み込まない
+    if (is_admin()) return;
 
-	wp_deregister_script( 'jquery'); //デフォルトの jQuery は読み込まない
+    wp_deregister_script('jquery');
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0', true);
 
-    // jQuery 3.6.0
-    wp_enqueue_script('jquery-3.6.0.min.js', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js', array(), '3.6.0', false);
+    // ローカルのjQueryファイルをフォールバックとして設定
+    add_action('wp_footer', function() {
+        ?>
+        <script>
+        window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.7.1.min.js"><\/script>');
+        </script>
+        <?php
+    });
 
     // その他のスクリプト
-	wp_enqueue_script('swiper-bundle.min.js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '1.0', false);
-    wp_enqueue_script('vegas.min.js', get_template_directory_uri() . '/assets/js/vegas.min.js', array(), '1.0', true);
-	wp_enqueue_script('scroll-hint.min.js', get_template_directory_uri() . '/assets/js/scroll-hint.min.js', array(), '1.0', true);
-	wp_enqueue_script('jquery-modal-video.min.js', get_template_directory_uri() . '/assets/js/jquery-modal-video.min.js', array(), '1.0', true);
-	wp_enqueue_script('sticky-sidebar.min.js', get_template_directory_uri() . '/assets/js/sticky-sidebar.min.js', array(), '1.0', true);
-    wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0', true);
+    wp_enqueue_script('swiper-bundle.min.js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '1.0', false);
+    wp_enqueue_script('vegas.min.js', get_template_directory_uri() . '/assets/js/vegas.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('scroll-hint.min.js', get_template_directory_uri() . '/assets/js/scroll-hint.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('jquery-modal-video.min.js', get_template_directory_uri() . '/assets/js/jquery-modal-video.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('sticky-sidebar.min.js', get_template_directory_uri() . '/assets/js/sticky-sidebar.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0', true);
 
-    // トップページのみに script-top.js
     if (is_front_page() || is_home()) {
-        wp_enqueue_script('script-top', get_template_directory_uri() . '/assets/js/script-top.js', array(), '1.0', true);
+        wp_enqueue_script('script-top', get_template_directory_uri() . '/assets/js/script-top.js', array('jquery'), '1.0', true);
     }
 }
 add_action('wp_enqueue_scripts', 'themes_file_scripts');

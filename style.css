@@ -17,6 +17,7 @@ Author: marusan Co., Ltd
 /*company*/
 /*recruit*/
 /*workflow*/
+/*contact*/
 /******************* old *******************/
 /*Top_構造計算*/
 /*Top_movie*/
@@ -1232,6 +1233,8 @@ p, a, li, dl dt, dl dd {
   position: relative;
   margin-top: 1em;
   padding-left: 2.2em;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 .contact-box .tel_num:before {
   content: "";
@@ -4257,11 +4260,179 @@ p, a, li, dl dt, dl dd {
   contact　お問い合わせ
 
 ===============================================================*/
-.contact form {
-  padding: 10%;
+.contact {
+  /*ステップバー*/
+}
+.contact .page_contact_main {
+  background: #e2f1f2;
+  padding-top: 10em;
+}
+.contact .page_content {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 8vw;
   background: #fff;
+  /*タイトル*/
+  /*テキスト*/
+  /*電話番号*/
+}
+@media all and (max-width: 1000px) {
+  .contact .page_content {
+    padding: 8vw 5vw;
+  }
+}
+@media all and (max-width: 768px) {
+  .contact .page_content {
+    padding: 12vw 5vw;
+  }
+}
+.contact .page_content .contact_title {
+  width: 100%;
+  margin: 0 auto 10%;
+}
+.contact .page_content .contact_title p {
+  width: 100%;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.contact .page_content .page_contact_text {
+  text-align: center;
+  margin-bottom: 5%;
+}
+.contact .page_content .page_contact_text .red {
+  color: red;
+}
+.contact .page_content .page_contact_tel {
+  border: solid 10px #e2f1f2;
+  padding: 3% 5%;
+}
+@media all and (max-width: 540px) {
+  .contact .page_content .page_contact_tel {
+    padding: 6% 5%;
+  }
+}
+.contact .page_content .page_contact_tel .page_contact_h2 {
+  color: #736a5f;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0 auto 5%;
+}
+.contact .page_content .page_contact_tel_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+@media all and (max-width: 768px) {
+  .contact .page_content .page_contact_tel_list {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+.contact .page_content .page_contact_tel .tel_num {
+  position: relative;
+  padding-left: 2em;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+@media all and (max-width: 1000px) {
+  .contact .page_content .page_contact_tel .tel_num {
+    font-size: 1.8rem;
+  }
+}
+.contact .page_content .page_contact_tel .tel_num:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translatey(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url(assets/images/common/phone-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media all and (max-width: 1000px) {
+  .contact .page_content .page_contact_tel .tel_num:before {
+    width: 26px;
+    height: 26px;
+  }
+}
+.contact .page_content .page_contact_tel .page_contact_hours {
+  text-align: center;
+}
+.contact .contact_progressbar {
+  position: relative;
+  max-width: 600px;
+  margin: 8% auto 8%;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 1;
+}
+.contact .contact_progressbar li {
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
+  width: 33.333%;
+  color: #736a5f;
+  font-weight: bold;
+}
+.contact .contact_progressbar li:before {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 7px auto 15px auto;
+  content: "";
+  text-align: center;
+  border-radius: 50%;
+  background-image: url(assets/images/contact/contact-item01.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: solid 5px #fff;
+}
+.contact .contact_progressbar li:after {
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  top: 22px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: #BFB9B1;
+}
+.contact .contact_progressbar li:first-child:after {
+  content: none;
+}
+.contact .contact_progressbar li.active, .contact .contact_progressbar li.complete {
+  color: #736a5f;
+}
+.contact .contact_progressbar li.active:before, .contact .contact_progressbar li.complete:before {
+  background-image: url(assets/images/contact/contact-item02.svg);
+}
+.contact .contact_progressbar li.active:after, .contact .contact_progressbar li.complete:after {
+  background-color: #736a5f;
+}
+.contact form {
+  padding: 0 10%;
   border-radius: 1em;
   margin: 5% 0;
+  /*==========================
+
+    ラジオボタンのスタイル
+
+  ============================*/
+  /* デフォルトのボタン */
+  /* チェック前のボタン */
+  /* チェック後のボタン */
+  /*セレクトボタン*/
+  /*input*/
+  /*textarea*/
+  /*同意ボタン*/
 }
 @media all and (max-width: 540px) {
   .contact form {
@@ -4289,9 +4460,12 @@ p, a, li, dl dt, dl dd {
   border: none;
 }
 .contact form .beside, .contact form .beside-none {
-  width: 12em;
-  color: #064868;
+  min-width: 12em;
+  color: #736a5f;
   font-weight: bold;
+}
+.contact form .content {
+  width: 100%;
 }
 .contact form .required {
   color: red;
@@ -4304,32 +4478,94 @@ p, a, li, dl dt, dl dd {
   border-bottom: solid 1px #064868;
   color: #064868;
 }
+.contact form .radio .wpcf7-list-item.first {
+  margin: 0;
+}
+.contact form .radio .wpcf7-list-item-label {
+  cursor: pointer;
+  display: flex;
+  margin-left: 2em;
+}
+@media all and (max-width: 768px) {
+  .contact form .radio .wpcf7-list-item-label {
+    margin-top: 1em;
+  }
+}
+.contact form .radio input[type=radio] {
+  opacity: 0; /* デフォルトのボタンを非表示 */
+  position: absolute;
+}
+.contact form .radio .wpcf7-list-item-label::before {
+  background: #fff;
+  border: 1.5px solid #736a5f;
+  border-radius: 100%; /* ラジオボタンっぽく丸くする */
+  content: "";
+  height: 1.4em;
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  margin-top: auto;
+  transition: background-color 0.5s; /* 色をじんわり変化させる */
+  width: 1.4em;
+}
+.contact form .radio input[type=radio]:checked + .wpcf7-list-item-label::before {
+  background-color: #98C0CC; /* チェック後の中心の色 */
+  box-shadow: inset 0 0 0 3px #fff; /* 中心の色のスタイル */
+}
+.contact form .wpcf7-list-item {
+  margin: 0;
+}
+.contact form .wpcf7-form-control {
+  padding: 0.5em 0.8em;
+}
+.contact form select.wpcf7-form-control {
+  height: 3.5em !important;
+  background: #EAF3FD;
+  border: none;
+  width: 100%;
+}
 @media all and (max-width: 540px) {
-  .contact form .wpcf7-form-control {
+  .contact form select.wpcf7-form-control {
     width: 100%;
   }
 }
-.contact form .wpcf7-form-control-wrap input {
-  padding: 0.5em 0;
+.contact form input.wpcf7-form-control {
+  height: 3.5em !important;
+  background: #EAF3FD;
+  border: none;
+  width: 100%;
 }
 @media all and (max-width: 540px) {
-  .contact form .select {
+  .contact form input.wpcf7-form-control {
     width: 100%;
   }
+}
+.contact form textarea.wpcf7-form-control {
+  border: none;
+  background: #EAF3FD;
+  width: 100%;
+}
+.contact form .wpcf7-validates-as-required {
+  padding-right: 0;
 }
 .contact form .sendBtn {
+  width: 12em;
   text-align: center;
-  margin: 2em auto 0;
+  margin: 5em auto 0;
 }
 .contact form .sendBtn input {
-  padding: 0.8em 5em;
-  border-radius: 3em;
+  padding: 1em 2em 1em 2em;
+  border-radius: 0.6em;
   border: none;
-  background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
+  background: #768d96;
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.1em;
   cursor: pointer;
+}
+
+/*アクセス非表示*/
+.contact .address {
+  display: none;
 }
 
 /*====================================================

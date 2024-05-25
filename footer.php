@@ -184,7 +184,7 @@
 </footer>
 
 <!-- GoogleMap API -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIYTWMK4fwVb0dmmp4LBDb8SQVAOsXyJ4&callback=initMap" async defer></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIYTWMK4fwVb0dmmp4LBDb8SQVAOsXyJ4&callback=initMap" async defer></script>-->
 <?php wp_footer(); ?>
 
 
