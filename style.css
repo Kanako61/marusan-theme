@@ -4257,17 +4257,16 @@ p, a, li, dl dt, dl dd {
 
 /*===============================================================
 
-  contact　お問い合わせ
+  contact　お問い合わせ 共通
 
 ===============================================================*/
-.contact {
-  /*ステップバー*/
-}
-.contact .page_contact_main {
+/*.contact {*/
+.page_contact_main {
   background: #e2f1f2;
-  padding-top: 10em;
+  padding: 10em 0 10em;
 }
-.contact .page_content {
+
+.page_content {
   max-width: 1220px;
   margin: 0 auto;
   padding: 8vw;
@@ -4277,70 +4276,70 @@ p, a, li, dl dt, dl dd {
   /*電話番号*/
 }
 @media all and (max-width: 1000px) {
-  .contact .page_content {
+  .page_content {
     padding: 8vw 5vw;
   }
 }
 @media all and (max-width: 768px) {
-  .contact .page_content {
+  .page_content {
     padding: 12vw 5vw;
   }
 }
-.contact .page_content .contact_title {
+.page_content .contact_title {
   width: 100%;
   margin: 0 auto 10%;
 }
-.contact .page_content .contact_title p {
+.page_content .contact_title p {
   width: 100%;
   font-size: 2.4rem;
   text-align: center;
 }
-.contact .page_content .page_contact_text {
+.page_content .page_contact_text {
   text-align: center;
   margin-bottom: 5%;
 }
-.contact .page_content .page_contact_text .red {
+.page_content .page_contact_text .red {
   color: red;
 }
-.contact .page_content .page_contact_tel {
+.page_content .page_contact_tel {
   border: solid 10px #e2f1f2;
   padding: 3% 5%;
 }
 @media all and (max-width: 540px) {
-  .contact .page_content .page_contact_tel {
+  .page_content .page_contact_tel {
     padding: 6% 5%;
   }
 }
-.contact .page_content .page_contact_tel .page_contact_h2 {
+.page_content .page_contact_tel .page_contact_h2 {
   color: #736a5f;
   font-size: 1.8rem;
   text-align: center;
   margin: 0 auto 5%;
 }
-.contact .page_content .page_contact_tel_list {
+.page_content .page_contact_tel_list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3em;
 }
 @media all and (max-width: 768px) {
-  .contact .page_content .page_contact_tel_list {
+  .page_content .page_contact_tel_list {
     flex-direction: column;
     gap: 1em;
   }
 }
-.contact .page_content .page_contact_tel .tel_num {
+.page_content .page_contact_tel .tel_num {
   position: relative;
   padding-left: 2em;
   font-size: 2.2rem;
   font-weight: bold;
 }
 @media all and (max-width: 1000px) {
-  .contact .page_content .page_contact_tel .tel_num {
+  .page_content .page_contact_tel .tel_num {
     font-size: 1.8rem;
   }
 }
-.contact .page_content .page_contact_tel .tel_num:before {
+.page_content .page_contact_tel .tel_num:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -4354,15 +4353,17 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
 }
 @media all and (max-width: 1000px) {
-  .contact .page_content .page_contact_tel .tel_num:before {
+  .page_content .page_contact_tel .tel_num:before {
     width: 26px;
     height: 26px;
   }
 }
-.contact .page_content .page_contact_tel .page_contact_hours {
+.page_content .page_contact_tel .page_contact_hours {
   text-align: center;
 }
-.contact .contact_progressbar {
+
+/*ステップバー*/
+.contact_progressbar {
   position: relative;
   max-width: 600px;
   margin: 8% auto 8%;
@@ -4372,7 +4373,7 @@ p, a, li, dl dt, dl dd {
   justify-content: space-between;
   z-index: 1;
 }
-.contact .contact_progressbar li {
+.contact_progressbar li {
   position: relative;
   list-style-type: none;
   text-align: center;
@@ -4381,7 +4382,7 @@ p, a, li, dl dt, dl dd {
   color: #736a5f;
   font-weight: bold;
 }
-.contact .contact_progressbar li:before {
+.contact_progressbar li:before {
   display: block;
   width: 32px;
   height: 32px;
@@ -4394,7 +4395,7 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
   border: solid 5px #fff;
 }
-.contact .contact_progressbar li:after {
+.contact_progressbar li:after {
   display: inline-block;
   position: absolute;
   z-index: -1;
@@ -4405,19 +4406,20 @@ p, a, li, dl dt, dl dd {
   content: "";
   background-color: #BFB9B1;
 }
-.contact .contact_progressbar li:first-child:after {
+.contact_progressbar li:first-child:after {
   content: none;
 }
-.contact .contact_progressbar li.active, .contact .contact_progressbar li.complete {
+.contact_progressbar li.active, .contact_progressbar li.complete {
   color: #736a5f;
 }
-.contact .contact_progressbar li.active:before, .contact .contact_progressbar li.complete:before {
+.contact_progressbar li.active:before, .contact_progressbar li.complete:before {
   background-image: url(assets/images/contact/contact-item02.svg);
 }
-.contact .contact_progressbar li.active:after, .contact .contact_progressbar li.complete:after {
+.contact_progressbar li.active:after, .contact_progressbar li.complete:after {
   background-color: #736a5f;
 }
-.contact form {
+
+form {
   padding: 0 10%;
   border-radius: 1em;
   margin: 5% 0;
@@ -4435,67 +4437,67 @@ p, a, li, dl dt, dl dd {
   /*同意ボタン*/
 }
 @media all and (max-width: 540px) {
-  .contact form {
+  form {
     padding: 5%;
   }
-  .contact form p {
+  form p {
     font-size: 1.5rem;
   }
 }
-.contact form .contact-item {
+form .contact-item {
   padding: 1em 0;
   display: flex;
   border-bottom: solid 1px #ccc;
 }
 @media all and (max-width: 768px) {
-  .contact form .contact-item {
+  form .contact-item {
     flex-direction: column;
   }
 }
-.contact form .contact-item, .contact form .contact-item2 {
+form .contact-item, form .contact-item2 {
   padding: 1.5em 0;
   border-bottom: solid 1px #DEDEDE;
 }
-.contact form .border-none {
+form .border-none {
   border: none;
 }
-.contact form .beside, .contact form .beside-none {
+form .beside, form .beside-none {
   min-width: 12em;
   color: #736a5f;
   font-weight: bold;
 }
-.contact form .content {
+form .content {
   width: 100%;
 }
-.contact form .required {
+form .required {
   color: red;
 }
-.contact form .privacy-policy_check {
-  padding-left: 2.8em;
+form .privacy-policy_check {
+  padding-left: 1.8em;
   margin-top: -0.8em;
 }
-.contact form .privacy-policy_check a {
+form .privacy-policy_check a {
   border-bottom: solid 1px #064868;
   color: #064868;
 }
-.contact form .radio .wpcf7-list-item.first {
+form .radio .wpcf7-list-item.first {
   margin: 0;
 }
-.contact form .radio .wpcf7-list-item-label {
+form .radio .wpcf7-list-item-label {
   cursor: pointer;
   display: flex;
   margin-left: 2em;
 }
 @media all and (max-width: 768px) {
-  .contact form .radio .wpcf7-list-item-label {
+  form .radio .wpcf7-list-item-label {
     margin-top: 1em;
   }
 }
-.contact form .radio input[type=radio] {
+form .radio input[type=radio] {
   opacity: 0; /* デフォルトのボタンを非表示 */
   position: absolute;
 }
-.contact form .radio .wpcf7-list-item-label::before {
+form .radio .wpcf7-list-item-label::before {
   background: #fff;
   border: 1.5px solid #736a5f;
   border-radius: 100%; /* ラジオボタンっぽく丸くする */
@@ -4507,52 +4509,53 @@ p, a, li, dl dt, dl dd {
   transition: background-color 0.5s; /* 色をじんわり変化させる */
   width: 1.4em;
 }
-.contact form .radio input[type=radio]:checked + .wpcf7-list-item-label::before {
+form .radio input[type=radio]:checked + .wpcf7-list-item-label::before {
   background-color: #98C0CC; /* チェック後の中心の色 */
   box-shadow: inset 0 0 0 3px #fff; /* 中心の色のスタイル */
 }
-.contact form .wpcf7-list-item {
+form .wpcf7-list-item {
   margin: 0;
 }
-.contact form .wpcf7-form-control {
+form .wpcf7-form-control {
   padding: 0.5em 0.8em;
 }
-.contact form select.wpcf7-form-control {
+form select.wpcf7-form-control {
   height: 3.5em !important;
   background: #EAF3FD;
   border: none;
   width: 100%;
 }
 @media all and (max-width: 540px) {
-  .contact form select.wpcf7-form-control {
+  form select.wpcf7-form-control {
     width: 100%;
   }
 }
-.contact form input.wpcf7-form-control {
+form input.wpcf7-form-control {
   height: 3.5em !important;
   background: #EAF3FD;
   border: none;
   width: 100%;
 }
 @media all and (max-width: 540px) {
-  .contact form input.wpcf7-form-control {
+  form input.wpcf7-form-control {
     width: 100%;
   }
 }
-.contact form textarea.wpcf7-form-control {
+form textarea.wpcf7-form-control {
   border: none;
   background: #EAF3FD;
   width: 100%;
 }
-.contact form .wpcf7-validates-as-required {
+form .wpcf7-form-control.wpcf7-checkbox {
   padding-right: 0;
+  padding-left: 0;
 }
-.contact form .sendBtn {
+form .sendBtn {
   width: 12em;
   text-align: center;
   margin: 5em auto 0;
 }
-.contact form .sendBtn input {
+form .sendBtn input {
   padding: 1em 2em 1em 2em;
   border-radius: 0.6em;
   border: none;
@@ -4563,8 +4566,78 @@ p, a, li, dl dt, dl dd {
   cursor: pointer;
 }
 
+/*}*/
 /*アクセス非表示*/
 .contact .address {
+  display: none;
+}
+
+/*===============================================================
+
+  contact　お問い合わせ
+
+===============================================================*/
+.contact-confirm .sendBtn {
+  width: auto;
+}
+.contact-confirm .sendBtn .sendBtn_box {
+  display: flex;
+  justify-content: center;
+  gap: 3.5em;
+}
+@media all and (max-width: 768px) {
+  .contact-confirm .sendBtn .sendBtn_box {
+    gap: 2em;
+  }
+}
+@media all and (max-width: 540px) {
+  .contact-confirm .sendBtn .sendBtn_box {
+    gap: 1em;
+  }
+}
+.contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
+  width: 10em;
+}
+@media all and (max-width: 540px) {
+  .contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
+    width: 7em;
+  }
+}
+.contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
+  background: none;
+  color: #736a5f;
+  border: solid 1.5px #736a5f;
+}
+.contact-confirm .sendBtn .sendBtn_box .wpcf7-spinner {
+  position: absolute;
+}
+
+/*アクセス非表示*/
+.contact-confirm .address {
+  display: none;
+}
+
+/*===============================================================
+
+  contact　お問い合わせ
+
+===============================================================*/
+.contact-thanks .contact_topBK-btn {
+  text-align: center;
+  margin: 5em auto 0;
+}
+.contact-thanks .contact_topBK-btn a {
+  padding: 1em 2em 1em 2em;
+  border-radius: 0.6em;
+  border: none;
+  color: #736a5f;
+  border: solid 1.5px #736a5f;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+/*アクセス非表示*/
+.contact-thanks .address {
   display: none;
 }
 

@@ -1,11 +1,17 @@
 <?php
 /*
-Template Name: effort
+Template Name: contact
 */
-/* office */
+/* contact-confirm */
 ?>
 
 <?php get_header(); ?>
+
+<!-- ローディング画面 -->
+<!--<div id="loading">
+    <p>Loading...</p>
+    <div id="loading-screen"></div>
+</div>-->
 
 <!-- ローディング画面 -->
 <!--<div id="loading">
@@ -14,7 +20,7 @@ Template Name: effort
 </div>
 -->
 
-<main class="l-contents-main page_main free-area">
+<main class="l-contents-main page_main page_contact_main">
 	<div class="page_content">
 		<div class="content__wrap">
 			<?php if( have_posts() ) : ?>
@@ -22,9 +28,19 @@ Template Name: effort
 					the_post();
 				?>
 					<article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
-					<h1 class="page_header_title content-title page_default_title">
-  						<p class=""><?php the_title(); ?></p>
-					</h1>
+						<h1 class="page_header_title content-title contact_title">
+							<p class="ja"><?php the_title(); ?></p>
+						</h1>
+
+						<!-- コメント -->
+						<p class="page_contact_text">入力内容をご確認頂きましたら<br class="pc_br">下記送信ボタンより内容を送信してください。</p>
+
+						<ul class="contact_progressbar">
+   							<li>入力</li>
+    						<li class="active">確認</li>
+    						<li>完了</li>
+						</ul>
+
                         <div class="content-body">
 							<?php if ( has_post_thumbnail() ) : ?>
                             	<div class="content-eyecatch">
@@ -38,17 +54,7 @@ Template Name: effort
 			<?php endif; ?>
 		</div>
 
-
 	</div>
-
-<!--====================================================
-
-  Contact
-  お問い合わせ
-
-=====================================================-->
-<?php get_template_part('contact'); ?>
-
 </main>
 
 <?php get_footer(); ?>

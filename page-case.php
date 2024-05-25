@@ -5,7 +5,7 @@ Template Name: Company
 /*
 Template Name: Company
 */
-/* Company */
+/* case */
 ?>
 
 

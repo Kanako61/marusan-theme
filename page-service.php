@@ -2,7 +2,7 @@
 /*
 Template Name: service
 */
-/* product */
+/* service */
 ?>
 
 <?php get_header(); ?>

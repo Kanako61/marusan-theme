@@ -1,0 +1,49 @@
+/*===============================================================
+
+  contact　お問い合わせ
+
+===============================================================*/
+.contact-confirm {
+  .sendBtn {
+    width:auto;
+
+    .sendBtn_box {
+      display:flex;
+      justify-content: center;
+      gap:3.5em;
+
+      @media all and (max-width:768px) {
+        gap:2em;
+      }
+
+      @media all and (max-width:540px) {
+        gap:1em;
+      }
+
+      input.wpcf7-submit, input.wpcf7-previous {
+        width:10em;
+
+        @media all and (max-width:540px) {
+          width:7em;
+        }
+      }
+
+      input.wpcf7-previous {
+        background:none;
+        color:$font-default-c;
+        border:solid 1.5px $font-default-c;
+      }
+
+      .wpcf7-spinner {
+        position:absolute;
+      }
+    }
+  }
+}
+
+/*アクセス非表示*/
+.contact-confirm .address {
+  display:none;
+}
+
+

@@ -2,7 +2,7 @@
 /*
 Template Name: Work Flow
 */
-/* WorkFlow */
+/* workflow */
 ?>
 
 <?php get_header(); ?>

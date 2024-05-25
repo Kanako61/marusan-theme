@@ -1,0 +1,27 @@
+/*===============================================================
+
+  contact　お問い合わせ
+
+===============================================================*/
+.contact-thanks {
+  .contact_topBK-btn {
+    text-align:center;
+    margin:5em auto 0;
+
+    a {
+      padding:1em 2em 1em 2em;
+      border-radius: 0.6em;
+      border:none;
+      color:$font-default-c;
+      border:solid 1.5px $font-default-c;
+      letter-spacing: 0.1em;
+      cursor:pointer;
+    }
+  }
+}
+
+/*アクセス非表示*/
+.contact-thanks .address {
+  display:none;
+}
+
