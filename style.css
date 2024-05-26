@@ -27,6 +27,7 @@ Author: marusan Co., Ltd
 /*recruit*/
 /*contact*/
 /*font*/
+/*$font-default:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;*/
 /*
 * 2-layout
 */
@@ -46,7 +47,7 @@ html {
 html body {
   font-size: 1.5em;
   margin: 0;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
@@ -1489,7 +1490,7 @@ p, a, li, dl dt, dl dd {
 }
 /*}*/
 /*カレント表示*/
-@media all and (min-width: 900px) {
+@media all and (min-width: 901px) {
   .l-site_header .current-menu-item, .l-site_header .current-post-ancestor {
     position: relative;
     z-index: 2;
@@ -3290,6 +3291,7 @@ p, a, li, dl dt, dl dd {
   color: #fff;
   font-size: 2.0833333333vw;
   font-weight: bold;
+  z-index: 2;
 }
 .page_message .message_top .name {
   position: absolute;
@@ -3298,6 +3300,7 @@ p, a, li, dl dt, dl dd {
   color: #fff;
   font-size: 2.0833333333vw;
   font-weight: bold;
+  z-index: 2;
 }
 .page_message .message_bottom {
   max-width: 1200px;
@@ -4264,9 +4267,9 @@ p, a, li, dl dt, dl dd {
 .page_contact_main {
   background: #e2f1f2;
   padding: 10em 0 10em;
+  /*ステップバー*/
 }
-
-.page_content {
+.page_contact_main .page_content {
   max-width: 1220px;
   margin: 0 auto;
   padding: 8vw;
@@ -4276,70 +4279,70 @@ p, a, li, dl dt, dl dd {
   /*電話番号*/
 }
 @media all and (max-width: 1000px) {
-  .page_content {
+  .page_contact_main .page_content {
     padding: 8vw 5vw;
   }
 }
 @media all and (max-width: 768px) {
-  .page_content {
+  .page_contact_main .page_content {
     padding: 12vw 5vw;
   }
 }
-.page_content .contact_title {
+.page_contact_main .page_content .contact_title {
   width: 100%;
   margin: 0 auto 10%;
 }
-.page_content .contact_title p {
+.page_contact_main .page_content .contact_title p {
   width: 100%;
   font-size: 2.4rem;
   text-align: center;
 }
-.page_content .page_contact_text {
+.page_contact_main .page_content .page_contact_text {
   text-align: center;
   margin-bottom: 5%;
 }
-.page_content .page_contact_text .red {
+.page_contact_main .page_content .page_contact_text .red {
   color: red;
 }
-.page_content .page_contact_tel {
+.page_contact_main .page_content .page_contact_tel {
   border: solid 10px #e2f1f2;
   padding: 3% 5%;
 }
 @media all and (max-width: 540px) {
-  .page_content .page_contact_tel {
+  .page_contact_main .page_content .page_contact_tel {
     padding: 6% 5%;
   }
 }
-.page_content .page_contact_tel .page_contact_h2 {
+.page_contact_main .page_content .page_contact_tel .page_contact_h2 {
   color: #736a5f;
   font-size: 1.8rem;
   text-align: center;
   margin: 0 auto 5%;
 }
-.page_content .page_contact_tel_list {
+.page_contact_main .page_content .page_contact_tel_list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3em;
 }
 @media all and (max-width: 768px) {
-  .page_content .page_contact_tel_list {
+  .page_contact_main .page_content .page_contact_tel_list {
     flex-direction: column;
     gap: 1em;
   }
 }
-.page_content .page_contact_tel .tel_num {
+.page_contact_main .page_content .page_contact_tel .tel_num {
   position: relative;
   padding-left: 2em;
   font-size: 2.2rem;
   font-weight: bold;
 }
 @media all and (max-width: 1000px) {
-  .page_content .page_contact_tel .tel_num {
+  .page_contact_main .page_content .page_contact_tel .tel_num {
     font-size: 1.8rem;
   }
 }
-.page_content .page_contact_tel .tel_num:before {
+.page_contact_main .page_content .page_contact_tel .tel_num:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -4353,17 +4356,15 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
 }
 @media all and (max-width: 1000px) {
-  .page_content .page_contact_tel .tel_num:before {
+  .page_contact_main .page_content .page_contact_tel .tel_num:before {
     width: 26px;
     height: 26px;
   }
 }
-.page_content .page_contact_tel .page_contact_hours {
+.page_contact_main .page_content .page_contact_tel .page_contact_hours {
   text-align: center;
 }
-
-/*ステップバー*/
-.contact_progressbar {
+.page_contact_main .contact_progressbar {
   position: relative;
   max-width: 600px;
   margin: 8% auto 8%;
@@ -4373,7 +4374,7 @@ p, a, li, dl dt, dl dd {
   justify-content: space-between;
   z-index: 1;
 }
-.contact_progressbar li {
+.page_contact_main .contact_progressbar li {
   position: relative;
   list-style-type: none;
   text-align: center;
@@ -4382,7 +4383,7 @@ p, a, li, dl dt, dl dd {
   color: #736a5f;
   font-weight: bold;
 }
-.contact_progressbar li:before {
+.page_contact_main .contact_progressbar li:before {
   display: block;
   width: 32px;
   height: 32px;
@@ -4395,7 +4396,7 @@ p, a, li, dl dt, dl dd {
   background-size: contain;
   border: solid 5px #fff;
 }
-.contact_progressbar li:after {
+.page_contact_main .contact_progressbar li:after {
   display: inline-block;
   position: absolute;
   z-index: -1;
@@ -4406,20 +4407,19 @@ p, a, li, dl dt, dl dd {
   content: "";
   background-color: #BFB9B1;
 }
-.contact_progressbar li:first-child:after {
+.page_contact_main .contact_progressbar li:first-child:after {
   content: none;
 }
-.contact_progressbar li.active, .contact_progressbar li.complete {
+.page_contact_main .contact_progressbar li.active, .page_contact_main .contact_progressbar li.complete {
   color: #736a5f;
 }
-.contact_progressbar li.active:before, .contact_progressbar li.complete:before {
+.page_contact_main .contact_progressbar li.active:before, .page_contact_main .contact_progressbar li.complete:before {
   background-image: url(assets/images/contact/contact-item02.svg);
 }
-.contact_progressbar li.active:after, .contact_progressbar li.complete:after {
+.page_contact_main .contact_progressbar li.active:after, .page_contact_main .contact_progressbar li.complete:after {
   background-color: #736a5f;
 }
-
-form {
+.page_contact_main form {
   padding: 0 10%;
   border-radius: 1em;
   margin: 5% 0;
@@ -4437,67 +4437,67 @@ form {
   /*同意ボタン*/
 }
 @media all and (max-width: 540px) {
-  form {
+  .page_contact_main form {
     padding: 5%;
   }
-  form p {
+  .page_contact_main form p {
     font-size: 1.5rem;
   }
 }
-form .contact-item {
+.page_contact_main form .contact-item {
   padding: 1em 0;
   display: flex;
   border-bottom: solid 1px #ccc;
 }
 @media all and (max-width: 768px) {
-  form .contact-item {
+  .page_contact_main form .contact-item {
     flex-direction: column;
   }
 }
-form .contact-item, form .contact-item2 {
+.page_contact_main form .contact-item, .page_contact_main form .contact-item2 {
   padding: 1.5em 0;
   border-bottom: solid 1px #DEDEDE;
 }
-form .border-none {
+.page_contact_main form .border-none {
   border: none;
 }
-form .beside, form .beside-none {
+.page_contact_main form .beside, .page_contact_main form .beside-none {
   min-width: 12em;
   color: #736a5f;
   font-weight: bold;
 }
-form .content {
+.page_contact_main form .content {
   width: 100%;
 }
-form .required {
+.page_contact_main form .required {
   color: red;
 }
-form .privacy-policy_check {
+.page_contact_main form .privacy-policy_check {
   padding-left: 1.8em;
   margin-top: -0.8em;
 }
-form .privacy-policy_check a {
+.page_contact_main form .privacy-policy_check a {
   border-bottom: solid 1px #064868;
   color: #064868;
 }
-form .radio .wpcf7-list-item.first {
+.page_contact_main form .radio .wpcf7-list-item.first {
   margin: 0;
 }
-form .radio .wpcf7-list-item-label {
+.page_contact_main form .radio .wpcf7-list-item-label {
   cursor: pointer;
   display: flex;
   margin-left: 2em;
 }
 @media all and (max-width: 768px) {
-  form .radio .wpcf7-list-item-label {
+  .page_contact_main form .radio .wpcf7-list-item-label {
     margin-top: 1em;
   }
 }
-form .radio input[type=radio] {
+.page_contact_main form .radio input[type=radio] {
   opacity: 0; /* デフォルトのボタンを非表示 */
   position: absolute;
 }
-form .radio .wpcf7-list-item-label::before {
+.page_contact_main form .radio .wpcf7-list-item-label::before {
   background: #fff;
   border: 1.5px solid #736a5f;
   border-radius: 100%; /* ラジオボタンっぽく丸くする */
@@ -4509,53 +4509,53 @@ form .radio .wpcf7-list-item-label::before {
   transition: background-color 0.5s; /* 色をじんわり変化させる */
   width: 1.4em;
 }
-form .radio input[type=radio]:checked + .wpcf7-list-item-label::before {
+.page_contact_main form .radio input[type=radio]:checked + .wpcf7-list-item-label::before {
   background-color: #98C0CC; /* チェック後の中心の色 */
   box-shadow: inset 0 0 0 3px #fff; /* 中心の色のスタイル */
 }
-form .wpcf7-list-item {
+.page_contact_main form .wpcf7-list-item {
   margin: 0;
 }
-form .wpcf7-form-control {
+.page_contact_main form .wpcf7-form-control {
   padding: 0.5em 0.8em;
 }
-form select.wpcf7-form-control {
+.page_contact_main form select.wpcf7-form-control {
   height: 3.5em !important;
   background: #EAF3FD;
   border: none;
   width: 100%;
 }
 @media all and (max-width: 540px) {
-  form select.wpcf7-form-control {
+  .page_contact_main form select.wpcf7-form-control {
     width: 100%;
   }
 }
-form input.wpcf7-form-control {
+.page_contact_main form input.wpcf7-form-control {
   height: 3.5em !important;
   background: #EAF3FD;
   border: none;
   width: 100%;
 }
 @media all and (max-width: 540px) {
-  form input.wpcf7-form-control {
+  .page_contact_main form input.wpcf7-form-control {
     width: 100%;
   }
 }
-form textarea.wpcf7-form-control {
+.page_contact_main form textarea.wpcf7-form-control {
   border: none;
   background: #EAF3FD;
   width: 100%;
 }
-form .wpcf7-form-control.wpcf7-checkbox {
+.page_contact_main form .wpcf7-form-control.wpcf7-checkbox {
   padding-right: 0;
   padding-left: 0;
 }
-form .sendBtn {
+.page_contact_main form .sendBtn {
   width: 12em;
   text-align: center;
   margin: 5em auto 0;
 }
-form .sendBtn input {
+.page_contact_main form .sendBtn input {
   padding: 1em 2em 1em 2em;
   border-radius: 0.6em;
   border: none;
@@ -5048,6 +5048,9 @@ form .sendBtn input {
 .tab-contents .page_recruit_job .recruit_table td dd {
   margin: 0;
 }
+.tab-contents .page_recruit_job .recruit_table_dl {
+  margin: 1em 0;
+}
 .tab-contents .page_recruit_job .entry-button {
   margin-top: 8%;
 }
@@ -5179,6 +5182,15 @@ form .sendBtn input {
 .tab-contents .page_recruit_flow .recruit_flow_list li:last-child .flow_item:before {
   display: none;
 }
+.tab-contents .page_recruit_flow .recruit_flow_list li:nth-child(2) .flow_item:after {
+  background-image: url(assets/images/recruit/recruit-flow02.svg);
+}
+.tab-contents .page_recruit_flow .recruit_flow_list li:nth-child(3) .flow_item:after {
+  background-image: url(assets/images/recruit/recruit-flow03.svg);
+}
+.tab-contents .page_recruit_flow .recruit_flow_list li:nth-child(4) .flow_item:after {
+  background-image: url(assets/images/recruit/recruit-flow04.svg);
+}
 .tab-contents .page_recruit_work {
   position: relative;
   background: #fff;
@@ -5249,6 +5261,8 @@ form .sendBtn input {
 .tab-contents .page_recruit_schedul .schedule_dl {
   display: grid;
   grid-template-columns: 1fr 10fr;
+  gap: 1em;
+  margin: 1em 0;
 }
 .tab-contents .page_recruit_schedul .schedule_dl dt {
   display: block;
@@ -5346,6 +5360,12 @@ form .sendBtn input {
   .tab-contents .other_list {
     width: 90vw;
     gap: 1em;
+  }
+}
+@media all and (max-width: 540px) {
+  .tab-contents .other_list {
+    flex-direction: column;
+    margin: 18vw auto 8vw;
   }
 }
 .tab-contents .other_list li {

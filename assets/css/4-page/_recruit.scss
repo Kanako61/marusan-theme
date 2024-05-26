@@ -424,6 +424,10 @@
                     margin:0;
                 }
             }
+
+            &_dl {
+                margin:1em 0;
+            }
         }
 
         .entry-button {
@@ -561,6 +565,18 @@
             li:last-child .flow_item:before {
                 display:none;
             }
+
+            li:nth-child(2) .flow_item:after {
+                background-image:url(assets/images/recruit/recruit-flow02.svg);
+            }
+
+            li:nth-child(3) .flow_item:after {
+                background-image:url(assets/images/recruit/recruit-flow03.svg);
+            }
+
+            li:nth-child(4) .flow_item:after {
+                background-image:url(assets/images/recruit/recruit-flow04.svg);
+            }
         }
     }
 
@@ -646,6 +662,8 @@
             .schedule_dl {
                 display:grid;
                 grid-template-columns: 1fr 10fr;
+                gap:1em;
+                margin:1em 0;
     
                 dt {
                     display:block;
@@ -756,6 +774,11 @@
             width:90vw;
             gap:1em;
         }
+
+        @media all and (max-width:540px) {
+            flex-direction:column;
+            margin:18vw auto 8vw;
+          }
 
         li {
             width:40%;

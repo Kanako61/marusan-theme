@@ -1,9 +1,6 @@
 <?php
 /*
 Template Name: Company
-<?php
-/*
-Template Name: Company
 */
 /* company */
 ?>

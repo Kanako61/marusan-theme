@@ -78,7 +78,7 @@
   <div class="top_service_c">
     <div class="top_service_left">
       <h2 class="top_h2 top-_service_h2">事業内容</h2>
-      <p class="top_service_left_text">プレカットは在来工法をはじめ、金物やパネル、 2×4 工 法 な ど あらゆる工法に対応。今後住宅業界で必須とも言われる構造計算への対応、人手不足が叫ばれる現場建方の仕事まで、住宅建築を多方面から支えていきます。</p>
+      <p class="top_service_left_text">プレカットは在来工法をはじめ、金物やパネル、 2×4工法などあらゆる工法に対応。今後住宅業界で必須とも言われる構造計算への対応、人手不足が叫ばれる現場建方の仕事まで、住宅建築を多方面から支えていきます。</p>
       <div class="top-button">
         <a href="<?php echo home_url('/'); ?>service">より詳しく</a>
       </div>

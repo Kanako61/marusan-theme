@@ -155,23 +155,23 @@ Template Name: recruit
                 <tr>
                   <th>勤務時間</th>
                   <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>会社カレンダーによりおおよそ隔週で週休二日になります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【休日出勤について】</dt>
                       <dd>受注状況・生産状況によりお願いする場合がありますが、基本的には土曜の出勤だけで、法定休日(日曜・祝日)は休みになります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【残業について】</dt>
                       <dd>受注状況・生産状況によりますが、多くても1日2時間程度まで、日勤で言えば19時くらいまでです。残業の場合、定時から10分間の休憩があります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【夜勤について】</dt>
                       <dd>一部のラインでは二交代制での生産をしていますので、習熟後に夜勤に入っていただく可能性があります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【休暇について】</dt>
                       <dd>有給休暇は入社6か月後に付与。</dd>
                     </dl>
@@ -402,19 +402,19 @@ Template Name: recruit
                 <dl class="pageRecruit_list_dl">
                   <dt class="senior_name"><span class="name">髙野 里菜</span><br>技術課</dt>
                   <dd>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>勤続年数：</dt>
                       <dd>4年</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>出身高校：</dt>
                       <dd>福島工業高校</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>趣味：</dt>
                       <dd>愛犬とたわむれる</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>性格：</dt>
                       <dd>優柔不断</dd>
                     </dl>
@@ -455,23 +455,23 @@ Template Name: recruit
                 <tr>
                   <th>勤務時間</th>
                   <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>会社カレンダーによりおおよそ隔週で週休二日になります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【休日出勤について】</dt>
                       <dd>受注状況・生産状況によりお願いする場合がありますが、基本的には土曜の出勤だけで、法定休日(日曜・祝日)は休みになります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【残業について】</dt>
                       <dd>受注状況・生産状況によりますが、多くても1日2時間程度まで、日勤で言えば19時くらいまでです。残業の場合、定時から10分間の休憩があります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【夜勤について】</dt>
                       <dd>一部のラインでは二交代制での生産をしていますので、習熟後に夜勤に入っていただく可能性があります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【休暇について】</dt>
                       <dd>有給休暇は入社6か月後に付与。</dd>
                     </dl>
@@ -736,23 +736,23 @@ Template Name: recruit
                 <tr>
                   <th>勤務時間</th>
                   <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>会社カレンダーによりおおよそ隔週で週休二日になります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【休日出勤について】</dt>
                       <dd>受注状況・生産状況によりお願いする場合がありますが、基本的には土曜の出勤だけで、法定休日(日曜・祝日)は休みになります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【残業について】</dt>
                       <dd>受注状況・生産状況によりますが、多くても1日2時間程度まで、日勤で言えば19時くらいまでです。残業の場合、定時から10分間の休憩があります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【夜勤について】</dt>
                       <dd>一部のラインでは二交代制での生産をしていますので、習熟後に夜勤に入っていただく可能性があります。</dd>
                     </dl>
-                    <dl>
+                    <dl class="recruit_table_dl">
                       <dt>【休暇について】</dt>
                       <dd>有給休暇は入社6か月後に付与。</dd>
                     </dl>
