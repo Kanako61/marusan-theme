@@ -3,7 +3,7 @@
   contact　お問い合わせ
 
 ===============================================================*/
-.contact-thanks {
+.contact-thanks, .r-contact-thanks{
   .contact_topBK-btn {
     text-align:center;
     margin:5em auto 0;
@@ -21,7 +21,7 @@
 }
 
 /*アクセス非表示*/
-.contact-thanks .address {
+.contact-thanks .address, .r-contact-thanks .address {
   display:none;
 }
 

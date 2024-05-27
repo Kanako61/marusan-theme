@@ -1,8 +1,8 @@
 <?php
 /*
-Template Name: contact-confirm
+Template Name: contact-thanks
 */
-/* contact-confirm */
+/* contact-thanks */
 ?>
 
 <?php get_header(); ?>
@@ -33,12 +33,12 @@ Template Name: contact-confirm
 						</h1>
 
 						<!-- コメント -->
-						<p class="page_contact_text">入力内容をご確認頂きましたら<br class="pc_br">下記送信ボタンより内容を送信してください。</p>
+						<p class="page_contact_text">エントリーありがとうございました。<br class="pc_br">担当者が内容を確認の上、数日以内にご連絡差し上げます。</p>
 
 						<ul class="contact_progressbar">
    							<li>入力</li>
-    						<li class="active">確認</li>
-    						<li>完了</li>
+    						<li>確認</li>
+    						<li class="active">完了</li>
 						</ul>
 
                         <div class="content-body">
@@ -49,6 +49,10 @@ Template Name: contact-confirm
 							<?php endif; ?>
 							<?php the_content(); ?>
                         </div>
+
+						<div class="contact_topBK-btn">
+							<a href="<?php echo home_url('/'); ?>recruit">採用情報へ戻る</a>
+						</div>
                     </article>
 				<?php endwhile; ?>
 			<?php endif; ?>

@@ -3,7 +3,7 @@
   contact　お問い合わせ
 
 ===============================================================*/
-.contact-confirm {
+.contact-confirm, .r-contact-confirm{
   .sendBtn {
     width:auto;
 
@@ -42,7 +42,7 @@
 }
 
 /*アクセス非表示*/
-.contact-confirm .address {
+.contact-confirm .address, .r-contact-confirm .address{
   display:none;
 }
 

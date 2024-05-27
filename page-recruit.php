@@ -189,7 +189,7 @@ Template Name: recruit
             </div>
 
             <div class="entry-button">
-              <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+              <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
             </div>
 
             <div class="topBK-btn">
@@ -346,7 +346,7 @@ Template Name: recruit
         </section>
 
         <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
         </div>
 
         <ul class="other_list">
@@ -489,7 +489,7 @@ Template Name: recruit
             </div>
 
             <div class="entry-button">
-              <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+              <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
             </div>
 
             <div class="topBK-btn">
@@ -626,7 +626,7 @@ Template Name: recruit
         </section>
 
         <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
         </div>
 
         <ul class="other_list">
@@ -774,7 +774,7 @@ Template Name: recruit
             </div>
 
             <div class="entry-button">
-              <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+              <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
             </div>
 
             <div class="topBK-btn">
@@ -913,7 +913,7 @@ Template Name: recruit
         </section>
 
         <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>contact">エントリー</a>
+            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
         </div>
 
         <ul class="other_list">

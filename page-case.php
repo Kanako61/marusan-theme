@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Company
+Template Name: case
 */
 /* case */
 ?>

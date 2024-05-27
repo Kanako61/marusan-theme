@@ -1,8 +1,8 @@
 <?php
 /*
-Template Name: contact-confirm
+Template Name: recruit-entory
 */
-/* contact-confirm */
+/* recruit-entory */
 ?>
 
 <?php get_header(); ?>
@@ -33,11 +33,26 @@ Template Name: contact-confirm
 						</h1>
 
 						<!-- コメント -->
-						<p class="page_contact_text">入力内容をご確認頂きましたら<br class="pc_br">下記送信ボタンより内容を送信してください。</p>
+						<p class="page_contact_text">エントリーの検討、誠にありがとうございます。<br class="pc_br">フォームの項目（ <span class="red">＊</span> は必須）についてご入力の上で確認・送信してください。<br>数日で担当者より直接ご連絡差し上げます。<br>当社から連絡がない場合は、お手数ですが一度お電話にてお問い合わせください。</p>
+
+						<!-- 電話 -->
+						<div class="page_contact_tel">
+							<h2 class="page_contact_h2">お電話でのお問い合わせ</h2>
+							<ul class="page_contact_tel_list">
+								<li>
+									<p class="tel_num">0243-55-2626</p>
+								</li>
+								<li>
+								<div class="page_contact_hours">
+      								<p>平日 8:00〜17:00<br>(祝日・年末年始を除く)</p>
+								</div>
+								</li>
+							</ul>
+						</div>
 
 						<ul class="contact_progressbar">
-   							<li>入力</li>
-    						<li class="active">確認</li>
+   							<li class="active">入力</li>
+    						<li>確認</li>
     						<li>完了</li>
 						</ul>
 

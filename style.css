@@ -4568,7 +4568,7 @@ p, a, li, dl dt, dl dd {
 
 /*}*/
 /*アクセス非表示*/
-.contact .address {
+.contact .address, .recruit-entory .address {
   display: none;
 }
 
@@ -4577,43 +4577,43 @@ p, a, li, dl dt, dl dd {
   contact　お問い合わせ
 
 ===============================================================*/
-.contact-confirm .sendBtn {
+.contact-confirm .sendBtn, .r-contact-confirm .sendBtn {
   width: auto;
 }
-.contact-confirm .sendBtn .sendBtn_box {
+.contact-confirm .sendBtn .sendBtn_box, .r-contact-confirm .sendBtn .sendBtn_box {
   display: flex;
   justify-content: center;
   gap: 3.5em;
 }
 @media all and (max-width: 768px) {
-  .contact-confirm .sendBtn .sendBtn_box {
+  .contact-confirm .sendBtn .sendBtn_box, .r-contact-confirm .sendBtn .sendBtn_box {
     gap: 2em;
   }
 }
 @media all and (max-width: 540px) {
-  .contact-confirm .sendBtn .sendBtn_box {
+  .contact-confirm .sendBtn .sendBtn_box, .r-contact-confirm .sendBtn .sendBtn_box {
     gap: 1em;
   }
 }
-.contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
+.contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous, .r-contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .r-contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
   width: 10em;
 }
 @media all and (max-width: 540px) {
-  .contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
+  .contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous, .r-contact-confirm .sendBtn .sendBtn_box input.wpcf7-submit, .r-contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
     width: 7em;
   }
 }
-.contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
+.contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous, .r-contact-confirm .sendBtn .sendBtn_box input.wpcf7-previous {
   background: none;
   color: #736a5f;
   border: solid 1.5px #736a5f;
 }
-.contact-confirm .sendBtn .sendBtn_box .wpcf7-spinner {
+.contact-confirm .sendBtn .sendBtn_box .wpcf7-spinner, .r-contact-confirm .sendBtn .sendBtn_box .wpcf7-spinner {
   position: absolute;
 }
 
 /*アクセス非表示*/
-.contact-confirm .address {
+.contact-confirm .address, .r-contact-confirm .address {
   display: none;
 }
 
@@ -4622,11 +4622,11 @@ p, a, li, dl dt, dl dd {
   contact　お問い合わせ
 
 ===============================================================*/
-.contact-thanks .contact_topBK-btn {
+.contact-thanks .contact_topBK-btn, .r-contact-thanks .contact_topBK-btn {
   text-align: center;
   margin: 5em auto 0;
 }
-.contact-thanks .contact_topBK-btn a {
+.contact-thanks .contact_topBK-btn a, .r-contact-thanks .contact_topBK-btn a {
   padding: 1em 2em 1em 2em;
   border-radius: 0.6em;
   border: none;
@@ -4637,7 +4637,7 @@ p, a, li, dl dt, dl dd {
 }
 
 /*アクセス非表示*/
-.contact-thanks .address {
+.contact-thanks .address, .r-contact-thanks .address {
   display: none;
 }
 

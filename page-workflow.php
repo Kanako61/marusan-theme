@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Work Flow
+Template Name: WorkFlow
 */
 /* workflow */
 ?>
