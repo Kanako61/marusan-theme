@@ -50,7 +50,7 @@
 
 <section class="top_company top_section">
   <div class="company_c">
-    <h2 class="top_h2">創業90年</h2>
+    <h2 class="top_h2">福島の住宅を支えて<br class="sp_br">90年。</h2>
     <p class="company_c_text">これまで住宅業界の課題をプレカットによって解決してきました。<br>これからは住宅・非住宅問わず、<br class="pc_br">建築業界の未来を支える会社として活躍していきます。</p>
     <div class="top-button">
       <a href="<?php echo home_url('/'); ?>company">会社情報</a>
@@ -116,31 +116,31 @@
       <li class="top_workflow_img_01">
         <picture>
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow01.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow01.jpg" alt="ご注文の流れ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow01.jpg" alt="伏図作成・見積書作成">
         </picture>
       </li>
       <li class="top_workflow_img_02">
         <picture>
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow02.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow02.jpg" alt="ご注文の流れ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow02.jpg" alt="打合せ・図面承認">
         </picture>
       </li>
       <li class="top_workflow_img_03">
         <picture>
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow03.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow03.jpg" alt="ご注文の流れ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow03.jpg" alt="加工">
         </picture>
       </li>
       <li class="top_workflow_img_04">
         <picture>
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow04.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow04.jpg" alt="ご注文の流れ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow04.jpg" alt="出荷">
         </picture>
       </li>
       <li class="top_workflow_img_05">
         <picture>
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow05.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow05.jpg" alt="ご注文の流れ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-workflow05.jpg" alt="上棟">
         </picture>
       </li>
     </ul>
@@ -151,27 +151,26 @@
 <!--====================================================
 
   Case Studies
-  納入う事例
+  導入事例
 
 ====================================================-->
 <section class="top_case top_section">
-  <h2 class="top_h2">納入事例</h2>
-  <div class="top_case_img">
-    <picture>
-      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.webp" type="image/webp">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.png" alt="導入事例">
-    </picture>
-  </div>
-  <p class="top_case_text">これまで当社のプレカットによって建てられた建物は4万棟以上。<br class="pc_br">日本における近代住宅建築の発展と共に歩んできました。数えきれない導入の一例と、住宅の垣根を超えた建築の実例を紹介します。</p>
-  <div class="top-button">
-    <a href="<?php echo get_term_link('case', 'category'); ?>">より詳しく</a>
+  <div class="top_case_inner">
+    <div class="top_case_img">
+      <picture>
+        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.webp" type="image/webp">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.jpg" alt="導入事例">
+      </picture>
+    </div>
+    <div class="top_case_content">
+      <h2 class="top_h2">導入事例</h2>
+      <p class="top_case_text">これまで当社のプレカットによって建てられた建物は4万棟以上。<br class="pc_br">日本における近代住宅建築の発展と共に歩んできました。<br class="pc_br">数えきれない導入の一例と、住宅の垣根を超えた建築の実例を紹介します。</p>
+      <div class="top-button">
+        <a href="<?php echo get_term_link('case', 'category'); ?>">より詳しく</a>
+      </div>
+    </div>
   </div>
 </section>
-
-<!--背景-->
-<div class="top_case_bk"></div>
-<!--背景ここまで-->
-
 
 <!--====================================================
 
@@ -181,10 +180,18 @@
 ====================================================-->
 <section class="top_effort top_section">
   <div class="top_effort_inner">
-    <h2 class="top_h2">取り組み</h2>
-    <p class="top_effort_text">働く人がより働きやすい環境を作るための取り組みや地域社会への貢献をマルサンでは常に心がけています。</p>
-    <div class="top-button">
-      <a href="<?php echo home_url('/'); ?>effort">より詳しく</a>
+    <div class="top_case_img">
+      <picture>
+        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-effort.webp" type="image/webp">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-effort.jpg" alt="取り組み">
+      </picture>
+    </div>
+    <div class="top_case_content">
+      <h2 class="top_h2">取り組み</h2>
+      <p class="top_effort_text">働く人がより働きやすい環境を作るための取り組みや<br class="pc_br">地域社会への貢献をマルサンでは常に心がけています。</p>
+      <div class="top-button">
+        <a href="<?php echo home_url('/'); ?>effort">より詳しく</a>
+      </div>
     </div>
   </div>
 </section>
@@ -202,7 +209,7 @@
 
   <!-- ここからループ -->
   <article id="post-<?php the_ID(); ?>"<?php post_class('news_content'); ?>>
-  	<div class="top_news_content">	
+  	<div class="top_news_content">
 		<ul class="top_news_meta">
 			<?php query_posts("cat=1&showposts=4"); ?> 
 				<?php if ( have_posts() ) : ?>
@@ -230,10 +237,6 @@
   <!-- ループここまで -->
   </div>
 </section>
-
-<!--背景-->
-<div class="top_news_bk"></div>
-<!--背景ここまで-->
 
 <!--====================================================
 

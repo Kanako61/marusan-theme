@@ -1,7 +1,7 @@
 .site-footer {
     .top_h2 {
         position:relative;
-        max-width:1220px;
+        max-width:1050px;
         margin:0 auto 8%;
 
         @media all and (max-width:1200px) {
@@ -29,6 +29,8 @@
             display:inline-block;
             width:(402/1440)*100vw;
             height:(124/1440)*100vw;
+            max-width:402px;
+            max-height:124px;
             background-image:url(assets/images/top/access-item1.svg);
             background-repeat: no-repeat;
             background-size: contain;

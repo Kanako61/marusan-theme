@@ -124,7 +124,7 @@
 		<dl class="address_dl">
 			<dt>東京事務所</dt>
 			<dd>
-				<p>〒170-0005<br>東京都豊島区南大塚1-60-20 天翔大塚駅前ビルS916</p>
+				<p>〒170-0005<br>東京都豊島区南大塚1-60-20<br>天翔大塚駅前ビルS916</p>
 				<!--<ul class="address_dl_list">
 					<li>
 						<dl class="address_tel">
