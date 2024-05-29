@@ -110,26 +110,22 @@
 
     .message_top {
         position:relative;
-        padding-top:(1000/1440)*100vw;
-
-        &:after {
-            content:'';
-            display:inline-block;
-            width:100%;
-            height:(45/1440)*100vw;
-            position:absolute;
-            bottom:-3.125vw;
-            left:0;
-            background:$main-bottom;
-        }
 
         .message_pic {
-            position:absolute;
+            position:relative;
             top:0;
             left:0;
             width:100%;
-            height:(1000/1440)*100vw;
+            height:(610/1440)*100vw;
             overflow: hidden;
+
+            @media all and (max-width:1100px) {
+                height:(703/1440)*100vw;
+            }
+
+            @media all and (max-width:768px) {
+                height:(645/768)*100vw;
+            }
 
             img {
                 height:100%;
@@ -138,46 +134,83 @@
 
         .page_company_h2 {
             position:absolute;
-            top:(280/1440)*100vw;
+            top:(269/1440)*100vw;
             right:0;
             z-index:2;
-            width:50%;
-            background:$message-h2-bk;
+            width:46%;
+            font-size:(24/1440)*100vw;
 
-            @media all and (min-width:1440px) {
-                font-size:(30/1440)*100vw;
+            @media all and (max-width:1100px) {
+                font-size:(28/1100)*100vw;
+                top:(260/1100)*100vw;
             }
 
-            &:after {
-                display:inline-block;
-                content:'';
-                position:absolute;
-                top:0;
-                right:0;
-                width:(60/1440)*100vw;
-                height:100%;
-                background:$company-h2-bk_02;
+            @media all and (max-width:768px) {
+                font-size:(30/768)*100vw;
+                top:(296/768)*100vw;
             }
         }
 
         .company_name {
             position:absolute;
-            top:(550/1440)*100vw;
-            left:(100/1440)*100vw;
+            top:(340/1440)*100vw;
+            left:(200/1440)*100vw;
             color:#fff;
-            font-size:(30/1440)*100vw;
+            font-size:(24/1440)*100vw;
             font-weight: bold;
+            letter-spacing: 0.15em;
+            line-height:1.3;
             z-index:2;
+
+            @media all and (max-width:1100px) {
+                font-size:(28/1100)*100vw;
+                top:(320/1100)*100vw;
+                left:(100/1100)*100vw;
+                line-height:1.4;
+            }
+
+            @media all and (max-width:768px) {
+                font-size:(24/768)*100vw;
+                top:(436/768)*100vw;
+                left:(30/768)*100vw;
+            }
         }
 
         .name {
             position:absolute;
-            top:(680/1440)*100vw;
-            right:(120/1440)*100vw;
+            top:(450/1440)*100vw;
+            right:(240/1440)*100vw;
             color:#fff;
-            font-size:(30/1440)*100vw;
+            font-size:(24/1440)*100vw;
             font-weight: bold;
+            letter-spacing: 0.15em;
+            line-height:1.4;
             z-index:2;
+
+            @media all and (max-width:1100px) {
+                font-size:(28/1100)*100vw;
+                top:(400/1100)*100vw;
+                right:(130/1100)*100vw;
+                line-height:1.2;
+            }
+
+            @media all and (max-width:768px) {
+                font-size:(24/768)*100vw;
+                top:(510/768)*100vw;
+                right:(50/768)*100vw;
+            }
+
+            &_en {
+                font-size:(18/1440)*100vw;
+
+                @media all and (max-width:1100px) {
+                    font-size:(20/1100)*100vw;
+                }
+
+                @media all and (max-width:768px) {
+                    font-size:(20/768)*100vw;
+                }
+            }
         }
     }
 

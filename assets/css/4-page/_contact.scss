@@ -187,7 +187,7 @@
       .contact-item {
         padding:1em 0;
         display:flex;
-        border-bottom:solid 1px #ccc;
+        border-bottom:solid 1px $border-c2;
   
         @media all and (max-width:768px) {
           flex-direction: column;
@@ -196,7 +196,7 @@
   
       .contact-item, .contact-item2 {
         padding:1.5em 0;
-        border-bottom:solid 1px $border-c-gray2;
+        border-bottom:solid 1px $border-c2;
       }
   
       .border-none {
@@ -222,8 +222,9 @@
         margin-top:-0.8em;
   
         a {
-          border-bottom:solid 1px $font-c-blue;
-          color:$font-c-blue;
+          border-bottom:solid 1px $font-default-c;
+          color:$font-default-c;
+          font-weight:600;
         }
       }
   
@@ -311,6 +312,7 @@
       .wpcf7-form-control.wpcf7-checkbox {
         padding-right:0;
         padding-left:0;
+        font-weight:bold;
       }
   
   

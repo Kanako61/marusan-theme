@@ -3,6 +3,8 @@
 /*common*/
 $font-default-c:#736a5f;
 $item-c:#bfb9b1;
+$bk-color:#fff;
+$link-btn-c:#768d96;
 
 /*メインビジュアル*/
 $movie-bk:rgba(255, 255, 255, 0.6);
@@ -14,6 +16,7 @@ $bk-3:#98c0cc;
 $h2-c:#736a5f;
 $bk-4:#98C0CC;
 $border-c:#BFB9B1;
+$border-c2:#ebeded;
 $main-bottom:rgba(62, 98, 114, 0.7);
 
 /*header*/
@@ -53,48 +56,11 @@ $workflow-ct-bk:#EFF2F2;
 /*contact*/
 $input-bk:#EAF3FD;
 
+/*single*/
+$table-th:#f5f5f5;
+
 
 /******************* old *******************/
-$bk-color:#ffffff;
-@mixin gradation-font{
-    background: -webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color:#524A46;
-}
-$bk-g-c:-webkit-linear-gradient(-25deg, #42B7E7, #2DAA59);
-$green-c:#35AF8A;
-$blue-c:#42B7E7;
-$font-default-title-c:#4A2020;
-$font-c-blue:#064868;
-$border-c-gray:#F1F1F1;
-$border-c-gray2:#DEDEDE;
-$font-c-gray:#999999;
-$section-bk-c:#F9EEE1;
-$text-shadow:#656565;
 
-/*Top_構造計算*/
-$kozo-bk:#F4EFEA;
 
-/*Top_movie*/
-$top-bk-gray:rgba(56, 56, 56, 0.8);
 
-/*footer*/
-$footer-border:#656565;
-
-/*page*/
-$bk-page:#f0e9e1;
-$p-nav-color:#064868;
-$link-btn-c:#FCF5EB;
-$page-h2-bk:#FEF6E1;
-
-/*company*/
-$table_th:#FCF2E3;
-$table_border:#552D2D;
-
-/*recruit*/
-$h2-b-c:#FEF6E1;
-$content-b-c:#FFFCF6;
-
-/*contact*/
-$contaact-bk-c:#FFFBF6;

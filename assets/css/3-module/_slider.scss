@@ -180,12 +180,11 @@
     }
     .slide-h3{
       display:inline-block;
-      color:$green-c;
+      color:#333;
       margin:0;
       font-size:2rem;
       font-family: $font-3;
       font-weight:700;
-      @include gradation-font;
   
       @media all and (max-width:600px) {
         font-size:1.6rem;

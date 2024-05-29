@@ -9,12 +9,12 @@
         }
 
         h2 {
-            background:$page-h2-bk;
+            background:$bk-1;
             padding:0.5em 1em;
-            color:$font-default-title-c;
+            color:$font-default-c;
             margin-top:2em;
-            border-top:solid 2px $footer-border;
-            border-bottom:solid 2px $footer-border;
+            border-top:solid 2px $font-default-c;
+            border-bottom:solid 2px $font-default-c;
 
             @media all and (max-width:540px) {
                 font-size:2rem;
@@ -24,7 +24,7 @@
         h3 {
             position:relative;
             font-size:2rem;
-            color:$font-default-title-c;
+            color:$font-default-c;
             border-bottom: dotted 2px $btn;
             padding:0.5em 0.5em 0.5em 1em;
 
@@ -47,7 +47,7 @@
 
         h4 {
             font-size:1.8rem;
-            color:$font-default-title-c;
+            color:$font-default-c;
             padding:0.5em 1em;
             background:$link-btn-c;
 
@@ -69,8 +69,8 @@
 
         h6 {
             font-size:1.6rem;
-            color:$font-default-title-c;
-            border-bottom:dotted 1px $font-default-title-c;
+            color:$font-default-c;
+            border-bottom:dotted 1px $font-default-c;
             padding:0.8em 1em;
             margin:0.5em 0;
 
@@ -101,7 +101,7 @@
 
         table {
             th, td {
-                border:solid 1px #ccc;
+                border:solid 1px $border-c;
                 color:$font-default-c;
                 padding:0.5em;
             }
@@ -118,7 +118,7 @@
         }
 
         .wp-block-table my-table th {
-            background: #f5f5f5;
+            background: $table-th;
         }
     }
 }
@@ -130,7 +130,7 @@
     font-size:4.2rem;
     font-family: $font-3;
     font-weight:500;
-    color:$font-default-title-c;
+    color:$font-default-c;
 
     @media all and (max-width:768px) {
         width:90vw;
@@ -143,7 +143,6 @@
         font-size:2rem;
         font-family: $font-1;
         font-weight:800;
-        @include gradation-font;
 
         @media all and (max-width:768px) {
             font-size:1.8rem;
@@ -189,46 +188,6 @@
         @media all and (max-width:540px) {
             margin:25% 0;
         }
-
-        /*&_h2 {
-            display:inline-block;
-            position:relative;
-            left:50%;
-            transform:translatex(-50%);
-            margin:2% auto;
-            font-family: $font-3;
-            text-align:center;
-            line-height: 1.4;
-
-            @media all and (max-width:540px) {
-                margin:4% 0 8%;
-            }
-
-            .en {
-                font-size:1.8rem;
-                font-family: $font-1;
-                font-weight: 800;
-                @include gradation-font;
-
-                @media all and (max-width:768px) {
-                    font-size:1.6rem;
-                }
-            }
-
-            .ja {
-                font-size:3.2rem;
-                letter-spacing: 0.15em;
-                margin-top:0.5rem;
-
-                @media all and (max-width:768px) {
-                    font-size:2.4rem;
-                }
-
-                @media all and (max-width:540px) {
-                    font-size:2.4rem;
-                }
-            }
-        }*/
     }
 
     &_content {
@@ -250,7 +209,7 @@
             text-align: center;
             gap:2rem 0;
             border-radius: 0.5em;
-            color:$font-default-title-c;
+            color:$font-default-c;
             background:#fff; 
             padding:1.5em 2em;
             margin:5% auto 5%;
@@ -335,93 +294,6 @@
         }
     }
 }
-
-
-
-/**====================================================
-    list　リンクリスト
-=====================================================**/
-.pageOther {
-    width:80vw;
-    max-width:1440px;
-    margin:0 auto;
-
-    @media all and (max-width:768px) {
-        width:90vw;
-    }
-
-    &_list {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap:1.5em;
-        place-content: center;
-        max-width:80%;
-        margin:0 auto;
-
-        @media all and (max-width:768px) {
-            max-width:100%;
-        }
-
-        @media all and (max-width:540px) {
-            grid-template-columns:1fr;
-        }
-
-        li {
-            a {
-                display:block;
-                background:#fff;
-                border-radius: 0.5em;
-                padding:1.4em 2.2em 1.6em;
-                letter-spacing: 0.1em;
-                line-height:1.6;
-                box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
-                transition:transform .3s;
-
-                &:hover {
-                    transform: translatey(-6px);
-                    filter: brightness(0.96);
-                }
-
-                .en {
-                    display: inline-block;
-                    @include gradation-font;
-                    font-size:(32/1440)*100vw;
-                    font-family: $font-1;
-                    font-weight:800;
-
-                    @media all and (max-width:1024px) {
-                        font-size:2.8rem;
-                      }
-                }
-
-                .ja {
-                    width:90%;
-                    position:relative;
-                    font-size:1.4rem;
-
-                    &:after {
-                        position:absolute;
-                        top:50%;
-                        right: -14%;
-                        transform: translatey(-50%);
-                        display:block;
-                        content:'';
-                        width:24px;
-                        height:24px;
-                        background-image:url(assets/images/common/b-icon.svg);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-
-                        @media all and (max-width:540px) {
-                            top: -35%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 
 /**====================================================

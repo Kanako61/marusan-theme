@@ -50,8 +50,9 @@
 
 <section class="top_company top_section">
   <div class="company_c">
-    <h2 class="top_h2">福島の住宅を支えて<br class="sp_br">90年。</h2>
-    <p class="company_c_text">これまで住宅業界の課題をプレカットによって解決してきました。<br>これからは住宅・非住宅問わず、<br class="pc_br">建築業界の未来を支える会社として活躍していきます。</p>
+    <h2 class="top_h2">私たちの思い</h2>
+    <p class="company_c_text">
+    昭和10年の創業以来、私たちは木材の加工を通じて、木造建築業界の課題解決に貢献してきました。令和になった今、建築業界も新しい時代を迎えようとしています。<br class="pc_br">これからも私たちは新たなことに挑戦し、木造住宅の未来を創造してまいります。</p>
     <div class="top-button">
       <a href="<?php echo home_url('/'); ?>company">会社情報</a>
     </div>

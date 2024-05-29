@@ -14,67 +14,6 @@
     opacity: 0;
 }
 
-/*---------------------------------------------------------------
-　サイドバー追従
----------------------------------------------------------------*/
-.precut-box {
-  display: flex;
-  gap:3em;
-}
-.precut-type_list {
-  max-width: 80%;
-  flex: 0 80%;
-
-  @media all and (max-width:768px) {
-    max-width: 100%;
-    flex: 0 100%;
-  }
-}
-.sidebar {
-  max-width: 18%;
-  flex: 0 20%;
-  align-items: flex-start;
-
-  @media all and (max-width:768px) {
-    display:none;
-  }
-}
-.sidebar h2 {
-  padding:0.5em 0.5em 0.5em 0.5em;
-  border-bottom: 1px solid $font-c-gray;
-  font-weight: 700;
-  font-size: 1.7rem;
-  color:$font-default-title-c;
-}
-
-#js-index__list {
-  li {
-    &::before {
-      content: "・";
-      color: $green-c;
-      font-size:1.4em;
-    }
-  }
-
-  a {
-    color: #000;
-  }
-  .is-active {
-    color: $green-c;
-  }
-}
-
-
-.precut-box2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.precut-content {
-  display: flex;
-  flex-direction: column;
-}
-
 
 
 

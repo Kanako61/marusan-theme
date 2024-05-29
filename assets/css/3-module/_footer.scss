@@ -1,42 +1,45 @@
 .site-footer {
     .top_h2 {
+        display:inline-block;
         position:relative;
+        left:50%;
+        transform: translatex(-50%);
         max-width:1050px;
         margin:0 auto 8%;
-
-        @media all and (max-width:1200px) {
-            margin:0 8vw 8%;
-        }
 
         &:before {
             display:inline-block;
             content:'';
             position:absolute;
             top:50%;
-            left:0;
+            left:calc(-1 * (calc((158 / 1440) * 100vw + 20vw)));
             transform:translatey(-50%);
-            width:(236/1440)*100vw;
-            height:1.5px;
+            width:(158/1440)*100vw;
+            height:(1.5/1440)*100vw;
             background:$border-c;
+
+            @media all and (min-width:1500px) {
+                left: -500px;
+            }
         }
 
         &:after {
             position:absolute;
-            top:50%;
-            right:0;
+            top:30%;
+            right:calc(-1 * (calc((402 / 1440) * 100vw + 7vw)));
             transform: translatey(-50%);
             content:'';
             display:inline-block;
-            width:(402/1440)*100vw;
-            height:(124/1440)*100vw;
-            max-width:402px;
-            max-height:124px;
+            width:(406/1440)*100vw;
+            height:(88/1440)*100vw;
+            max-width:406px;
+            max-height:88px;
             background-image:url(assets/images/top/access-item1.svg);
             background-repeat: no-repeat;
             background-size: contain;
 
-            @media all and (min-width:1440px) {
-                right:-8vw;
+            @media all and (min-width:1500px) {
+                right: -500px;
             }
         }
     }
@@ -47,6 +50,7 @@
 ===============================================================*/
 .address {
     &_inner {
+        position:relative;
         background-image:url(assets/images/top/access-bk.jpg);
         background-size:cover;
         background-repeat: no-repeat;
@@ -61,7 +65,7 @@
 
     &_list {
         position:relative;
-        max-width:1150px;
+        max-width:1000px;
         margin:0 auto;
 
         @media all and (max-width:1200px) {

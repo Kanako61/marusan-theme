@@ -656,7 +656,6 @@
     /*1日の流れ*/
     .page_recruit {
         &_schedul {
-            background:$content-b-c;
             padding:3% 6%;
     
             .schedule_dl {
@@ -677,7 +676,7 @@
         }
     
         &_question {
-            background:$content-b-c;
+            background:#fff;
             padding:3% 6%;
         }
     }
