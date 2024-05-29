@@ -3766,7 +3766,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (min-width: 1000px) {
   .service .page_title-pic {
-    height: 80vh;
+    height: 31.9444444444vw;
   }
   .service .page_title-pic img {
     height: 100%;
@@ -3774,10 +3774,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 768px) {
   .service .page_title-pic {
-    height: 50vh;
-  }
-  .service .page_title-pic img {
-    height: 100%;
+    height: 40vh;
   }
 }
 
@@ -3806,11 +3803,11 @@ p, a, li, dl dt, dl dd {
 .page_precut {
   width: 80vw;
   max-width: 1050px;
-  margin: 10% auto;
+  margin: 5% auto;
 }
 @media all and (max-width: 768px) {
   .page_precut {
-    margin: 20% auto;
+    margin: 10% auto;
   }
 }
 
@@ -3819,7 +3816,7 @@ p, a, li, dl dt, dl dd {
 =====================================================*/
 .precut_list {
   position: relative;
-  margin-bottom: 8%;
+  margin-bottom: 15%;
 }
 @media all and (max-width: 768px) {
   .precut_list {
@@ -3854,7 +3851,7 @@ p, a, li, dl dt, dl dd {
 }
 .precut_list .swiper-wrapper:after {
   position: absolute;
-  top: 0;
+  top: -1em;
   left: 0;
   content: "";
   display: inline-block;
@@ -3876,7 +3873,7 @@ p, a, li, dl dt, dl dd {
 .precut_list .slide {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 @media all and (max-width: 768px) {
   .precut_list .slide {
@@ -3911,7 +3908,7 @@ p, a, li, dl dt, dl dd {
 }
 .precut_list .slide-title:after {
   position: absolute;
-  bottom: 0;
+  bottom: -1em;
   right: 0;
   content: "";
   width: 70%;
@@ -3942,13 +3939,36 @@ p, a, li, dl dt, dl dd {
   pointer-events: auto;
 }
 .precut_list .thumb-wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3em;
   width: 80vw;
   max-width: 1050px;
   margin: auto;
-  margin-bottom: 6em;
+  margin-bottom: 8em;
+}
+.precut_list .thumb-wrapper:before {
+  position: absolute;
+  top: 35%;
+  left: -5vw;
+  transform: translatey(-50%);
+  content: "";
+  display: inline-block;
+  background: #bfb9b1;
+  width: 1.5px;
+  height: 150%;
+}
+.precut_list .thumb-wrapper:after {
+  position: absolute;
+  top: 35%;
+  right: -5vw;
+  transform: translatey(-50%);
+  content: "";
+  display: inline-block;
+  background: #bfb9b1;
+  width: 1.5px;
+  height: 150%;
 }
 @media all and (max-width: 768px) {
   .precut_list .thumb-wrapper {
@@ -4037,11 +4057,11 @@ p, a, li, dl dt, dl dd {
   content: "";
   display: inline-block;
   position: absolute;
-  bottom: -6em;
+  bottom: -5.8em;
   left: 50%;
   transform: translatex(-50%);
   width: 2px;
-  height: 3.5em;
+  height: 3.2em;
   background: #BFB9B1;
 }
 @media all and (max-width: 540px) {
@@ -4070,11 +4090,13 @@ p, a, li, dl dt, dl dd {
 }
 .page_other-precut_inner dt {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.6rem;
+  font-weight: 600;
   margin-bottom: 4%;
 }
 @media all and (max-width: 768px) {
   .page_other-precut_inner dt {
+    font-size: 2rem;
     margin-bottom: 8%;
     line-height: 1.8 !important;
   }
@@ -4138,10 +4160,36 @@ p, a, li, dl dt, dl dd {
   }
 }
 .other-precut_list_dl {
+  position: relative;
   width: 50%;
   background: #fff;
   padding: 8% 8%;
   margin: 0;
+}
+.other-precut_list_dl:before {
+  position: absolute;
+  top: -0.5em;
+  right: 0;
+  content: "";
+  width: 40%;
+  height: 2px;
+  display: inline-block;
+  background: #BFB9B1;
+}
+@media all and (max-width: 540px) {
+  .other-precut_list_dl:before {
+    display: none;
+  }
+}
+.other-precut_list_dl:after {
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  content: "";
+  width: 40%;
+  height: 2px;
+  display: inline-block;
+  background: #BFB9B1;
 }
 @media all and (max-width: 540px) {
   .other-precut_list_dl {
@@ -4153,6 +4201,7 @@ p, a, li, dl dt, dl dd {
   margin-bottom: 14%;
   text-align: center;
   font-size: 2rem;
+  font-weight: 600;
 }
 @media all and (max-width: 768px) {
   .other-precut_list_dl dt {
@@ -4164,6 +4213,18 @@ p, a, li, dl dt, dl dd {
 }
 .other-precut_list_img {
   width: 50%;
+}
+@media all and (max-width: 540px) {
+  .other-precut_list_img:before {
+    position: absolute;
+    top: -0.5em;
+    right: 0;
+    content: "";
+    width: 40%;
+    height: 2px;
+    display: inline-block;
+    background: #BFB9B1;
+  }
 }
 @media all and (max-width: 540px) {
   .other-precut_list_img {
