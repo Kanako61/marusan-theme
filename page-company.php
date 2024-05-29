@@ -25,6 +25,10 @@ Template Name: Company
 
 
 <div class="company_content page_content">
+    <!-- 背景の線 -->
+    <div class="overview_bk-01"></div>
+    <div class="overview_bk-02"></div>
+    <!-- 背景の線ここまで -->
 
     <!--====================================================
         Top Message　代表挨拶
@@ -54,15 +58,16 @@ Template Name: Company
         </p>
         <p class="name">
             <span class="name_ja">前田 英俊</span><br>
-            <span class="name_en">MAEDA HIDETOSHI</span>
+            <span class="name_en">Maeda Hidetoshi</span>
         </p>
     </div>
 
     <div class="message_bottom">
         <dl class="message_bottom_text">
-            <dt>お客様第一で「高品質な製品」を作り続ける</dt>
+            <dt>お客様第一で<br class="sp_br">「高品質な製品」を作り続ける</dt>
             <dd>
-                <p>当社は昭和10 年に下駄作りで創業しました。その後、住宅用木材の製材、木造住宅部材のプレカット加工と、長きにに渡り木材の加工に携わってきました。近年では、パネルの加工や、金物工法のプレカット等にも加工範囲を広げております。これらの製品をつくる上で、創業以来、我が社が拘ってきたことは、「お客様第一」ということ、そして、それを実現するために「高品質な製品」をつくり続けることです。これからも当社は、「高品質、高性能な木造住宅部材を供給し、安心、安全な住まいづくりに貢献する」こと、「精度の良い木造住宅部材を短納期、かつタイムリーに供給し、工期の短縮と職人不足の解消に貢献する」こと、「住宅産業界のあらたなニーズに対応し、木造住宅の更なる工業化の促進に貢献する」ことを我が社の使命とし、全社員一丸となって「お客様お役立ち企業」を目指してまいります。</p>
+                <p class="message_text">　当社は昭和10 年に下駄作りで創業しました。その後、住宅用木材の製材、木造住宅部材のプレカット加工と、長きにに渡り木材の加工に携わってきました。近年では、パネルの加工や、金物工法のプレカット等にも加工範囲を広げております。これらの製品をつくる上で、創業以来、我が社が拘ってきたことは、「お客様第一」ということ、そして、それを実現するために「高品質な製品」をつくり続けることです。</p>
+                 <p class="message_text">　これからも当社は、「高品質、高性能な木造住宅部材を供給し、安心、安全な住まいづくりに貢献する」こと、「精度の良い木造住宅部材を短納期、かつタイムリーに供給し、工期の短縮と職人不足の解消に貢献する」こと、「住宅産業界のあらたなニーズに対応し、木造住宅の更なる工業化の促進に貢献する」ことを我が社の使命とし、全社員一丸となって「お客様お役立ち企業」を目指してまいります。</p>
             </dd>
             <dd class="post">代表取締役社長<span class="name">前田 英俊</span></dd>
         </dl>
@@ -90,9 +95,6 @@ Template Name: Company
         Overview　会社概要
     =====================================================-->
     <section class="page_section page_overview" id="overview">
-    <!-- 背景の色 -->
-    <div class="overview_bk-01"></div>
-    <div class="overview_bk-02"></div>
 
     <div class="page_overview_inner">
         <h2 class="page_section_h2 page_company_h2">
@@ -162,7 +164,10 @@ Template Name: Company
         <tr>
             <th>業務内容</th>
             <td>
-                在来軸組工法のプレカット　　/ 金物工法のプレカット　　/ 在来パネル材　２×４工法用パネル材　　/ 現場吹付断熱の施工　　/ 羽柄プレカット材の製造販売及びこれらに関連する木材、造作材、建築金物、建材等の小売販売　　/ 在来軸組工法の建方工事　　/ 構造計算業務
+                在来軸組工法のプレカット / 金物工法のプレカット /<br>
+                在来パネル材 / ２×４工法用パネル材 / 現場吹付断熱の施工 /<br>
+                羽柄プレカット材の製造販売及びこれらに関連する木材、造作材、建築金物、建材等の小売販売/在来軸組工法の建方工事 /<br>
+                構造計算業務
             </td>
         </tr>
     </table>
@@ -182,7 +187,7 @@ Template Name: Company
     </div>
 
     <div class="history">
-    <h2 class="page_section_h2 page_company_h2 pattern02">
+    <h2 class="page_section_h2 page_company_h2 pattern01">
         <p class="ja">沿革</p>
     </h2>
         <ul class="history_list">
@@ -432,7 +437,6 @@ Template Name: Company
 </div>
 </section>
 
-</div>
 
 <!--====================================================
 
@@ -440,7 +444,9 @@ Template Name: Company
   お問い合わせ
 
 =====================================================-->
-<!-- <?php get_template_part('contact'); ?> -->
+<?php get_template_part('contact'); ?>
+
+</div>
 
 </main>
 

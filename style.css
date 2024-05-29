@@ -2983,15 +2983,27 @@ p, a, li, dl dt, dl dd {
 
 /* Company 共通 */
 .company_main .page_content {
+  position: relative;
   width: 100%;
   max-width: none;
   margin: 0;
+  /*背景の装飾*/
+  /*お問い合わせ*/
 }
-
-.page_company_h2 {
+.company_main .page_content:after {
+  position: absolute;
+  top: 0;
+  right: 4vw;
+  content: "";
+  background: #fcf3e4;
+  width: 4vw;
+  height: 100%;
+  z-index: -1;
+}
+.company_main .page_content .page_company_h2 {
   position: relative;
   display: inline-block;
-  width: 65%;
+  width: 55%;
   margin-bottom: 5%;
   font-size: 3rem;
   color: #fff;
@@ -2999,38 +3011,59 @@ p, a, li, dl dt, dl dd {
   padding: 0.2em 1em 0.2em 4.5em;
   text-align: left;
 }
+@media all and (max-width: 1200px) {
+  .company_main .page_content .page_company_h2 {
+    width: 75%;
+  }
+}
 @media all and (max-width: 768px) {
-  .page_company_h2 {
+  .company_main .page_content .page_company_h2 {
     font-size: 3.6458333333vw;
     padding: 0.2em 1em 0.2em 2em;
-    width: 80%;
+    width: 65%;
   }
 }
 @media all and (max-width: 540px) {
-  .page_company_h2 {
+  .company_main .page_content .page_company_h2 {
     font-size: 1.8rem;
   }
 }
-
-.page_company_h2.pattern01 {
+.company_main .page_content .page_company_h2.pattern01 {
   background: #98C0CC;
   transform: translatex(-6vw);
 }
-.page_company_h2.pattern01:after {
+.company_main .page_content .page_company_h2.pattern01:after {
   display: inline-block;
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 4vw;
+  width: 2em;
   height: 100%;
   background: #FCF3E4;
 }
-.page_company_h2.pattern01 p {
+.company_main .page_content .page_company_h2.pattern01 p {
   color: #fff;
 }
-
-.company_table {
+.company_main .page_content .page_company_h2.pattern02 {
+  position: relative;
+  background: rgba(44, 79, 90, 0.7);
+  transform: translatex(-6vw);
+}
+.company_main .page_content .page_company_h2.pattern02:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  background: #B7CDD7;
+}
+.company_main .page_content .page_company_h2.pattern02 p {
+  color: #fff;
+}
+.company_main .page_content .company_table {
   position: relative;
   width: 80vw;
   max-width: 1200px;
@@ -3038,7 +3071,7 @@ p, a, li, dl dt, dl dd {
   padding: 12% 0;
   background: #fff;
 }
-.company_table th {
+.company_main .page_content .company_table th {
   position: relative;
   width: 12em;
   border-collapse: separate;
@@ -3048,7 +3081,7 @@ p, a, li, dl dt, dl dd {
   font-weight: bold;
   vertical-align: baseline;
 }
-.company_table th:after {
+.company_main .page_content .company_table th:after {
   position: absolute;
   top: 1.5em;
   right: 0;
@@ -3058,17 +3091,42 @@ p, a, li, dl dt, dl dd {
   height: 2em;
   background: #BFB9B1;
 }
-.company_table td {
+.company_main .page_content .company_table td {
   padding: 0em 2.5em;
 }
-.company_table_address dd {
+.company_main .page_content .company_table_address dd {
   margin: 0 0 1.5em 0;
 }
-.company_table_scale {
+.company_main .page_content .company_table_scale {
   display: flex;
 }
-.company_table_scale dd {
+.company_main .page_content .company_table_scale dd {
   margin: 0;
+}
+.company_main .page_content .overview_bk-01 {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4vw;
+  height: 100%;
+  background: #E2F1F2;
+}
+.company_main .page_content .overview_bk-02 {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4vw;
+  height: 100%;
+  background: #98C0CC;
+}
+.company_main .page_content .contact-box {
+  padding: 20% 0 35%;
+  margin: 0 8vw;
+}
+.company_main .page_content .contact-box_text {
+  width: 80vw;
 }
 
 /*アクセス削除*/
@@ -3129,7 +3187,7 @@ p, a, li, dl dt, dl dd {
 .page_message .message_top .company_name {
   position: absolute;
   top: 23.6111111111vw;
-  left: 13.8888888889vw;
+  left: 12.5vw;
   color: #fff;
   font-size: 1.6666666667vw;
   font-weight: bold;
@@ -3155,7 +3213,7 @@ p, a, li, dl dt, dl dd {
 .page_message .message_top .name {
   position: absolute;
   top: 31.25vw;
-  right: 16.6666666667vw;
+  right: 20.8333333333vw;
   color: #fff;
   font-size: 1.6666666667vw;
   font-weight: bold;
@@ -3192,26 +3250,40 @@ p, a, li, dl dt, dl dd {
   }
 }
 .page_message .message_bottom {
+  position: relative;
   max-width: 1200px;
   width: 80vw;
-  margin: 10% auto 8%;
+  margin: 5% auto 8%;
 }
 @media all and (max-width: 768px) {
   .page_message .message_bottom {
-    margin: 16% auto 10%;
+    margin: 10% auto 10%;
   }
 }
 .page_message .message_bottom_text {
-  margin: 0;
+  margin: 0 auto;
+  width: 76vw;
+  max-width: 760px;
 }
 .page_message .message_bottom_text dt {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: bold;
   margin-bottom: 5%;
 }
+@media all and (max-width: 768px) {
+  .page_message .message_bottom_text dt {
+    font-size: 2rem;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+  }
+}
 .page_message .message_bottom_text dd {
   margin: 0;
+}
+.page_message .message_bottom_text dd .message_text {
+  line-height: 2.1;
+  margin: 1em 0;
 }
 .page_message .message_bottom_text .post {
   margin-top: 5%;
@@ -3235,7 +3307,7 @@ p, a, li, dl dt, dl dd {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  margin: 5%;
+  margin: 0 5%;
 }
 .rinen_list li {
   position: relative;
@@ -3265,47 +3337,21 @@ p, a, li, dl dt, dl dd {
 .page_overview {
   position: relative;
   margin-bottom: 0;
-}
-.page_overview:after {
-  position: absolute;
-  top: 0;
-  right: 4vw;
-  content: "";
-  background: #fcf3e4;
-  width: 4vw;
-  height: 100%;
-}
-.page_overview .overview_bk-01 {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4vw;
-  height: 100%;
-  background: #E2F1F2;
-}
-.page_overview .overview_bk-02 {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4vw;
-  height: 100%;
-  background: #98C0CC;
+  margin-top: 15%;
 }
 .page_overview_inner {
   position: relative;
   z-index: 2;
 }
 .page_overview_inner .page_company_h2 {
-  position: absolute;
+  position: absolute !important;
   z-index: 2;
-  width: 40vw;
+  width: 40vw !important;
   top: 45%;
-  right: 0;
+  right: 0 !important;
   transform: translatey(-50%);
   background: #6988A8;
-  padding: 0.2em 4.8611111111vw 0.2em 0em;
+  padding-left: 0 !important;
 }
 @media all and (min-width: 1440px) {
   .page_overview_inner .page_company_h2 {
@@ -3324,14 +3370,7 @@ p, a, li, dl dt, dl dd {
   line-height: 0;
 }
 .page_overview_inner .page_company_h2:after {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4vw;
-  height: 100%;
-  background: #98C0CC;
+  display: none;
 }
 .page_overview_inner .page_company_h2 p {
   color: #fff;
@@ -3349,13 +3388,8 @@ p, a, li, dl dt, dl dd {
   width: 80vw;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 12% 0;
-  background: #fff;
-}
-@media all and (max-width: 768px) {
-  .company_table {
-    width: 90vw;
-  }
+  padding: 8% 0;
+  background: none;
 }
 .company_table th {
   position: relative;
@@ -3390,6 +3424,7 @@ p, a, li, dl dt, dl dd {
 }
 .company_table td {
   padding: 0em 2.5em;
+  min-width: 450px;
 }
 @media all and (max-width: 768px) {
   .company_table td {
@@ -3432,24 +3467,13 @@ p, a, li, dl dt, dl dd {
     display: none;
   }
 }
-.page_history .page_company_h2.pattern02 {
+.page_history .page_company_h2 {
   position: relative;
+  top: -2em;
   background: rgba(44, 79, 90, 0.7);
-  margin: -3vw auto 0;
-  transform: translatex(-5vw);
 }
-.page_history .page_company_h2.pattern02:after {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4vw;
-  height: 100%;
+.page_history .page_company_h2:after {
   background: #B7CDD7;
-}
-.page_history .page_company_h2.pattern02 p {
-  color: #fff;
 }
 
 .history {
@@ -3460,11 +3484,11 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .history {
     width: 90vw;
-    padding: 0 5vw 0 5vw;
+    padding: 0 5vw;
   }
 }
 .history_list {
-  margin: 8% 0;
+  margin: 0 0 8%;
 }
 .history_list li {
   display: flex;
@@ -3485,11 +3509,17 @@ p, a, li, dl dt, dl dd {
 .history_list li dl dt {
   width: 6.5em;
   position: relative;
-  padding: 0 0 2em;
+  padding: 0 0 0.6em 0;
+  line-height: 1.4;
 }
 @media all and (max-width: 768px) {
   .history_list li dl dt {
     font-size: 1.3rem;
+  }
+}
+@media all and (max-width: 540px) {
+  .history_list li dl dt {
+    padding: 0 0 1.2em 0;
   }
 }
 .history_list li dl dt:before {
@@ -3548,11 +3578,16 @@ p, a, li, dl dt, dl dd {
   margin: 0 auto;
 }
 .page_facility .page_company_h2 {
-  margin-top: 10%;
+  position: relative;
+  top: -2em;
+  background: rgba(152, 192, 204, 0.8);
+}
+.page_facility .page_company_h2:after {
+  background: #FCF3E4;
 }
 @media all and (max-width: 768px) {
   .page_facility .page_company_h2 {
-    transform: translatex(0);
+    transform: translatex(-1vw);
   }
 }
 .page_facility:after {
@@ -3585,7 +3620,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 768px) {
   .page_facility .company_table {
-    width: 90vw;
+    width: 82vw;
     margin-bottom: 10%;
   }
 }
