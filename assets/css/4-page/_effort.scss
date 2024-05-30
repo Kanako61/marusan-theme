@@ -11,7 +11,7 @@
     position:relative;
 
     @media all and (min-width:1000px) {
-        height:80vh;
+        height:(580/1440)*100vw;
 
         img {
             height:100%;
@@ -28,10 +28,11 @@
 
     .copy {
         position:absolute;
-        top:50%;
+        top:55%;
         left:45%;
         transform:translate(-50%, -50%);
         font-size:2.4rem;
+        font-weight:600;
         color:#fff;
         text-align:center;
         z-index:2;
@@ -66,15 +67,25 @@
 .effort_text {
     width:80vw;
     max-width:1050px;
-    margin:12% auto;
+    margin:12% auto 8%;
 
     @media all and (max-width:768px) {
-        margin:20% auto 20%;
+        margin:12% auto 12%;
     }
 
     dl {
+        max-width:76vw;
+        margin:0 auto;
         position:relative;
         z-index:2;
+
+        @media all and (max-width:1100px) {
+            max-width:70vw;
+        }
+
+        @media all and (max-width:768px) {
+            max-width:80vw;
+        }
 
         &:before {
             content:"";
@@ -84,17 +95,22 @@
             left:-10vw;
             width:(311/1440)*100vw;
             height:(580/1440)*100vw;
+            max-width:311px;
+            max-height:580px;
             background-image:url(assets/images/effort/circle-item-01.svg);
             background-repeat: no-repeat;
             background-size: contain;
 
-            @media all and (max-width:768px) {
-                top:74%;
-                left:-5vw;
+            @media all and (max-width:1100px) {
+                width:60vw;
+                top:2vw;
+                left:-14vw;
             }
 
-            @media all and (max-width:540px) {
-                top:80%;
+            @media all and (max-width:768px) {
+                top:inherit;
+                bottom:3vw;
+                left:-5vw;
             }
         }
 
@@ -106,17 +122,21 @@
             right:-10vw;
             width:(295/1440)*100vw;
             height:(613/1440)*100vw;
+            max-width:295px;
+            max-height:613px;
             background-image:url(assets/images/effort/circle-item-02.svg);
             background-repeat: no-repeat;
             background-size: contain;
 
-            @media all and (max-width:768px) {
-                top:70%;
-                right:-5vw;
+            @media all and (max-width:1100px) {
+                top:2vw;
+                right:-14vw;
             }
 
-            @media all and (max-width:540px) {
-                top:80%;
+            @media all and (max-width:768px) {
+                top:inherit;
+                bottom:3vw;
+                right:-5vw;
             }
         }
     }
@@ -124,17 +144,29 @@
     dt {
         text-align: center;
         font-size:1.8rem;
-        margin-bottom:4%;
+        font-weight:bold;
+        margin-bottom:6%;
     }
 
     dd {
         margin:0 auto;
+
+        .blue {
+            color:$blue-text;
+            font-weight:600;
+        }
     }
 
     &_pic {
         width:60%;
         max-width:618px;
-        margin:5% auto 2%!important;
+        margin:5% auto 0;
+        padding-bottom:10%;
+
+        @media all and (max-width:768px) {
+            margin:10% auto 0!important;
+            padding-bottom:15%;
+        }
 
         p {
             text-align: center;
@@ -156,6 +188,7 @@
         transform:translate(-50%, -50%);
         color:#fff;
         font-size:2.4rem;
+        font-weight: bold;
         text-align: center;
 
         @media all and (max-width:768px) {
@@ -175,7 +208,7 @@
     margin:15% auto;
 
     @media all and (max-width:768px) {
-        width:90vw;
+        width:80vw;
     }
 
     &_list {
@@ -199,7 +232,7 @@
 
                 &:after {
                     position:absolute;
-                    top:-10vw;
+                    top:-8vw;
                     left:-10vw;
                     content:'';
                     display:inline-block;
@@ -286,8 +319,8 @@
 
                 &:after {
                     @include item;
-                    bottom:-3vw;
-                    right:-8vw;
+                    bottom:2vw;
+                    right:-5vw;
                     width:(143/1440)*100vw;
                     height:(143/1440)*100vw;
                     background-image:url(assets/images/effort/circle-item-09.svg);
@@ -451,8 +484,10 @@
                 }
 
                 &_img {
+                    position:relative;
                     width:45%;
                     max-width:465px;
+                    z-index:3;
 
                     @media all and (max-width:1050px) {
                         width:(465/1440)*100vw;
@@ -469,7 +504,7 @@
 
 .quality {
     width:80vw;
-    max-width:1050px;
+    max-width:850px;
     margin:0 auto;
 
     @media all and (max-width:768px) {
@@ -483,18 +518,31 @@
 
     .quality_aq {
         display:flex;
-        justify-content: space-between;
-        gap:4em;
+        justify-content:center;
+        gap:2em;
         margin-bottom:6%;
 
         @media all and (max-width:768px) {
             flex-direction: column;
-            gap:2em;
+            justify-content:flex-start;
+            gap:4em;
+            margin-bottom:15%;
         }
 
         &_text {
+            position:relative;
             width:45%;
-            border-bottom:solid 1px $font-default-c;
+
+            &:after {
+                content:'';
+                display:inline-block;
+                position:absolute;
+                bottom:-0.5em;
+                right:0;
+                background:$item-c;
+                width:50%;
+                height:1.5px;
+            }
 
             @media all and (max-width:768px) {
                 width:100%;
@@ -508,53 +556,24 @@
         }
     }
 
-    .quality_more {
-        display:flex;
-        justify-content: space-between;
-        gap:4em;
-
-        @media all and (max-width:768px) {
-            flex-direction: column;
-            gap:2em;
-        }
+    .nintei {
 
         &_list {
-            width:45%;
-
-            @media all and (max-width:768px) {
-                width:100%;
-            }
+            padding-left:1em;
 
             li {
-                dl {
-                    display:grid;
-                    grid-template-columns: 1fr 2fr;
-                    gap:3em;
-                    margin:0.5em 0;
+                list-style-type: disc;
+                color:#467886;
 
-                    dt {
-                        width:6em;
-                    }
+                a {
+                    padding:0.2em 0;
+                    color:#467886;
+                    transition:all .3s;
 
-                    @media all and (max-width:1000px) {
-                        grid-template-columns: 1fr 3fr;
-                        gap:1.5em;
-                    }
-
-                    dd {
-                        margin:0;
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
-            }
-        }
-
-        &_pic {
-            width:45%;
-            max-width:342px;
-            margin:0 auto;
-
-            @media all and (max-width:768px) {
-                width:100%; 
             }
         }
     }

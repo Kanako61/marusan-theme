@@ -34,9 +34,9 @@ Template Name: effort
 
 <section class="page_section effort_text">
 <dl class="effort_text_dl">
-    <dt>マルサンのSDGｓへの取り組み</dt>
-    <dd>マルサンは家づくりを支える会社です。1935年創業以来、マルサンは住宅を取り巻く様々な課題やニーズに応えるべくサービスを創造して参りました。私たちは2016年に「明日の家づくりを創る」と言うスローガンを掲げ、住宅業界が抱える「人手不足の解消」「木造住宅の品質向上」と言った課題解決に貢献してきました。<br>
-    地震大国である我が国はこれから超少子高齢化社会を迎え、住宅業界は更なる課題が浮き彫りになっていきます。「明日の家づくりを創る」と言うスローガンには、木造住宅における新しい家づくりの在り方を創造する意志が込められており、プレカット工場としての垣根を超えた企業に成長することを目指します。
+    <dt>マルサンのSDGｓへの<br class="sp_br">取り組み</dt>
+    <dd>1935年創業以来、マルサンは住宅を取り巻く様々な課題やニーズに応えるべく数多くのサービスを創造してまいりました。2016年に掲げた「<span class="blue">明日の家づくりを創る</span>」というスローガンのもと、住宅業界の「<span class="blue">人手不足の解消</span>」「<span class="blue">木造住宅の性能向上</span>」といった課題解決に貢献しています。<br>
+    地震大国である我が国は超少子高齢社会を迎え、住宅業界は更なる課題と共に新しい局面を迎え始めています。「明日の家づくりを創る」と言うスローガンには、木造住宅における新しい家づくりの在り方を創造する意志が込められており、プレカット工場としての垣根を超えた企業に成長することを目指しています。
     </dd>
     <dd class="effort_text_pic">
         <picture>
@@ -53,7 +53,7 @@ Template Name: effort
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-img-03.webp" type="image/webp">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort-img-03.jpg" alt="家づくりから世の中を良くしていきたい">
     </picture>
-    <p class="copy">家づくりから<br>世の中を良くしていきたい</p>
+    <p class="copy">家づくりから<br>環境の社会創りを</p>
 </div>
 
 
@@ -66,7 +66,7 @@ Template Name: effort
 <!--ワークライフバランスと健康経営-->
 <li class="page_sdgs_list_item item-01">
     <div class="list_item_inner-01">
-        <h2 class="page_sdgs_h2">ワークライフバランスと健康経営</h2>
+        <h2 class="page_sdgs_h2">ワークライフバランスと<br class="sp">健康経営</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-03.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-05.png">
@@ -76,7 +76,8 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-02">
-        <p class="item-01_text">長時間労働の抑制や有給休暇の取得を会社から社員へ促し、社員のライフスタイルに応じた職場環境の整備を推進しています。  定期健康診断やメンタルヘルスチェック等の健康増進への支援や外国人技能実習生の労働環境整備を通じて社員の健康維持を大切にしています。</p>
+        <p class="item-01_text">長時間労働の抑制や各種の休暇を取得しやすい環境づくりなど、社員のライフスタイルに応じた働きやすい職場環境を整備することは企業の大切なつとめです。マルサンは、定期健康診断やメンタルヘルスチェック等の健康増進への支援や外国人の労働環境整備などを通じて社員の健康維持をサポートしています。
+        </p>
 
         <div class="list_item_inner-02_img">
             <picture>
@@ -87,8 +88,26 @@ Template Name: effort
     </div>
 
     <div class="list_item_inner-03">
-        <p class="item-01_text02">健康経営優良法人認定制度とは、地域の健康課題に即した取組や日本健康会議が進める健康増進の取組をもとに、特に優良な健康経営を実践している大企業や中小企業等の法人を顕彰する制度です。<br>
+        <p class="item-01_text02">健康経営優良法人認定制度とは、地域の健康課題に即した取組や日本健康会議が進める健康増進の取組をもとに、特に優良な健康経営を実践している大企業や中小企業等の法人を顕彰する制度です。​<br>
         当社は2021年度から継続して健康経営優良法人の認定を受けています。</p>
+    </div>
+</li>
+
+
+<!--DXの推進​-->
+<li class="page_sdgs_list_item item-03">
+    <div class="list_item_inner-01">
+        <h2 class="page_sdgs_h2">DXの推進</h2>
+        <div class="sdgs_icon">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-08.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-09.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-13.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-17.png">
+        </div>
+    </div>
+
+    <div class="list_item_inner-03">
+        <p class="item-01_text01">DX推進室を設置し、年度計画の中で取組方針を策定。経営方針としてDX推進を打ち出しています。社内のあらゆる業務を見直し、デジタル技術を活用した情報共有や業務効率改善によって仕事がしやすい環境を構築し、常に改善を繰り返す仕組みづくりを進めています。。</p>
     </div>
 </li>
 
@@ -112,30 +131,11 @@ Template Name: effort
 </li>
 
 
-<!--DXの推進​-->
-<li class="page_sdgs_list_item item-03">
-    <div class="list_item_inner-01">
-        <h2 class="page_sdgs_h2">DXの推進</h2>
-        <div class="sdgs_icon">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-08.png">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-09.png">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-13.png">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-17.png">
-        </div>
-    </div>
-
-    <div class="list_item_inner-03">
-        <p class="item-01_text01">ＤＸ推進室を設置し、年度計画の中で取組み方針を策定。各種業務のＩＴ化を推進しています。<br>
-        また、情報を一元管理する社内管理システムを構築し、全社での情報共有、業務効率の改善に取組んでいます。</p>
-    </div>
-</li>
-
-
-<!--資源循環型社会の実現と省エネ-->
+<!--資源循環型社会の実現とカーボンニュートラル-->
 <li class="page_sdgs_list_item
 item-04">
     <div class="list_item_inner-01">
-        <h2 class="page_sdgs_h2">資源循環型社会の実現と省エネ</h2>
+        <h2 class="page_sdgs_h2">資源循環型社会の実現と<br>カーボンニュートラル</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-07.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-12.png">
@@ -145,7 +145,7 @@ item-04">
     </div>
 
     <div class="list_item_inner-02">
-        <p class="item-01_text01">プレカット加工時に発生するおがくずを畜産農家に提供し、堆肥として再利用しています。また、端材についても間柱等のオリジナル製品や、家庭用暖房の燃料として再利用しています。<br>照明設備や製造ライン等を導入する際は、省エネ設備を積極的に採用し、エネルギー使用量の削減に取組みます。</p>
+        <p class="item-01_text01">プレカット加工時に通常は廃棄する端材やおがくずが必ず発生します。マルサンでは短くなった端材を繋ぎ合わせ新しい柱を製品化しています。他にも家庭用暖房の燃料として地域の一般家庭に販売したり、おがくずは畜産農家に提供し堆肥等に再利用しています。各種設備更新では積極的に省エネ設備を採用し、エネルギー使用量も削減。<br>木材の有効利用と省エネによって、CO2排出量の抑制にも取り組んでいます。</p>
 
         <div class="list_item_inner-02_img">
             <picture>
@@ -157,10 +157,10 @@ item-04">
 </li>
 
 
-<!--地域経済の活性化-->
+<!--地域活性化への取り組み-->
 <li class="page_sdgs_list_item item-05">
     <div class="list_item_inner-01">
-        <h2>地域経済の活性化</h2>
+        <h2>地域活性化への取り組み</h2>
         <div class="sdgs_icon">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-04.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/sustaina-icon-11.png">
@@ -170,7 +170,7 @@ item-04">
     </div>
 
     <div class="list_item_inner-02">
-        <p class="item-01_text01">県産材や国産材の利用を推奨し、地域資源の有効活用を促進します。<br>さらに、就業体験や工場見学会を開催し、地元福島県で開催される地域イベントへの参加を通じて地域活性化への貢献を行っています。</p>
+        <p class="item-01_text01">県産材や国産材の利用を推奨し、地域資源の有効活用を促進しています。<br>さらに、小学生から高校生の職場体験や工場見学会、そして地域イベントでの木工教室の開催を通して地域の活性化にも力を入れています。</p>
 
         <div class="list_item_inner-02_img">
             <picture>
@@ -194,43 +194,19 @@ item-04">
 <section class="page_section quality">
 <h2>品質への取り組み</h2>
 <div class="quality_aq">
-    <p class="quality_aq_text">AQ認証は、木質建材等について品質性能等を客観的に評価・認証し、消費者に対し安全性及び居住性に優れた製品の提供を目的として（財）日本住宅・木材技術センターが認証するもので、認証製品には下記のようなAQマークを表示します。</p>
+    <p class="quality_aq_text">JAS規格に規定されていないプレカット材等の新しい木質建材の品質性能等を客観的に評価・認証する制度として「AQ認証」があります。当社では平成9年にAQ認証を取得して以来、3年毎に行われる再評価を経ながら、現在まで認証を維持しております。</p>
     <div class="quality_aq_pic">
         <picture>
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-01.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-01.jpg" alt="AQ認証">
+            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-02.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-02.jpg" alt="AQ認証">
         </picture>
     </div>
 </div>
 
-<div class="quality_more">
-    <ul class="quality_more_list">
-        <li>
-            <dl>
-                <dt>認証取得日</dt>
-                <dd>平成9年4月1日</dd>
-            </dl>
-        </li>
-        <li>
-            <dl>
-                <dt>認証内容</dt>
-                <dd>優良木質建材等の認証</dd>
-            </dl>
-        </li>
-        <li>
-            <dl>
-                <dt>認証番号</dt>
-                <dd>A-176</dd>
-            </dl>
-        </li>
-
+<div class="nintei">
+    <ul class="nintei_list">
+        <li><a href="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-01.jpg">認定書</a></li>
     </ul>
-    <div class="quality_more_pic">
-        <picture>
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-02.webp" type="image/webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/quality-img-02.jpg" alt="AQ認証">
-         </picture>
-    </div>
 </div>
 </section>
 
