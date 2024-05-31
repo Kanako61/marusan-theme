@@ -4701,8 +4701,13 @@ p, a, li, dl dt, dl dd {
 .recruit_main_img {
   position: relative;
   width: 92vw;
-  margin: 0 auto 7vw;
+  margin: 0 auto;
   z-index: 2;
+}
+@media all and (max-width: 768px) {
+  .recruit_main_img {
+    margin: 0 auto 6%;
+  }
 }
 .recruit_main_img:after {
   position: absolute;
@@ -4715,26 +4720,26 @@ p, a, li, dl dt, dl dd {
   height: 9.7222222222vw;
   z-index: -1;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1200px) {
   .recruit_main_img {
-    padding-top: 5em;
+    padding-top: 5.5em;
   }
 }
 .recruit_main_img .recruit_pic {
   position: relative;
   width: 72.9166666667vw;
-  height: 49.1666666667vw;
+  height: 40.625vw;
   max-height: 90vh;
   margin: 0 0 0 auto;
   overflow: hidden;
 }
 .recruit_main_img .recruit_main_copy {
   position: absolute;
-  bottom: -7vw;
+  top: 50%;
   left: 0;
   font-size: 6.9444444444vw;
   color: #fff;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: 0;
   font-weight: 900;
   margin: 0;
@@ -4744,44 +4749,93 @@ p, a, li, dl dt, dl dd {
     font-size: 10rem;
   }
 }
+@media all and (max-width: 768px) {
+  .recruit_main_img .recruit_main_copy {
+    top: 70%;
+  }
+}
+.recruit_main_img .recruit_main_copy .copy_01 {
+  position: relative;
+}
+.recruit_main_img .recruit_main_copy .copy_01:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: -5vw;
+  display: inline-block;
+  width: 140%;
+  height: 0.3472222222vw;
+  background: #fff;
+}
+.recruit_main_img .recruit_main_copy .copy_02 {
+  position: relative;
+}
+.recruit_main_img .recruit_main_copy .copy_02:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: -60vw;
+  display: inline-block;
+  width: 80vw;
+  height: 0.3472222222vw;
+  background: #fff;
+}
+.recruit_main_img .recruit_main_copy .copy_03 {
+  position: relative;
+}
+.recruit_main_img .recruit_main_copy .copy_03:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: -5vw;
+  display: inline-block;
+  width: 50%;
+  height: 0.3472222222vw;
+  background: #fff;
+}
+@media all and (min-width: 1440px) {
+  .recruit_main_img .recruit_main_copy {
+    font-size: 10rem;
+  }
+}
 
 .recruit_top_text {
+  position: relative;
   width: 80vw;
-  max-width: 680px;
-  margin: 12% auto 0;
-  padding: 0 0 8% 8%;
-}
-@media all and (max-width: 768px) {
-  .recruit_top_text {
-    padding-left: 11vw;
-  }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8% 0 8% 15%;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 .recruit_top_text .item_after {
   position: relative;
+  margin-bottom: 10%;
 }
 .recruit_top_text .item_after:after {
   content: "";
   display: inline-block;
   position: absolute;
   bottom: -8vw;
-  left: -26vw;
+  left: -20vw;
   width: 39.0277777778vw;
   height: 23.6111111111vw;
+  max-width: 562px;
+  max-height: 340px;
   background-image: url(assets/images/recruit/recruit-item01.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 1500px) {
   .recruit_top_text .item_after:after {
-    bottom: -8vw;
-    left: -20vw;
-    width: 32.0833333333vw;
-    height: 16.6666666667vw;
+    bottom: -400%;
+    left: -20em;
   }
 }
 .recruit_top_text p {
   color: #fff;
   margin: 3em 0;
+  padding-left: 6%;
 }
 
 /*====================================================
@@ -4978,21 +5032,29 @@ p, a, li, dl dt, dl dd {
     font-size: 2rem;
   }
 }
-.tab-contents .tab-01 .page_recruit_h2.color {
+.tab-contents .tab-01 .color {
   color: #379F77;
+  font-weight: bold;
 }
-.tab-contents .tab-02 .page_recruit_h2.color {
+.tab-contents .tab-02 .color {
   color: #E67744;
+  font-weight: bold;
 }
-.tab-contents .tab-03 .page_recruit_h2.color {
+.tab-contents .tab-03 .color {
   color: #5279F4;
+  font-weight: bold;
 }
 .tab-contents .page_recruit_job {
   position: relative;
   width: 80vw;
   margin: 0 auto;
   background: #fff;
-  padding: 8%;
+  padding: 4% 8%;
+}
+@media all and (max-width: 768px) {
+  .tab-contents .page_recruit_job {
+    padding: 8% 4%;
+  }
 }
 .tab-contents .page_recruit_job:after {
   position: absolute;
@@ -5043,13 +5105,13 @@ p, a, li, dl dt, dl dd {
 .tab-contents .page_recruit_flow {
   background: #fff;
   width: 80vw;
-  margin: 8vw auto 0;
-  padding: 8%;
+  margin: 8vw auto;
+  padding: 4% 8%;
 }
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_flow {
     width: 90vw;
-    padding: 8% 5%;
+    padding: 8% 4%;
   }
 }
 .tab-contents .page_recruit_flow .recruit_flow_list {
@@ -5182,7 +5244,12 @@ p, a, li, dl dt, dl dd {
   background: #fff;
   width: 80vw;
   margin: 8vw auto 0;
-  padding: 8%;
+  padding: 4% 8%;
+}
+@media all and (max-width: 768px) {
+  .tab-contents .page_recruit_work {
+    padding: 8% 4%;
+  }
 }
 .tab-contents .page_recruit_work:after {
   position: absolute;
@@ -5210,7 +5277,12 @@ p, a, li, dl dt, dl dd {
   background: #fff;
   width: 80vw;
   margin: 8vw auto 0;
-  padding: 8%;
+  padding: 4% 8%;
+}
+@media all and (max-width: 768px) {
+  .tab-contents .page_recruit_merit {
+    padding: 8% 4%;
+  }
 }
 .tab-contents .page_recruit_merit:after {
   position: absolute;
@@ -5263,19 +5335,20 @@ p, a, li, dl dt, dl dd {
 .tab-contents .page_recruit_schedul {
   width: 80vw;
   margin: 8vw auto 0;
-  padding: 8%;
+  padding: 4% 8%;
   background: #fff;
 }
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_schedul {
     width: 90vw;
+    padding: 8% 4%;
   }
 }
 .tab-contents .page_recruit_question {
   width: 80vw;
-  margin: 8vw auto;
+  margin: 8vw auto 0;
   background: #fff;
-  padding: 8%;
+  padding: 4% 8%;
 }
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_question {

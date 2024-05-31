@@ -26,24 +26,19 @@ Template Name: recruit
 </div>
 
 <p class="recruit_main_copy">
-  家づくりを<br>
-  縁の下から支える<br>
-  プロになる。
+  <span class="copy_01">家づくりを</span><br>
+  <span class="copy_02">縁の下から支える</span><br>
+  <span class="copy_03">プロになる。</span>
 </p>
 </section>
 
 <!-- トップテキスト -->
 <section class="recruit_top_text">
-  <p>家づくりってどうやって成り立っているんだろう。<br class="pc_br">
-  想像もしたことない人たちが沢山力を合わせて創っているはず。<br class="pc_br">
-  だって大切な家族が住まう家だから。</p>
-
-  <p>マルサンはプレカット工場設立以来、<br class="pc_br">
-  数えきれないほどの住宅や建物の構造部材を加工・提供してきました。
-  </p>
-
+  <p>家づくりってどうやって成り立っているんだろう。<br class="pc_br"></p>
+  <p>
+  マルサンはプレカット工場設立以来、<br class="pc_br">
+  数えきれないほどの住宅や建物の構造部材を加工・提供してきました。</p>
   <p class="item_after">「明日の家づくりを創る」</p>
-
   <p>これまでも、これからも。マルサンは住宅業界が抱える課題や問題に<br class="pc_br">向き合い、未来のための家づくりを支えていきます。
   </p>
 </section>
@@ -59,7 +54,7 @@ Template Name: recruit
       <ul class="tab-button">
         <li class="tab tab-01 is-active">加工機オペレーター</li>
         <li class="tab tab-02">CADオペレーター</li>
-        <li class="tab tab-03">セールスオペレーター</li>
+        <li class="tab tab-03">ドライバー</li>
       </ul>
 
     <!--タブを切り替えて表示するコンテンツ-->
@@ -100,11 +95,11 @@ Template Name: recruit
                   </picture>
                 </div>
                 <dl class="pageRecruit_list_dl">
-                  <dt class="senior_name"><span class="name">池田 佳裕</span><br>製造部 製造二課</dt>
+                  <dt class="senior_name"><span class="name">池田 圭佑</span><br>製造部 製造二課</dt>
                   <dd>
                     <dl>
-                      <dt>勤続年数：</dt>
-                      <dd>7年</dd>
+                      <dt>入社年：</dt>
+                      <dd>2017年</dd>
                     </dl>
                     <dl>
                       <dt>出身高校：</dt>
@@ -122,7 +117,7 @@ Template Name: recruit
                 </dl>
               </div>
               <p class="interview_text">
-              頑張りすぎず程々に、とは思っていますが、工場である以上、生産性は常に考えないといけません。いまより精度と効率を上げる働き方、段取りを考えながら仕事をこなします。現状、景気の良い業界とは言えませんが、成果が出ればやりがいも生まれてきます。
+              工場作業と聞くと同じ作業の繰り返しをイメージするかもしれませんが、お客様の家は<span class="color">一軒一軒違う</span>ため、寸法や形を都度確認しながらの作業になります。<span class="color">安全を最優先</span>に、より精度と効率を上げるための方法を考えながら仕事をしています。この仕事のやりがいは、<span class="color">気持ちを込めて作った製品が完成した瞬間</span>です。
               </p>
           </section>
         </div>
@@ -196,36 +191,6 @@ Template Name: recruit
               <a href="#pageRecruit">上部に戻る</a>
             </div>
           </section>
-
-        <!-- 採用の流れ -->
-        <section class="page_recruit_flow recruit_section">
-          <h2 class="flow_h2 page_recruit_h2">採用の流れ</h2>
-          <p>エントリーから内定までの間に、工場見学や個別説明会を実施しています。
-            実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
-          </p>
-
-          <ul class="recruit_flow_list">
-            <li>
-              <div class="flow_item"><p>エントリー</p></div>
-              <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
-              <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>筆記試験<br>面接</p></div>
-              <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>内定</p></div>
-              <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
-            </li>
-          </ul>
-          <div class="topBK-btn">
-            <a href="#pageRecruit">上部に戻る</a>
-          </div>
-        </section>
 
         <!-- 仕事内容 -->
         <section class="page_recruit_work recruit_section">
@@ -345,6 +310,36 @@ Template Name: recruit
           </div>
         </section>
 
+        <!-- 採用の流れ -->
+        <section class="page_recruit_flow recruit_section">
+          <h2 class="flow_h2 page_recruit_h2">採用の流れ</h2>
+          <p>エントリーから内定までの間に、工場見学や個別説明会を実施しています。
+            実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
+          </p>
+
+          <ul class="recruit_flow_list">
+            <li>
+              <div class="flow_item"><p>エントリー</p></div>
+              <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
+              <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>筆記試験<br>面接</p></div>
+              <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>内定</p></div>
+              <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
+            </li>
+          </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
+        </section>
+
         <div class="entry-button">
             <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
         </div>
@@ -357,7 +352,7 @@ Template Name: recruit
           </li>
           <li>
             <div class="other_list_btn other_btn_03">
-              <a href="#tab-03">セールスドライバー</a>
+              <a href="#tab-03">ドライバー</a>
             </div>
           </li>
         </ul>
@@ -403,8 +398,8 @@ Template Name: recruit
                   <dt class="senior_name"><span class="name">髙野 里菜</span><br>技術課</dt>
                   <dd>
                     <dl class="recruit_table_dl">
-                      <dt>勤続年数：</dt>
-                      <dd>4年</dd>
+                      <dt>入社年：</dt>
+                      <dd>2020年</dd>
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>出身高校：</dt>
@@ -422,7 +417,7 @@ Template Name: recruit
                 </dl>
               </div>
               <p class="interview_text">
-              家を建てるという、一生に一度とも言えるお買い物のお手伝いをしていることに誇りを持っています。私が入力した物件を見学させていただいた時にとても感動したと同時に、そこで生活する方々のために丁寧で確実な仕事をするべきと感じ、日々精進しています。
+              家を建てるという、<span class="color">一生に一度とも言えるお買い物のお手伝い</span>をしていることに誇りを持っています。私がCAD入力をして実際に<span class="color">完成した物件</span>を見学した時はとても感動しました。その家で実際に暮らしている人がいることを想像すると、とても<span class="color">責任のある仕事</span>でもあると感じ、日々仕事の精度や効率を上げられるように精進しています。
               </p>
           </section>
         </div>
@@ -496,36 +491,6 @@ Template Name: recruit
               <a href="#pageRecruit">上部に戻る</a>
             </div>
           </section>
-
-        <!-- 採用の流れ -->
-        <section class="page_recruit_flow recruit_section">
-          <h2 class="flow_h2 page_recruit_h2">採用の流れ</h2>
-          <p>エントリーから内定までの間に、工場見学や個別説明会を実施しています。
-            実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
-          </p>
-
-          <ul class="recruit_flow_list">
-            <li>
-              <div class="flow_item"><p>エントリー</p></div>
-              <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
-              <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>筆記試験<br>面接</p></div>
-              <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>内定</p></div>
-              <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
-            </li>
-          </ul>
-          <div class="topBK-btn">
-            <a href="#pageRecruit">上部に戻る</a>
-          </div>
-        </section>
 
         <!-- 仕事内容 -->
         <section class="page_recruit_work recruit_section">
@@ -625,6 +590,36 @@ Template Name: recruit
           </div>
         </section>
 
+        <!-- 採用の流れ -->
+        <section class="page_recruit_flow recruit_section">
+          <h2 class="flow_h2 page_recruit_h2">採用の流れ</h2>
+          <p>エントリーから内定までの間に、工場見学や個別説明会を実施しています。
+            実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
+          </p>
+
+          <ul class="recruit_flow_list">
+            <li>
+              <div class="flow_item"><p>エントリー</p></div>
+              <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
+              <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>筆記試験<br>面接</p></div>
+              <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>内定</p></div>
+              <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
+            </li>
+          </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
+        </section>
+
         <div class="entry-button">
             <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
         </div>
@@ -637,7 +632,7 @@ Template Name: recruit
           </li>
           <li>
             <div class="other_list_btn other_btn_03">
-              <a href="#tab-03">セールスドライバー</a>
+              <a href="#tab-03">ドライバー</a>
             </div>
 
           </li>
@@ -647,7 +642,7 @@ Template Name: recruit
 
       <!--=======================================================================
 
-        セールスドライバー
+        ドライバー
 
       ======================================================================ー-->
 
@@ -656,7 +651,7 @@ Template Name: recruit
           <!--概要-->
           <section class="page_recruit_gaiyou recruit_section">
             <div class="pageRecruit_list_text gaiyou_box">
-              <h2 class="gaiyou_h2 page_recruit_h2 color">セールスドライバー</h2>
+              <h2 class="gaiyou_h2 page_recruit_h2 color">ドライバー</h2>
               <dl class="pageRecruit_list_dl">
                 <dt>工場とお客様をつなぐ</dt>
                 <dd>資材搬入や製品運搬を行い、工場ラインとお客様の架け橋となります。</dd>
@@ -665,7 +660,7 @@ Template Name: recruit
             <div class="gaiyou_pic">
               <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work03-1.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work03-1.jpg" alt="セールスドライバー">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/recruit-work03-1.jpg" alt="ドライバー">
               </picture>
             </div>
           </section>
@@ -684,8 +679,8 @@ Template Name: recruit
                   <dt class="senior_name"><span class="name">野口 貴彦</span><br>管理部 管理課</dt>
                   <dd>
                     <dl>
-                      <dt>勤続年数：</dt>
-                      <dd>10年</dd>
+                      <dt>入社年：</dt>
+                      <dd>2014年</dd>
                     </dl>
                     <dl>
                       <dt>出身高校：</dt>
@@ -703,7 +698,7 @@ Template Name: recruit
                 </dl>
               </div>
               <p class="interview_text">
-              私が入社した当初は木造建築については、ほとんど何もわからない状態でしたが、上司の指導や先輩のアドバイスをもらい、今でもこの仕事を続けられているのだと思います。仕事で心掛けていることは、「クレーム０」です。
+              私が入社した当初は木造建築については、<span class="color">ほとんど何もわからない状態</span>でしたが、<span class="color">上司の指導や先輩のアドバイス</span>をもらい、今でもこの仕事を続けられているのだと思います。仕事で心掛けていることは、「<span class="color">クレーム０</span>」です。
               </p>
           </section>
         </div>
@@ -719,7 +714,7 @@ Template Name: recruit
                 </colgroup>
                 <tr>
                   <th>職種</th>
-                  <td>セールスドライバー</td>
+                  <td>ドライバー</td>
                 </tr>
                 <tr>
                   <th>雇用形態</th>
@@ -781,36 +776,6 @@ Template Name: recruit
               <a href="#pageRecruit">上部に戻る</a>
             </div>
           </section>
-
-        <!-- 採用の流れ -->
-        <section class="page_recruit_flow recruit_section">
-          <h2 class="flow_h2 page_recruit_h2">採用の流れ</h2>
-          <p>エントリーから内定までの間に、工場見学や個別説明会を実施しています。
-            実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
-          </p>
-
-          <ul class="recruit_flow_list">
-            <li>
-              <div class="flow_item"><p>エントリー</p></div>
-              <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
-              <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>筆記試験<br>面接</p></div>
-              <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
-            </li>
-            <li>
-              <div class="flow_item"><p>内定</p></div>
-              <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
-            </li>
-          </ul>
-          <div class="topBK-btn">
-            <a href="#pageRecruit">上部に戻る</a>
-          </div>
-        </section>
 
         <!-- 仕事内容 -->
         <section class="page_recruit_work recruit_section">
@@ -905,6 +870,36 @@ Template Name: recruit
             <li>
               <p class="question"><span class="qa">Q</span>運搬と付随する業務以外に作業をすることはありますか？</p>
               <p class="answer"><span class="qa">A</span>出荷が少ない場合などに工場内での作業（積み込みや材料集め）をしていただくことがあります。</p>
+            </li>
+          </ul>
+          <div class="topBK-btn">
+            <a href="#pageRecruit">上部に戻る</a>
+          </div>
+        </section>
+
+        <!-- 採用の流れ -->
+        <section class="page_recruit_flow recruit_section">
+          <h2 class="flow_h2 page_recruit_h2">採用の流れ</h2>
+          <p>エントリーから内定までの間に、工場見学や個別説明会を実施しています。
+            実際に働いている社員の姿や声を聞くことで、理解を深めた上で入社していただけます。
+          </p>
+
+          <ul class="recruit_flow_list">
+            <li>
+              <div class="flow_item"><p>エントリー</p></div>
+              <p>当社HPの問合せフォームから必要事項と応募したい旨を記載して送信してください。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>履歴書送付<br>書類審査</p></div>
+              <p>数日以内に当社から案内をいたします。郵送またはメールにて履歴書を送っていただきます。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>筆記試験<br>面接</p></div>
+              <p>一般常識などの簡単な筆記試験を受けていただいた後、面接を行います。</p>
+            </li>
+            <li>
+              <div class="flow_item"><p>内定</p></div>
+              <p>二週間以内を目途に当社から選考結果についてご連絡いたします。</p>
             </li>
           </ul>
           <div class="topBK-btn">
