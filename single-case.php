@@ -34,6 +34,10 @@ get_header(); ?>
 		<?php the_content(); ?>
 	</div>
 	<!--コンテンツエリアここまで-->
+
+	<div class="top-button case-button">
+        <a href="<?php echo get_term_link('case', 'category'); ?>">戻る</a>
+    </div>
 </div>
 
 <!--====================================================

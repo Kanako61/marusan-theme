@@ -16,6 +16,24 @@
         max-width:900px;
         margin:0 auto;
     }
+
+    .single_content {
+        margin:0 auto;
+    }
+
+    /*戻るボタン*/
+    .case-button {
+        margin:calc(5vw + 8%) auto 0;
+
+        a {
+            padding:0.8em 3.5em;
+        }
+    }
+
+    /*お問い合わせ*/
+    .contact-box {
+        margin-top:15%;
+    }
 }
 
 /*カテゴリータイトル*/
@@ -46,7 +64,7 @@
     background:none!important;
     border:none!important;
     font-size:2rem!important;
-    font-weight:400!important;
+    font-weight:600!important;
     text-align:center;
     color:$font-default-c!important;
     letter-spacing: 0.2em!important;
@@ -60,9 +78,9 @@
 /*画像*/
 .single_case_image {
     width:100vw;
-    margin: 0 calc(50% - 50vw) 15%;
+    margin: 0 calc(50% - 50vw) 6%;
     position:relative;
-    padding:10% 0 10%;
+    padding:6% 0 10%;
     background-image:url(assets/images/news/case-item-bk.svg);
     background-position:top 18vw left 0;
     background-repeat: repeat-x;
@@ -84,8 +102,24 @@
 
 /*テキスト*/
 .single_case_text {
+    position:relative;
+    display:block;
     line-height:2;
     letter-spacing: 0.2em;
+    max-width:600px;
+    margin:0 auto!important;
+
+    &:after {
+        position:absolute;
+        left:50%;
+        bottom:-8vw;
+        transform:translatex(-50%);
+        content:'';
+        display:inline-block;
+        width:80%;
+        height:1.5px;
+        background:$item-c;
+    }
 }
 
 

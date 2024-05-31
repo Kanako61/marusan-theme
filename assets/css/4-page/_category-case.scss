@@ -9,14 +9,6 @@
 .category-case .category-case_pic {
     position:relative;
 
-    @media all and (min-width:1000px) {
-        height:80vh;
-
-        img {
-            height:100%;
-        }
-    }
-
     @media all and (max-width:768px) {
         height:50vh;
 
@@ -29,6 +21,12 @@
 /*リスト*/
 .category-case {
     .category_header_title {
+        margin:6% auto 10%;
+
+        @media all and (max-width:768px) {
+            margin:10% auto 15%;
+        } 
+
         p {
             font-size:2.4rem;
             text-align: center;

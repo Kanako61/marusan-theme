@@ -45,6 +45,7 @@ html body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
   font-weight: 500;
   font-style: normal;
+  background: #F9FDFD;
 }
 
 *, *::before, *::after {
@@ -304,7 +305,7 @@ LOADING
 }
 
 .page {
-  background: #fff;
+  background: #F9FDFD;
   letter-spacing: 0.1em;
 }
 .page_main {
@@ -468,7 +469,7 @@ LOADING
 
 /*アーカイブページここから*/
 .archive {
-  background: #fff;
+  background: #F9FDFD;
 }
 .archive .archive_container {
   width: 80vw;
@@ -560,7 +561,7 @@ LOADING
 /*アーカイブページここまで*/
 /*記事ページここから*/
 .single {
-  background: #fff;
+  background: #F9FDFD;
   /*記事ページ入力エリアここから*/
 }
 .single_main {
@@ -613,7 +614,7 @@ LOADING
 }
 .single_content {
   margin: 8% auto 5%;
-  background: #fff;
+  background: #F9FDFD;
   padding: 5% 3%;
   border-radius: 0.5em;
 }
@@ -1924,8 +1925,12 @@ p, a, li, dl dt, dl dd {
 
 ===============================================================*/
 /*コンテンツ*/
+.home {
+  background: #F9FDFD;
+}
+
 .main_top {
-  background: #fff;
+  background: #F9FDFD;
   overflow: hidden;
 }
 
@@ -3123,8 +3128,7 @@ p, a, li, dl dt, dl dd {
   background: #98C0CC;
 }
 .company_main .page_content .contact-box {
-  max-width: 75vw;
-  margin: 0 auto 8%;
+  margin-bottom: 5%;
 }
 
 /*アクセス削除*/
@@ -3675,7 +3679,7 @@ p, a, li, dl dt, dl dd {
   grid-template-columns: 1fr;
   gap: 4em;
   max-width: 1200px;
-  padding: 8% 0 15%;
+  padding: 8% 0 0;
 }
 .page_access_list_dl {
   display: grid;
@@ -4253,7 +4257,7 @@ p, a, li, dl dt, dl dd {
   max-width: 1220px;
   margin: 0 auto;
   padding: 8vw;
-  background: #fff;
+  background: #F9FDFD;
   /*タイトル*/
   /*テキスト*/
   /*電話番号*/
@@ -5947,14 +5951,6 @@ p, a, li, dl dt, dl dd {
 .page_title-pic {
   position: relative;
 }
-@media all and (min-width: 1000px) {
-  .page_title-pic {
-    height: 70vh;
-  }
-  .page_title-pic img {
-    height: 100%;
-  }
-}
 @media all and (max-width: 768px) {
   .page_title-pic {
     height: 50vh;
@@ -6359,14 +6355,6 @@ p, a, li, dl dt, dl dd {
 .category-case .category-case_pic {
   position: relative;
 }
-@media all and (min-width: 1000px) {
-  .category-case .category-case_pic {
-    height: 80vh;
-  }
-  .category-case .category-case_pic img {
-    height: 100%;
-  }
-}
 @media all and (max-width: 768px) {
   .category-case .category-case_pic {
     height: 50vh;
@@ -6377,6 +6365,14 @@ p, a, li, dl dt, dl dd {
 }
 
 /*リスト*/
+.category-case .category_header_title {
+  margin: 6% auto 10%;
+}
+@media all and (max-width: 768px) {
+  .category-case .category_header_title {
+    margin: 10% auto 15%;
+  }
+}
 .category-case .category_header_title p {
   font-size: 2.4rem;
   text-align: center;
@@ -6488,14 +6484,13 @@ p, a, li, dl dt, dl dd {
 /*トップ画像*/
 .category-news_pic {
   position: relative;
-}
-@media all and (min-width: 1000px) {
-  .category-news_pic {
-    height: 80vh;
-  }
-  .category-news_pic img {
-    height: 100%;
-  }
+  /*@media all and (min-width:1000px) {
+      height:80vh;
+
+      img {
+          height:100%;
+      }
+  }*/
 }
 @media all and (max-width: 768px) {
   .category-news_pic {
@@ -6507,9 +6502,9 @@ p, a, li, dl dt, dl dd {
 }
 .category-news_pic .copy {
   position: absolute;
-  top: 40%;
+  top: 55%;
   transform: translatey(-50%);
-  right: 20%;
+  right: 13%;
   font-size: 2.4rem;
 }
 @media all and (max-width: 1024px) {
@@ -6521,13 +6516,19 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .category-news_pic .copy {
     font-size: 3.125vw;
+    top: 40%;
   }
 }
 @media all and (max-width: 540px) {
   .category-news_pic .copy {
     font-size: 1.6rem;
     white-space: nowrap;
-    top: 42%;
+    top: 39%;
+  }
+}
+@media all and (max-width: 320px) {
+  .category-news_pic .copy {
+    text-shadow: #736a5f 1px 1px 3px;
   }
 }
 .category-news_pic .copy:before {
@@ -6546,8 +6547,8 @@ p, a, li, dl dt, dl dd {
 }
 .category-news_pic .copy:after {
   position: absolute;
-  bottom: -9vw;
-  left: -4vw;
+  bottom: -8.2vw;
+  left: -4.8vw;
   transform: translatey(-50%);
   display: inline-block;
   content: "";
@@ -6693,10 +6694,24 @@ p, a, li, dl dt, dl dd {
 
 .single-case_main {
   padding-top: 10em;
+  /*戻るボタン*/
+  /*お問い合わせ*/
 }
 .single-case_main .single_container {
   max-width: 900px;
   margin: 0 auto;
+}
+.single-case_main .single_content {
+  margin: 0 auto;
+}
+.single-case_main .case-button {
+  margin: calc(5vw + 8%) auto 0;
+}
+.single-case_main .case-button a {
+  padding: 0.8em 3.5em;
+}
+.single-case_main .contact-box {
+  margin-top: 15%;
 }
 
 /*カテゴリータイトル*/
@@ -6725,7 +6740,7 @@ p, a, li, dl dt, dl dd {
   background: none !important;
   border: none !important;
   font-size: 2rem !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   text-align: center;
   color: #736a5f !important;
   letter-spacing: 0.2em !important;
@@ -6740,9 +6755,9 @@ p, a, li, dl dt, dl dd {
 /*画像*/
 .single_case_image {
   width: 100vw;
-  margin: 0 calc(50% - 50vw) 15%;
+  margin: 0 calc(50% - 50vw) 6%;
   position: relative;
-  padding: 10% 0 10%;
+  padding: 6% 0 10%;
   background-image: url(assets/images/news/case-item-bk.svg);
   background-position: top 18vw left 0;
   background-repeat: repeat-x;
@@ -6765,8 +6780,23 @@ p, a, li, dl dt, dl dd {
 
 /*テキスト*/
 .single_case_text {
+  position: relative;
+  display: block;
   line-height: 2;
   letter-spacing: 0.2em;
+  max-width: 600px;
+  margin: 0 auto !important;
+}
+.single_case_text:after {
+  position: absolute;
+  left: 50%;
+  bottom: -8vw;
+  transform: translatex(-50%);
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 1.5px;
+  background: #bfb9b1;
 }
 
 /*アクセス非表示*/

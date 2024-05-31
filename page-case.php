@@ -27,7 +27,7 @@ Template Name: case
 <div class="case_content page_content">
 
     <!--====================================================
-        case　導入事例
+        case　納入事例
     =====================================================-->
     <section class="page_section page_message" id="case">
 
@@ -39,7 +39,7 @@ Template Name: case
     </div>
 
     <section class="page_section rinen" id="rinen">
-        <h2 class="page_section_h2 page_company_h2 pattern01">導入事例</h2>
+        <h2 class="page_section_h2 page_company_h2 pattern01">納入事例</h2>
 
         <ul class="rinen_list">
             <li>私達はお客様に信頼される誠実な仕事をします。</li>

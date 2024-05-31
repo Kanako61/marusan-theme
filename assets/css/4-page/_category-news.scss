@@ -13,13 +13,13 @@
 .category-news_pic {
     position:relative;
 
-    @media all and (min-width:1000px) {
+    /*@media all and (min-width:1000px) {
         height:80vh;
 
         img {
             height:100%;
         }
-    }
+    }*/
 
     @media all and (max-width:768px) {
         height:50vh;
@@ -31,9 +31,9 @@
 
     .copy {
         position:absolute;
-        top:40%;
+        top:55%;
         transform: translatey(-50%);
-        right:20%;
+        right:13%;
         font-size:2.4rem;
 
         @media all and (max-width:1024px) {
@@ -43,12 +43,17 @@
 
         @media all and (max-width:768px) {
             font-size:(24/768)*100vw;
+            top:40%;
         }
 
         @media all and (max-width:540px) {
             font-size:1.6rem;
             white-space: nowrap;
-            top:42%;
+            top:39%;
+        }
+
+        @media all and (max-width:320px) {
+            text-shadow: $font-default-c 1px 1px 3px;
         }
 
         &:before {
@@ -68,8 +73,8 @@
 
         &:after {
             position:absolute;
-            bottom:-9vw;
-            left:-4vw;
+            bottom:-8.2vw;
+            left:-4.8vw;
             transform:translatey(-50%);
             display:inline-block;
             content:'';

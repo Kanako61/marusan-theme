@@ -156,8 +156,7 @@
 
     /*お問い合わせ*/
     .contact-box {
-        max-width:75vw;
-        margin:0 auto 8%;
+       margin-bottom:5%;
     }
 }
 
@@ -744,7 +743,7 @@
         grid-template-columns: 1fr;
         gap:4em;
         max-width:1200px;
-        padding:8% 0 15%;
+        padding:8% 0 0;
 
         &_dl {
             display:grid;

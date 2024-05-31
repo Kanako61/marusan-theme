@@ -152,7 +152,7 @@
 <!--====================================================
 
   Case Studies
-  導入事例
+  納入事例
 
 ====================================================-->
 <section class="top_case top_section">
@@ -160,11 +160,11 @@
     <div class="top_case_img">
       <picture>
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.jpg" alt="導入事例">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top/top-case.jpg" alt="納入事例">
       </picture>
     </div>
     <div class="top_case_content">
-      <h2 class="top_h2">導入事例</h2>
+      <h2 class="top_h2">納入事例</h2>
       <p class="top_case_text">これまで当社のプレカットによって建てられた建物は4万棟以上。<br class="pc_br">日本における近代住宅建築の発展と共に歩んできました。<br class="pc_br">数えきれない導入の一例と、住宅の垣根を超えた建築の実例を紹介します。</p>
       <div class="top-button">
         <a href="<?php echo get_term_link('case', 'category'); ?>">より詳しく</a>

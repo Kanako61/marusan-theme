@@ -4,8 +4,12 @@
 
 ===============================================================*/
 /*コンテンツ*/
+.home {
+  background:$body-bk-color;
+}
+
 .main_top {
-  background:$bk-color;
+  background:$body-bk-color;
   overflow: hidden;
 }
 

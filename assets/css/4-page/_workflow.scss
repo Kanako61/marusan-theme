@@ -2,14 +2,6 @@
 .page_title-pic {
     position:relative;
 
-    @media all and (min-width:1000px) {
-        height:70vh;
-
-        img {
-            height:100%;
-        }
-    }
-
     @media all and (max-width:768px) {
         height:50vh;
 
