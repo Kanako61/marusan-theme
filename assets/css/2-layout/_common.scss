@@ -118,3 +118,11 @@ LOADING
 .text-c {
     text-align: center;
 }
+
+
+.offset {
+    display: block;
+    position: relative;
+    top: -5em; /* 5emのオフセット */
+    visibility: hidden;
+}

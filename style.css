@@ -8,6 +8,7 @@ Author: marusan Co., Ltd
 */
 /******************* New *******************/
 /*common*/
+/*nav*/
 /*メインビジュアル*/
 /*top*/
 /*header*/
@@ -147,6 +148,13 @@ LOADING
 /*行揃え*/
 .text-c {
   text-align: center;
+}
+
+.offset {
+  display: block;
+  position: relative;
+  top: -5em; /* 5emのオフセット */
+  visibility: hidden;
 }
 
 /*固定ページ共通*/
@@ -1194,24 +1202,21 @@ p, a, li, dl dt, dl dd {
     margin-left: 0;
   }
 }
-.menu-global-container ul {
+.menu-global-container .global-nav__menu {
+  position: relative;
   display: flex;
-  gap: 2.5em;
   color: #736a5f;
   margin: 0;
+  /*PC時サブメニュー*/
 }
-@media all and (max-width: 1280px) {
-  .menu-global-container ul {
-    gap: 1.8em;
-  }
-}
-.menu-global-container li {
+.menu-global-container .global-nav__menu .menu-item-object-page, .menu-global-container .global-nav__menu .menu-item-object-category {
   list-style-type: none;
 }
-.menu-global-container li:first-child {
+.menu-global-container .global-nav__menu .menu-item-object-page:first-child, .menu-global-container .global-nav__menu .menu-item-object-category:first-child {
   margin-left: 0;
 }
-.menu-global-container li a {
+.menu-global-container .global-nav__menu .menu-item-object-page a, .menu-global-container .global-nav__menu .menu-item-object-category a {
+  display: block;
   position: relative;
   font-size: 1.4rem;
   font-family: "Lato", sans-serif;
@@ -1219,29 +1224,55 @@ p, a, li, dl dt, dl dd {
   letter-spacing: 0.1em;
   white-space: nowrap;
   text-decoration: none;
+  padding: 2em 1em;
+  /*@media all and (min-width:901px) {
+      &:before {
+          background: $font-default-c;
+          content: '';
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          bottom: -50%;
+          margin: auto;
+          transform-origin: right top;
+          transform: scale(0, 1);
+          transition: transform .3s ease-out;
+      }
+
+      &:hover::before {
+          transform-origin: left top;
+          transform: scale(1, 1);
+      }
+  }*/
 }
 @media all and (max-width: 1280px) {
-  .menu-global-container li a {
+  .menu-global-container .global-nav__menu .menu-item-object-page a, .menu-global-container .global-nav__menu .menu-item-object-category a {
     font-size: 1.4rem;
   }
 }
 @media all and (min-width: 901px) {
-  .menu-global-container li a:before {
-    background: #736a5f;
-    content: "";
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    bottom: -50%;
-    margin: auto;
-    transform-origin: right top;
-    transform: scale(0, 1);
-    transition: transform 0.3s ease-out;
+  .menu-global-container .global-nav__menu .menu-item-object-page.active {
+    position: relative;
   }
-  .menu-global-container li a:hover::before {
-    transform-origin: left top;
-    transform: scale(1, 1);
+  .menu-global-container .global-nav__menu .sub-menu {
+    position: absolute;
+    top: 5.4em;
+    left: 0;
+    background: rgba(95, 131, 173, 0.8);
+    display: none;
+  }
+  .menu-global-container .global-nav__menu .sub-menu li a {
+    width: 10em;
+    display: block;
+    padding: 1em 1.5em;
+    border-bottom: solid 2px #384B52;
+  }
+  .menu-global-container .global-nav__menu .sub-menu li:last-child a {
+    border: none;
+  }
+  .menu-global-container .global-nav__menu .sub-menu.active {
+    display: block;
   }
 }
 
@@ -1301,7 +1332,6 @@ p, a, li, dl dt, dl dd {
   position: fixed;
   right: 1.6em;
   top: 1em;
-  /*background: $green-c;*/
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -1397,31 +1427,39 @@ p, a, li, dl dt, dl dd {
 /*}*/
 /*カレント表示*/
 @media all and (min-width: 901px) {
-  .l-site_header .current-menu-item, .l-site_header .current-post-ancestor {
-    position: relative;
+  .l-site_header .current_page_item, .l-site_header .menu-item-object-category.current-menu-item {
     z-index: 2;
   }
-  .l-site_header .current-menu-item:before, .l-site_header .current-post-ancestor:before {
+  .l-site_header .current_page_item a, .l-site_header .menu-item-object-category.current-menu-item a {
+    position: relative;
+  }
+  .l-site_header .current_page_item a:before, .l-site_header .menu-item-object-category.current-menu-item a:before {
     display: inline-block;
     content: "";
     position: absolute;
-    bottom: -1.8em;
-    left: -1em;
-    width: calc(100% + 2em);
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 0.8em;
     background: rgba(110, 188, 201, 0.8);
     z-index: 2;
   }
-  .l-site_header .current-menu-item:after, .l-site_header .current-post-ancestor:after {
+  .l-site_header .current_page_item a:after, .l-site_header .menu-item-object-category.current-menu-item a:after {
     display: inline-block;
     content: "";
     position: absolute;
-    top: -2em;
-    left: -1em;
-    width: calc(100% + 2em);
-    height: 4.8em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(99, 130, 142, 0.8);
     z-index: -1;
+  }
+  .l-site_header .current_page_item .sub-menu a:before, .l-site_header .menu-item-object-category.current-menu-item .sub-menu a:before {
+    display: none;
+  }
+  .l-site_header .current_page_item .sub-menu a:after, .l-site_header .menu-item-object-category.current-menu-item .sub-menu a:after {
+    display: none;
   }
 }
 /*section ボタン*/

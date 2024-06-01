@@ -35,6 +35,7 @@ Template Name: service
 <!--====================================================
     プレカット
 =====================================================-->
+<div id="about" class="offset"></div>
 <section class="page_section page_precut">
   <h2 class="page_section_h2 page_precut_h2">プレカット</h2>
   <p>今や日本の住宅建築の当たり前となったプレカットは1995年に発生した阪神・淡路大震災の復興をきっかけに普及が広がりました。1935年創業以来、様々な住宅建築に携わってきたマルサンでは、プレカットが普及する前の1989年にプレカット工場を設立。35年以上に渡ってプレカットの先駆者としてプレカットの普及に尽力して参りました。対応可能な工法は在来工法だけでなく、あらゆる金物工法やパネル工法、2×4工法にも対応。今ではプレカットのみならず、吹付断熱の施工や建方工事の請負など、住宅建築を多方面にてサポート、ご提案致します。</p>
@@ -91,6 +92,7 @@ Template Name: service
       <div class="swiper-wrapper" id="swiper-wrapper-8311066e659334865" aria-live="polite" style="transition-duration: 0ms;">
 
       <li class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 10" style="width: 720px; opacity: 0; transform: translate3d(-4320px, 0px, 0px); transition-duration: 0ms;">
+      <div id="precut_01" class="offset"></div>
         <div class="slide">
           <div class="slide-media">
             <picture>
@@ -106,6 +108,7 @@ Template Name: service
       </li>
 
       <li class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 10" style="width: 720px; opacity: 0; transform: translate3d(-4320px, 0px, 0px); transition-duration: 0ms;">
+      <div id="precut_02" class="offset"></div>
         <div class="slide">
           <div class="slide-media">
             <picture>
@@ -121,6 +124,7 @@ Template Name: service
       </li>
 
       <li class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 10" style="width: 720px; opacity: 0; transform: translate3d(-4320px, 0px, 0px); transition-duration: 0ms;">
+        <div id="precut_03" class="offset"></div>
         <div class="slide">
           <div class="slide-media">
             <picture>
@@ -136,6 +140,7 @@ Template Name: service
       </li>
 
       <li class="swiper-slide swiper-slide-next" role="group" aria-label="7 / 10" style="width: 720px; opacity: 0; transform: translate3d(-4320px, 0px, 0px); transition-duration: 0ms;">
+        <div id="precut_04" class="offset"></div>
         <div class="slide">
           <div class="slide-media">
             <picture>
@@ -152,10 +157,6 @@ Template Name: service
     </div>
     </ul><!-- /swiper-wrapper -->
 
-      <!--<div class="swiper-controller">
-        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-8311066e659334865" aria-disabled="false"></div>
-        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-8311066e659334865" aria-disabled="false"></div>
-      </div>-->
     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
 
   </div><!-- /swiper-main -->
@@ -175,6 +176,7 @@ Template Name: service
 <div class="other-precut_box">
   <ul class="other-precut_list">
     <!--建築資材-->
+    <div id="service_01" class="offset"></div>
     <li>
       <dl class="other-precut_list_dl">
         <dt>建築資材</dt>
@@ -190,6 +192,7 @@ Template Name: service
     </li>
 
     <!--構造計算-->
+    <div id="service_02" class="offset"></div>
     <li>
       <dl class="other-precut_list_dl">
         <dt>構造計算</dt>
@@ -205,6 +208,7 @@ Template Name: service
     </li>
 
     <!--吹付断熱-->
+    <div id="service_03" class="offset"></div>
     <li>
       <dl class="other-precut_list_dl">
         <dt>吹付断熱</dt>
@@ -220,6 +224,7 @@ Template Name: service
     </li>
 
     <!--建て方-->
+    <div id="service_04" class="offset"></div>
     <li>
       <dl class="other-precut_list_dl">
         <dt>建方</dt>

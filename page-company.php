@@ -33,7 +33,7 @@ Template Name: Company
     <!--====================================================
         Top Message　代表挨拶
     =====================================================-->
-    <section class="page_section page_message" id="message">
+    <section class="page_section page_message">
 
     <div class="message_top">
         <h2 class="page_section_h2 page_company_h2">社長挨拶</h2>
@@ -62,6 +62,7 @@ Template Name: Company
         </p>
     </div>
 
+    <div id="message" class="offset"></div>
     <div class="message_bottom">
         <dl class="message_bottom_text">
             <dt>お客様第一で<br class="sp_br">「高品質な製品」を作り続ける</dt>
@@ -77,7 +78,8 @@ Template Name: Company
     <!--====================================================
         Philosophy　企業理念
     =====================================================-->
-    <section class="page_section rinen" id="rinen">
+    <div id="rinen" class="offset"></div>
+    <section class="page_section rinen">
         <h2 class="page_section_h2 page_company_h2 pattern01">企業理念</h2>
 
         <ul class="rinen_list">
@@ -94,7 +96,8 @@ Template Name: Company
     <!--====================================================
         Overview　会社概要
     =====================================================-->
-    <section class="page_section page_overview" id="overview">
+    <div id="overview" class="offset"></div>
+    <section class="page_section page_overview">
 
     <div class="page_overview_inner">
         <h2 class="page_section_h2 page_company_h2">
@@ -177,7 +180,8 @@ Template Name: Company
     <!--====================================================
         History　沿革
     =====================================================-->
-    <section class="page_section page_history" id="history">
+    <div id="history" class="offset"></div>
+    <section class="page_section page_history">
 
     <div class="page_pic overview_pic">
         <picture>
@@ -283,7 +287,8 @@ Template Name: Company
     <!--====================================================
         Facility　設備
     =====================================================-->
-    <section class="page_section page_facility" id="facility">
+    <div id="facility" class="offset"></div>
+    <section class="page_section page_facility">
 
     <div class="page_pic facility_pic">
         <picture>
@@ -365,8 +370,8 @@ Template Name: Company
     <!--====================================================
         Access　アクセス
     =====================================================-->
-
-    <section class="page_section page_access" id="access">
+    <div id="access" class="offset"></div>
+    <section class="page_section page_access">
 
     <div class="page_access_inner">
     <h2 class="page_section_h2 page_company_h2 pattern01">

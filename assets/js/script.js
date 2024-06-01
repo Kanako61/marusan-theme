@@ -3,10 +3,23 @@
 	ハンバーガーメニュー
 
 ===============================================================*/
-  $(".hamburger_button").click(function () {
+$(".hamburger_button").click(function () {
     $(this).toggleClass('active');
     $('.l-site_header').toggleClass('active');
 });
+
+
+//hoverで表示切り替え
+$('.menu-item-object-page').hover(
+  function() {
+  $(this).addClass('active');
+  $(this).find('.sub-menu').addClass('active');
+  },
+  function() {
+  $(this).removeClass('active');
+  $(this).find('.sub-menu').removeClass('active');
+  },
+);
 
 /*---------------------------------------------------------------
 ローミング
@@ -125,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 /*---------------------------------------------------------------
 	事業内容スライド
 ---------------------------------------------------------------*/
@@ -136,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.precut_list .thumb-media-active').classList.remove('thumb-media-active');
     thumb[index].classList.add('thumb-media-active');
   }
-  
+
   const mySwiper = new Swiper('.precut_list .swiper', {
     effect: 'fade',
     fadeEffect: {
@@ -149,6 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     on: {
       afterInit: (swiper) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const slideIndex = urlParams.get('slide');
+        if (slideIndex !== null) {
+          swiper.slideTo(Number(slideIndex));
+        }
         thumb[swiper.realIndex].classList.add('thumb-media-active');
         for (let i = 0; i < thumb.length; i++) {
           thumb[i].onclick = () => {
@@ -161,7 +180,22 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     }
   });
-  }());
+
+  // Navigation text click event listeners
+  document.querySelector('.nav1').onclick = () => mySwiper.slideTo(0);
+  document.querySelector('.nav2').onclick = () => mySwiper.slideTo(1);
+  document.querySelector('.nav3').onclick = () => mySwiper.slideTo(2);
+  document.querySelector('.nav4').onclick = () => mySwiper.slideTo(3);
+  
+  // Scroll to element with ID from hash
+  const hash = window.location.hash;
+  if (hash) {
+    const element = document.querySelector(hash);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
+}());
 
 
 /*---------------------------------------------------------------
