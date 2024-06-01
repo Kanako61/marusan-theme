@@ -1,13 +1,14 @@
 /*===============================================================
 
-	ハンバーガーメニュー
+	グロナビ
 
 ===============================================================*/
+
+//ハンバーガーメニュー
 $(".hamburger_button").click(function () {
     $(this).toggleClass('active');
     $('.l-site_header').toggleClass('active');
 });
-
 
 //hoverで表示切り替え
 $('.menu-item-object-page').hover(
@@ -20,6 +21,15 @@ $('.menu-item-object-page').hover(
   $(this).find('.sub-menu').removeClass('active');
   },
 );
+
+
+/*---------------------------------------------------------------
+	動画ポップアップ
+---------------------------------------------------------------*/
+$('.movie_btn').modalVideo({
+  channel: 'custom',
+  url: $('#l-body').attr('data-tmpdir') + 'assets/images/top/marusan.mp4'
+});
 
 /*---------------------------------------------------------------
 ローミング
@@ -147,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const thumb = document.querySelectorAll('.precut_list .thumb-media');
   
   const switchThumb = (index) => {
-    document.querySelector('.precut_list .thumb-media-active').classList.remove('thumb-media-active');
+    document.querySelector('.precut_list .thumb-media-active')?.classList.remove('thumb-media-active'); // Nullish coalescing operatorを使用して修正
     thumb[index].classList.add('thumb-media-active');
   }
 
@@ -172,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < thumb.length; i++) {
           thumb[i].onclick = () => {
             swiper.slideTo(i);
+            switchThumb(i);
           };
         }
       },
@@ -182,19 +193,46 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Navigation text click event listeners
-  document.querySelector('.nav1').onclick = () => mySwiper.slideTo(0);
-  document.querySelector('.nav2').onclick = () => mySwiper.slideTo(1);
-  document.querySelector('.nav3').onclick = () => mySwiper.slideTo(2);
-  document.querySelector('.nav4').onclick = () => mySwiper.slideTo(3);
-  
-  // Scroll to element with ID from hash
-  const hash = window.location.hash;
-  if (hash) {
-    const element = document.querySelector(hash);
-    if (element) {
-      element.scrollIntoView();
+  const nav1 = document.querySelector('.nav1');
+  const nav2 = document.querySelector('.nav2');
+  const nav3 = document.querySelector('.nav3');
+  const nav4 = document.querySelector('.nav4');
+
+  nav1.onclick = () => {
+    mySwiper.slideTo(0);
+    switchThumb(0);
+  };
+  nav2.onclick = () => {
+    mySwiper.slideTo(1);
+    switchThumb(1);
+  };
+  nav3.onclick = () => {
+    mySwiper.slideTo(2);
+    switchThumb(2);
+  };
+  nav4.onclick = () => {
+    mySwiper.slideTo(3);
+    switchThumb(3);
+  };
+
+  // Scroll to element with ID from hash with offset
+  const scrollToHashElement = () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        const yOffset = -80; // Adjust the offset value as needed
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
   }
+
+  // Handle initial load with hash in URL
+  window.addEventListener('load', scrollToHashElement);
+
+  // Handle hash change in URL
+  window.addEventListener('hashchange', scrollToHashElement);
 }());
 
 
@@ -285,16 +323,6 @@ const fadeObserver = new IntersectionObserver(animateFade);
 const fadeElements = document.querySelectorAll('.fadein');
 fadeElements.forEach((fadeElement) => {
   fadeObserver.observe(fadeElement);
-});
-
-
-
-/*---------------------------------------------------------------
-	動画ポップアップ
----------------------------------------------------------------*/
-$('.movie_btn').modalVideo({
-  channel: 'custom',
-  url: $('#l-body').attr('data-tmpdir') + 'assets/images/top/marusan.mp4'
 });
 
 

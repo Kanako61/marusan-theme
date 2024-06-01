@@ -247,6 +247,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
       letter-spacing: 0.4em;
       font-size:3rem;
       margin-bottom:6%;
+      @include h2;
 
       @media all and (max-width:768px) {
         font-size:2.2rem;

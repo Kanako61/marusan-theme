@@ -127,7 +127,7 @@ Template Name: WorkFlow
 
     <p class="page_flow_other_text">マルサンではプレカットのみならず、構造計算業務や吹付断熱施工も行っております。<br class="pc_br">プレカット対応工法や、関連業務の詳細はこちらをご覧ください。</p>
 
-    <h3 class="page_flow_other_h3">マルサン事業案内</h3>
+    <h3 class="page_flow_other_h3">マルサン事業内容</h3>
     <div class="top-button">
       <a href="<?php echo home_url('/'); ?>service">詳しくはこちら</a>
     </div>

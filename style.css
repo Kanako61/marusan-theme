@@ -269,7 +269,7 @@ LOADING
   margin: 8% auto 10%;
   line-height: 1;
   font-size: 4.2rem;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
   font-weight: 500;
   color: #736a5f;
 }
@@ -1252,8 +1252,12 @@ p, a, li, dl dt, dl dd {
   }
 }
 @media all and (min-width: 901px) {
+  .menu-global-container .global-nav__menu .menu-item-object-page:hover, .menu-global-container .global-nav__menu .menu-item-object-category:hover {
+    background: rgba(99, 130, 142, 0.8);
+  }
   .menu-global-container .global-nav__menu .menu-item-object-page.active {
     position: relative;
+    background: rgba(99, 130, 142, 0.8);
   }
   .menu-global-container .global-nav__menu .sub-menu {
     position: absolute;
@@ -1267,6 +1271,9 @@ p, a, li, dl dt, dl dd {
     display: block;
     padding: 1em 1.5em;
     border-bottom: solid 2px #384B52;
+  }
+  .menu-global-container .global-nav__menu .sub-menu li a:hover {
+    background: rgba(110, 188, 201, 0.8);
   }
   .menu-global-container .global-nav__menu .sub-menu li:last-child a {
     border: none;
@@ -1886,7 +1893,7 @@ p, a, li, dl dt, dl dd {
   color: #333;
   margin: 0;
   font-size: 2rem;
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
   font-weight: 700;
 }
 @media all and (max-width: 600px) {
@@ -2190,6 +2197,10 @@ p, a, li, dl dt, dl dd {
   letter-spacing: 0.4em;
   font-size: 3rem;
   margin-bottom: 6%;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 @media all and (max-width: 768px) {
   .top_company .company_c .top_h2 {
@@ -3310,6 +3321,10 @@ p, a, li, dl dt, dl dd {
   font-size: 2.4rem;
   font-weight: bold;
   margin-bottom: 5%;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 @media all and (max-width: 768px) {
   .page_message .message_bottom_text dt {

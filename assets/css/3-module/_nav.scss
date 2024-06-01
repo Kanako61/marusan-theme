@@ -61,8 +61,12 @@
 
         /*PC時サブメニュー*/
         @media all and (min-width:901px) {
+            .menu-item-object-page:hover, .menu-item-object-category:hover {
+                background:$header-current-nav01;
+            }
             .menu-item-object-page.active {    
                 position:relative;
+                background:$header-current-nav01;
             }
 
             .sub-menu {
@@ -78,6 +82,10 @@
                         display:block;
                         padding:1em 1.5em;
                         border-bottom:solid 2px $nav-border-c;
+
+                        &:hover {
+                            background:$header-current-nav02;
+                        }
                     }
                 }
 

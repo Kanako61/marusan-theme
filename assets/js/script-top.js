@@ -5,11 +5,13 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		//if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02.jpg'},
 				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01.jpg'},
+				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02.jpg'},
 				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image03.jpg'},
         { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image04.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05.jpg'}
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05.jpg'},
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06.jpg'},
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07.jpg'}
 			];
 		/*} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
