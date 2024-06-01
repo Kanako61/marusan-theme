@@ -26,7 +26,7 @@ get_header(); ?>
     </h1>
 
 		
-	<article class="category_news w-80v">
+	<article class="category_news">
 	<?php if(have_posts() ) : ?>
 		<?php
 			while (have_posts() ) :
@@ -59,7 +59,6 @@ get_header(); ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
 	</article>
-	</div>
 </div><!-- .container -->
 
 <!--ページネーションここから-->

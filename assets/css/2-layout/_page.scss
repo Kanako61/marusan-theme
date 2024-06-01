@@ -4,7 +4,7 @@
     .content-body {
         p, ol, li, table, dl {
             @media all and (max-width:540px) {
-                font-size:1.3rem;
+                font-size:1.5rem;
             }
         }
 
@@ -49,7 +49,7 @@
             font-size:1.8rem;
             color:$font-default-c;
             padding:0.5em 1em;
-            background:$link-btn-c;
+            background:$bk-2;
 
             @media all and (max-width:540px) {
                 font-size:1.6rem;

@@ -70,7 +70,15 @@ Template Name: Company
                 <p class="message_text">　当社は昭和10 年に下駄作りで創業しました。その後、住宅用木材の製材、木造住宅部材のプレカット加工と、長きにに渡り木材の加工に携わってきました。近年では、パネルの加工や、金物工法のプレカット等にも加工範囲を広げております。これらの製品をつくる上で、創業以来、我が社が拘ってきたことは、「お客様第一」ということ、そして、それを実現するために「高品質な製品」をつくり続けることです。</p>
                  <p class="message_text">　これからも当社は、「高品質、高性能な木造住宅部材を供給し、安心、安全な住まいづくりに貢献する」こと、「精度の良い木造住宅部材を短納期、かつタイムリーに供給し、工期の短縮と職人不足の解消に貢献する」こと、「住宅産業界のあらたなニーズに対応し、木造住宅の更なる工業化の促進に貢献する」ことを我が社の使命とし、全社員一丸となって「お客様お役立ち企業」を目指してまいります。</p>
             </dd>
-            <dd class="post">代表取締役社長<span class="name">前田 英俊</span></dd>
+            <dd class="post">
+                <span class="name">代表取締役社長</span>
+                <div class="name_sign">
+                    <picture>
+                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message-sign.webp" type="image/webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/message-sign.png" alt="前田 英俊">
+                    </picture>
+                </div>
+            </dd>
         </dl>
     </div>
     </section>
@@ -106,7 +114,7 @@ Template Name: Company
         <div class="page_pic overview_pic">
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-overview.webp" type="image/webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-overview.jpg" alt="会社概要">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-overview.jpg" alt="会社概要">
             </picture>
         </div>
     </div>

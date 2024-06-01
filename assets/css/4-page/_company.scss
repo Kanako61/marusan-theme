@@ -319,7 +319,35 @@
 
             .post {
                 margin-top:5%;
-                text-align: end;
+                display:flex;
+                justify-content: end;
+                align-items: center;
+                gap:1em;
+
+                .name_sign {
+                    width:158px;
+                    height:43px;
+
+                    img {
+                        width:auto;
+                        height:100%;
+                    }
+
+                    @media all and (max-width:1000px) {
+                        width:(158/1000)*100vw;
+                        height:(43/1000)*100vw;
+                    }
+
+                    @media all and (max-width:768px) {
+                        width:(158/768)*100vw;
+                        height:(43/768)*100vw;
+                    }
+
+                    @media all and (max-width:540px) {
+                        width:(150/540)*100vw;
+                        height:(35/540)*100vw;
+                    }
+                }
             }
         }
     }

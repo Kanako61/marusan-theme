@@ -97,17 +97,16 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   width:(925/1440)*100vw;
   height:(270/1440)*100vw;
 
-  @media all and (max-width:1024px) {
-    bottom:20vw;
-    width:80%;
-    height:auto;
+  @media all and (max-width: 1024px) {
+    bottom: 20vw;
+    width: 90%;
+    height: auto;
   }
-
-  @media all and (max-width:540px) {
-    bottom:40vw;
-    width:80%;
-    min-width:260px;
-    height:auto;
+  
+  @media all and (max-width: 540px) {
+    bottom: 30vw;
+     min-width: 260px;
+     height: auto;
   }
 }
 
@@ -197,7 +196,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     }
 
     @media all and (max-width:540px) {
-      margin:25% 5vw 20%;
+      margin:25% 8vw 20%;
       text-align:left;
     }
 

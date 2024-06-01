@@ -441,10 +441,6 @@
         background:#fff;
         padding:4% 8%;
 
-        @media all and (max-width:768px) {
-            padding:8% 4%;
-        }
-
         &:after {
             position:absolute;
             top:50%;
@@ -506,7 +502,7 @@
 
         @media all and (max-width:768px) {
             width:90vw;
-            padding:8% 4%;
+            padding:8% 8%;
         }
 
         .recruit_flow_list {
@@ -651,7 +647,7 @@
         padding:4% 8%;
 
         @media all and (max-width:768px) {
-            padding:8% 4%;
+            padding:8% 8%;
         }
 
         &:after {
@@ -687,7 +683,7 @@
         padding:4% 8%;
 
         @media all and (max-width:768px) {
-            padding:8% 4%;
+            padding:8% 8%;
         }
 
         &:after {
@@ -759,7 +755,7 @@
 
         @media all and (max-width:768px) {
             width:90vw;
-            padding:8% 4%;
+            padding:8% 8%;
         }
     }
 

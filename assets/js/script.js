@@ -10,17 +10,46 @@ $(".hamburger_button").click(function () {
     $('.l-site_header').toggleClass('active');
 });
 
-//hoverで表示切り替え
-$('.menu-item-object-page').hover(
-  function() {
-  $(this).addClass('active');
-  $(this).find('.sub-menu').addClass('active');
-  },
-  function() {
-  $(this).removeClass('active');
-  $(this).find('.sub-menu').removeClass('active');
-  },
-);
+
+// PCサイズでのみhoverイベントを有効にする
+if (window.innerWidth > 900) {
+  $('.menu-item-object-page').hover(
+      function() {
+          $(this).addClass('active');
+          $(this).find('.sub-menu').addClass('active');
+      },
+      function() {
+          $(this).removeClass('active');
+          $(this).find('.sub-menu').removeClass('active');
+      }
+  );
+}
+
+// ハンバーガーメニュー内のリンククリック時にメニューを閉じる
+const menuLinks = document.querySelectorAll('.global-nav__menu a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 900) { // モバイル表示の時だけ動作
+      $('.hamburger_button').removeClass('active');
+      $('.l-site_header').removeClass('active');
+    }
+  });
+});
+
+
+//要素追加
+jQuery(document).ready(function($) {
+  // 900px以下の場合のみ実行
+  if ($(window).width() <= 900) {
+      $('.menu-item-has-children').prepend('<span class="plus"></span>');
+  }
+
+  if ($(window).width() <= 900) {
+    $('.menu-item-has-children .plus').click(function() {
+        $(this).parent('.menu-item-has-children').toggleClass('active');
+    });
+  }
+});
 
 
 /*---------------------------------------------------------------
@@ -30,6 +59,29 @@ $('.movie_btn').modalVideo({
   channel: 'custom',
   url: $('#l-body').attr('data-tmpdir') + 'assets/images/top/marusan.mp4'
 });
+
+/*---------------------------------------------------------------
+	よくある質問　ドロップダウン
+---------------------------------------------------------------*/
+$(document).ready(function(){
+  $(".question").on("click", function() {
+    $(this).next().slideToggle(200);
+    $(this).toggleClass("active");
+  });
+});
+
+
+/*---------------------------------------------------------------
+	table スクロールヒント
+---------------------------------------------------------------*/
+window.addEventListener('DOMContentLoaded', function() {
+  new ScrollHint('.js-scrollable', {
+      i18n: {
+          scrollable: 'スクロールできます'
+      }
+  });
+});
+
 
 /*---------------------------------------------------------------
 ローミング
@@ -267,29 +319,6 @@ items.forEach((item) => {
 });
 
 */
-
-
-/*---------------------------------------------------------------
-	よくある質問　ドロップダウン
----------------------------------------------------------------*/
-$(document).ready(function(){
-  $(".question").on("click", function() {
-    $(this).next().slideToggle(200);
-    $(this).toggleClass("active");
-  });
-});
-
-
-/*---------------------------------------------------------------
-	table スクロールヒント
----------------------------------------------------------------*/
-window.addEventListener('DOMContentLoaded', function() {
-  new ScrollHint('.js-scrollable', {
-      i18n: {
-          scrollable: 'スクロールできます'
-      }
-  });
-});
 
 
 /*---------------------------------------------------------------

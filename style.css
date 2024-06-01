@@ -160,7 +160,7 @@ LOADING
 /*固定ページ共通*/
 @media all and (max-width: 540px) {
   .free-area .content-body p, .free-area .content-body ol, .free-area .content-body li, .free-area .content-body table, .free-area .content-body dl {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 .free-area .content-body h2 {
@@ -203,7 +203,7 @@ LOADING
   font-size: 1.8rem;
   color: #736a5f;
   padding: 0.5em 1em;
-  background: #768d96;
+  background: #e2f1f2;
 }
 @media all and (max-width: 540px) {
   .free-area .content-body h4 {
@@ -1208,6 +1208,7 @@ p, a, li, dl dt, dl dd {
   color: #736a5f;
   margin: 0;
   /*PC時サブメニュー*/
+  /*sp時サブメニュー*/
 }
 .menu-global-container .global-nav__menu .menu-item-object-page, .menu-global-container .global-nav__menu .menu-item-object-category {
   list-style-type: none;
@@ -1218,33 +1219,13 @@ p, a, li, dl dt, dl dd {
 .menu-global-container .global-nav__menu .menu-item-object-page a, .menu-global-container .global-nav__menu .menu-item-object-category a {
   display: block;
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: "Lato", sans-serif;
   font-weight: bold;
   letter-spacing: 0.1em;
   white-space: nowrap;
   text-decoration: none;
   padding: 2em 1em;
-  /*@media all and (min-width:901px) {
-      &:before {
-          background: $font-default-c;
-          content: '';
-          width: 100%;
-          height: 1px;
-          position: absolute;
-          left: 0;
-          bottom: -50%;
-          margin: auto;
-          transform-origin: right top;
-          transform: scale(0, 1);
-          transition: transform .3s ease-out;
-      }
-
-      &:hover::before {
-          transform-origin: left top;
-          transform: scale(1, 1);
-      }
-  }*/
 }
 @media all and (max-width: 1280px) {
   .menu-global-container .global-nav__menu .menu-item-object-page a, .menu-global-container .global-nav__menu .menu-item-object-category a {
@@ -1282,6 +1263,81 @@ p, a, li, dl dt, dl dd {
     display: block;
   }
 }
+@media all and (max-width: 900px) {
+  .menu-global-container .global-nav__menu {
+    /* サブメニュー表示用のスタイル */
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children {
+    position: relative;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children .plus {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 5em;
+    width: 6em;
+    z-index: 3;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children .plus:hover {
+    cursor: pointer;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 1.5em;
+    width: 2px;
+    height: 15px;
+    background: #fff;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 2.6em;
+    transform: translatey(-50%);
+    right: calc(1.5em - 6.5px);
+    width: 15px;
+    height: 2px;
+    background: #fff;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children a:after {
+    display: none !important;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children.active {
+    margin-bottom: 0;
+    border: none;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children.active:before {
+    display: none;
+  }
+  .menu-global-container .global-nav__menu .sub-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    margin-bottom: 2em;
+  }
+  .menu-global-container .global-nav__menu .sub-menu li a {
+    width: 100%;
+    display: block;
+    padding: 1.2em 1.5em !important;
+    font-size: 1.3rem !important;
+    border-bottom: dotted 1px #fff !important;
+  }
+  .menu-global-container .global-nav__menu .sub-menu li a:after {
+    display: block !important;
+    width: 13px !important;
+    height: 11px !important;
+  }
+  .menu-global-container .global-nav__menu .menu-item-has-children.active .sub-menu {
+    display: block;
+  }
+}
 
 /*グロナビオープン時*/
 .l-site_header.active {
@@ -1301,7 +1357,7 @@ p, a, li, dl dt, dl dd {
   width: 100%;
   height: 100vh;
   background: #98C0CC;
-  padding: 20% 10%;
+  padding: 15% 10%;
   margin: 0;
   z-index: 3;
   overflow: auto;
@@ -1309,14 +1365,13 @@ p, a, li, dl dt, dl dd {
 .l-site_header.active .global-nav__menu li {
   text-align: left;
   margin-left: 0;
-  padding: 0.6em 0;
 }
 .l-site_header.active .global-nav__menu li a {
   display: block;
   position: relative;
   color: #fff;
-  font-size: 1.8rem;
-  padding: 1.5em 0;
+  font-size: 1.6rem;
+  padding: 1.5em 1em;
   border-bottom: solid 1px #fff;
 }
 .l-site_header.active .global-nav__menu li a:after {
@@ -1325,7 +1380,7 @@ p, a, li, dl dt, dl dd {
   position: absolute;
   top: 50%;
   transform: translate(-50%);
-  right: 0;
+  right: 0.5em;
   width: 15px;
   height: 13px;
   background-image: url(assets/images/common/arrow-icon-w.svg);
@@ -2058,14 +2113,13 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 1024px) {
   .main_message {
     bottom: 20vw;
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 }
 @media all and (max-width: 540px) {
   .main_message {
-    bottom: 40vw;
-    width: 80%;
+    bottom: 30vw;
     min-width: 260px;
     height: auto;
   }
@@ -2148,7 +2202,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 540px) {
   .top_company .company_c {
-    margin: 25% 5vw 20%;
+    margin: 25% 8vw 20%;
     text-align: left;
   }
 }
@@ -3342,7 +3396,36 @@ p, a, li, dl dt, dl dd {
 }
 .page_message .message_bottom_text .post {
   margin-top: 5%;
-  text-align: end;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+}
+.page_message .message_bottom_text .post .name_sign {
+  width: 158px;
+  height: 43px;
+}
+.page_message .message_bottom_text .post .name_sign img {
+  width: auto;
+  height: 100%;
+}
+@media all and (max-width: 1000px) {
+  .page_message .message_bottom_text .post .name_sign {
+    width: 15.8vw;
+    height: 4.3vw;
+  }
+}
+@media all and (max-width: 768px) {
+  .page_message .message_bottom_text .post .name_sign {
+    width: 20.5729166667vw;
+    height: 5.5989583333vw;
+  }
+}
+@media all and (max-width: 540px) {
+  .page_message .message_bottom_text .post .name_sign {
+    width: 27.7777777778vw;
+    height: 6.4814814815vw;
+  }
 }
 
 /*====================================================
@@ -4264,6 +4347,7 @@ p, a, li, dl dt, dl dd {
   margin: 0;
 }
 .other-precut_list_img {
+  position: relative;
   width: 50%;
 }
 @media all and (max-width: 540px) {
@@ -5104,11 +5188,6 @@ p, a, li, dl dt, dl dd {
   background: #fff;
   padding: 4% 8%;
 }
-@media all and (max-width: 768px) {
-  .tab-contents .page_recruit_job {
-    padding: 8% 4%;
-  }
-}
 .tab-contents .page_recruit_job:after {
   position: absolute;
   top: 50%;
@@ -5164,7 +5243,7 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_flow {
     width: 90vw;
-    padding: 8% 4%;
+    padding: 8% 8%;
   }
 }
 .tab-contents .page_recruit_flow .recruit_flow_list {
@@ -5301,7 +5380,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_work {
-    padding: 8% 4%;
+    padding: 8% 8%;
   }
 }
 .tab-contents .page_recruit_work:after {
@@ -5334,7 +5413,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_merit {
-    padding: 8% 4%;
+    padding: 8% 8%;
   }
 }
 .tab-contents .page_recruit_merit:after {
@@ -5394,7 +5473,7 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .tab-contents .page_recruit_schedul {
     width: 90vw;
-    padding: 8% 4%;
+    padding: 8% 8%;
   }
 }
 .tab-contents .page_recruit_question {
@@ -6610,13 +6689,6 @@ p, a, li, dl dt, dl dd {
 /*トップ画像*/
 .category-news_pic {
   position: relative;
-  /*@media all and (min-width:1000px) {
-      height:80vh;
-
-      img {
-          height:100%;
-      }
-  }*/
 }
 @media all and (max-width: 768px) {
   .category-news_pic {
@@ -6771,6 +6843,14 @@ p, a, li, dl dt, dl dd {
 }
 .category_news_list {
   border-bottom: solid 1px #BFB9B1;
+  width: 80vw;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media all and (max-width: 768px) {
+  .category_news_list {
+    width: 90vw;
+  }
 }
 .category_news_list .item_meta li {
   line-height: 2.8;
@@ -6826,6 +6906,11 @@ p, a, li, dl dt, dl dd {
 .single-case_main .single_container {
   max-width: 900px;
   margin: 0 auto;
+}
+@media all and (max-width: 1000px) {
+  .single-case_main .single_container {
+    padding-bottom: 8%;
+  }
 }
 .single-case_main .single_content {
   margin: 0 auto;
