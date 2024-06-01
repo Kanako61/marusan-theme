@@ -51,9 +51,9 @@ Template Name: effort
 <div class="effort_img_pic">
     <picture>
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-img-03.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort-img-03.jpg" alt="家づくりから世の中を良くしていきたい">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort-img-03.jpg" alt="家づくりから環境の社会創りを">
     </picture>
-    <p class="copy">家づくりから<br>環境の社会創りを</p>
+    <p class="copy">家づくりから<br>理想の社会創りを</p>
 </div>
 
 
