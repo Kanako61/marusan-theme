@@ -346,4 +346,18 @@
 }
 
 
+/* reCAPTCHAの保護マーク 非表示 */
+.grecaptcha-badge { 
+  visibility: hidden;
+}
+
+.recapture a {
+  text-decoration: underline;
+  color:$text-link;
+  cursor: pointer;
+  font-size:1.3rem;
+}
+
+
+
 

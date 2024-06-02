@@ -884,6 +884,11 @@
                 width:100%;
                 height:(208/850)*100vw;
             }
+
+            @media all and (max-width:600px) {
+                width:100%;
+                height:(208/600)*100vw;
+            }
         }
     }
 }
