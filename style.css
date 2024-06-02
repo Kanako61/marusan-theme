@@ -4287,8 +4287,8 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 540px) {
   .precut_list .thumb-media-active .precut_tit:after {
     width: 1.5px;
-    bottom: -3.5em;
-    height: 3em;
+    bottom: -2.4em;
+    height: 2em;
   }
 }
 
