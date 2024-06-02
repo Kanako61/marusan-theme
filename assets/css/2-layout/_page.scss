@@ -1,5 +1,28 @@
 /*固定ページ共通*/
 
+.page_main {
+    padding-top:10em;
+}
+
+.page {
+    .content-title{
+        margin:0 auto 8%;
+
+        @media all and (max-width:540px) {
+            margin:0 auto 15%;
+        }
+
+        p {
+            font-size:3rem;
+            text-align: center;
+
+            @media all and (max-width:540px) {
+                font-size:2rem;
+            }
+        }
+    }
+}
+
 .free-area {
     .content-body {
         p, ol, li, table, dl {
@@ -336,6 +359,11 @@
         white-space:normal;
         word-wrap:break-word!important;
     }
+}
+
+/*アクセス非表示*/
+.page .address {
+    display:none;
 }
 
 

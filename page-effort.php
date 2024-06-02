@@ -51,7 +51,7 @@ Template Name: effort
 <div class="effort_img_pic">
     <picture>
         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-img-03.webp" type="image/webp">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort-img-03.jpg" alt="家づくりから環境の社会創りを">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort-img-03.jpg" alt="家づくりから理想の社会創りを">
     </picture>
     <p class="copy">家づくりから<br>理想の社会創りを</p>
 </div>
@@ -175,7 +175,7 @@ item-04">
         <div class="list_item_inner-02_img">
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-img-02.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-img-02.jpg" alt="資地域経済の活性化">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/effort/effort-img-02.jpg" alt="地域活性化への取り組み">
             </picture>
         </div>
     </div>

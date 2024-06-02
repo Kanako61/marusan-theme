@@ -98,7 +98,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   height:(270/1440)*100vw;
 
   @media all and (max-width: 1024px) {
-    bottom: 20vw;
+    bottom: 15vw;
     width: 90%;
     height: auto;
   }
@@ -113,31 +113,28 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 /*movie*/
 .top-p_movie {
   position:absolute;
-  bottom:2vw;
+  bottom:3vw;
   right:2%;
   background:$movie-bk;
-  padding:0.6em 1em;
-  border-radius: 0.5em;
+  padding:0.9% 1.4%;
+  border-radius: 1vw;
   z-index:2;
-
-  @media all and (max-width:800px) {
-    padding:1.5% 2.5%;
-  }
 
   .movie_pic {
     position:relative;
-    width:(180/1440)*100vw;
-    height:(100/1440)*100vw;
-    min-width:180px;
-    min-height:100px;
+    width:(216/1440)*100vw;
+    height:(141/1440)*100vw;
     border-radius: 0.5rem;
     overflow: hidden;
 
-    @media all and (max-width:768px) {
-      width:(180/768)*100vw;
-      height:(100/768)*100vw;
-      min-width:120px;
-      min-height:65px;
+    @media all and (max-width:1024px) {
+      width:(185/1024)*100vw;
+      height:(123/1024)*100vw;
+    }
+
+    @media all and (max-width:540px) {
+      width:(154/540)*100vw;
+      height:(102/540)*100vw;
     }
 
     &:after {
@@ -145,16 +142,21 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
       display:inline-block;
       position:absolute;
       top:50%;
-      left:50%;
+      left:55%;
       transform: translate(-50%, -50%);
-      width:(32/1440)*100vw;
-      height:(32/1440)*100vw;
+      width:(52/1440)*100vw;
+      height:(52/1440)*100vw;
       min-width:20px;
       min-height:20px;
       background-image:url(assets/images/common/play-btn.svg);
       background-repeat: no-repeat;
       background-size: contain;
       transition: all .3s;
+
+      @media all and (max-width:540px) {
+        width:(35/540)*100vw;
+        height:(35/540)*100vw;
+      }
     }
 
     img {

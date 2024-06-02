@@ -19,7 +19,7 @@ get_header(); ?>
 					the_post();
 				?>
 					<article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
-					<h1 class="page_header_title content-title page_default_title">
+					<h1 class="page_header_title content-title page_title page_default_title">
   						<p class=""><?php the_title(); ?></p>
 					</h1>
                         <div class="content-body">

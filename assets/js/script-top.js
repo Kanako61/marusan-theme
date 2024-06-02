@@ -3,7 +3,7 @@
 ---------------------------------------------------------------*/
 //画像の設定
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-		//if (windowwidth > 768){
+		if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
 				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01.jpg'},
 				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02.jpg'},
@@ -13,13 +13,17 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
         { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06.jpg'},
         { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07.jpg'}
 			];
-		/*} else {
+		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-				{ src: './img/img_sp_01.jpg' },
-				{ src: './img/img_sp_02.jpg' },
-				{ src: './img/img_sp_03.jpg' }
+				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01_sp.jpg'},
+				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02_sp.jpg'},
+				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image03_sp.jpg'},
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image04_sp.jpg'},
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05_sp.jpg'},
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06_sp.jpg'},
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07_sp.jpg'}
 			];
-		}*/
+		}
 
 //Vegas全体の設定
 $('#slider').vegas({
