@@ -5,6 +5,7 @@
     max-width: none;
     margin:0;
     padding-bottom:15%;
+    background:#fff;
 
     &:after {
         position:absolute;
@@ -14,9 +15,8 @@
         background:$bk-1;
         width:4vw;
         height:100%;
-        z-index:-1;
+        z-index:1;
     }
-
 
     .page_company_h2 {
         position:relative;
@@ -171,7 +171,9 @@
 　　Philosophy　代表挨拶
 =====================================================*/
 .page_message {
+    position:relative;
     margin:0 auto 8%;
+    z-index:3;
 
     .message_top {
         position:relative;
@@ -357,9 +359,11 @@
 　　Philosophy　企業理念
 =====================================================*/
 .rinen {
+    position:relative;
     width:80vw;
     max-width:1200px;
     margin:10% auto;
+    z-index:3;
 
     @media all and (max-width:540px) {
         margin-top:20%;
@@ -405,6 +409,7 @@
     position:relative;
     margin-bottom:0;
     margin-top:15%;
+    z-index:3;
 
     &_inner {
         position:relative;
@@ -529,6 +534,7 @@
 .page_history {
     position: relative;
     margin:0;
+    z-index:3;
 
     &:after {
         position:absolute;
@@ -659,6 +665,7 @@
 .page_facility {
     position:relative;
     margin:0 auto;
+    z-index:3;
 
     .page_company_h2 {
         position:relative;
@@ -740,6 +747,7 @@
 .page_access {
     position:relative;
     margin:0;
+    z-index:3;
 
     &:before {
         position:absolute;
@@ -771,86 +779,110 @@
         display:grid;
         grid-template-columns: 1fr;
         gap:4em;
-        max-width:1200px;
-        padding:8% 0 0;
+        transform:translatex(-6vw);
+        margin-right:-6vw;
+        padding:0 0;
+
+        @media all and (max-width:900px) {
+            transform:inherit;
+            margin-right:0;
+        }
+
+        li {
+            display:grid;
+            grid-template-columns: 2fr 1fr;
+            gap:2em;
+            align-items: center;
+
+            @media all and (max-width:900px) {
+                grid-template-columns: 1fr;
+                gap:0;
+            }
+        }
 
         &_dl {
-            display:grid;
-            grid-template-columns: 1fr 1.5fr 2fr;
-            gap:3em;
+            display:flex;
+            align-items: center;
 
-            @media all and (max-width:1024px) {
-                grid-template-columns: 0.6fr 1.5fr 2fr;
-                gap:2em;
+            @media all and (max-width:900px) {
+                width:100%;
             }
 
-            @media all and (max-width:768px) {
-                grid-template-columns: 1fr;
+            @media all and (max-width:600px) {
+                flex-direction: column;
+                gap:1em;
             }
 
             dt {
-                width:12em;
+                position:relative;
 
-                @media all and (max-width:1024px) {
-                    width:8em;
+                .page_access_h3 {
+                    position:absolute;
+                    top:0;
+                    left:0.5em;
+                    background:$page-access-h3-bk;
+                    margin:0;
+                    padding:0.5em 1em;
+                    font-size:1.6rem;
+
+                    @media all and (max-width:540px) {
+                        font-size:1.5rem;
+                    }
+                }
+
+                .page_access_pic {
+                    width:(531/1440)*100vw;
+                    height:(284/1440)*100vw;
+                    max-width:531px;
+                    max-height:284px;
+
+                    @media all and (max-width:600px) {
+                        width:100%;
+                        height:auto;
+                    }
+
+                    img {
+                        width:auto;
+                        height:100%;
+
+                        @media all and (max-width:600px) {
+                            width:100%;
+                            height:auto;
+                        }
+                    }
                 }
             }
 
             dd {
-                a {
-                    text-decoration: none;
+                width:40%;
+                margin-left:-5%;
+                z-index:2;
+                line-height:2.2;
+
+                @media all and (max-width:900px) {
+                    width:70%;
+                }
+
+
+                @media all and (max-width:600px) {
+                    width:100%;
+                    margin-left:0;
                 }
             }
         }
 
-        li {
-            dl {
-                dt {
-                    position:relative;
+        .map {
+            width:100%;
+            height:(238/1440)*100vw;
 
-                    @media all and (max-width:768px) {
-                        font-size:1.8rem;
-                        padding-bottom:1em;
-                        width:100%;
-                        border-bottom:solid 1px $font-default-c;
-                    }
+            iframe {
+                width:100%;
+                height:100%;
+            }
 
-                    @media all and (max-width:540px) {
-                        font-size:1.6rem;
-                    }
-
-                    &:after {
-                        position:absolute;
-                        top:0em;
-                        right:0;
-                        display:inline-block;
-                        content:'';
-                        width:3px;
-                        height:2em;
-                        background:$border-c;
-
-                        @media all and (max-width:768px) {
-                            display:none;
-                        }
-                    }
-                }
-
-                dd {
-                    margin:0;
-                    line-height: 2.4;
-                }
-
-                .map {
-                    iframe {
-                        width:100%;
-                        height:(310/1440)*100vw;
-                        max-height:300px;
-
-                        @media all and (max-width:768px) {
-                            height:(310/768)*100vw;
-                        }
-                    }
-                }
+            @media all and (max-width:900px) {
+                width:100%;
+                height:(208/850)*100vw;
             }
         }
     }

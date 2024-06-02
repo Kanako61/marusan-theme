@@ -194,7 +194,7 @@ Template Name: Company
     <div class="page_pic overview_pic">
         <picture>
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-history.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-history.jpg" alt="沿革">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-history.jpg" alt="沿革">
         </picture>
     </div>
 
@@ -301,7 +301,7 @@ Template Name: Company
     <div class="page_pic facility_pic">
         <picture>
             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-facility.webp" type="image/webp">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-facility.jpg" alt="沿革">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company-facility.jpg" alt="設備">
         </picture>
     </div>
 
@@ -389,62 +389,112 @@ Template Name: Company
     <ul class="page_access_list">
         <li>
             <dl class="page_access_list_dl">
-                <dt>本社</dt>
+                <dt>
+                    <h3 class="page_access_h3">本社</h3>
+                    <div class="page_pic page_access_pic">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_01.webp" type="image/webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_01.jpg" alt="本社">
+                        </picture>
+                    </div>
+                </dt>
                 <dd>〒964-0313<br>
                 福島県二本松市小浜字鳥居町27-3<br>
                 TEL 0243-55-2255<br>
                 FAX 0243-55-2589
                 </dd>
-
-                <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.785161879082!2d140.50593451078726!3d37.56012512438011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602071b5aa3e05d5%3A0x417538084508ae6a!2z5qCq5byP5Lya56S-44Oe44Or44K144Oz!5e0!3m2!1sja!2sjp!4v1708253582787!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></dd>
             </dl>
+                 
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.785161879082!2d140.50593451078726!3d37.56012512438011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602071b5aa3e05d5%3A0x417538084508ae6a!2z5qCq5byP5Lya56S-44Oe44Or44K144Oz!5e0!3m2!1sja!2sjp!4v1708253582787!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </li>
 
         <li>
             <dl class="page_access_list_dl">
-                <dt>工場</dt>
+                <dt>
+                    <h3 class="page_access_h3">工場</h3>
+                    <div class="page_pic page_access_pic">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_02.webp" type="image/webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_02.jpg" alt="工場">
+                        </picture>
+                    </div>
+                </dt>
                 <dd>〒964-0315<br>
                 福島県二本松市成田字柏崎214<br>
                 TEL 0243-55-2626<br>
                 FAX 0243-55-2585
                 </dd>
-                <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.6006457666995!2d140.48666439216964!3d37.528480195359975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6020704410368899%3A0x66a62fbbc9f2106d!2z5p2x5YyX44OX44Os44Kr44OD44OI44Ov44O844Kv44K577yI77yI5qCq77yJ44Oe44Or44K144Oz77yJ!5e0!3m2!1sja!2sjp!4v1708253536262!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></dd>
             </dl>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1582.6006457666995!2d140.48666439216964!3d37.528480195359975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6020704410368899%3A0x66a62fbbc9f2106d!2z5p2x5YyX44OX44Os44Kr44OD44OI44Ov44O844Kv44K577yI77yI5qCq77yJ44Oe44Or44K144Oz77yJ!5e0!3m2!1sja!2sjp!4v1708253536262!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </li>
 
         <li>
             <dl class="page_access_list_dl">
-                <dt>郡山営業所</dt>
+                <dt>
+                    <h3 class="page_access_h3">郡山営業所</h3>
+                    <div class="page_pic page_access_pic">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_03.webp" type="image/webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_03.jpg" alt="郡山営業所">
+                        </picture>
+                    </div>
+                </dt>
                 <dd>〒963-0725<br>
                 福島県郡山市田村町金屋字川久保53-1<br>
                 TEL 024-983-9003<br>
                 FAX 024-953-6313
                 </dd>
-                <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.7026632439197!2d140.39337871077788!3d37.37321183507485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60206ba41261e209%3A0x37177e4fa1f33c3e!2zKOagqinjg57jg6vjgrXjg7Mg6YOh5bGx5Za25qWt5omA!5e0!3m2!1sja!2sjp!4v1708253643224!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></dd>
             </dl>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.7026632439197!2d140.39337871077788!3d37.37321183507485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60206ba41261e209%3A0x37177e4fa1f33c3e!2zKOagqinjg57jg6vjgrXjg7Mg6YOh5bGx5Za25qWt5omA!5e0!3m2!1sja!2sjp!4v1708253643224!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </li>
 
         <li>
             <dl class="page_access_list_dl">
-                <dt>福島営業所</dt>
+                <dt>
+                    <h3 class="page_access_h3">福島営業所</h3>
+                    <div class="page_pic page_access_pic">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_04.webp" type="image/webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_04.jpg" alt="福島営業所">
+                        </picture>
+                    </div>
+                </dt>
                 <dd>〒960-8164<br>
                 福島県福島市八木田字神明52-1<br>
                 TEL 024-546-2436<br>
                 FAX 024-546-2441
                 </dd>
-                <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.683974682079!2d140.43995811079688!3d37.75055761343886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a85a50c09602d%3A0x78af68dd53fa9177!2zKOagqinjg57jg6vjgrXjg7Mg56aP5bO25Za25qWt5omA!5e0!3m2!1sja!2sjp!4v1708253294698!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></dd>
             </dl>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.683974682079!2d140.43995811079688!3d37.75055761343886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a85a50c09602d%3A0x78af68dd53fa9177!2zKOagqinjg57jg6vjgrXjg7Mg56aP5bO25Za25qWt5omA!5e0!3m2!1sja!2sjp!4v1708253294698!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </li>
 
         <li>
             <dl class="page_access_list_dl">
-                <dt>東京事務所</dt>
+                <dt>
+                    <h3 class="page_access_h3">東京事務所</h3>
+                    <div class="page_pic page_access_pic">
+                        <picture>
+                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_05.webp" type="image/webp">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/company_access_05.jpg" alt="東京営業所">
+                        </picture>
+                    </div>
+                </dt>
                 <dd>〒170-0005<br>
                 東京都豊島区南大塚1-60-20<br>
                 天翔大塚駅前ビルS916
                 </dd>
-                <dd class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.809996356575!2d139.72784181069738!3d35.730891127131144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d75db96c8e3%3A0x94a24ce875653064!2z5aSp57-U44Kq44OV44Kj44K55aSn5aGa!5e0!3m2!1sja!2sjp!4v1708244379916!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></dd>
             </dl>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.809996356575!2d139.72784181069738!3d35.730891127131144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d75db96c8e3%3A0x94a24ce875653064!2z5aSp57-U44Kq44OV44Kj44K55aSn5aGa!5e0!3m2!1sja!2sjp!4v1708244379916!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </li>
     </ul>
 </div>

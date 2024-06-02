@@ -158,24 +158,23 @@ LOADING
 }
 
 /*固定ページ共通*/
-.page_main {
+.page_default_main {
   padding-top: 10em;
 }
-
-.page .content-title {
+.page_default_main .content-title {
   margin: 0 auto 8%;
 }
 @media all and (max-width: 540px) {
-  .page .content-title {
+  .page_default_main .content-title {
     margin: 0 auto 15%;
   }
 }
-.page .content-title p {
+.page_default_main .content-title p {
   font-size: 3rem;
   text-align: center;
 }
 @media all and (max-width: 540px) {
-  .page .content-title p {
+  .page_default_main .content-title p {
     font-size: 2rem;
   }
 }
@@ -3143,6 +3142,7 @@ p, a, li, dl dt, dl dd {
   max-width: none;
   margin: 0;
   padding-bottom: 15%;
+  background: #fff;
   /*背景の装飾*/
   /*お問い合わせ*/
 }
@@ -3154,7 +3154,7 @@ p, a, li, dl dt, dl dd {
   background: #fcf3e4;
   width: 4vw;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 .company_main .page_content .page_company_h2 {
   position: relative;
@@ -3289,7 +3289,9 @@ p, a, li, dl dt, dl dd {
 　　Philosophy　代表挨拶
 =====================================================*/
 .page_message {
+  position: relative;
   margin: 0 auto 8%;
+  z-index: 3;
 }
 .page_message .message_top {
   position: relative;
@@ -3478,9 +3480,11 @@ p, a, li, dl dt, dl dd {
 　　Philosophy　企業理念
 =====================================================*/
 .rinen {
+  position: relative;
   width: 80vw;
   max-width: 1200px;
   margin: 10% auto;
+  z-index: 3;
 }
 @media all and (max-width: 540px) {
   .rinen {
@@ -3522,6 +3526,7 @@ p, a, li, dl dt, dl dd {
   position: relative;
   margin-bottom: 0;
   margin-top: 15%;
+  z-index: 3;
 }
 .page_overview_inner {
   position: relative;
@@ -3631,6 +3636,7 @@ p, a, li, dl dt, dl dd {
 .page_history {
   position: relative;
   margin: 0;
+  z-index: 3;
 }
 .page_history:after {
   position: absolute;
@@ -3756,6 +3762,7 @@ p, a, li, dl dt, dl dd {
 .page_facility {
   position: relative;
   margin: 0 auto;
+  z-index: 3;
 }
 .page_facility .page_company_h2 {
   position: relative;
@@ -3832,6 +3839,7 @@ p, a, li, dl dt, dl dd {
 .page_access {
   position: relative;
   margin: 0;
+  z-index: 3;
 }
 .page_access:before {
   position: absolute;
@@ -3860,79 +3868,111 @@ p, a, li, dl dt, dl dd {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4em;
-  max-width: 1200px;
-  padding: 8% 0 0;
+  transform: translatex(-6vw);
+  margin-right: -6vw;
+  padding: 0 0;
 }
-.page_access_list_dl {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 2fr;
-  gap: 3em;
-}
-@media all and (max-width: 1024px) {
-  .page_access_list_dl {
-    grid-template-columns: 0.6fr 1.5fr 2fr;
-    gap: 2em;
+@media all and (max-width: 900px) {
+  .page_access_list {
+    transform: inherit;
+    margin-right: 0;
   }
 }
-@media all and (max-width: 768px) {
-  .page_access_list_dl {
+.page_access_list li {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+  align-items: center;
+}
+@media all and (max-width: 900px) {
+  .page_access_list li {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+.page_access_list_dl {
+  display: flex;
+  align-items: center;
+}
+@media all and (max-width: 900px) {
+  .page_access_list_dl {
+    width: 100%;
+  }
+}
+@media all and (max-width: 600px) {
+  .page_access_list_dl {
+    flex-direction: column;
+    gap: 1em;
   }
 }
 .page_access_list_dl dt {
-  width: 12em;
-}
-@media all and (max-width: 1024px) {
-  .page_access_list_dl dt {
-    width: 8em;
-  }
-}
-.page_access_list_dl dd a {
-  text-decoration: none;
-}
-.page_access_list li dl dt {
   position: relative;
 }
-@media all and (max-width: 768px) {
-  .page_access_list li dl dt {
-    font-size: 1.8rem;
-    padding-bottom: 1em;
-    width: 100%;
-    border-bottom: solid 1px #736a5f;
-  }
+.page_access_list_dl dt .page_access_h3 {
+  position: absolute;
+  top: 0;
+  left: 0.5em;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 1.6rem;
 }
 @media all and (max-width: 540px) {
-  .page_access_list li dl dt {
-    font-size: 1.6rem;
+  .page_access_list_dl dt .page_access_h3 {
+    font-size: 1.5rem;
   }
 }
-.page_access_list li dl dt:after {
-  position: absolute;
-  top: 0em;
-  right: 0;
-  display: inline-block;
-  content: "";
-  width: 3px;
-  height: 2em;
-  background: #BFB9B1;
+.page_access_list_dl dt .page_access_pic {
+  width: 36.875vw;
+  height: 19.7222222222vw;
+  max-width: 531px;
+  max-height: 284px;
 }
-@media all and (max-width: 768px) {
-  .page_access_list li dl dt:after {
-    display: none;
+@media all and (max-width: 600px) {
+  .page_access_list_dl dt .page_access_pic {
+    width: 100%;
+    height: auto;
   }
 }
-.page_access_list li dl dd {
-  margin: 0;
-  line-height: 2.4;
+.page_access_list_dl dt .page_access_pic img {
+  width: auto;
+  height: 100%;
 }
-.page_access_list li dl .map iframe {
+@media all and (max-width: 600px) {
+  .page_access_list_dl dt .page_access_pic img {
+    width: 100%;
+    height: auto;
+  }
+}
+.page_access_list_dl dd {
+  width: 40%;
+  margin-left: -5%;
+  z-index: 2;
+  line-height: 2.2;
+}
+@media all and (max-width: 900px) {
+  .page_access_list_dl dd {
+    width: 70%;
+  }
+}
+@media all and (max-width: 600px) {
+  .page_access_list_dl dd {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.page_access_list .map {
   width: 100%;
-  height: 21.5277777778vw;
-  max-height: 300px;
+  height: 16.5277777778vw;
 }
-@media all and (max-width: 768px) {
-  .page_access_list li dl .map iframe {
-    height: 40.3645833333vw;
+.page_access_list .map iframe {
+  width: 100%;
+  height: 100%;
+}
+@media all and (max-width: 900px) {
+  .page_access_list .map {
+    width: 100%;
+    height: 24.4705882353vw;
   }
 }
 

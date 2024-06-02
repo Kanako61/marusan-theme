@@ -11,7 +11,7 @@ get_header(); ?>
 </div>
 -->
 
-<main class="l-contents-main page_main free-area">
+<main class="l-contents-main page_default_main free-area">
 	<div class="page_content">
 		<div class="content__wrap">
 			<?php if( have_posts() ) : ?>
