@@ -216,6 +216,18 @@
 　　タブ切り替え
 =====================================================*/
 
+/*アニメーションスタイル*/
+.pageRecruit_content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+  
+.pageRecruit_content.is-display {
+    opacity: 1;
+    display: block;
+}
+
 .pageRecruit {
     position:relative;
     background:$bk-4;

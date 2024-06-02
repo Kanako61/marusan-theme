@@ -1225,11 +1225,12 @@ p, a, li, dl dt, dl dd {
   letter-spacing: 0.1em;
   white-space: nowrap;
   text-decoration: none;
-  padding: 2em 1em;
+  padding: 1.65em 1em;
 }
 @media all and (max-width: 1280px) {
   .menu-global-container .global-nav__menu .menu-item-object-page a, .menu-global-container .global-nav__menu .menu-item-object-category a {
     font-size: 1.4rem;
+    padding: 2em 1em;
   }
 }
 @media all and (min-width: 901px) {
@@ -1387,7 +1388,6 @@ p, a, li, dl dt, dl dd {
   background-size: cover;
 }
 
-/*グロナビここまで*/
 /*ハンバーガーボタンここから*/
 .hamburger_button {
   display: none;
@@ -2342,7 +2342,7 @@ p, a, li, dl dt, dl dd {
   }
 }
 .top_service_left_text {
-  max-width: 210px;
+  max-width: 270px;
   margin: 0 auto 20%;
 }
 @media all and (max-width: 768px) {
@@ -4017,7 +4017,6 @@ p, a, li, dl dt, dl dd {
 }
 .precut_list .slide-media {
   display: block;
-  border-radius: 4px;
   width: 100%;
   height: auto;
 }
@@ -4978,6 +4977,18 @@ p, a, li, dl dt, dl dd {
 /*====================================================
 　　タブ切り替え
 =====================================================*/
+/*アニメーションスタイル*/
+.pageRecruit_content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+.pageRecruit_content.is-display {
+  opacity: 1;
+  display: block;
+}
+
 .pageRecruit {
   position: relative;
   background: #98C0CC;

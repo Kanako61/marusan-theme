@@ -149,15 +149,20 @@ document.addEventListener('DOMContentLoaded', function () {
   function activateTab(index) {
     // すべてのタブとコンテンツからクラスを削除
     tabs.forEach(tab => tab.classList.remove('is-active'));
-    contents.forEach(content => content.classList.remove('is-display'));
+    contents.forEach(content => {
+      content.classList.remove('is-display');
+      content.style.display = 'none'; // displayをnoneに設定
+    });
 
     // 指定されたタブとコンテンツにクラスを追加
     if (tabs[index]) {
       tabs[index].classList.add('is-active');
     }
     if (contents[index]) {
-      contents[index].classList.add('is-display');
-      contents[index].scrollIntoView({ behavior: 'smooth' });
+      contents[index].style.display = 'block'; // displayをblockに設定
+      setTimeout(() => {
+        contents[index].classList.add('is-display');
+      }, 0); // 少し遅らせてクラスを追加
     }
   }
 
@@ -183,9 +188,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 各ボタンにイベントリスナーを追加
-  addClickListener('.other_btn_01', 0); // .other_btn_01ボタンは最初のタブ（インデックス0）をアクティブにする
-  addClickListener('.other_btn_02', 1); // .other_btn_02ボタンは2番目のタブ（インデックス1）をアクティブにする
-  addClickListener('.other_btn_03', 2); // .other_btn_03ボタンは3番目のタブ（インデックス2）をアクティブにする
+  addClickListener('.other_btn_01', 0);
+  addClickListener('.other_btn_02', 1);
+  addClickListener('.other_btn_03', 2);
 
   // ページ内リンクのクリックイベントを調整
   const pageLinks = document.querySelectorAll('a[href*="#"]');

@@ -152,7 +152,7 @@ Template Name: recruit
                   <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
-                      <dd>会社カレンダーによりおおよそ隔週で週休二日になります。</dd>
+                      <dd>月当たり、1~2回の土曜出勤があります。</dd>
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【休日出勤について】</dt>
@@ -452,7 +452,7 @@ Template Name: recruit
                   <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
-                      <dd>会社カレンダーによりおおよそ隔週で週休二日になります。</dd>
+                      <dd>月当たり、1~2回の土曜出勤があります。</dd>
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【休日出勤について】</dt>
@@ -524,7 +524,7 @@ Template Name: recruit
           </dl>
           <dl class="schedule_dl">
             <dt>8:00</dt>
-            <dd>今日の担当ラインに入って作業開始</dd>
+            <dd>今日の作業開始</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>10:00</dt>
@@ -733,7 +733,7 @@ Template Name: recruit
                   <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
-                      <dd>会社カレンダーによりおおよそ隔週で週休二日になります。</dd>
+                      <dd>月当たり、1~2回の土曜出勤があります。</dd>
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【休日出勤について】</dt>
@@ -802,46 +802,14 @@ Template Name: recruit
         <!-- 1日の流れ -->
         <section class="page_recruit_schedul recruit_section">
           <h2 class="schedul_h2 page_recruit_h2">一日の流れ</h2>
-          <dl class="schedule_dl">
-            <dt>7:45</dt>
-            <dd>毎朝のラジオ体操～全体朝礼～各部署ごとのミーティング</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>8:00</dt>
-            <dd>今日の担当ラインに入って作業開始</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>10:00</dt>
-            <dd>休憩</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>10:15</dt>
-            <dd>作業再開</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>12:00</dt>
-            <dd>お昼休み　自席・食堂などで昼食やお昼寝など<br>※お弁当(一食350円)が当日朝まで注文可能<br>※テレビ・冷暖房・給湯設備のある食堂スペースあり</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>13:00</dt>
-            <dd>午後の作業開始</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>15:00</dt>
-            <dd>休憩</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>15:15</dt>
-            <dd>作業再開</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>17:20</dt>
-            <dd>作業日報を作成、上司に提出</dd>
-          </dl>
-          <dl class="schedule_dl">
-            <dt>17:30</dt>
-            <dd>終業 帰宅</dd>
-          </dl>
+          <p>※現場までの距離により、大幅に変わります。</p><br>
+          <p>朝イチ現場着</p>
+          <p>↓</p>
+          <p>荷降ろし次第、帰社、折返し分の荷積み</p>
+          <p>↓</p>
+          <p>折返しの現場へ</p>
+          <p>↓</p>
+          <p>翌日分の荷積みの後、運転日報を記入・提出して終業</p>
           <div class="topBK-btn">
             <a href="#pageRecruit">上部に戻る</a>
           </div>

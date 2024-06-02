@@ -102,7 +102,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     width: 90%;
     height: auto;
   }
-  
+
   @media all and (max-width: 540px) {
     bottom: 30vw;
      min-width: 260px;
@@ -334,7 +334,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     }
 
     &_text {
-      max-width:210px;
+      max-width:270px;
       margin:0 auto 20%;
 
       @media all and (max-width:768px) {
