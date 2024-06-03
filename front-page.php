@@ -52,7 +52,7 @@
   <div class="company_c">
     <h2 class="top_h2">私たちの思い</h2>
     <p class="company_c_text">
-    昭和10年の創業以来、<br class="pc_br">私たちは木材の加工を通じて、木造建築業界の課題解決に貢献してきました。<br class="pc_br">令和になった今、建築業界も新しい時代を迎えようとしています。<br class="pc_br">これからも私たちは新たなことに挑戦し、木造住宅の未来を創造してまいります。</p>
+    昭和10年の創業以来、<br class="pc_br">私たちは木材の加工を通じて、木造建築業界の課題解決に貢献してきました。<br class="pc_br">令和になった今、建築業界も新しい時代を迎えようとしています。<br class="pc_br">これからも私たちは新たなことに挑戦し、家づくりの未来を創造してまいります。</p>
     <div class="top-button">
       <a href="<?php echo home_url('/'); ?>company">会社情報</a>
     </div>
@@ -79,7 +79,7 @@
   <div class="top_service_c">
     <div class="top_service_left">
       <h2 class="top_h2 top-_service_h2">事業内容</h2>
-      <p class="top_service_left_text">プレカットは在来工法をはじめ、金物やパネル、 2×4工法などあらゆる工法に対応。今後住宅業界で必須とも言われる構造計算への対応、人手不足が叫ばれる現場建方の仕事まで、住宅建築を多方面から支えていきます。</p>
+      <p class="top_service_left_text">プレカットは在来工法をはじめ、金物工法やパネル、 2×4工法などあらゆる工法に対応。今後住宅業界で必須とも言われる構造計算への対応、人手不足が叫ばれる現場建方の仕事まで、住宅建築を多方面から支えていきます。</p>
       <div class="top-button">
         <a href="<?php echo home_url('/'); ?>service">より詳しく</a>
       </div>

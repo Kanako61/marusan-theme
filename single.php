@@ -26,7 +26,7 @@ get_header(); ?>
 			<time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d')?></time>
 		</ul>
 		<!--ここからコンテンツエリア-->
-		<div class="single_content content-body">
+		<div class="single_content single-news-content content-body">
 			<?php the_content(); ?>
 		</div>
 		<!--コンテンツエリアここまで-->

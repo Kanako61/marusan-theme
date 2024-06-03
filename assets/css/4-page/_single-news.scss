@@ -28,6 +28,15 @@
     &_time {
         text-align:end;
     }
+
+    .single-news-content {
+        padding:0;
+        margin:0 auto 5%;
+
+        .free-area img {
+            padding:0.5em;
+        }
+    }
 }
 
 /*アクセス非表示*/

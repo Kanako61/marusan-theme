@@ -215,18 +215,37 @@
 /*====================================================
 　　タブ切り替え
 =====================================================*/
-
-/*アニメーションスタイル*/
-.pageRecruit_content {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: none;
-}
-  
+/* フェードインのアニメーション */
 .pageRecruit_content.is-display {
-    opacity: 1;
     display: block;
+    animation: fadeIn 0.5s ease-in-out;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* フェードアウトのアニメーション */
+.pageRecruit_content:not(.is-display) {
+    display: block;
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
 
 .pageRecruit {
     position:relative;
@@ -311,15 +330,15 @@
         display: block;
     }
 
-    .tab-01.is-active {
+    .tab.tab-01.is-active {
         background:$tab-01;
     }
 
-    .tab-02.is-active {
+    .tab.tab-02.is-active {
         background:$tab-02;
     }
 
-    .tab-03.is-active {
+    .tab.tab-03.is-active {
         background:$tab-03;
     }
 }

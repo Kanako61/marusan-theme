@@ -139,10 +139,10 @@ window.addEventListener('load',() => {
 });*/
 
 /*---------------------------------------------------------------
-	タブ切り替え
+	採用ページタブ切り替え
 ---------------------------------------------------------------*/
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.pageRecruit_content');
 
@@ -203,7 +203,89 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+});*/
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.pageRecruit_content');
+
+  function activateTab(index, scroll = false) {
+    // すべてのタブからクラスを削除
+    tabs.forEach(tab => tab.classList.remove('is-active'));
+    // すべてのコンテンツからクラスを削除
+    contents.forEach(content => {
+      if (content.classList.contains('is-display')) {
+        content.classList.remove('is-display');
+        setTimeout(() => {
+          content.classList.remove('is-active');
+        }, 500); // 0.5秒後に非表示にする
+      }
+    });
+
+    // 指定されたタブとコンテンツにクラスを追加
+    if (tabs[index]) {
+      tabs[index].classList.add('is-active');
+    }
+    if (contents[index]) {
+      if (index === 0 || index === 1 || index === 2) { // tab-01, tab-02, tab-03 の場合のみフェード切り替えのアニメーションを適用
+        contents[index].classList.add('is-active');
+        setTimeout(() => {
+          contents[index].classList.add('is-display');
+          if (scroll) {
+            contents[index].scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 10); // 微小な遅延を入れる
+      } else {
+        // tab-01, tab-02, tab-03 以外の場合はフェード切り替えのアニメーションを適用しない
+        contents[index].classList.add('is-active');
+        contents[index].classList.add('is-display');
+        if (scroll) {
+          contents[index].scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  }
+
+  // 各タブにクリックイベントを追加
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (event) => {
+      event.preventDefault(); // デフォルトの動作をキャンセル
+      activateTab(index);
+    });
+  });
+
+  // ボタンのクリックイベントを設定する関数
+  function addClickListener(buttonClass, tabIndex) {
+    const buttons = document.querySelectorAll(buttonClass);
+    if (buttons) {
+      buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault(); // デフォルトの動作をキャンセル
+          activateTab(tabIndex, true);
+        });
+      });
+    }
+  }
+
+  // 各ボタンにイベントリスナーを追加
+  addClickListener('.other_btn_01', 0); // .other_btn_01ボタンは最初のタブ（インデックス0）をアクティブにする
+  addClickListener('.other_btn_02', 1); // .other_btn_02ボタンは2番目のタブ（インデックス1）をアクティブにする
+  addClickListener('.other_btn_03', 2); // .other_btn_03ボタンは3番目のタブ（インデックス2）をアクティブにする
+
+  // ページ内リンクのクリックイベントを調整
+  const pageLinks = document.querySelectorAll('a[href*="#"]');
+  pageLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target && !target.classList.contains('tab-03')) { // tab-03 の場合はスクロールしない
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 });
+
 
 
 /*---------------------------------------------------------------
@@ -290,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle hash change in URL
   window.addEventListener('hashchange', scrollToHashElement);
-}());
+}())
 
 
 /*---------------------------------------------------------------

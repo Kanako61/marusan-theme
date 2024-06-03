@@ -30,6 +30,7 @@
         }
 
         h2 {
+            font-size:2rem;
             background:$bk-1;
             padding:0.5em 1em;
             color:$font-default-c;
@@ -38,7 +39,7 @@
             border-bottom:solid 2px $font-default-c;
 
             @media all and (max-width:540px) {
-                font-size:2rem;
+                font-size:1.9rem;
             }
         }
 
@@ -80,8 +81,8 @@
         h5 {
             font-size:1.8rem;
             color:$btn;
-            padding:0em 1em;
-            margin:0.8em 0;
+            padding:0em;
+            margin:0.8em 0.5em;
 
             @media all and (max-width:540px) {
                 font-size:1.6rem;
@@ -118,6 +119,7 @@
 
         img {
             width:auto;
+            max-width:100%;
         }
 
         table {

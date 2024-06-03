@@ -40,7 +40,7 @@ get_header(); ?>
 		</li>
 	</ul>
 	<!--ここからコンテンツエリア-->
-	<div class="single_content content-body">
+	<div class="single_content single-news-content content-body">
 		<?php the_content(); ?>
 	</div>
 	<!--コンテンツエリアここまで-->

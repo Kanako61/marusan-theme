@@ -418,27 +418,20 @@
         .page_company_h2 {
             position:absolute!important;
             z-index:2;
-            width:40vw!important;
-            top:45%;
+            width:46%!important;
+            top:(150/1440)*100vw;
             right:0!important;
-            transform: translatey(-50%);
-            background:$overview-h2-bk;
+            font-size:(30/1440)*100vw!important;
             padding-left:0!important;
 
-            @media all and (min-width:1440px) {
-                font-size:(30/1440)*100vw;
+            @media all and (max-width:1100px) {
+                font-size:(28/1100)*100vw!important;
+                top:(105/1100)*100vw;
             }
 
-            &:before {
-                display:inline-block;
-                content:'';
-                position:absolute;
-                top:0;
-                left:-2.17em;
-                border-top: 2.2em solid $overview-h2-bk;
-                border-bottom: 2.2em solid transparent;
-                border-left: 2.2em solid transparent;
-                line-height: 0;
+            @media all and (max-width:768px) {
+                font-size:(30/768)*100vw!important;
+                top:(53/768)*100vw;
             }
 
             &:after {
@@ -476,7 +469,7 @@
     
             @media all and (max-width:768px) {
                 width:6em;
-                padding:1.5em;
+                padding:1.5em!important;
             }
     
             &:after {
@@ -496,15 +489,16 @@
         }
     
         td {
-            padding:0em 2.5em;
+            padding:1.5em 2.5em!important;
             min-width:450px;
     
             @media all and (max-width:768px) {
-                padding: 0 1.5em;
+                padding: 1.5em!important;
             }
         }
     
         &_address {
+            margin:0;
             dd {
                 margin:0 0 1.5em 0;
             }
@@ -512,10 +506,10 @@
     
         &_scale {
             display:flex;
-            gap:2em;
+            margin:0;
     
             dt {
-                width:9em;
+                width:10em;
             }
     
             dd {
@@ -582,6 +576,7 @@
 
             dl {
                 display:grid;
+                align-items: center;
                 grid-template-columns:1fr 9fr;
                 gap:6em;
                 margin:0;
@@ -593,7 +588,7 @@
                 dt {
                     width:6.5em;
                     position:relative;
-                    padding:0 0 0.6em 0;
+                    padding:0.3em 0;
                     line-height:1.4;
 
                     @media all and (max-width:768px) {
@@ -601,7 +596,7 @@
                     }
 
                     @media all and (max-width:540px) {
-                        padding:0 0 1.2em 0;
+                        padding:0.5em 0;
                     }
 
                     &:before {
@@ -622,7 +617,8 @@
 
                     &:after {
                         position:absolute;
-                        top:0;
+                        top: 55%;
+                        transform:translatey(-50%);
                         right:-3.5em;
                         content:'';
                         display:inline-block;
@@ -640,7 +636,6 @@
 
                     .year {
                         font-size:2.6rem;
-                        padding:1em 0;
 
                         @media all and (max-width:768px) {
                             font-size:2rem;
