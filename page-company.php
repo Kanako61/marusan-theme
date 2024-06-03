@@ -318,27 +318,27 @@ Template Name: Company
         <tr>
             <th>主要設備</th>
             <td>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>横架材プレカット加工ライン</dt>
                     <dd>宮川工機製VX-03W</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>柱材プレカット加工ライン</dt>
                     <dd>宮川工機製MPS-34</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>柱・束プレカット加工機</dt>
                     <dd>宮川工機製MHG-M4</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>羽柄材プレカット加工機</dt>
                     <dd>宮川工機製MPS-25K</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>合板プレカット加工機</dt>
                     <dd>宮川工機製MDP-13、MDP-14</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>2×4組立ライン</dt>
                     <dd>庄内機械製</dd>
                 </dl>
@@ -347,19 +347,19 @@ Template Name: Company
         <tr>
             <th>CAD</th>
             <td>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>トーアエンジニアリング</dt>
                     <dd>Ultimate</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>宮川工機</dt>
                     <dd>MP-CAD8</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>ネットイーグル</dt>
                     <dd>Xstar/FX24</dd>
                 </dl>
-                <dl class="company_table_scale">
+                <dl class="company_table_fc">
                     <dt>福井コンピュータアーキテクト</dt>
                     <dd>アーキトレンドゼロ</dd>
                 </dl>

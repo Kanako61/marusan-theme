@@ -3752,7 +3752,7 @@ p, a, li, dl dt, dl dd {
   display: inline-block;
   background: #BFB9B1;
   width: 3px;
-  height: 100%;
+  height: 120%;
 }
 @media all and (max-width: 768px) {
   .history_list li dl dt:before {
@@ -3850,22 +3850,26 @@ p, a, li, dl dt, dl dd {
 }
 .page_facility .company_table th {
   width: 8em;
+  padding: 1.5em !important;
 }
-.page_facility .company_table_scale {
+.page_facility .company_table td {
+  padding: 0 1.5em !important;
+}
+.page_facility .company_table_fc {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5em;
+  gap: 2em;
 }
 @media all and (max-width: 1000px) {
-  .page_facility .company_table_scale {
+  .page_facility .company_table_fc {
     grid-template-columns: 1fr;
     gap: 0;
   }
 }
-.page_facility .company_table_scale dt {
+.page_facility .company_table_fc dt {
   width: 18em;
 }
-.page_facility .company_table_scale dd {
+.page_facility .company_table_fc dd {
   margin: 0;
 }
 
