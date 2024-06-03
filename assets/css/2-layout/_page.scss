@@ -29,12 +29,20 @@
             }
         }
 
+        a {
+            color:$text-link;
+            transition:all .3s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         h2 {
             font-size:2rem;
             background:$bk-1;
             padding:0.5em 1em;
             color:$font-default-c;
-            margin-top:2em;
             border-top:solid 2px $font-default-c;
             border-bottom:solid 2px $font-default-c;
 
@@ -58,10 +66,10 @@
                 display: inline-block;
                 content: "";
                 position: absolute;
-                top: 55%;
+                top: 50%;
                 left: 0;
                 transform: translatey(-50%);
-                width: 6px;
+                width: 8px;
                 height: 35%;
                 background: $btn;
             }
@@ -103,7 +111,7 @@
 
         ul {
             list-style-type: disc;
-            padding-left:1em;
+            padding-left:1.5em;
             margin:1.5em 0;
         }
 
@@ -360,6 +368,38 @@
         word-wrap:break-word!important;
     }
 }
+
+
+/**====================================================
+    ファイルアイコン
+=====================================================**/
+
+/*PDF*/
+a[href*=".pdf"]::after {
+    content: "\f1c1";
+    font-family: "Font Awesome 5 Free";
+    color: #F30401;
+    padding-left:0.2em;
+}
+
+/*word*/
+a[href*=".doc"]::after,
+a[href*=".docx"]::after {
+  content: "\f1c2";
+  font-family: "Font Awesome 5 Free";
+  color: #0061C2;
+  padding-left:0.2em;
+}
+
+/*Excel*/
+a[href*=".xls"]::after,
+a[href*=".xlsx"]::after {
+  content: "\f1c3";
+  font-family: "Font Awesome 5 Free";
+  color: #1F6F43;
+  padding-left:0.2em;
+}
+
 
 /*アクセス非表示*/
 .page .address {

@@ -110,6 +110,7 @@ function theme_enqueue_styles() {
 	//wp_enqueue_style( 'normalize.css', get_template_directory_uri() . '/assets/css/normalize.css');
 	//wp_enqueue_style( 'locomotive-scroll.min.css', get_template_directory_uri() . '/assets/css/locomotive-scroll.min.css');
 	wp_enqueue_style( 'modal-video.min.css',get_template_directory_uri() . '/assets/css/modal-video.min.css');
+    wp_enqueue_style( 'fontawesome.css','https://use.fontawesome.com/releases/v5.6.1/css/all.css');
 	
     wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css');
 }
