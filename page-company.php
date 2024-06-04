@@ -58,7 +58,7 @@ Template Name: Company
         </p>
         <p class="name">
             <span class="name_ja">前田 英俊</span><br>
-            <span class="name_en">Maeda Hidetoshi</span>
+            <span class="name_en">MAEDA Hidetoshi</span>
         </p>
     </div>
 
@@ -119,8 +119,8 @@ Template Name: Company
         </div>
     </div>
 
-    <div class="js-scrollable-wrap">
-    <table class="company_table page_table js-scrollable">
+    <div>
+    <table class="company_table page_table">
         <colgroup>
         <col span="2" />
         </colgroup>
@@ -310,8 +310,8 @@ Template Name: Company
         <p class="ja">設備</p>
     </h2>
 
-    <div class="js-scrollable-wrap">
-    <table class="company_table page_table js-scrollable">
+    <div>
+    <table class="company_table page_table">
         <colgroup>
         <col span="2" />
         </colgroup>
@@ -332,11 +332,11 @@ Template Name: Company
                 </dl>
                 <dl class="company_table_fc">
                     <dt>羽柄材プレカット加工機</dt>
-                    <dd>宮川工機製MPS-25K</dd>
+                    <dd>宮川工機製MPC-25K</dd>
                 </dl>
                 <dl class="company_table_fc">
                     <dt>合板プレカット加工機</dt>
-                    <dd>宮川工機製MDP-13、MDP-14</dd>
+                    <dd>宮川工機製MDP-11、MDP-13</dd>
                 </dl>
                 <dl class="company_table_fc">
                     <dt>2×4組立ライン</dt>
@@ -357,7 +357,7 @@ Template Name: Company
                 </dl>
                 <dl class="company_table_fc">
                     <dt>ネットイーグル</dt>
-                    <dd>Xstar/FX24</dd>
+                    <dd>Xstar/XF24</dd>
                 </dl>
                 <dl class="company_table_fc">
                     <dt>福井コンピュータアーキテクト</dt>

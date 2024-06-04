@@ -149,7 +149,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>勤務時間</th>
-                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
+                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…10分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>月当たり、1~2回の土曜出勤があります。</dd>
@@ -195,7 +195,7 @@ Template Name: recruit
         <!-- 仕事内容 -->
         <section class="page_recruit_work recruit_section">
           <h2 class="work_h2 page_recruit_h2">仕事内容</h2>
-          <p class="page_recruit_work_text">加工機と制御用のP C を操作して、製材品を加工して木造住宅用の部材を生産します。C A D で出力されたデータの取り込み、加工順に合わせた材料の準備と加工機への投入、加工された製品( 完成品) の検品・梱包と出荷ヤードへの搬出を行います。加工機で対応できない特殊加工が必要となる場合もあり、そういった加工は大工技能を持つベテラン作業員が作業を担当しています。また、今後に備えて若手への技術継承も行っています。シフト制のため、予定が組みやすい。業務上必要な資格は会社負担で取得可能。木材の知識が身に付き、余暇、趣味に役立ちます。
+          <p class="page_recruit_work_text">加工機と制御用のPCを操作して、製材品を加工して木造住宅用の部材を生産します。CADで出力されたデータの取り込み、加工順に合わせた材料の準備と加工機への投入、加工された製品(完成品)の検品・梱包と出荷ヤードへの搬出を行います。加工機で対応できない特殊加工が必要となる場合もあり、そういった加工は大工技能を持つベテラン作業員が作業を担当しています。また、今後に備えて若手への技術継承も行っています。
           </p>
           <div class="topBK-btn">
             <a href="#pageRecruit">上部に戻る</a>
@@ -220,7 +220,7 @@ Template Name: recruit
           <h2 class="schedul_h2 page_recruit_h2">一日の流れ</h2>
           <dl class="schedule_dl">
             <dt>7:45</dt>
-            <dd>毎朝のラジオ体操～全体朝礼～各部署ごとのミーティング</dd>
+            <dd>全体朝礼～各部署ごとのミーティング</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>8:00</dt>
@@ -290,7 +290,7 @@ Template Name: recruit
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>女性はどのくらいの人数働いていますか？</p>
-              <p class="answer"><span class="qa">A</span>加工機オペレーターとしては2020/9月現在で0人ですが、過去にのべ数名の方に勤務いただいた実績があります。また、他職種ですが工場内の業務に従事している方が1名います。</p>
+              <p class="answer"><span class="qa">A</span>加工機オペレーターとしては2024/6月現在で0人ですが、過去にのべ数名の方に勤務いただいた実績があります。</p>
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>喫煙は可能ですか？</p>
@@ -340,11 +340,12 @@ Template Name: recruit
           </div>
         </section>
 
-        <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
-        </div>
-
         <ul class="other_list">
+          <li>
+            <div class="other_list_btn other_btn_01">
+              <a href="#tab-01">加工機オペレーター</a>
+            </div>
+          </li>
           <li>
             <div class="other_list_btn other_btn_02">
               <a href="#tab-02">CADオペレーター</a>
@@ -356,6 +357,11 @@ Template Name: recruit
             </div>
           </li>
         </ul>
+
+        <div class="entry-button">
+            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
+        </div>
+
         </div>
       </li>
 
@@ -449,7 +455,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>勤務時間</th>
-                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
+                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>月当たり、1~2回の土曜出勤があります。</dd>
@@ -520,7 +526,7 @@ Template Name: recruit
           <h2 class="schedul_h2 page_recruit_h2">一日の流れ</h2>
           <dl class="schedule_dl">
             <dt>7:45</dt>
-            <dd>毎朝のラジオ体操～全体朝礼～各部署ごとのミーティング</dd>
+            <dd>全体朝礼～各部署ごとのミーティング</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>8:00</dt>
@@ -620,10 +626,6 @@ Template Name: recruit
           </div>
         </section>
 
-        <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
-        </div>
-
         <ul class="other_list">
           <li>
             <div class="other_list_btn other_btn_01">
@@ -631,12 +633,21 @@ Template Name: recruit
             </div>
           </li>
           <li>
+            <div class="other_list_btn other_btn_02">
+              <a href="#tab-2">CADオペレーター</a>
+            </div>
+          </li>
+          <li>
             <div class="other_list_btn other_btn_03">
               <a href="#tab-03">ドライバー</a>
             </div>
-
           </li>
         </ul>
+
+        <div class="entry-button">
+            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
+        </div>
+
         </div>
       </li>
 
@@ -698,7 +709,7 @@ Template Name: recruit
                 </dl>
               </div>
               <p class="interview_text">
-              私が入社した当初は木造建築については、<span class="color">ほとんど何もわからない状態</span>でしたが、<span class="color">上司の指導や先輩のアドバイス</span>をもらい、今でもこの仕事を続けられているのだと思います。仕事で心掛けていることは、「<span class="color">クレーム０</span>」です。
+              私が入社した当初は木造建築については、<span class="color">ほとんど何もわからない状態</span>でしたが、<span class="color">上司の指導や先輩のアドバイス</span>をもらい、今でもこの仕事を続けられているのだと思います。配達先で「マルサンの材料はいいよね」と言ってもらえるとやりがいを感じます。仕事で心掛けていることは、「<span class="color">クレーム０</span>」です。
               </p>
           </section>
         </div>
@@ -730,7 +741,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>勤務時間</th>
-                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩90分(10:00・15:00…15分 12:00～13:00)
+                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>月当たり、1~2回の土曜出勤があります。</dd>
@@ -755,7 +766,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>必須資格</th>
-                  <td>中型自動車免許・玉掛け技能講習・小型移動式クレーン技能講習</td>
+                  <td>中型自動車免許・玉掛け技能講習・小型移動式クレーン技能講習<br>※入社後、会社負担で取得可</td>
                 </tr>
                 <tr>
                   <th>休日・休暇</th>
@@ -780,7 +791,7 @@ Template Name: recruit
         <!-- 仕事内容 -->
         <section class="page_recruit_work recruit_section">
           <h2 class="work_h2 page_recruit_h2">仕事内容</h2>
-          <p class="page_recruit_work_text">工場で加工した製品(プレカット材)や、一部の住宅資材を建築現場にお届け するお仕事です。プレカット材は現場作業予定に応じて搬入しますが、朝イチ(8:00)までに現場にお届けする場合が多く、距離によっては折り返して1日に何度か搬入する場合もあります。現場搬入時はユニックによる荷降ろしが基本となります。また、その他に小口の素材品(加工していない製材品)の受注品の配達も行います。
+          <p class="page_recruit_work_text">工場で加工した製品(プレカット材)や、一部の住宅資材を建築現場にお届けするお仕事です。プレカット材は現場作業予定に応じて搬入しますが、朝イチ(8:00)までに現場にお届けする場合が多く、距離によっては折り返して1日に何度か搬入する場合もあります。現場搬入時はユニックによる荷降ろしが基本となります。また、その他に小口の素材品(加工していない製材品)の受注品の配達も行います。
           </p>
           <div class="topBK-btn">
             <a href="#pageRecruit">上部に戻る</a>
@@ -825,7 +836,7 @@ Template Name: recruit
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>ユニックや玉掛け、フォークリフトなどの資格は必要ですか？</p>
-              <p class="answer"><span class="qa">A</span>積み込み・荷降ろしには必要になります。<br>※業務上必要な資格は費用を会社が負担して資格することができます。</p>
+              <p class="answer"><span class="qa">A</span>積み込み・荷降ろしには必要になります。<br>※業務上必要な資格は費用を会社が負担して取得することができます。</p>
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>早出・残業はありますか？</p>
@@ -833,7 +844,7 @@ Template Name: recruit
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>荷降ろし以外に、現場で何か対応することはありますか？</p>
-              <p class="answer"><span class="qa">A</span>産工事日程の確認や他物件の搬入路・現場の確認など、お客様からの情報収集を通した営業活動も行います。</p>
+              <p class="answer"><span class="qa">A</span>工事日程の確認や他物件の搬入路・現場の確認など、お客様からの情報収集を通した営業活動も行います。</p>
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>運搬と付随する業務以外に作業をすることはありますか？</p>
@@ -875,10 +886,6 @@ Template Name: recruit
           </div>
         </section>
 
-        <div class="entry-button">
-            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
-        </div>
-
         <ul class="other_list">
           <li>
             <div class="other_list_btn other_btn_01">
@@ -890,7 +897,17 @@ Template Name: recruit
               <a href="#tab-02">CADオペレーター</a>
             </div>
           </li>
+          <li>
+            <div class="other_list_btn other_btn_03">
+              <a href="#tab-03">ドライバー</a>
+            </div>
+          </li>
         </ul>
+
+        <div class="entry-button">
+            <a href="<?php echo home_url('/'); ?>recruit-entory">エントリー</a>
+        </div>
+
         </div>
       </li>
     </ul>

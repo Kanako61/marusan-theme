@@ -860,29 +860,52 @@
         }
     }
 
+    /*下部のボタンリスト*/
     .other_list {
         width:80vw;
         margin:8vw auto;
         display:flex;
         justify-content: center;
-        gap:2em;
+        gap:1.5em;
 
-        @media all and (max-width:800px) {
+        @media all and (max-width:768px) {
             width:90vw;
-            gap:1em;
+            gap:0.5em;
         }
 
         @media all and (max-width:540px) {
             flex-direction:column;
-            margin:18vw auto 8vw;
-          }
+            margin:10vw auto;
+        }
 
         li {
-            width:40%;
+            width: calc(100% / 3);
 
-            @media all and (max-width:768px) {
-                width:auto;
-            }
+            @media all and (max-width:540px) {
+                width:100%;
+            } 
+        }
+    }
+
+    /*下部職種ボタン*/
+    .tab-01.is-display .other_btn_01 {
+        a {
+            background:$tab-01!important;
+            color:#fff;
+        }
+    }
+
+    .tab-02.is-display .other_btn_02 {
+        a {
+            background:$tab-02;
+            color:#fff;
+        }
+    }
+
+    .tab-03.is-display .other_btn_03 {
+        a {
+            background:$tab-03;
+            color:#fff;
         }
     }
 }

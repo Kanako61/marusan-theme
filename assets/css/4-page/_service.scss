@@ -412,15 +412,15 @@
         @media all and (max-width:540px) {
             flex-direction: column-reverse;
         }
+    } 
+    
+    .row-reverse {
+        flex-direction: row-reverse;
 
-        &:nth-child(2n) {
-            flex-direction: row-reverse;
-
-            @media all and (max-width:540px) {
-                flex-direction: column-reverse;
-            }
+        @media all and (max-width:540px) {
+            flex-direction: column-reverse;
         }
-    }   
+    }
 
     &_dl {
         position:relative;

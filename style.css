@@ -513,6 +513,7 @@ a[href*=".pdf"]::after {
   font-family: "Font Awesome 5 Free";
   color: #F30401;
   padding-left: 0.2em;
+  font-size: 1.4em;
 }
 
 /*word*/
@@ -522,6 +523,7 @@ a[href*=".docx"]::after {
   font-family: "Font Awesome 5 Free";
   color: #0061C2;
   padding-left: 0.2em;
+  font-size: 1.4em;
 }
 
 /*Excel*/
@@ -531,6 +533,7 @@ a[href*=".xlsx"]::after {
   font-family: "Font Awesome 5 Free";
   color: #1F6F43;
   padding-left: 0.2em;
+  font-size: 1.4em;
 }
 
 /*アクセス非表示*/
@@ -1624,6 +1627,7 @@ p, a, li, dl dt, dl dd {
 /*エントリーボタン*/
 .entry-button {
   text-align: center;
+  margin: 0 auto 10%;
 }
 .entry-button a {
   display: inline-block;
@@ -1654,14 +1658,25 @@ p, a, li, dl dt, dl dd {
 .other_list_btn a {
   display: block;
   background: #fff;
-  padding: 1em 1em;
+  padding: 1em 0;
   text-align: center;
   font-size: 2rem;
   transition: all 0.3s;
 }
+@media all and (max-width: 1000px) {
+  .other_list_btn a {
+    font-size: 1.9444444444vw;
+  }
+}
 @media all and (max-width: 768px) {
   .other_list_btn a {
-    font-size: 3.125vw;
+    font-size: 2.2135416667vw;
+  }
+}
+@media all and (max-width: 540px) {
+  .other_list_btn a {
+    width: 100%;
+    font-size: 1.6rem;
   }
 }
 .other_list_btn a:hover {
@@ -3543,7 +3558,7 @@ p, a, li, dl dt, dl dd {
   content: "";
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 0.8em;
   left: 0;
   transform: translate(-50%);
   width: 0.8em;
@@ -3608,20 +3623,41 @@ p, a, li, dl dt, dl dd {
   padding: 8% 0 12%;
   background: none;
 }
+@media all and (max-width: 540px) {
+  .page_overview .company_table {
+    padding: 12% 0 12%;
+  }
+}
+@media all and (max-width: 540px) {
+  .page_overview .company_table tr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    margin-bottom: 2em;
+  }
+}
 .page_overview .company_table th {
   position: relative;
-  width: 12em;
+  width: 4em !important;
   border-collapse: separate;
   border-spacing: 5px 10px;
   text-align: start;
   padding: 1.5em 2.5em;
   font-weight: bold;
   vertical-align: baseline;
+  white-space: nowrap;
 }
 @media all and (max-width: 768px) {
   .page_overview .company_table th {
-    width: 6em;
-    padding: 1.5em !important;
+    padding: 1.5em;
+  }
+}
+@media all and (max-width: 540px) {
+  .page_overview .company_table th {
+    padding: 0 0 0.2em 0 !important;
+    font-weight: 600;
+    width: 100% !important;
+    border-bottom: solid 1px #ebeded !important;
   }
 }
 .page_overview .company_table th:after {
@@ -3639,13 +3675,18 @@ p, a, li, dl dt, dl dd {
     width: 1.5px;
   }
 }
-.page_overview .company_table td {
-  padding: 1.5em 2.5em !important;
-  min-width: 450px;
+@media all and (max-width: 540px) {
+  .page_overview .company_table th:after {
+    display: none !important;
+  }
 }
-@media all and (max-width: 768px) {
+.page_overview .company_table td {
+  padding: 1.5em !important;
+  min-width: inherit !important;
+}
+@media all and (max-width: 540px) {
   .page_overview .company_table td {
-    padding: 1.5em !important;
+    padding: 0em !important;
   }
 }
 .page_overview .company_table_address {
@@ -3848,22 +3889,51 @@ p, a, li, dl dt, dl dd {
     margin-bottom: 10%;
   }
 }
+@media all and (max-width: 540px) {
+  .page_facility .company_table tr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    margin-bottom: 2em;
+  }
+}
 .page_facility .company_table th {
-  width: 8em;
+  width: 10em !important;
   padding: 1.5em !important;
+  white-space: nowrap;
+}
+@media all and (max-width: 540px) {
+  .page_facility .company_table th:after {
+    display: none !important;
+  }
+}
+@media all and (max-width: 540px) {
+  .page_facility .company_table th {
+    padding: 0 0 0.2em 0 !important;
+    font-weight: 600;
+    width: 100% !important;
+    border-bottom: solid 1px #ebeded !important;
+  }
 }
 .page_facility .company_table td {
-  padding: 0 1.5em !important;
+  padding: 1.5em !important;
+}
+@media all and (max-width: 540px) {
+  .page_facility .company_table td {
+    padding: 0 !important;
+  }
 }
 .page_facility .company_table_fc {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
+  margin: 0 0 0.1em 0;
 }
 @media all and (max-width: 1000px) {
   .page_facility .company_table_fc {
     grid-template-columns: 1fr;
     gap: 0;
+    margin: 0 0 1em 0;
   }
 }
 .page_facility .company_table_fc dt {
@@ -4417,11 +4487,11 @@ p, a, li, dl dt, dl dd {
     flex-direction: column-reverse;
   }
 }
-.other-precut_list li:nth-child(2n) {
+.other-precut_list .row-reverse {
   flex-direction: row-reverse;
 }
 @media all and (max-width: 540px) {
-  .other-precut_list li:nth-child(2n) {
+  .other-precut_list .row-reverse {
     flex-direction: column-reverse;
   }
 }
@@ -5256,6 +5326,8 @@ p, a, li, dl dt, dl dd {
   /*この仕事の良いところ*/
   /*1日の流れ*/
   /*よくある質問*/
+  /*下部のボタンリスト*/
+  /*下部職種ボタン*/
 }
 .tab-contents .pageRecruit_top_content {
   padding: 8%;
@@ -5718,27 +5790,39 @@ p, a, li, dl dt, dl dd {
   margin: 8vw auto;
   display: flex;
   justify-content: center;
-  gap: 2em;
+  gap: 1.5em;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 768px) {
   .tab-contents .other_list {
     width: 90vw;
-    gap: 1em;
+    gap: 0.5em;
   }
 }
 @media all and (max-width: 540px) {
   .tab-contents .other_list {
     flex-direction: column;
-    margin: 18vw auto 8vw;
+    margin: 10vw auto;
   }
 }
 .tab-contents .other_list li {
-  width: 40%;
+  width: 33.3333333333%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 540px) {
   .tab-contents .other_list li {
-    width: auto;
+    width: 100%;
   }
+}
+.tab-contents .tab-01.is-display .other_btn_01 a {
+  background: #379F77 !important;
+  color: #fff;
+}
+.tab-contents .tab-02.is-display .other_btn_02 a {
+  background: #E67744;
+  color: #fff;
+}
+.tab-contents .tab-03.is-display .other_btn_03 a {
+  background: #5279F4;
+  color: #fff;
 }
 
 /*アクセス非表示*/
@@ -5861,7 +5945,7 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .effort_text dl:before {
     top: inherit;
-    bottom: 3vw;
+    bottom: -1vw;
     left: -5vw;
   }
 }
@@ -5888,7 +5972,7 @@ p, a, li, dl dt, dl dd {
 @media all and (max-width: 768px) {
   .effort_text dl:after {
     top: inherit;
-    bottom: 3vw;
+    bottom: -1vw;
     right: -5vw;
   }
 }
@@ -5908,13 +5992,12 @@ p, a, li, dl dt, dl dd {
 .effort_text_pic {
   width: 60%;
   max-width: 618px;
-  margin: 5% auto 0;
-  padding-bottom: 10%;
+  margin: 5% auto 0 !important;
+  padding-bottom: 10% !important;
 }
 @media all and (max-width: 768px) {
   .effort_text_pic {
     margin: 10% auto 0 !important;
-    padding-bottom: 15%;
   }
 }
 .effort_text_pic p {

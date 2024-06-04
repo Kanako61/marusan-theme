@@ -31,6 +31,7 @@
 /*エントリーボタン*/
 .entry-button {
   text-align: center;
+  margin:0 auto 10%;
 
   a {
     display:inline-block;
@@ -62,13 +63,22 @@
   a {
       display:block;
       background:#fff;
-      padding:1em 1em;
+      padding:1em 0;
       text-align:center;
       font-size:2rem;
       transition: all .3s;
 
+      @media all and (max-width:1000px) {
+        font-size:(28/1440)*100vw;
+      }
+
       @media all and (max-width:768px) {
-        font-size:(24/768)*100vw;
+        font-size:(17/768)*100vw;
+      }
+
+      @media all and (max-width:540px) {
+        width: 100%;
+        font-size:1.6rem;
       }
 
       &:hover {

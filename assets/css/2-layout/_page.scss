@@ -379,6 +379,7 @@ a[href*=".pdf"]::after {
     font-family: "Font Awesome 5 Free";
     color: #F30401;
     padding-left:0.2em;
+    font-size:1.4em;
 }
 
 /*word*/
@@ -388,6 +389,7 @@ a[href*=".docx"]::after {
   font-family: "Font Awesome 5 Free";
   color: #0061C2;
   padding-left:0.2em;
+  font-size:1.4em;
 }
 
 /*Excel*/
@@ -397,6 +399,7 @@ a[href*=".xlsx"]::after {
   font-family: "Font Awesome 5 Free";
   color: #1F6F43;
   padding-left:0.2em;
+  font-size:1.4em;
 }
 
 
