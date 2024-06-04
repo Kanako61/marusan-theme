@@ -14,11 +14,17 @@
     position:relative;
 
     @media all and (max-width:768px) {
-        height:50vh;
+        /*height:50vh;*/
+        height:inherit;
+        padding-top:4.65em;
 
         img {
             height:100%;
         }
+    }
+
+    @media all and (max-width:414px) {
+        padding-top:5.2em;
     }
 
     .copy {
@@ -35,17 +41,12 @@
 
         @media all and (max-width:768px) {
             font-size:(24/768)*100vw;
-            top:40%;
         }
 
         @media all and (max-width:540px) {
             font-size:1.6rem;
             white-space: nowrap;
-            top:39%;
-        }
-
-        @media all and (max-width:320px) {
-            text-shadow: $font-default-c 1px 1px 3px;
+            top:60%;
         }
 
         &:before {

@@ -40,12 +40,12 @@ Template Name: Company
         <div class="page_pic message_pic">
             <picture>
                 <!-- For devices with a minimum width of 768px -->
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_s.webp" type="image/webp" media="(max-width: 768px)">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_s.jpg" media="(max-width: 768px)">
+                <!--<source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_s.webp" type="image/webp" media="(max-width: 768px)">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_s.jpg" media="(max-width: 768px)">-->
                 
                 <!-- For devices with a minimum width of 1100px -->
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_m.webp" type="image/webp" media="(max-width: 1100px)">
-                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_m.jpg" media="(max-width: 1100px)">
+                <!--<source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_m.webp" type="image/webp" media="(max-width: 1100px)">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message_m.jpg" media="(max-width: 1100px)">-->
             
                 <!-- For other devices -->
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/message.webp" type="image/webp">

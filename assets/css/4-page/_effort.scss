@@ -19,11 +19,17 @@
     }
 
     @media all and (max-width:768px) {
-        height:50vh;
+        /*height:50vh;*/
+        height:inherit;
+        margin-top:4.65em;
 
         img {
             height:100%;
         }
+    }
+
+    @media all and (max-width:414px) {
+        margin-top:5.2em;
     }
 
     .copy {

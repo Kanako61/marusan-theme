@@ -18,7 +18,13 @@
         }
 
         @media all and (max-width:768px) {
-            height:40vh;
+            /*height:40vh;*/
+            height:inherit;
+            margin-top:4.65em;
+        }
+
+        @media all and (max-width:414px) {
+            margin-top:5.2em;
         }
     }
 }

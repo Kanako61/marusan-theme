@@ -27,6 +27,10 @@
 .l-site_header {
     background:rgba(62, 98, 114, 0.65);
 
+    @media all and (max-width:768px) {
+        background:$header-bk;
+    }
+
     &:after {
         display:inline-block;
         content:'';
