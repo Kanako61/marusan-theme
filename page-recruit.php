@@ -219,10 +219,6 @@ Template Name: recruit
         <section class="page_recruit_schedul recruit_section">
           <h2 class="schedul_h2 page_recruit_h2">一日の流れ</h2>
           <dl class="schedule_dl">
-            <dt>7:45</dt>
-            <dd>全体朝礼～各部署ごとのミーティング</dd>
-          </dl>
-          <dl class="schedule_dl">
             <dt>8:00</dt>
             <dd>今日の担当ラインに入って作業開始</dd>
           </dl>
@@ -524,10 +520,6 @@ Template Name: recruit
         <!-- 1日の流れ -->
         <section class="page_recruit_schedul recruit_section">
           <h2 class="schedul_h2 page_recruit_h2">一日の流れ</h2>
-          <dl class="schedule_dl">
-            <dt>7:45</dt>
-            <dd>全体朝礼～各部署ごとのミーティング</dd>
-          </dl>
           <dl class="schedule_dl">
             <dt>8:00</dt>
             <dd>今日の作業開始</dd>

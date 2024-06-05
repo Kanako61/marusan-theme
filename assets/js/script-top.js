@@ -1,41 +1,55 @@
 /*---------------------------------------------------------------
 メインビジュアル
 ---------------------------------------------------------------*/
-//画像の設定
-var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-		if (windowwidth > 768){
-			var responsiveImage = [//PC用の画像
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01.jpg'},
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02.jpg'},
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image03.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image04.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07.jpg'}
-			];
-		} else {
-			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01_sp.jpg'},
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02_sp.jpg'},
-				{ src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image03_sp.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image04_sp.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05_sp.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06_sp.jpg'},
-        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07_sp.jpg'}
-			];
-		}
+/*画像設定*/
 
-//Vegas全体の設定
+var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+/*if (windowwidth > 768){*/
+    var responsiveImage = [ // PC用の画像
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image03.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image04.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07.jpg' }
+    ];
+/*} else {
+    var responsiveImage = [ // タブレットサイズ（768px）以下用の画像
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image01_sp.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image02_sp.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image03_sp.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image04_sp.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image05_sp.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image06_sp.jpg' },
+        { src: $('#l-body').attr('data-tmpdir') + 'assets/images/top/main_image07_sp.jpg' }
+    ];
+}*/
+
+// 配列をランダムにシャッフルする関数
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+// responsiveImage配列をシャッフル
+shuffleArray(responsiveImage);
+
+// Vegas全体の設定
 $('#slider').vegas({
-		overlay: true,//画像の上に網線やドットのオーバーレイパターン画像を指定。
-		transition: 'fade2',//切り替わりのアニメーション。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
-		transitionDuration: 2000,//切り替わりのアニメーション時間をミリ秒単位で設定
-		delay: 5000,//スライド間の遅延をミリ秒単位で。
-		animationDuration: 20000,//スライドアニメーション時間をミリ秒単位で設定
-		animation: 'random',//スライドアニメーションの種類。
-		slides: responsiveImage,//画像設定を読む
-		//timer:false,// プログレスバーを非表示したい場合はこのコメントアウトを外してください
-	});
+    overlay: true, 
+    transition: 'fade2',
+    transitionDuration: 2000,
+    delay: 5000,
+    animationDuration: 20000,
+    animation: 'random',
+    slides: responsiveImage,
+    // timer:false // プログレスバーを非表示したい場合はこのコメントアウトを外す
+});
 
 
 /*---------------------------------------------------------------

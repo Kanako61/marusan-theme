@@ -128,9 +128,9 @@ Template Name: Company
             <td>
                 <dl class="company_table_address">
                     <dt>本社</dt>
-                    <dd>〒964-0313 福島県二本松市小浜字鳥居町27-3<br>TEL 0243-55-2255 FAX 0243-55-2589</dd>
+                    <dd>〒964-0313 福島県二本松市小浜字鳥居町27-3<br>TEL 0243-55-2255　<br class="tab_br">FAX 0243-55-2589</dd>
                     <dt>工場</dt>
-                    <dd>〒964-0315 福島県二本松市成田字柏崎214<br>TEL 0243-55-2626 FAX 0243-55-2585</dd>
+                    <dd>〒964-0315 福島県二本松市成田字柏崎214<br>TEL 0243-55-2626　<br class="tab_br">FAX 0243-55-2585</dd>
                 </dl>
             </td>
         </tr>
@@ -166,10 +166,7 @@ Template Name: Company
         <tr>
             <th>業務内容</th>
             <td>
-                在来軸組工法のプレカット / 金物工法のプレカット /<br>
-                在来パネル材 / ２×４工法用パネル材 / 現場吹付断熱の施工 /<br>
-                羽柄プレカット材の製造販売 / これらに関連する木材、造作材、建築金物、建材等の小売販売/在来軸組工法の建方工事 /<br>
-                構造計算業務
+                在来軸組工法のプレカット / 金物工法のプレカット / 在来パネル材 / ２×４工法用パネル材 / 現場吹付断熱の施工 / 羽柄プレカット材 / これらに関連する木材、造作材、建築金物、建材等の小売販売 / 在来軸組工法の建方工事 / 構造計算業務
             </td>
         </tr>
     </table>
@@ -327,7 +324,7 @@ Template Name: Company
                 </dl>
                 <dl class="company_table_fc">
                     <dt>合板プレカット加工機</dt>
-                    <dd>宮川工機製MDP-11、MDP-13</dd>
+                    <dd>宮川工機製MPD-11、MPD-13</dd>
                 </dl>
                 <dl class="company_table_fc">
                     <dt>2×4組立ライン</dt>
@@ -348,7 +345,7 @@ Template Name: Company
                 </dl>
                 <dl class="company_table_fc">
                     <dt>ネットイーグル</dt>
-                    <dd>Xstar/XF24</dd>
+                    <dd>Xstar / XF24</dd>
                 </dl>
                 <dl class="company_table_fc">
                     <dt>福井コンピュータアーキテクト</dt>
@@ -358,7 +355,7 @@ Template Name: Company
         </tr>
         <tr>
             <th>対応金物工法</th>
-            <td>クレテックP3/HSS/SSマルチ/プレセッターSU等</td>
+            <td>クレテックP3 / HSS / SSマルチ / プレセッターSU等</td>
         </tr>
     </table>
     </div>

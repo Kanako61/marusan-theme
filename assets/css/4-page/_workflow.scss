@@ -47,6 +47,8 @@
 }
 
 .page_flow {
+    margin:10% 0 15%;
+
     /*ご注文の流れ見出し*/
     .page_workflow_h2 {
         display:inline-block;
@@ -61,7 +63,7 @@
         }
 
         @media all and (max-width:768px) {
-            margin-bottom:18%;
+            margin-bottom:15%;
             font-size:2rem;
         }
 
@@ -113,7 +115,7 @@
         font-size:2rem;
         font-weight:400;
         color:$h2-c;
-        margin:0 0 4em;
+        margin:0 0 3em;
 
         @media all and (max-width:768px) {
             font-size:1.8rem;
@@ -150,8 +152,8 @@
                 position:absolute;
                 top:-10%;
                 left:-50%;
-                width:124%;
-                height:108%;
+                width: 2.8em;
+                height: 1.9em;
                 background:$workflow-num-bk;
                 z-index:-1;
             }

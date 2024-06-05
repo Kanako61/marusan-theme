@@ -125,6 +125,15 @@ LOADING
   }
 }
 
+.pc_br2 {
+  display: block;
+}
+@media all and (max-width: 1100px) {
+  .pc_br2 {
+    display: none;
+  }
+}
+
 .tab_br {
   display: none;
 }
@@ -767,24 +776,20 @@ a[href*=".xlsx"]::after {
   display: flex;
   gap: 0 2em;
   justify-content: space-between;
+  background: rgba(62, 98, 114, 0.65);
   align-items: center;
   z-index: 6;
   padding: 1.5rem 3rem;
   transition: all 0.3s;
 }
+@media all and (max-width: 768px) {
+  .l-site_header {
+    background: rgba(122, 148, 159, 0.9);
+  }
+}
 @media all and (max-width: 540px) {
   .l-site_header {
     padding: 1.5rem 1rem;
-  }
-}
-
-/*トップページのみ*/
-.l-site_header {
-  background: rgba(62, 98, 114, 0.65);
-}
-@media all and (max-width: 768px) {
-  .l-site_header {
-    background: #7a949f;
   }
 }
 .l-site_header:after {
@@ -1473,7 +1478,7 @@ p, a, li, dl dt, dl dd {
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #98C0CC;
+  background: rgba(152, 192, 204, 0.92);
   padding: 15% 10%;
   margin: 0;
   z-index: 3;
@@ -4552,6 +4557,12 @@ p, a, li, dl dt, dl dd {
   background: #fff;
   padding: 8% 8%;
   margin: 0;
+  min-height: 448px;
+}
+@media all and (max-width: 540px) {
+  .other-precut_list_dl {
+    min-height: inherit;
+  }
 }
 .other-precut_list_dl:before {
   position: absolute;
@@ -6514,6 +6525,7 @@ p, a, li, dl dt, dl dd {
 }
 
 .page_flow {
+  margin: 10% 0 15%;
   /*ご注文の流れ見出し*/
   /*各項目の見出し*/
 }
@@ -6532,7 +6544,7 @@ p, a, li, dl dt, dl dd {
 }
 @media all and (max-width: 768px) {
   .page_flow .page_workflow_h2 {
-    margin-bottom: 18%;
+    margin-bottom: 15%;
     font-size: 2rem;
   }
 }
@@ -6580,7 +6592,7 @@ p, a, li, dl dt, dl dd {
   font-size: 2rem;
   font-weight: 400;
   color: #736a5f;
-  margin: 0 0 4em;
+  margin: 0 0 3em;
 }
 @media all and (max-width: 768px) {
   .page_flow .page_flow_tit {
@@ -6618,8 +6630,8 @@ p, a, li, dl dt, dl dd {
   position: absolute;
   top: -10%;
   left: -50%;
-  width: 124%;
-  height: 108%;
+  width: 2.8em;
+  height: 1.9em;
   background: #B4D1DA;
   z-index: -1;
 }

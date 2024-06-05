@@ -52,7 +52,7 @@
   <div class="company_c">
     <h2 class="top_h2">私たちの思い</h2>
     <p class="company_c_text">
-    昭和10年の創業以来、<br>私たちは木材の加工を通じて、<br class="tab2_br sp_br">木造建築業界の課題解決に貢献してきました。<br>令和になった今、<br class="tab2_br sp_br">建築業界も新しい時代を迎えようとしています。<br>これからも私たちは新たなことに挑戦し、家づくりの未来を創造してまいります。</p>
+    昭和10年の創業以来、<br>私たちは木材の加工を通じて、<br class="tab2_br sp_br">木造建築業界の課題解決に貢献してきました。<br>令和になった今、<br class="tab2_br sp_br">建築業界も新しい時代を迎えようとしています。<br>これからも私たちは新たなことに挑戦し、<br class="tab2_br sp_br">家づくりの未来を創造してまいります。</p>
     <div class="top-button">
       <a href="<?php echo home_url('/'); ?>company">会社情報</a>
     </div>
