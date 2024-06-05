@@ -21,6 +21,10 @@
     line-height:1.8;
     letter-spacing: 0.2em;
     color:$font-default-c;
+
+    @media all and (max-width:1100px) {
+      letter-spacing: 0.1em;
+    } 
   } 
 }
 
@@ -72,21 +76,17 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   width: 100%;
   height: 90vh;
 
-  @media all and (max-width:1440px) {
+  @media all and (max-width:1200px) {
     height:(700/1440)*100vw;
   }
 
   @media all and (max-width:768px) {
-    margin-top:4.65em;
+    margin-top:4.4em;
   }
 
   @media all and (max-width:414px) {
-    margin-top:5.2em;
-}
-
-  /*@media all and (max-width:540px) {
-    height:80vh;
-  }*/
+    margin-top:4.8em;
+  }
 
   &:after {
     display:inline-block;
@@ -108,20 +108,6 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
   bottom:3vw;
   width:(925/1440)*100vw;
   height:(270/1440)*100vw;
-
-  /*@media all and (max-width: 1024px) {
-    bottom:5vw;
-    width: 90%;
-    height: auto;
-    width:(925/1440)*100vw;
-    height:(270/1440)*100vw;
-  }
-
-  @media all and (max-width: 540px) {
-    bottom: 30vw;
-     min-width: 260px;
-     height: auto;
-  }*/
 }
 
 /*movie*/
@@ -213,7 +199,7 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
     @media all and (max-width:540px) {
       margin:25% 8vw 20%;
-      text-align:left;
+      /*text-align:left;*/
     }
 
     &:before {
@@ -256,6 +242,11 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
     &_text {
       margin-bottom:12%;
+
+      @media all and (max-width:1100px) {
+        max-width:500px;
+        margin:0 auto 8%;
+      }
     }
 
     .top_h2 {
@@ -275,6 +266,11 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
 
      p {
       letter-spacing: 0.4em;
+
+      @media all and (max-width:540px) {
+        letter-spacing: 0.2em;
+        font-size:96%;
+      }
      }
   }
 }
@@ -1097,7 +1093,9 @@ $top-box-shadow:0.5em 0.5em 1em rgba(234, 234, 234, 0.3);
     margin-bottom:5%;
 
     @media all and (max-width:540px) {
-      text-align: left;
+      /*text-align: left;*/
+      max-width:86%;
+      margin:0 auto 5%;
     }
   }
 }

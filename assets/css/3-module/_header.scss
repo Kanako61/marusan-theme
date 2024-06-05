@@ -54,7 +54,11 @@
     }
 
     img {
-    padding:1em 0;
+        padding:1em 0;
+
+        @media all and (max-width:768px) {
+            width:90%;
+        }
     }
 }
 

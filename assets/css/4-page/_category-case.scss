@@ -1,8 +1,10 @@
 /* case 共通 */
-.case_main .page_content {
-    width:100%;
-    max-width: none;
-    margin:0;
+.category-case_main .category_container {
+    margin-bottom:10%;
+
+    @media all and (max-width:768px) {
+        margin-bottom:18%;
+    }
 }
 
 /* トップ画像 */
@@ -12,14 +14,15 @@
     @media all and (max-width:768px) {
         /*height:50vh;*/
         height:inherit;
-        padding-top:4.65em;
+        padding-top:4.4em;
+
         img {
             height:100%;
         }
     }
 
     @media all and (max-width:414px) {
-        padding-top:5.2em;
+        padding-top:4.8em;
     }
 }
 

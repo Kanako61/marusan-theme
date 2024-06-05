@@ -188,20 +188,12 @@
 
             @media all and (max-width:768px) {
                 height:inherit;
-                margin-top:4.65em;
+                margin-top:4.4em;
             }
 
             @media all and (max-width:414px) {
-                margin-top:5.2em;
+                margin-top:4.8em;
             }
-
-            /*@media all and (max-width:1100px) {
-                height:(703/1440)*100vw;
-            }
-
-            @media all and (max-width:768px) {
-                height:(645/768)*100vw;
-            }*/
 
             img {
                 height:100%;
@@ -218,13 +210,11 @@
 
             @media all and (max-width:1100px) {
                 font-size:(28/1100)*100vw;
-                /*top:(260/1100)*100vw;*/
                 top:40%;
             }
 
             @media all and (max-width:768px) {
                 font-size:(28/768)*100vw;
-                /*top:(296/768)*100vw;*/
                 top:35%;
             }
         }
@@ -242,7 +232,6 @@
 
             @media all and (max-width:1100px) {
                 font-size:(26/1100)*100vw;
-                /*top:(320/1100)*100vw;*/
                 top:53%;
                 left:(100/1100)*100vw;
                 line-height:1.4;
@@ -250,7 +239,6 @@
 
             @media all and (max-width:768px) {
                 font-size:(22/768)*100vw;
-                /*top:(436/768)*100vw;*/
                 top:51%;
                 left:(30/768)*100vw;
             }
@@ -269,7 +257,6 @@
 
             @media all and (max-width:1100px) {
                 font-size:(28/1100)*100vw;
-                /*top:(400/1100)*100vw;*/
                 top:72%;
                 right:(130/1100)*100vw;
                 line-height:1.2;
@@ -277,7 +264,6 @@
 
             @media all and (max-width:768px) {
                 font-size:(24/768)*100vw;
-                /*top:(510/768)*100vw;*/
                 top:70%;
                 right:(50/768)*100vw;
             }
@@ -329,7 +315,6 @@
                 margin:0;
 
                 .message_text {
-                    line-height:2.1;
                     margin:1em 0;
                 }
             }

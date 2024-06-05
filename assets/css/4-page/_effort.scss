@@ -2,9 +2,6 @@
    取り組み共通
 =====================================================*/
 .effort {
-    p, dl dt, dl dd {
-        line-height:2.2;
-    }
 
 /* トップ画像 */
 .page_title-pic {
@@ -21,7 +18,7 @@
     @media all and (max-width:768px) {
         /*height:50vh;*/
         height:inherit;
-        margin-top:4.65em;
+        margin-top:4.4em;
 
         img {
             height:100%;
@@ -29,13 +26,13 @@
     }
 
     @media all and (max-width:414px) {
-        margin-top:5.2em;
+        margin-top:4.8em;
     }
 
     .copy {
         position:absolute;
         top:55%;
-        left:45%;
+        left:50%;
         transform:translate(-50%, -50%);
         font-size:2.4rem;
         font-weight:600;

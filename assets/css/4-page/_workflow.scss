@@ -3,29 +3,48 @@
     position:relative;
 
     @media all and (max-width:768px) {
-        height:50vh;
+        height:inherit;
+        margin-top:4.4em;
 
         img {
             height:100%;
         }
+    }
+
+    @media all and (max-width:414px) {
+        margin-top:4.8em;
     }
 }
 
 .page_workflow_h1 {
     display:inline-block;
     position:absolute;
-    top:50%;
-    left:45%;
-    transform: translate(-50%, -50%);
+    top:(225/1440)*100vw;
+    left:50%;
+    transform: translatex(-50%);
     color:#fff;
     letter-spacing: 0.2em;
     text-align:center;
 
+    @media all and (max-width:1440px) {
+        font-size:(32/1440)*100vw;
+    }
+
+    @media all and (max-width:1100px) {
+        font-size:(30/1100)*100vw;
+        text-shadow: #333 1px 0 5px;
+    }
+
     @media all and (max-width:768px) {
-        font-size:2.4rem;
+        font-size:(30/768)*100vw;
+        top:50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media all and (max-width:414px) {
+        font-size:(24/540)*100vw;
     }
 }
-
 
 .page_flow {
     /*ご注文の流れ見出し*/
@@ -82,7 +101,6 @@
 
         p {
             text-align:center;
-            font-weight:400;
         }
     }
 
@@ -352,37 +370,53 @@
         width:80%;
         position:relative;
         font-size:2rem;
-        font-weight:400;
         color:$h2-c;
         margin:0 auto 4em;
         text-align:center;
 
         @media all and (max-width:768px) {
             font-size:1.8rem;
+            margin:0 auto 2em;
+        }
+
+        @media all and (max-width:540px) {
+            height: 30px;
         }
 
         &:before {
             content:'';
             display:inline-block;
             position:absolute;
-            top:-60%;
-            left:-5%;
-            width:14%;
+            top:-90%;
+            left:-8%;
+            width:5em;
             height:190%;
             background:$workflow-num-bk;
             z-index:-1;
+
+            @media all and (max-width:768px) {
+                width: 4em;
+                height: 2.7em;
+                top: -50%;
+                left: -6%;
+            }
         }
 
         &:after {
             content:'';
             display:inline-block;
             position:absolute;
-            bottom:-60%;
+            bottom:-0.8em;
             right:0;
             width:100%;
-            height:1.8em;
+            height:90%;
             background:$bk-2;
             z-index:-1;
+
+            @media all and (max-width:768px) {
+                height:75%;
+                bottom:-0.5em;
+            }
         }
     }
 

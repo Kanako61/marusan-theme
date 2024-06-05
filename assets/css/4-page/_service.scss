@@ -2,9 +2,6 @@
    事業案内共通
 =====================================================*/
 .service {
-    p, dl dt, dl dd {
-        line-height:2.2;
-    }
 
     /*トップ画像*/
     .page_title-pic {
@@ -20,11 +17,11 @@
         @media all and (max-width:768px) {
             /*height:40vh;*/
             height:inherit;
-            margin-top:4.65em;
+            margin-top:4.4em;
         }
 
         @media all and (max-width:414px) {
-            margin-top:5.2em;
+            margin-top:4.8em;
         }
     }
 }
