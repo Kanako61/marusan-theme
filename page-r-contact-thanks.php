@@ -1,8 +1,8 @@
 <?php
 /*
-Template Name: contact-thanks
+Template Name: recruit-entory-thanks
 */
-/* contact-thanks */
+/* recruit-entory-thanks */
 ?>
 
 <?php get_header(); ?>
@@ -12,13 +12,6 @@ Template Name: contact-thanks
     <p>Loading...</p>
     <div id="loading-screen"></div>
 </div>-->
-
-<!-- ローディング画面 -->
-<!--<div id="loading">
-  <p>Loading...</p>
-  <div id="loading-screen"></div>
-</div>
--->
 
 <main class="l-contents-main page_main page_contact_main">
 	<div class="page_content">

@@ -13,13 +13,6 @@ Template Name: contact-thanks
     <div id="loading-screen"></div>
 </div>-->
 
-<!-- ローディング画面 -->
-<!--<div id="loading">
-  <p>Loading...</p>
-  <div id="loading-screen"></div>
-</div>
--->
-
 <main class="l-contents-main page_main page_contact_main">
 	<div class="page_content">
 		<div class="content__wrap">
