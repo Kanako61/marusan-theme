@@ -53,6 +53,8 @@
                 position:absolute;
                 top:5.4em;
                 left:0;
+                max-height: 80vh;
+                overflow-y: auto;
                 background:$sub-nav-bk;
                 display:none;
 

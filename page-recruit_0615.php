@@ -145,7 +145,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>基本給</th>
-                  <td>180,000～250,000円（年齢・経験・能力等を考慮し決定）</td>
+                  <td>175,000～250,000円（年齢・経験・能力等を考慮し決定）</td>
                 </tr>
                 <tr>
                   <th>勤務時間</th>
@@ -174,7 +174,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>休日・休暇</th>
-                  <td>日曜・祝祭日、年間休日：110日</td>
+                  <td>日曜・祝祭日、年間休日：108日</td>
                 </tr>
                 <tr>
                   <th>待遇・福利厚生</th>
@@ -227,12 +227,12 @@ Template Name: recruit
             <dd>休憩</dd>
           </dl>
           <dl class="schedule_dl">
-            <dt>10:10</dt>
+            <dt>10:15</dt>
             <dd>作業再開</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>12:00</dt>
-            <dd>お昼休憩<br>※お弁当(一食380円)が当日朝まで注文可能<br>※テレビ・冷暖房・給湯設備のある食堂スペースあり</dd>
+            <dd>お昼休憩<br>※お弁当(一食350円)が当日朝まで注文可能<br>※テレビ・冷暖房・給湯設備のある食堂スペースあり</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>13:00</dt>
@@ -243,7 +243,7 @@ Template Name: recruit
             <dd>休憩</dd>
           </dl>
           <dl class="schedule_dl">
-            <dt>15:10</dt>
+            <dt>15:15</dt>
             <dd>作業再開</dd>
           </dl>
           <dl class="schedule_dl">
@@ -447,11 +447,11 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>基本給</th>
-                  <td>180,000～250,000円（年齢・経験・能力等を考慮し決定）</td>
+                  <td>175,000～250,000円（年齢・経験・能力等を考慮し決定）</td>
                 </tr>
                 <tr>
                   <th>勤務時間</th>
-                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…10分 12:00～13:00)
+                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>月当たり、1~2回の土曜出勤があります。</dd>
@@ -462,7 +462,11 @@ Template Name: recruit
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【残業について】</dt>
-                      <dd>受注状況・生産状況によりますが、多くても1日2時間程度です。残業の場合、定時から10分間の休憩があります。</dd>
+                      <dd>受注状況・生産状況によりますが、多くても1日2時間程度まで、日勤で言えば19時くらいまでです。残業の場合、定時から10分間の休憩があります。</dd>
+                    </dl>
+                    <dl class="recruit_table_dl">
+                      <dt>【夜勤について】</dt>
+                      <dd>一部のラインでは二交代制での生産をしていますので、習熟後に夜勤に入っていただく可能性があります。</dd>
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【休暇について】</dt>
@@ -472,7 +476,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>休日・休暇</th>
-                  <td>日曜・祝祭日、年間休日：110日</td>
+                  <td>日曜・祝祭日、年間休日：108日</td>
                 </tr>
                 <tr>
                   <th>待遇・福利厚生</th>
@@ -525,12 +529,12 @@ Template Name: recruit
             <dd>休憩</dd>
           </dl>
           <dl class="schedule_dl">
-            <dt>10:10</dt>
+            <dt>10:15</dt>
             <dd>作業再開</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>12:00</dt>
-            <dd>お昼休み　自席・食堂などで昼食やお昼寝など<br>※お弁当(一食380円)が当日朝まで注文可能<br>※テレビ・冷暖房・給湯設備のある食堂スペースあり</dd>
+            <dd>お昼休み　自席・食堂などで昼食やお昼寝など<br>※お弁当(一食350円)が当日朝まで注文可能<br>※テレビ・冷暖房・給湯設備のある食堂スペースあり</dd>
           </dl>
           <dl class="schedule_dl">
             <dt>13:00</dt>
@@ -541,7 +545,7 @@ Template Name: recruit
             <dd>休憩</dd>
           </dl>
           <dl class="schedule_dl">
-            <dt>15:10</dt>
+            <dt>15:15</dt>
             <dd>作業再開</dd>
           </dl>
           <dl class="schedule_dl">
@@ -572,7 +576,7 @@ Template Name: recruit
 
             <li>
               <p class="question"><span class="qa">Q</span>女性はどのくらいの人数働いていますか？</p>
-              <p class="answer"><span class="qa">A</span>2024/6現在、CADオペレーター全12人中6人が女性です。</p>
+              <p class="answer"><span class="qa">A</span>2020/9現在、CADオペレーター全12人中6人が女性です。</p>
             </li>
             <li>
               <p class="question"><span class="qa">Q</span>産休・育休の取得実績を教えてください。</p>
@@ -725,11 +729,11 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>基本給</th>
-                  <td>180,000～250,000円（年齢・経験・能力等を考慮し決定）</td>
+                  <td>175,000～250,000円（年齢・経験・能力等を考慮し決定）</td>
                 </tr>
                 <tr>
                   <th>勤務時間</th>
-                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…10分 12:00～13:00)
+                  <td>8:00-17:00（1月～3月）<br>8:00-17:30（4月～12月）<br>休憩80分(10:00・15:00…15分 12:00～13:00)
                     <dl class="recruit_table_dl">
                       <dt>【出勤について】</dt>
                       <dd>月当たり、1~2回の土曜出勤があります。</dd>
@@ -740,7 +744,11 @@ Template Name: recruit
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【残業について】</dt>
-                      <dd>受注状況・生産状況によりますが、遠方の現場の場合、早出・残業となる場合があります。</dd>
+                      <dd>受注状況・生産状況によりますが、多くても1日2時間程度まで、日勤で言えば19時くらいまでです。残業の場合、定時から10分間の休憩があります。</dd>
+                    </dl>
+                    <dl class="recruit_table_dl">
+                      <dt>【夜勤について】</dt>
+                      <dd>一部のラインでは二交代制での生産をしていますので、習熟後に夜勤に入っていただく可能性があります。</dd>
                     </dl>
                     <dl class="recruit_table_dl">
                       <dt>【休暇について】</dt>
@@ -754,7 +762,7 @@ Template Name: recruit
                 </tr>
                 <tr>
                   <th>休日・休暇</th>
-                  <td>日曜・祝祭日、年間休日：110日</td>
+                  <td>日曜・祝祭日、年間休日：108日</td>
                 </tr>
                 <tr>
                   <th>待遇・福利厚生</th>

@@ -75,11 +75,11 @@ Template Name: Company
     </section>
 
     <!--====================================================
-        Philosophy　企業理念
+        Philosophy　経営理念
     =====================================================-->
     <div id="rinen" class="offset"></div>
     <section class="page_section rinen">
-        <h2 class="page_section_h2 page_company_h2 pattern01">企業理念</h2>
+        <h2 class="page_section_h2 page_company_h2 pattern01">経営理念</h2>
 
         <ul class="rinen_list">
             <li>私達はお客様に信頼される誠実な仕事をします。</li>

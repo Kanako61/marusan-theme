@@ -165,7 +165,7 @@
     </div>
     <div class="top_case_content">
       <h2 class="top_h2">納入事例</h2>
-      <p class="top_case_text">これまで当社のプレカットによって建てられた建物は4万棟以上。<br class="pc_br">日本における近代住宅建築の発展と共に歩んできました。<br class="pc_br">数えきれない納入事例の中から、住宅の垣根を超えた建築の実例を紹介します。</p>
+      <p class="top_case_text">これまで当社のプレカットによって建てられた建物は4万棟以上。<br class="pc_br">日本における近代住宅建築の発展と共に歩んできました。<br class="pc_br">数えきれない導入の一例と、住宅の垣根を超えた建築の実例を紹介します。</p>
       <div class="top-button">
         <a href="<?php echo get_term_link('case', 'category'); ?>">より詳しく</a>
       </div>

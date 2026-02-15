@@ -369,7 +369,7 @@
 =====================================================**/
 
 /*PDF*/
-a[href*=".pdf"]::after {
+a[href*=".pdf"]:not(:has(img))::after {
     content: "\f1c1";
     font-family: "Font Awesome 5 Free";
     color: #F30401;
@@ -397,6 +397,13 @@ a[href*=".xlsx"]::after {
   font-size:1.4em;
 }
 
+/*youtube動画*/
+iframe[src*="youtube.com"],
+iframe[src*="youtu.be"] {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
 
 /*アクセス非表示*/
 .page .address {

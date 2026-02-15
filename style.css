@@ -163,6 +163,18 @@ LOADING
   }
 }
 
+/*マージン*/
+.u-mt3per {
+  margin-top: 3%;
+}
+
+/*フォントサイズ*/
+.text-small {
+  display: block;
+  font-size: 80%;
+  line-height: 2;
+}
+
 /*行揃え*/
 .text-c {
   text-align: center;
@@ -523,7 +535,7 @@ LOADING
     ファイルアイコン
 =====================================================**/
 /*PDF*/
-a[href*=".pdf"]::after {
+a[href*=".pdf"]:not(:has(img))::after {
   content: "\f1c1";
   font-family: "Font Awesome 5 Free";
   color: #F30401;
@@ -549,6 +561,14 @@ a[href*=".xlsx"]::after {
   color: #1F6F43;
   padding-left: 0.2em;
   font-size: 1.4em;
+}
+
+/*youtube動画*/
+iframe[src*="youtube.com"],
+iframe[src*="youtu.be"] {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
 }
 
 /*アクセス非表示*/
@@ -588,10 +608,6 @@ a[href*=".xlsx"]::after {
 .archive .archive_container .archive_news_list {
   color: #736a5f;
   /* サムネイル */
-  /* タイトル */
-  /* カテゴリー */
-  /* 日時 */
-  /* 本文抜粋表示 */
 }
 .archive .archive_container .archive_news_list .item_pic {
   margin-bottom: 0.6em;
@@ -604,6 +620,9 @@ a[href*=".xlsx"]::after {
 .archive .archive_container .archive_news_list .item_pic a {
   display: block;
   width: 100%;
+}
+.archive .archive_container .archive_news_list {
+  /* タイトル */
 }
 .archive .archive_container .archive_news_list .item_title {
   font-size: 1.5rem;
@@ -620,6 +639,9 @@ a[href*=".xlsx"]::after {
   .archive .archive_container .archive_news_list .item_inner {
     display: block;
   }
+}
+.archive .archive_container .archive_news_list {
+  /* カテゴリー */
 }
 .archive .archive_container .archive_news_list .post-categories {
   display: flex;
@@ -638,9 +660,15 @@ a[href*=".xlsx"]::after {
   border-radius: 3em;
   padding: 0.1em 0.6em;
 }
+.archive .archive_container .archive_news_list {
+  /* 日時 */
+}
 .archive .archive_container .archive_news_list .item_time {
   font-size: 1.2rem;
   letter-spacing: 0.1em;
+}
+.archive .archive_container .archive_news_list {
+  /* 本文抜粋表示 */
 }
 .archive .archive_container .archive_news_list .item_excerpt {
   font-size: 1.2rem;
@@ -651,11 +679,13 @@ a[href*=".xlsx"]::after {
 /*記事ページここから*/
 .single {
   background: #F9FDFD;
-  /*記事ページ入力エリアここから*/
 }
 .single_main {
   line-height: 1.8;
   overflow: hidden;
+}
+.single {
+  /*記事ページ入力エリアここから*/
 }
 .single_container {
   margin: 0 auto;
@@ -1328,8 +1358,6 @@ p, a, li, dl dt, dl dd {
   display: flex;
   color: #736a5f;
   margin: 0;
-  /*PC時サブメニュー*/
-  /*sp時サブメニュー*/
 }
 .menu-global-container .global-nav__menu .menu-item-object-page, .menu-global-container .global-nav__menu .menu-item-object-category {
   list-style-type: none;
@@ -1354,6 +1382,9 @@ p, a, li, dl dt, dl dd {
     padding: 2em 1em;
   }
 }
+.menu-global-container .global-nav__menu {
+  /*PC時サブメニュー*/
+}
 @media all and (min-width: 901px) {
   .menu-global-container .global-nav__menu .menu-item-object-page:hover, .menu-global-container .global-nav__menu .menu-item-object-category:hover {
     background: rgba(99, 130, 142, 0.8);
@@ -1366,6 +1397,8 @@ p, a, li, dl dt, dl dd {
     position: absolute;
     top: 5.4em;
     left: 0;
+    max-height: 80vh;
+    overflow-y: auto;
     background: rgba(95, 131, 173, 0.8);
     display: none;
   }
@@ -1385,10 +1418,10 @@ p, a, li, dl dt, dl dd {
     display: block;
   }
 }
+.menu-global-container .global-nav__menu {
+  /*sp時サブメニュー*/
+}
 @media all and (max-width: 900px) {
-  .menu-global-container .global-nav__menu {
-    /* サブメニュー表示用のスタイル */
-  }
   .menu-global-container .global-nav__menu .menu-item-has-children {
     position: relative;
   }
@@ -1455,6 +1488,9 @@ p, a, li, dl dt, dl dd {
     display: block !important;
     width: 13px !important;
     height: 11px !important;
+  }
+  .menu-global-container .global-nav__menu {
+    /* サブメニュー表示用のスタイル */
   }
   .menu-global-container .global-nav__menu .menu-item-has-children.active .sub-menu {
     display: block;
@@ -2275,16 +2311,18 @@ p, a, li, dl dt, dl dd {
   height: 9.7916666667vw;
   border-radius: 0.5rem;
   overflow: hidden;
-  /*@media all and (max-width:540px) {
-    width:(154/540)*100vw;
-    height:(102/540)*100vw;
-  }*/
 }
 @media all and (max-width: 1024px) {
   .top-p_movie .movie_pic {
     width: 18.06640625vw;
     height: 12.01171875vw;
   }
+}
+.top-p_movie .movie_pic {
+  /*@media all and (max-width:540px) {
+    width:(154/540)*100vw;
+    height:(102/540)*100vw;
+  }*/
 }
 .top-p_movie .movie_pic:after {
   content: "";
@@ -3247,8 +3285,6 @@ p, a, li, dl dt, dl dd {
   margin: 0;
   padding-bottom: 15%;
   background: #fff;
-  /*背景の装飾*/
-  /*お問い合わせ*/
 }
 .company_main .page_content:after {
   position: absolute;
@@ -3362,6 +3398,9 @@ p, a, li, dl dt, dl dd {
 .company_main .page_content .company_table_scale dd {
   margin: 0;
 }
+.company_main .page_content {
+  /*背景の装飾*/
+}
 .company_main .page_content .overview_bk-01 {
   content: "";
   position: absolute;
@@ -3379,6 +3418,9 @@ p, a, li, dl dt, dl dd {
   width: 4vw;
   height: 100%;
   background: #98C0CC;
+}
+.company_main .page_content {
+  /*お問い合わせ*/
 }
 .company_main .page_content .contact-box {
   margin-bottom: 5%;
@@ -4473,11 +4515,11 @@ p, a, li, dl dt, dl dd {
 .page_other-precut_inner {
   width: 80vw;
   max-width: 1050px;
-  margin: 0 auto 6%;
+  margin: 6% auto;
 }
 @media all and (max-width: 768px) {
   .page_other-precut_inner {
-    margin: 0 auto 15%;
+    margin: 15% auto;
   }
 }
 .page_other-precut_inner dt {
@@ -4637,6 +4679,10 @@ p, a, li, dl dt, dl dd {
   height: 100%;
 }
 
+.other-precut_list.tapos {
+  gap: 0;
+}
+
 /*アクセス非表示*/
 .service .address {
   display: none;
@@ -4651,16 +4697,12 @@ p, a, li, dl dt, dl dd {
 .page_contact_main {
   background: #e2f1f2;
   padding: 10em 0 10em;
-  /*ステップバー*/
 }
 .page_contact_main .page_content {
   max-width: 1220px;
   margin: 0 auto;
   padding: 8vw;
   background: #F9FDFD;
-  /*タイトル*/
-  /*テキスト*/
-  /*電話番号*/
 }
 @media all and (max-width: 1000px) {
   .page_contact_main .page_content {
@@ -4672,6 +4714,9 @@ p, a, li, dl dt, dl dd {
     padding: 12vw 5vw;
   }
 }
+.page_contact_main .page_content {
+  /*タイトル*/
+}
 .page_contact_main .page_content .contact_title {
   width: 100%;
   margin: 0 auto 10%;
@@ -4681,12 +4726,18 @@ p, a, li, dl dt, dl dd {
   font-size: 2.4rem;
   text-align: center;
 }
+.page_contact_main .page_content {
+  /*テキスト*/
+}
 .page_contact_main .page_content .page_contact_text {
   text-align: center;
   margin-bottom: 5%;
 }
 .page_contact_main .page_content .page_contact_text .red {
   color: red;
+}
+.page_contact_main .page_content {
+  /*電話番号*/
 }
 .page_contact_main .page_content .page_contact_tel {
   border: solid 10px #e2f1f2;
@@ -4748,6 +4799,9 @@ p, a, li, dl dt, dl dd {
 .page_contact_main .page_content .page_contact_tel .page_contact_hours {
   text-align: center;
 }
+.page_contact_main {
+  /*ステップバー*/
+}
 .page_contact_main .contact_progressbar {
   position: relative;
   max-width: 600px;
@@ -4807,18 +4861,6 @@ p, a, li, dl dt, dl dd {
   padding: 0 10%;
   border-radius: 1em;
   margin: 5% 0;
-  /*==========================
-
-    ラジオボタンのスタイル
-
-  ============================*/
-  /* デフォルトのボタン */
-  /* チェック前のボタン */
-  /* チェック後のボタン */
-  /*セレクトボタン*/
-  /*input*/
-  /*textarea*/
-  /*同意ボタン*/
 }
 @media all and (max-width: 540px) {
   .page_contact_main form {
@@ -4865,6 +4907,13 @@ p, a, li, dl dt, dl dd {
   color: #736a5f;
   font-weight: 600;
 }
+.page_contact_main form {
+  /*==========================
+
+    ラジオボタンのスタイル
+
+  ============================*/
+}
 .page_contact_main form .radio .wpcf7-list-item.first {
   margin: 0;
 }
@@ -4878,9 +4927,15 @@ p, a, li, dl dt, dl dd {
     margin-top: 1em;
   }
 }
+.page_contact_main form {
+  /* デフォルトのボタン */
+}
 .page_contact_main form .radio input[type=radio] {
   opacity: 0; /* デフォルトのボタンを非表示 */
   position: absolute;
+}
+.page_contact_main form {
+  /* チェック前のボタン */
 }
 .page_contact_main form .radio .wpcf7-list-item-label::before {
   background: #fff;
@@ -4894,6 +4949,9 @@ p, a, li, dl dt, dl dd {
   transition: background-color 0.5s; /* 色をじんわり変化させる */
   width: 1.4em;
 }
+.page_contact_main form {
+  /* チェック後のボタン */
+}
 .page_contact_main form .radio input[type=radio]:checked + .wpcf7-list-item-label::before {
   background-color: #98C0CC; /* チェック後の中心の色 */
   box-shadow: inset 0 0 0 3px #fff; /* 中心の色のスタイル */
@@ -4903,6 +4961,9 @@ p, a, li, dl dt, dl dd {
 }
 .page_contact_main form .wpcf7-form-control {
   padding: 0.5em 0.8em;
+}
+.page_contact_main form {
+  /*セレクトボタン*/
 }
 .page_contact_main form select.wpcf7-form-control {
   height: 3.5em !important;
@@ -4915,6 +4976,9 @@ p, a, li, dl dt, dl dd {
     width: 100%;
   }
 }
+.page_contact_main form {
+  /*input*/
+}
 .page_contact_main form input.wpcf7-form-control {
   height: 3.5em !important;
   background: #EAF3FD;
@@ -4926,10 +4990,16 @@ p, a, li, dl dt, dl dd {
     width: 100%;
   }
 }
+.page_contact_main form {
+  /*textarea*/
+}
 .page_contact_main form textarea.wpcf7-form-control {
   border: none;
   background: #EAF3FD;
   width: 100%;
+}
+.page_contact_main form {
+  /*同意ボタン*/
 }
 .page_contact_main form .wpcf7-form-control.wpcf7-checkbox {
   padding-right: 0;
@@ -5376,21 +5446,6 @@ p, a, li, dl dt, dl dd {
   background: #5279F4;
 }
 
-.tab-contents {
-  /*概要*/
-  /*インタビュー*/
-  /*加工機オペレーター*/
-  /*CADオペレーター*/
-  /*セールスオペレーター*/
-  /*募集要項*/
-  /*採用の流れ*/
-  /*仕事の内容*/
-  /*この仕事の良いところ*/
-  /*1日の流れ*/
-  /*よくある質問*/
-  /*下部のボタンリスト*/
-  /*下部職種ボタン*/
-}
 .tab-contents .pageRecruit_top_content {
   padding: 8%;
   background: #fff;
@@ -5400,6 +5455,9 @@ p, a, li, dl dt, dl dd {
   .tab-contents .pageRecruit_top_content {
     padding: 10% 8%;
   }
+}
+.tab-contents {
+  /*概要*/
 }
 .tab-contents .page_recruit_gaiyou {
   display: grid;
@@ -5435,6 +5493,9 @@ p, a, li, dl dt, dl dd {
 }
 .tab-contents .page_recruit_gaiyou .pageRecruit_list_dl dd {
   margin: 0;
+}
+.tab-contents {
+  /*インタビュー*/
 }
 .tab-contents .page_recruit_interview .interview_box {
   display: grid;
@@ -5477,17 +5538,29 @@ p, a, li, dl dt, dl dd {
     font-size: 2rem;
   }
 }
+.tab-contents {
+  /*加工機オペレーター*/
+}
 .tab-contents .tab-01 .color {
   color: #379F77;
   font-weight: bold;
+}
+.tab-contents {
+  /*CADオペレーター*/
 }
 .tab-contents .tab-02 .color {
   color: #E67744;
   font-weight: bold;
 }
+.tab-contents {
+  /*セールスオペレーター*/
+}
 .tab-contents .tab-03 .color {
   color: #5279F4;
   font-weight: bold;
+}
+.tab-contents {
+  /*募集要項*/
 }
 .tab-contents .page_recruit_job {
   position: relative;
@@ -5541,6 +5614,9 @@ p, a, li, dl dt, dl dd {
 }
 .tab-contents .page_recruit_job .entry-button {
   margin-top: 8%;
+}
+.tab-contents {
+  /*採用の流れ*/
 }
 .tab-contents .page_recruit_flow {
   background: #fff;
@@ -5679,6 +5755,9 @@ p, a, li, dl dt, dl dd {
 .tab-contents .page_recruit_flow .recruit_flow_list li:nth-child(4) .flow_item:after {
   background-image: url(assets/images/recruit/recruit-flow04.svg);
 }
+.tab-contents {
+  /*仕事の内容*/
+}
 .tab-contents .page_recruit_work {
   position: relative;
   background: #fff;
@@ -5711,6 +5790,9 @@ p, a, li, dl dt, dl dd {
 }
 .tab-contents .page_recruit_work_text {
   line-height: 2.2;
+}
+.tab-contents {
+  /*この仕事の良いところ*/
 }
 .tab-contents .page_recruit_merit {
   position: relative;
@@ -5752,6 +5834,9 @@ p, a, li, dl dt, dl dd {
   font-weight: bold;
   margin-right: 1em;
 }
+.tab-contents {
+  /*1日の流れ*/
+}
 .tab-contents .page_recruit_schedul {
   padding: 3% 6%;
 }
@@ -5783,6 +5868,9 @@ p, a, li, dl dt, dl dd {
     width: 90vw;
     padding: 8% 8%;
   }
+}
+.tab-contents {
+  /*よくある質問*/
 }
 .tab-contents .page_recruit_question {
   width: 80vw;
@@ -5847,6 +5935,9 @@ p, a, li, dl dt, dl dd {
 .tab-contents .page_recruit_question .qa {
   margin-right: 2em;
 }
+.tab-contents {
+  /*下部のボタンリスト*/
+}
 .tab-contents .other_list {
   width: 80vw;
   margin: 8vw auto;
@@ -5873,6 +5964,9 @@ p, a, li, dl dt, dl dd {
   .tab-contents .other_list li {
     width: 100%;
   }
+}
+.tab-contents {
+  /*下部職種ボタン*/
 }
 .tab-contents .tab-01.is-display .other_btn_01 a {
   background: #379F77 !important;
@@ -6109,10 +6203,6 @@ p, a, li, dl dt, dl dd {
   flex-direction: column;
   gap: 6em;
   /*ワークライフバランスと健康経営*/
-  /*社会問題の解決*/
-  /*DXの推進*/
-  /*資源循環型社会の実現と省エネ*/
-  /*地域経済の活性化*/
 }
 .page_sdgs_list .item-01 .item-01_text {
   position: relative;
@@ -6145,6 +6235,9 @@ p, a, li, dl dt, dl dd {
   background-image: url(assets/images/effort/circle-item-04.svg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+.page_sdgs_list {
+  /*社会問題の解決*/
 }
 .page_sdgs_list .item-02 {
   position: relative;
@@ -6191,6 +6284,9 @@ p, a, li, dl dt, dl dd {
   height: 8.3333333333vw;
   background-image: url(assets/images/effort/circle-item-07.svg);
 }
+.page_sdgs_list {
+  /*DXの推進*/
+}
 .page_sdgs_list .item-03 .item-01_text01 {
   position: relative;
 }
@@ -6217,6 +6313,9 @@ p, a, li, dl dt, dl dd {
   width: 9.9305555556vw;
   height: 9.9305555556vw;
   background-image: url(assets/images/effort/circle-item-09.svg);
+}
+.page_sdgs_list {
+  /*資源循環型社会の実現と省エネ*/
 }
 .page_sdgs_list .item-04 {
   position: relative;
@@ -6253,6 +6352,9 @@ p, a, li, dl dt, dl dd {
   height: 11.8055555556vw;
   background-image: url(assets/images/effort/circle-item-11.svg);
   z-index: -1;
+}
+.page_sdgs_list {
+  /*地域経済の活性化*/
 }
 .page_sdgs_list .item-05 .item-01_text01 {
   position: relative;
@@ -6527,7 +6629,6 @@ p, a, li, dl dt, dl dd {
 .page_flow {
   margin: 10% 0 15%;
   /*ご注文の流れ見出し*/
-  /*各項目の見出し*/
 }
 .page_flow .page_workflow_h2 {
   display: inline-block;
@@ -6584,6 +6685,9 @@ p, a, li, dl dt, dl dd {
 }
 .page_flow .page_workflow_h2 p {
   text-align: center;
+}
+.page_flow {
+  /*各項目の見出し*/
 }
 .page_flow .page_flow_tit {
   position: relative;
@@ -6663,8 +6767,6 @@ p, a, li, dl dt, dl dd {
   place-content: start space-evenly;
   gap: 16em;
   padding-bottom: 6em;
-  /*PCのみグレー背景*/
-  /*PC時の線*/
 }
 @media all and (max-width: 1100px) {
   .page_flow_list_item {
@@ -6681,6 +6783,9 @@ p, a, li, dl dt, dl dd {
     padding-bottom: 0;
   }
 }
+.page_flow_list_item {
+  /*PCのみグレー背景*/
+}
 .page_flow_list_item:before {
   content: "";
   display: inline-block;
@@ -6691,6 +6796,9 @@ p, a, li, dl dt, dl dd {
   width: 84%;
   height: 8em;
   z-index: -1;
+}
+.page_flow_list_item {
+  /*PC時の線*/
 }
 .page_flow_list_item:after {
   display: inline-block;
@@ -6725,7 +6833,6 @@ p, a, li, dl dt, dl dd {
     grid-template-columns: 1fr;
     gap: 0em;
     /*スマホ時点線*/
-    /*スマホ時丸*/
   }
   .page_flow_list_item:before {
     border-top: 3px dotted #736a5f;
@@ -6736,6 +6843,9 @@ p, a, li, dl dt, dl dd {
     left: -4em;
     width: 4em;
     height: 3px;
+  }
+  .page_flow_list_item {
+    /*スマホ時丸*/
   }
   .page_flow_list_item:after {
     display: inline-block;
@@ -6759,8 +6869,6 @@ p, a, li, dl dt, dl dd {
 }
 .page_flow_list_item .page_flow_pic {
   position: relative;
-  /*PC時点線*/
-  /*PC時丸*/
 }
 .page_flow_list_item .page_flow_pic_box {
   position: relative;
@@ -6774,6 +6882,9 @@ p, a, li, dl dt, dl dd {
   min-width: 100%;
   height: auto;
   overflow: hidden;
+}
+.page_flow_list_item .page_flow_pic {
+  /*PC時点線*/
 }
 .page_flow_list_item .page_flow_pic:before {
   border-top: 3px dotted #736a5f;
@@ -6801,6 +6912,9 @@ p, a, li, dl dt, dl dd {
   .page_flow_list_item .page_flow_pic:before {
     display: none;
   }
+}
+.page_flow_list_item .page_flow_pic {
+  /*PC時丸*/
 }
 .page_flow_list_item .page_flow_pic:after {
   display: inline-block;
@@ -6981,8 +7095,6 @@ p, a, li, dl dt, dl dd {
 }
 .category-case_list {
   position: relative;
-  /*サムネイル*/
-  /*タイトル*/
 }
 .category-case_list:after {
   display: inline-block;
@@ -7012,12 +7124,18 @@ p, a, li, dl dt, dl dd {
     display: none;
   }
 }
+.category-case_list {
+  /*サムネイル*/
+}
 .category-case_list .item_pic {
   margin-bottom: 1em;
   overflow: hidden;
 }
 .category-case_list .item_pic img {
   transition: all 0.3s;
+}
+.category-case_list {
+  /*タイトル*/
 }
 .category-case_list .item_title {
   text-align: center;
@@ -7032,10 +7150,12 @@ p, a, li, dl dt, dl dd {
 }
 .category-case .item_meta:hover {
   /*タイトル*/
-  /*サムネイル*/
 }
 .category-case .item_meta:hover .item_title a {
   color: #98C0CC;
+}
+.category-case .item_meta:hover {
+  /*サムネイル*/
 }
 .category-case .item_meta:hover .item_pic img {
   scale: 1.1;
@@ -7273,8 +7393,6 @@ p, a, li, dl dt, dl dd {
 
 .single-case_main {
   padding-top: 10em;
-  /*戻るボタン*/
-  /*お問い合わせ*/
 }
 .single-case_main .single_container {
   max-width: 900px;
@@ -7288,11 +7406,17 @@ p, a, li, dl dt, dl dd {
 .single-case_main .single_content {
   margin: 0 auto;
 }
+.single-case_main {
+  /*戻るボタン*/
+}
 .single-case_main .case-button {
   margin: calc(5vw + 8%) auto 0;
 }
 .single-case_main .case-button a {
   padding: 0.8em 3.5em;
+}
+.single-case_main {
+  /*お問い合わせ*/
 }
 .single-case_main .contact-box {
   margin-top: 15%;

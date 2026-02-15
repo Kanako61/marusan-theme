@@ -2,7 +2,6 @@
 メインビジュアル
 ---------------------------------------------------------------*/
 /*画像設定*/
-
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 /*if (windowwidth > 768){*/
     var responsiveImage = [ // PC用の画像

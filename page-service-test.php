@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: service
+Template Name: service-test
 */
 /* service */
 ?>
@@ -161,6 +161,32 @@ Template Name: service
 
   </div><!-- /swiper-main -->
 </section>
+
+
+<!--====================================================
+
+  TAPOS®(テイポス)
+
+=====================================================-->
+<div class="other-precut_box">
+  <ul class="other-precut_list tapos">
+    <!--TAPOS®(テイポス)-->
+    <div id="service_05" class="offset"></div>
+    <li>
+      <dl class="other-precut_list_dl">
+        <dt>TAPOS®(テイポス)</dt>
+        <dd>当社は全国で7社目、東北地方では初めての「TAPOS®」許諾契約工場です。梁仕口をV字（テーパー）加工することで、これまでの在来仕口と比較して高いせん断耐力を実現しました。詳しくは弊社営業担当までお問い合わせください。<br><span class="text-small u-mt3per">※TAPOS®は兵庫県立農林水産技術総合センター森林林業技術センターの特許技術です。</span></dd>  
+      </dl>
+
+      <div class="other-precut_list_img">
+        <picture>
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-01.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-01.jpg" alt="TAPOS®(テイポス)">  
+        </picture>
+      </div>
+    </li>
+  </ul>
+</div>
 
 <!--====================================================
 

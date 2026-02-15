@@ -347,10 +347,10 @@
     &_inner {
         width:80vw;
         max-width:1050px;
-        margin:0 auto 6%;
+        margin:6% auto;
 
         @media all and (max-width:768px) {
-            margin:0 auto 15%;
+            margin:15% auto;
         }
 
         dt {
@@ -511,8 +511,11 @@
             object-fit: cover;
             height:100%;
         }
-
     }
+}
+
+.other-precut_list.tapos {
+    gap:0;
 }
 
 /*アクセス非表示*/
