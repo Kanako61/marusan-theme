@@ -180,8 +180,8 @@ Template Name: service-test
 
       <div class="other-precut_list_img">
         <picture>
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-01.webp" type="image/webp">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-01.jpg" alt="TAPOS®(テイポス)">  
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-05.webp" type="image/webp">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/other-list-05.jpg" alt="TAPOS®(テイポス)">  
         </picture>
       </div>
     </li>
