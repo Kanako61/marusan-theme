@@ -13,7 +13,7 @@ Template Name: service-test
     <div id="loading-screen"></div>
 </div>-->
 
-<main class="l-contents-main page_main service_main">
+<main class="service l-contents-main page_main service_main service">
 
 <!--page img-->
 <div class="page_title-pic">
