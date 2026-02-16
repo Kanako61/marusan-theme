@@ -171,8 +171,7 @@ Template Name: service-test
 <div class="other-precut_box">
   <ul class="other-precut_list tapos">
     <!--TAPOS®(テイポス)-->
-    <div id="service_05" class="offset"></div>
-    <li>
+    <li id="service_05">
       <dl class="other-precut_list_dl">
         <dt>TAPOS®(テイポス)</dt>
         <dd>当社は全国で7社目、東北地方では初めての「TAPOS®」許諾契約工場です。梁仕口をV字（テーパー）加工することで、これまでの在来仕口と比較して高いせん断耐力を実現しました。詳しくは弊社営業担当までお問い合わせください。<br><span class="text-small u-mt3per">※TAPOS®は兵庫県立農林水産技術総合センター森林林業技術センターの特許技術です。</span></dd>  
@@ -202,8 +201,7 @@ Template Name: service-test
 <div class="other-precut_box">
   <ul class="other-precut_list">
     <!--建築資材-->
-    <div id="service_01" class="offset"></div>
-    <li class="row-reverse">
+    <li id="service_01" class="row-reverse">
       <dl class="other-precut_list_dl">
         <dt>建築資材</dt>
         <dd>やり方材から住宅設備まで、建築に係るあらゆる部材を取り扱っております。短納期での配達も対応できますので、資材に関することは何でもお気軽にご相談ください。</dd>  
@@ -218,8 +216,7 @@ Template Name: service-test
     </li>
 
     <!--構造計算-->
-    <div id="service_02" class="offset"></div>
-    <li class="">
+    <li id="service_02" class="">
       <dl class="other-precut_list_dl">
         <dt>構造計算</dt>
         <dd>これまで一般的な木造住宅では免除されていた構造計算が、建築基準法の改正により2025年4月からは義務化される見通しです。マルサンでは工務店様や建築事務所様に代わって構造計算業務をサポートすることが可能です。</dd>  
@@ -234,8 +231,7 @@ Template Name: service-test
     </li>
 
     <!--吹付断熱-->
-    <div id="service_03" class="offset"></div>
-    <li class="row-reverse">
+    <li id="service_03" class="row-reverse">
       <dl class="other-precut_list_dl">
         <dt>吹付断熱</dt>
         <dd>気密・断熱・防音性・耐久性に優れた吹付断熱によってより性能の高い家づくりが可能です。熱伝導率0.036W/mk、業界最高基準での施工をマルサンが行います。</dd>  
@@ -250,8 +246,7 @@ Template Name: service-test
     </li>
 
     <!--建て方-->
-    <div id="service_04" class="offset"></div>
-    <li>
+    <li id="service_04">
       <dl class="other-precut_list_dl">
         <dt>建方</dt>
         <dd>大工経験のある社員で建方班を結成。人手不足が深刻な建築現場をマルサンがプレカットから建方まで一貫して請け負います。</dd>  

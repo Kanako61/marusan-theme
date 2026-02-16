@@ -523,5 +523,25 @@
     display:none;
 }
 
+/*202602追記*/
+.service-test .other-precut_list li {
+    scroll-margin-top: 5em;
+}
+
+.service-test .other-precut_list {
+    gap: 8em;
+
+    @media all and (max-width: 768px) {
+        gap: 4em;
+    }
+}
+
+.service-test .precut_list {
+    margin-bottom:10%;
+
+    @media all and (max-width: 768px) {
+        margin-bottom: 15%;
+    }
+}
 
 
