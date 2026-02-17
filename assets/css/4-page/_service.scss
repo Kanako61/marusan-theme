@@ -347,10 +347,10 @@
     &_inner {
         width:80vw;
         max-width:1050px;
-        margin:6% auto;
+        margin:11% auto 6%;
 
         @media all and (max-width:768px) {
-            margin:15% auto;
+            margin:22% auto 15%;
         }
 
         dt {
