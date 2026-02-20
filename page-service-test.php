@@ -13,7 +13,7 @@ Template Name: service-test
     <div id="loading-screen"></div>
 </div>-->
 
-<main class="service l-contents-main page_main service_main service">
+<main class="l-contents-main page_main service_main service">
 
 <!--page img-->
 <div class="page_title-pic">
@@ -168,8 +168,8 @@ Template Name: service-test
   TAPOS®(テイポス)
 
 =====================================================-->
-<div class="other-precut_box">
-  <ul class="other-precut_list tapos">
+<div class="other-precut_box tapos">
+  <ul class="other-precut_list">
     <!--TAPOS®(テイポス)-->
     <li id="service_05">
       <dl class="other-precut_list_dl">

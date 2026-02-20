@@ -347,10 +347,10 @@
     &_inner {
         width:80vw;
         max-width:1050px;
-        margin:11% auto 6%;
+        margin:6% auto;
 
         @media all and (max-width:768px) {
-            margin:22% auto 15%;
+            margin:15% auto;
         }
 
         dt {
@@ -391,6 +391,18 @@
         background:$bk-1;
         width:15vw;
         height:100%;
+    }
+}
+
+.tapos.other-precut_box {
+    padding:10% 0 15%;
+
+    @media all and (max-width:768px) {
+        padding:15% 0 20%;
+    }
+    
+    .other-precut_list {
+        gap:0;
     }
 }
 
@@ -514,10 +526,6 @@
     }
 }
 
-.other-precut_list.tapos {
-    gap:0;
-}
-
 /*アクセス非表示*/
 .service .address {
     display:none;
@@ -543,5 +551,6 @@
         margin-bottom: 15%;
     }
 }
+
 
 

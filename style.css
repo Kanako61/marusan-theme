@@ -4515,11 +4515,11 @@ p, a, li, dl dt, dl dd {
 .page_other-precut_inner {
   width: 80vw;
   max-width: 1050px;
-  margin: 11% auto 6%;
+  margin: 6% auto;
 }
 @media all and (max-width: 768px) {
   .page_other-precut_inner {
-    margin: 22% auto 15%;
+    margin: 15% auto;
   }
 }
 .page_other-precut_inner dt {
@@ -4559,6 +4559,18 @@ p, a, li, dl dt, dl dd {
   background: #fcf3e4;
   width: 15vw;
   height: 100%;
+}
+
+.tapos.other-precut_box {
+  padding: 10% 0 15%;
+}
+@media all and (max-width: 768px) {
+  .tapos.other-precut_box {
+    padding: 15% 0 20%;
+  }
+}
+.tapos.other-precut_box .other-precut_list {
+  gap: 0;
 }
 
 .other-precut_list {
@@ -4677,10 +4689,6 @@ p, a, li, dl dt, dl dd {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
-}
-
-.other-precut_list.tapos {
-  gap: 0;
 }
 
 /*アクセス非表示*/
