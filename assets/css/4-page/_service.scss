@@ -400,7 +400,7 @@
     @media all and (max-width:768px) {
         padding:15% 0 20%;
     }
-    
+
     .other-precut_list {
         gap:0;
     }
@@ -532,11 +532,11 @@
 }
 
 /*202602追記*/
-.service-test .other-precut_list li {
+.service .other-precut_list li {
     scroll-margin-top: 5em;
 }
 
-.service-test .other-precut_list {
+.service .other-precut_list {
     gap: 8em;
 
     @media all and (max-width: 768px) {
@@ -544,7 +544,7 @@
     }
 }
 
-.service-test .precut_list {
+.service .precut_list {
     margin-bottom:10%;
 
     @media all and (max-width: 768px) {
