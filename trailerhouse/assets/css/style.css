@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/*カラー設定*/
+/*レイアウト*/
+.u-align-c {
+  text-align: center;
+}
+
+.trailerhouse_main h2, .trailerhouse_main h3, .trailerhouse_main h4, .trailerhouse_main p, .trailerhouse_main span, .trailerhouse_main li, .trailerhouse_main dt, .trailerhouse_main dd {
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.trailerhouse_main {
+  /* メインビジュアル */
+}
+.trailerhouse_main .trailerhouse_main_img {
+  position: relative;
+}
+.trailerhouse_main .trailerhouse_main_img .catchcopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4;
+}
+.trailerhouse_main .trailerhouse_main_img .catchcopy .en {
+  font-size: 5.5555555556vw;
+}
+.trailerhouse_main .trailerhouse_main_img .catchcopy .ja {
+  font-size: 1.8055555556vw;
+}
+.trailerhouse_main {
+  /* トレーラーハウスとは */
+}
+.trailerhouse_main .about {
+  background-image: url("../images/about_bk.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  padding: 14% 0;
+}
+.trailerhouse_main .about_inner {
+  width: 80%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.trailerhouse_main .about_tit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font-size: 60px;
+  margin: 0 0 10%;
+}
+.trailerhouse_main .about_tit .en {
+  font-size: 15px;
+}
+.trailerhouse_main .about_tit .ja {
+  font-size: 40px;
+}
+.trailerhouse_main .about .txtArea .u-txt {
+  font-size: 15px;
+  color: #ffffff;
+}
+.trailerhouse_main {
+  /* Features */
+}
+.trailerhouse_main .features_inner {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.trailerhouse_main .features_tit {
+  font-size: 15px;
+  color: #ffffff;
+}
+.trailerhouse_main .features_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
+}
+.trailerhouse_main .features_list_item {
+  border-radius: 1em;
+  border: solid 3px #e1eaee;
+  padding: 2em 1.5em 1em;
+}
+.trailerhouse_main .features_list_item .item_tit {
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.trailerhouse_main .features_list_item .icon {
+  text-align: center;
+}
+.trailerhouse_main .features_list_item .icon img {
+  width: auto;
+  height: 80px;
+}
+.trailerhouse_main .features_list_item .txtArea {
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .trailerhouse_main .features .features_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.trailerhouse_main {
+  /* マルサンがつくるトレーラハウス */
+}
+.trailerhouse_main .marusan_trailerhouse {
+  background-color: #fcf8f1;
+}
+.trailerhouse_main .marusan_trailerhouse_inner {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+.trailerhouse_main .marusan_trailerhouse_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.4;
+}
+.trailerhouse_main .marusan_trailerhouse_tit .ja {
+  font-size: 40px;
+  color: #3d6382;
+}
+.trailerhouse_main .marusan_trailerhouse_tit .en {
+  font-size: 120px;
+  color: #ffffff;
+}
+.trailerhouse_main .marusan_trailerhouse_txtArea {
+  color: #000000;
+  font-weight: bold;
+}
+.trailerhouse_main .marusan_trailerhouse_list {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.trailerhouse_main .marusan_trailerhouse_list_item {
+  display: flex;
+  gap: 3em;
+  background: #ffffff;
+  padding: 5% 5%;
+}
+.trailerhouse_main .marusan_trailerhouse_list_item:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+.trailerhouse_main .marusan_trailerhouse_list_item .txtArea_tit {
+  color: #000000;
+}
+.trailerhouse_main .marusan_trailerhouse_list_item .txtArea_txt {
+  color: #000000;
+}
+.trailerhouse_main {
+  /* products */
+}
+.trailerhouse_main .products {
+  background: #f1eee7;
+}
+.trailerhouse_main .products_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+.trailerhouse_main .products h3, .trailerhouse_main .products p, .trailerhouse_main .products span, .trailerhouse_main .products li, .trailerhouse_main .products dl {
+  color: #000000;
+}
+.trailerhouse_main .products_box {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3% 6%;
+}
+.trailerhouse_main .products_box_tit {
+  font-size: 40px;
+  text-align: center;
+}
+.trailerhouse_main .products_box_img {
+  max-width: 530px;
+  width: 80%;
+  margin: 0 auto;
+}
+.trailerhouse_main .products_box .txtArea {
+  text-align: center;
+}
+.trailerhouse_main .products_box .txtArea .name {
+  font-size: 20px;
+}
+.trailerhouse_main .products_box .products_point_list {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 5%;
+}
+.trailerhouse_main .products_box .products_point_list_item {
+  background: #fcf8f1;
+  padding: 3%;
+}
+.trailerhouse_main .products_box .products_point_list_item .point {
+  color: #c6a478;
+}
+.trailerhouse_main .products_box .products_point_list_item .item_txt {
+  margin-top: 5%;
+}
+.trailerhouse_main .products_box .fig_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+}
+.trailerhouse_main .plus-One {
+  background: #fcf8f1;
+}
+.trailerhouse_main .plus-One_inner {
+  max-width: 1050px;
+  width: 80%;
+  margin: 0 auto;
+}
+.trailerhouse_main .plus-One_tit_en {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  color: #3d6382;
+}
+.trailerhouse_main .plus-One_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3d6382;
+}
+.trailerhouse_main .plus-One_tit .tit {
+  font-size: 40px;
+}
+.trailerhouse_main .plus-One_tit .plus {
+  font-size: 120px;
+  margin-right: 10%;
+  color: #c6a478;
+}
+.trailerhouse_main .plus-One .txtArea {
+  color: #3d6382;
+}
+.trailerhouse_main .plus-One_list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  margin: 0 auto;
+}
+.trailerhouse_main .plus-One_list_item {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.trailerhouse_main .plus-One_list_item .imgArea {
+  max-width: 420px;
+}
+.trailerhouse_main .plus-One_list_item .TxtArea {
+  max-width: 830px;
+  padding: 5%;
+}
+.trailerhouse_main {
+  /*展示場案内*/
+}
+.trailerhouse_main .exhibition {
+  background: #ffffff;
+}
+.trailerhouse_main .exhibition_inner {
+  display: flex;
+  gap: 2em;
+  max-width: 1050px;
+  width: 90%;
+  margin: 0 auto;
+}
+.trailerhouse_main .exhibition_tit {
+  font-size: 40px;
+}
+.trailerhouse_main .exhibition .imgArea {
+  max-width: 770px;
+}
+.trailerhouse_main {
+  /*お問合せリンク*/
+}
+.trailerhouse_main .trailerhouse_contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1050px;
+  width: 90%;
+  margin: 0 auto;
+  background: #3d6c82;
+  padding: 2em 3em;
+  border-radius: 1em;
+}
+.trailerhouse_main .trailerhouse_contact_tit {
+  color: #ffffff !important;
+  font-size: 40px;
+  margin: 0;
+}
+.trailerhouse_main .trailerhouse_contact_btn {
+  text-align: left;
+  margin-top: 1em;
+}
+.trailerhouse_main .trailerhouse_contact_btn a {
+  position: relative;
+  display: inline-block;
+  color: #2e2e2e;
+  background: #ffffff;
+  border-radius: 6em;
+  letter-spacing: 0;
+  padding: 0.3em 3em 0.3em 1em;
+  font-weight: bold;
+}
+.trailerhouse_main .trailerhouse_contact_btn .icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  width: 1.5em;
+  height: 1.5em;
+}
+.trailerhouse_main .trailerhouse_contact .imgArea {
+  max-width: 120px;
+  width: 12%;
+  height: auto;
+}

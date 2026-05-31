@@ -1,0 +1,404 @@
+/*カラー設定*/
+$txt-tit-pt01:#3d6382;
+$num-01:#4caac7;
+$txt-tit-pt02:#c6a478;
+$txt-tit-pt03:#ffffff;
+$txt-th-pt03:#6b6b6b;
+$txt-defalt-pt01:#2e2e2e;
+$txt-defalt-pt02:#000000;
+
+$bk-pt01:#f1eee7;
+$bk-pt02:#fcf8f1;
+$bk-pt03:#ffffff;
+$bk-contact:#3d6c82;
+
+$border-pt01:#e1eaee;
+
+/*レイアウト*/
+@mixin flex-c {
+    display:flex;
+}
+
+.u-align-c {
+    text-align:center;
+}
+
+.trailerhouse_main {
+    h2, h3, h4, p, span, li, dt, dd {
+        line-height:1.4;
+        letter-spacing: 0;
+    }
+
+    /* メインビジュアル */
+    .trailerhouse_main_img {
+        position:relative;
+
+        .catchcopy {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50% , -50%);
+            color:$txt-tit-pt03;
+            text-align:center;
+            line-height: 1.4;
+
+            .en {
+                font-size:(80/1440)*100vw;
+            }
+
+            .ja {
+                font-size:(26/1440)*100vw;
+            }
+        }
+    }
+
+    /* トレーラーハウスとは */
+    .about {
+       background-image:url( '../images/about_bk.webp');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       width:100%;
+       height:auto;
+       padding:14% 0;
+
+       &_inner {
+        width:80%;
+        max-width:440px;
+        margin: 0 auto;
+       }
+
+       &_tit {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        color:$txt-tit-pt03;
+        font-size:60px;
+        margin:0 0 10%;
+
+        .en {
+            font-size:15px;
+        }
+        .ja {
+            font-size:40px;
+        }
+       }
+
+        .txtArea {
+            .u-txt {
+                font-size:15px;
+                color:$txt-tit-pt03;
+            }
+        }
+    }
+
+    /* Features */
+    .features {
+        &_inner {
+            width:90%;
+            max-width:1280px;
+            margin:0 auto;
+        }
+
+        &_tit {
+            font-size:15px;
+            color:$txt-tit-pt03;
+        }
+
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5em;
+
+            &_item {
+                border-radius: 1em;
+                border: solid 3px $border-pt01;
+                padding:2em 1.5em 1em;
+
+                .item_tit {
+                    color:$txt-defalt-pt02;
+                    font-size:20px;
+                    line-height:1.4;
+                }
+                .icon {
+                    text-align:center;
+
+                    img {
+                        width:auto;
+                        height:80px;
+                    }
+                }
+                .txtArea {
+                    color:$txt-defalt-pt02;
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .features_list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    /* マルサンがつくるトレーラハウス */
+    .marusan_trailerhouse {
+        background-color:$bk-pt02;
+
+        &_inner {
+            max-width:1200px;
+            width:90%;
+            margin:0 auto;
+        }
+
+        &_tit {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height:1.4;
+
+            .ja {
+                font-size:40px;
+                color:$txt-tit-pt01;
+            }
+
+            .en {
+                font-size:120px;
+                color:$txt-tit-pt03;
+            }
+        }
+
+        &_txtArea {
+            color:$txt-defalt-pt02;
+            font-weight:bold;
+        }
+
+        &_list {
+            display:flex;
+            flex-direction: column;
+            gap:3em;
+
+            &_item {
+                display:flex;
+                gap:3em;
+                background:$bk-pt03;
+                padding:5% 5%;
+
+                &:nth-of-type(even) {
+                    flex-direction: row-reverse;
+                }
+
+                .txtArea {
+                    &_tit {
+                        color:$txt-defalt-pt02;
+                    }
+                    &_txt {
+                        color:$txt-defalt-pt02;
+                    }
+
+                }
+            }
+        }
+    }
+
+    /* products */
+    .products {
+        background:$bk-pt01;
+        
+        &_inner {
+            display:flex;
+            flex-direction: column;
+            gap:4em; 
+        }
+
+        h3, p, span, li, dl {
+        color:$txt-defalt-pt02;
+        }
+        
+        &_box {
+            max-width:1280px;
+            width:90%;
+            margin:0 auto;
+            background:$bk-pt03;
+            padding:3% 6%;
+
+            &_tit {
+                font-size:40px;
+                text-align:center;
+            }
+
+            &_img {
+                max-width:530px;
+                width:80%;
+                margin:0 auto;
+            }
+
+            .txtArea {
+                text-align:center;
+
+                .name {
+                    font-size:20px;
+                }
+            }
+
+            .products_point_list {
+                display:flex;
+                gap:1.5em;
+                margin-top:5%;
+
+                &_item {
+                    background:$bk-pt02;
+                    padding:3%;
+
+                    .point {
+                        color:$txt-tit-pt02;
+                    }
+
+                    .item_txt {
+                        margin-top:5%;
+                    }
+                }
+            }
+
+            .fig_list {
+                display:grid;
+                grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+            }
+        }
+    }
+
+    .plus-One {
+        background:$bk-pt02;
+
+        &_inner {
+            max-width:1050px;
+            width:80%;
+            margin:0 auto;
+        }
+
+        &_tit_en {
+            max-width:1280px;
+            width:90%;
+            margin:0 auto;
+            color:$txt-tit-pt01;
+        }
+
+        &_tit {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            color:$txt-tit-pt01;
+
+            .tit {
+                font-size:40px;
+            }
+
+            .plus {
+                font-size:120px;
+                margin-right:10%;
+                color:$txt-tit-pt02;
+            }
+        }
+
+        .txtArea {
+            color:$txt-tit-pt01;
+        }
+
+        &_list {
+            display:flex;
+            flex-direction: column;
+            gap:2em;
+            width:100%;
+            margin:0 auto;
+
+            &_item {
+                display:flex;
+                justify-content:space-between;
+                background:$txt-tit-pt03;
+
+                .imgArea {
+                    max-width:420px;
+                }
+
+                .TxtArea {
+                    max-width:830px;
+                    padding:5%;
+                }
+            }
+        }
+    }
+
+    /*展示場案内*/
+    .exhibition {
+        background:$bk-pt03;
+
+        &_inner {
+            display:flex;
+            gap:2em;
+            max-width:1050px;
+            width:90%;
+            margin:0 auto;
+        }
+
+        &_tit {
+            font-size:40px;
+        }
+
+        .imgArea {
+            max-width:770px;
+        }
+    }
+
+    /*お問合せリンク*/
+    .trailerhouse_contact {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width:1050px;
+        width:90%;
+        margin:0 auto;
+        background:$bk-contact;
+        padding:2em 3em;
+        border-radius: 1em;
+
+        &_tit {
+            color:$txt-tit-pt03!important;
+            font-size:40px;
+            margin:0;
+        }
+
+        &_btn {
+            text-align:left;
+            margin-top:1em;
+
+            a {
+                position:relative;
+                display:inline-block;
+                color:$txt-defalt-pt01;
+                background:$bk-pt03;
+                border-radius: 6em;
+                letter-spacing: 0;
+                padding:0.3em 3em 0.3em 1em;
+                font-weight:bold;
+            }
+
+            .icon {
+                position:absolute;
+                top:50%;
+                right:0;
+                transform: translate(-50%, -50%);
+                width:1.5em;
+                height:1.5em;
+            }
+        }
+
+        .imgArea {
+            max-width:120px;
+            width:12%;
+            height:auto;
+        }
+    }
+}
