@@ -19,7 +19,6 @@ Template Name: trailerhouse
 </div>
 </section>
 
-
 <section class="about">
   <div class="about_inner">
     <h2 class="about_tit"><span class="en">About Trailer House</span><span class="ja">トレーラーハウスとは</span></h2>
@@ -35,8 +34,8 @@ Template Name: trailerhouse
   <h2 class="features_tit">Features</h2>
     <ul class="features_list">
       <li class="features_list_item">
-        <span class="num"> 1</span>
-        <h3 class="item_tit u-align-c">市街化調整区域などにも設置可能</h3>
+        <span class="num">1</span>
+        <h3 class="item_tit u-align-c">市街化調整区域などにも<br>設置可能</h3>
         <div class="icon">
           <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-01.svg" alt="新しいくらしの可能性を">
         </div>
@@ -44,7 +43,7 @@ Template Name: trailerhouse
       </li>
       <li class="features_list_item">
         <span class="num">2</span>
-        <h3 class="item_tit u-align-c">市街化調整区域などにも設置可能</h3>
+        <h3 class="item_tit u-align-c">低コスト＆<br>迅速な設置</h3>
         <div class="icon">
           <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-02.svg" alt="新しいくらしの可能性を">
         </div>
@@ -76,7 +75,7 @@ Template Name: trailerhouse
 <section class="marusan_trailerhouse">
   <div class="marusan_trailerhouse_inner">
     <h2 class="marusan_trailerhouse_tit"><span class="ja">マルサンがつくる<br>トレーラーハウス</span><span class="en">Features</span></h2>
-    <p class="marusan_trailerhouse_txtArea">地元ふくしまから生まれる木造トレーラーハウス。<br>長年、木造住宅建築に携わってきた私たちが取り組む新しい形の住まいです。</p>
+    <p class="marusan_trailerhouse_txtArea">地元ふくしまから生まれる木造トレーラーハウス。<br class="u-none--sp">長年、木造住宅建築に携わってきた私たちが取り組む新しい形の住まいです。</p>
     <ul class="marusan_trailerhouse_list">
       <li class="marusan_trailerhouse_list_item">
         <div class="txtArea">
@@ -118,7 +117,7 @@ Template Name: trailerhouse
 
 <!--Products-->
 <section class="products">
-  <span>Products</span>
+  <p class="products_tit">Products</p>
 
   <div class="products_inner">
   <!--sumika-->
@@ -172,31 +171,56 @@ Template Name: trailerhouse
     <dl>
     </dl>
 
-    <table class="trailerhouse_table page_table">
+    <table class="trailerhouse_table">
         <colgroup>
         <col span="2" />
         </colgroup>
         <tr>
-            <th>モデル名</th>
-            <td>sumika</td>
+          <th>モデル名</th>
+          <td>sumika</td>
         </tr>
         <tr>
-            <th>代表</th>
-            <td>前田 英俊</td>
+          <th>外寸</th>
+          <td>L5925mm×w2310mm×H2910mm</td>
         </tr>
         <tr>
-            <th>資本金</th>
-            <td>3,500万円</td>
+          <th>面積</th>
+          <td>3,500万円</td>
         </tr>
         <tr>
-            <th>営業拠点</th>
-            <td>郡山営業所、福島営業所、東京事務所</td>
+          <th>構造</th>
+          <td>郡山営業所、福島営業所、東京事務所</td>
         </tr>
         <tr>
-            <th>業務内容</th>
-            <td>
-                在来軸組工法のプレカット / 金物工法のプレカット / 在来パネル材 / ２×４工法用パネル材 / 現場吹付断熱の施工 / 羽柄プレカット材 / これらに関連する木材、造作材、建築金物、建材等の小売販売 / 在来軸組工法の建方工事 / 構造計算業務
-            </td>
+          <th>外壁・屋根</th>
+          <td>ガルバリウム銅板・一面杉材</td>
+        </tr>
+        <tr>
+          <th>窓</th>
+          <td>アルミ　Low-E復層ガラス</td>
+        </tr>
+        <tr>
+          <th>壁</th>
+          <td>ヒノキ化粧仕上げ</td>
+        </tr>
+        <tr>
+          <th>天井</th>
+          <td>ヒノキ化粧仕上げ</td>
+        </tr>
+        <tr>
+          <th>床</th>
+          <td>タイルカーペット/クッションフロア</td>
+        </tr>
+        <tr>
+          <th>断熱</th>
+          <td>床　スタイロフォーム100mm<br>
+            壁　スタイロフォーム16k/100mm<br>
+            天井　高性能グラスウール14k/155mm
+          </td>
+        </tr>
+        <tr>
+          <th>オプション</th>
+          <td>エアコン/トイレ/キッチン他</td>
         </tr>
     </table>
 
@@ -249,31 +273,56 @@ Template Name: trailerhouse
     <dl>
     </dl>
 
-    <table class="trailerhouse_table page_table">
+    <table class="trailerhouse_table">
         <colgroup>
         <col span="2" />
         </colgroup>
         <tr>
-            <th>モデル名</th>
-            <td>sumika</td>
+          <th>モデル名</th>
+          <td>meguri</td>
         </tr>
         <tr>
-            <th>代表</th>
-            <td>前田 英俊</td>
+          <th>外寸</th>
+          <td>L5925mm×w2310mm×H2910mm</td>
         </tr>
         <tr>
-            <th>資本金</th>
-            <td>3,500万円</td>
+          <th>面積</th>
+          <td>3,500万円</td>
         </tr>
         <tr>
-            <th>営業拠点</th>
-            <td>郡山営業所、福島営業所、東京事務所</td>
+          <th>構造</th>
+          <td>郡山営業所、福島営業所、東京事務所</td>
         </tr>
         <tr>
-            <th>業務内容</th>
-            <td>
-                在来軸組工法のプレカット / 金物工法のプレカット / 在来パネル材 / ２×４工法用パネル材 / 現場吹付断熱の施工 / 羽柄プレカット材 / これらに関連する木材、造作材、建築金物、建材等の小売販売 / 在来軸組工法の建方工事 / 構造計算業務
-            </td>
+          <th>外壁・屋根</th>
+          <td>ガルバリウム銅板・一面杉材</td>
+        </tr>
+        <tr>
+          <th>窓</th>
+          <td>アルミ　Low-E復層ガラス</td>
+        </tr>
+        <tr>
+          <th>壁</th>
+          <td>ヒノキ化粧仕上げ</td>
+        </tr>
+        <tr>
+          <th>天井</th>
+          <td>ヒノキ化粧仕上げ</td>
+        </tr>
+        <tr>
+          <th>床</th>
+          <td>タイルカーペット/クッションフロア</td>
+        </tr>
+        <tr>
+          <th>断熱</th>
+          <td>床　スタイロフォーム100mm<br>
+            壁　スタイロフォーム16k/100mm<br>
+            天井　高性能グラスウール14k/155mm
+          </td>
+        </tr>
+        <tr>
+          <th>オプション</th>
+          <td>エアコン/トイレ/キッチン他</td>
         </tr>
     </table>
 
@@ -289,39 +338,39 @@ Template Name: trailerhouse
   <p class="plus-One_tit_en">Example of Use</p>
   <div class="plus-One_inner">
     <h2 class="plus-One_tit"><span class="tit">sumika / meguriで<br>+1の活用を</span><span class="plus">+1</span></h2>
-    <p class="txtArea">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    <p class="txtArea top">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
 
     <ul class="plus-One_list">
       <li class="plus-One_list_item">
         <div class="imgArea">
           <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-01.webp" alt="新しいくらしの可能性を">
         </div>
-        <div class="TxtArea">
+        <div class="txtArea">
           <h3 class="plus-One_tit">暮らしに+1</h3>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         </div>
       </li>
       <li class="plus-One_list_item">
         <div class="imgArea">
           <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-02.webp" alt="新しいくらしの可能性を">
         </div>
-        <div class="TxtArea">
+        <div class="txtArea">
           <h3 class="plus-One_tit">暮らしに+1</h3>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         </div>
       </li>
       <li class="plus-One_list_item">
         <div class="imgArea">
           <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-03.webp" alt="新しいくらしの可能性を">
         </div>
-        <div class="TxtArea">
+        <div class="txtArea">
           <h3 class="plus-One_tit">暮らしに+1</h3>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p class="txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         </div>
       </li>
     </ul>
   </div>
-</srction>
+</section>
 
 <!--展示場案内-->
 <section class="exhibition">
@@ -331,8 +380,8 @@ Template Name: trailerhouse
     </div>
     <div class="txtArea">
       <h2 class="exhibition_tit">展示場案内</h2>
-      <p class="txt">トレーラーハウスの<br>見学は完全予約制です。</p>
-      <p class="txt">見学希望の方は<br>お問い合わせからご連絡ください。</p>
+      <p class="txt">トレーラーハウスの<br class="u-none--sp">見学は完全予約制です。</p>
+      <p class="txt">見学希望の方は<br class="u-none--sp">お問い合わせからご連絡ください。</p>
     </div>
   </div>
 
