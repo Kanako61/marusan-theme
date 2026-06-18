@@ -1347,7 +1347,7 @@ p, a, li, dl dt, dl dd {
 .menu-global-container {
   transition: transform 0.6s ease-out;
 }
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
   .menu-global-container {
     display: none;
     margin-left: 0;
@@ -1356,6 +1356,7 @@ p, a, li, dl dt, dl dd {
 .menu-global-container .global-nav__menu {
   position: relative;
   display: flex;
+  align-items: center;
   color: #736a5f;
   margin: 0;
 }
@@ -1382,10 +1383,48 @@ p, a, li, dl dt, dl dd {
     padding: 2em 1em;
   }
 }
+.menu-global-container .global-nav__menu .menu-item--trailer a {
+  padding: 1.15em 5.5em 1.15em 1em;
+  background-color: #d3c189;
+}
+@media all and (min-width: 1025px) {
+  .menu-global-container .global-nav__menu .menu-item--trailer a {
+    text-align: center;
+    line-height: 1.4;
+  }
+  .menu-global-container .global-nav__menu .menu-item--trailer a:after {
+    content: "";
+    display: block;
+    background-image: url(assets/images/common/nav_trailerhouse.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: initial;
+    position: absolute;
+    top: 45%;
+    left: 7em;
+    transform: translateY(-50%);
+    width: 4em;
+    height: 3em;
+    z-index: 2;
+  }
+  .menu-global-container .global-nav__menu .menu-item--trailer a:hover {
+    background: #c1a95e;
+  }
+}
+@media all and (max-width: 1280px) {
+  .menu-global-container .global-nav__menu .menu-item--trailer a {
+    padding: 1.5em 5.5em 1.5em 1em;
+  }
+}
+@media all and (max-width: 1024px) {
+  .menu-global-container .global-nav__menu .menu-item--trailer .u-none--sp {
+    display: none;
+  }
+}
 .menu-global-container .global-nav__menu {
   /*PC時サブメニュー*/
 }
-@media all and (min-width: 901px) {
+@media all and (min-width: 1025px) {
   .menu-global-container .global-nav__menu .menu-item-object-page:hover, .menu-global-container .global-nav__menu .menu-item-object-category:hover {
     background: rgba(99, 130, 142, 0.8);
   }
@@ -1421,7 +1460,7 @@ p, a, li, dl dt, dl dd {
 .menu-global-container .global-nav__menu {
   /*sp時サブメニュー*/
 }
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
   .menu-global-container .global-nav__menu .menu-item-has-children {
     position: relative;
   }
@@ -1537,12 +1576,26 @@ p, a, li, dl dt, dl dd {
   display: inline-block;
   position: absolute;
   top: 50%;
-  transform: translate(-50%);
-  right: 0.5em;
+  transform: translatey(-50%);
+  right: 1em;
   width: 15px;
   height: 13px;
   background-image: url(assets/images/common/arrow-icon-w.svg);
   background-size: cover;
+}
+.l-site_header.active .global-nav__menu .menu-item--trailer a:before {
+  content: "";
+  display: block;
+  background-image: url(assets/images/common/nav_trailerhouse.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: initial;
+  position: absolute;
+  top: 50%;
+  left: 10em;
+  transform: translateY(-50%);
+  width: 4em;
+  height: 3em;
 }
 
 /*ハンバーガーボタンここから*/
@@ -1557,7 +1610,7 @@ p, a, li, dl dt, dl dd {
   border-radius: 5px;
   z-index: 4;
 }
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
   .hamburger_button {
     display: block;
   }
@@ -1606,7 +1659,7 @@ p, a, li, dl dt, dl dd {
   padding: 0 2rem;
 }
 
-@media all and (min-width: 901px) {
+@media all and (min-width: 1025px) {
   .menu-global-container ul li a {
     color: #fff;
   }
@@ -1620,7 +1673,7 @@ p, a, li, dl dt, dl dd {
 }
 
 /*スクロールしたらグロナビのスタイル変える*/
-@media all and (min-width: 901px) {
+@media all and (min-width: 1025px) {
   .l-site_header:has(+ .main.classActive) {
     background: #fff;
   }
@@ -1629,7 +1682,7 @@ p, a, li, dl dt, dl dd {
     text-shadow: none;
   }
 }
-@media all and (max-width: 900px) {
+@media all and (max-width: 1024px) {
   .l-site_header:has(+ .main.classActive) {
     background: none;
   }
@@ -1645,7 +1698,7 @@ p, a, li, dl dt, dl dd {
 }
 /*}*/
 /*カレント表示*/
-@media all and (min-width: 901px) {
+@media all and (min-width: 1025px) {
   .l-site_header .current_page_item, .l-site_header .menu-item-object-category.current-menu-item {
     z-index: 2;
   }
@@ -1679,6 +1732,9 @@ p, a, li, dl dt, dl dd {
   }
   .l-site_header .current_page_item .sub-menu a:after, .l-site_header .menu-item-object-category.current-menu-item .sub-menu a:after {
     display: none;
+  }
+  .l-site_header .current_page_item.menu-item--trailer a {
+    background: #c1a95e;
   }
 }
 /*section ボタン*/

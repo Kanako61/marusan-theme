@@ -153,7 +153,6 @@ function themes_file_scripts() {
     wp_enqueue_script('jquery-modal-video.min.js', get_template_directory_uri() . '/assets/js/jquery-modal-video.min.js', array('jquery'), '1.0', true);
     wp_enqueue_script('sticky-sidebar.min.js', get_template_directory_uri() . '/assets/js/sticky-sidebar.min.js', array('jquery'), '1.0', true);
     wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('script-top', get_template_directory_uri() . '/assets/js/script-top.js', array('jquery'), '1.0', true);
 
     if (is_front_page() || is_home()) {
         wp_enqueue_script('script-top', get_template_directory_uri() . '/assets/js/script-top.js', array('jquery'), '1.0', true);
@@ -186,8 +185,22 @@ function my_custom_lazyblock_handlebars_helper ( $handlebars )
 add_action( 'lzb_handlebars_object', 'my_custom_lazyblock_handlebars_helper' );
 
 
+//グロナビ、ログイン中のみ表示　公開後にこの記述は消す
+add_filter('wp_nav_menu_objects', function ($items) {
 
+    if (current_user_can('edit_pages')) {
+        return $items;
+    }
 
+    foreach ($items as $key => $item) {
+
+        if (in_array('menu-item--trailer', $item->classes, true)) {
+            unset($items[$key]);
+        }
+    }
+
+    return $items;
+});
 
 
 
