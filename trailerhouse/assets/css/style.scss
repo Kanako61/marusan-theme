@@ -37,9 +37,9 @@ $font-copy-ja: max(18px, vw(24));
 $font-tit-120: clamp(64px, vw(120), 120px);
 $font-tit-62: clamp(48px, vw(62), 62px);
 $font-tit-56: clamp(34px, vw(56), 56px);
-$font-tit-24: clamp(19px, vw(24), 24px);
-$font-tit-20: clamp(18px, vw(20), 20px);
-$font-tit-18: clamp(16px, vw(18), 18px);
+$font-tit-24: clamp(18px, vw(24), 24px);
+$font-tit-20: clamp(16px, vw(20), 20px);
+$font-tit-18: clamp(14px, vw(18), 18px);
 
 @mixin font-tit-42 {
     font-size:clamp(28px, vw(42), 42px);
@@ -49,9 +49,31 @@ $font-tit-18: clamp(16px, vw(18), 18px);
     }
 } 
 
-$font-txt-16:16px;
-$font-txt-15:15px;
+@mixin font-txt-16 {
+    font-size:16px;
+
+    @include sp {
+        font-size:clamp(13px, vw(15, 375), 16px);
+    }
+}
+
+@mixin font-txt-15 {
+    font-size:15px;
+
+    @include sp {
+        font-size:clamp(13px, vw(14, 375), 15px);
+    }
+}
+
 $font-txt-13:13px;
+
+@mixin font-dec-16 {
+    font-size:16px;
+
+    @include sp {
+        font-size:clamp(10px, vw(15, 375), 16px);
+    }
+}
 
 /* 余白 */
 $space-xs: 8px;
@@ -80,7 +102,6 @@ $space-l--sp: vw(32, 375);
 $space-ls--sp: vw(36, 375);
 $space-xl--sp: vw(48, 375);
 $space-xxl--sp: vw(64, 375);
-
 
 $space-sec-160--sp:vw(80, 375);
 
@@ -135,15 +156,20 @@ $txt-tit-pt02:#c6a478;
 $txt-tit-pt03:#ffffff;
 $txt-th-pt03:#6b6b6b;
 $txt-defalt-pt01:#2e2e2e;
-$txt-defalt-pt02:#000000;
 
-$bk-pt01:#f1eee7;
+$bk-pt01:#dcd5c8;
 $bk-pt02:#fcf8f1;
 $bk-pt03:#ffffff;
 $bk-contact:#3d6c82;
 
 $border-pt01:#e1eaee;
 $border-pt02:#d8d8d8;
+
+body {
+    p, a, li, dl dt, dl dd {
+        color:$txt-defalt-pt01;
+    }
+}
 
 /*レイアウト*/
 @mixin flex-c {
@@ -260,7 +286,7 @@ $border-pt02:#d8d8d8;
 
         .txtArea {
             .u-txt {
-                font-size:$font-txt-15;
+                @include font-txt-15;
                 color:$txt-tit-pt03;
                 line-height:1.8;
             }
@@ -280,7 +306,7 @@ $border-pt02:#d8d8d8;
         }
 
         &_tit {
-            font-size: $font-txt-16;
+            @include font-txt-16;
             color:$txt-tit-pt01;
             margin-bottom:$space-m;
 
@@ -326,7 +352,7 @@ $border-pt02:#d8d8d8;
                     width:2.5em;
                     height:2.5em;
                     border-radius: 10em;
-                    font-size: $font-txt-15;
+                    @include font-txt-15;
 
                     @include sp {
                         width: 2em;
@@ -335,7 +361,6 @@ $border-pt02:#d8d8d8;
                 }
 
                 .item_tit {
-                    color:$txt-defalt-pt02;
                     font-size: $font-tit-20;
                     line-height:1.4;
                     margin-bottom:$space-s;
@@ -356,8 +381,7 @@ $border-pt02:#d8d8d8;
                     }
                 }
                 .txtArea {
-                    color:$txt-defalt-pt02;
-                    font-size: $font-txt-15;
+                    @include font-txt-15;
                     margin-top:auto;
                 }
             }
@@ -377,7 +401,7 @@ $border-pt02:#d8d8d8;
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xl--sp 0;
+            padding:$space-xl--sp 0 $space-sec-80--sp;
         }
 
         &_inner {
@@ -422,8 +446,7 @@ $border-pt02:#d8d8d8;
         }
 
         &_txtArea {
-            font-size:$font-txt-16;
-            color:$txt-defalt-pt02;
+            @include font-txt-16;
             font-weight:bold;
             width:96%;
             margin:0 0 $space-sec-120 auto;
@@ -500,19 +523,22 @@ $border-pt02:#d8d8d8;
                 .txtArea {
                     max-width:460px;
 
+                    @include sp {
+                        max-width:none;
+                    }
+
                     .en-num {
+                        @include font-dec-16;
                         display:block;
-                        font-size:$font-txt-16;
                         margin-bottom:$space-m;
+                        color:$txt-tit-pt02;
                     }
                     &_tit {
-                        color:$txt-defalt-pt02;
                         font-size:$font-tit-20;
                         margin-bottom:$space-l;
                     }
                     &_txt {
-                        color:$txt-defalt-pt02;
-                        font-size:$font-txt-15;
+                        @include font-txt-15;
                     }
                 }
 
@@ -547,11 +573,7 @@ $border-pt02:#d8d8d8;
         padding:$space-sec-100 0;
 
         @include sp {
-            padding:$space-xl--sp 0;
-        }
-
-        h3, p, span, li, dl {
-            color:$txt-defalt-pt02;
+            padding:$space-sec-80--sp 0 $space-xl--sp;
         }
 
         &_tit {
@@ -614,7 +636,7 @@ $border-pt02:#d8d8d8;
                 }
 
                 .price {
-                    font-size:$font-txt-15;
+                    @include font-txt-15;
 
                     .tax {
                         font-size:$font-txt-13;
@@ -624,31 +646,27 @@ $border-pt02:#d8d8d8;
 
             .products_point_list {
                 display:flex;
-                @include cantainer-1050;
                 gap:$gap-24;
                 margin-bottom:$space-xl;
-
-                @media all and (max-width:1050px) {
-                    max-width:100%;
-                }
+                @include cantainer-1050;
+                width:100%;
 
                 @include sp {
-                    width:100%;
                     flex-direction: column;
                     gap:$gap-24--sp;
                 }
 
                 &_item {
                     background:$bk-pt02;
-                    padding:$space-m;
+                    padding:$space-l;
 
                     @include sp {
                         padding:$space-s--sp;
                     }
 
                     .point {
+                        @include font-txt-16;
                         color:$txt-tit-pt02;
-                        font-size:$font-txt-16;
                         margin-bottom:$space-m;
                     }
 
@@ -662,18 +680,20 @@ $border-pt02:#d8d8d8;
                     }
 
                     .item_txt {
-                        font-size:$font-txt-15;
+                        @include font-txt-15;
                         
                     }
                 }
             }
 
             .fig_list {
+                @include cantainer-1050;
                 display:grid;
                 grid-template-columns: repeat(2, 1fr);
+                margin-top:$space-l;
                 margin-bottom:$space-xl;
                 justify-content: center;
-                @include cantainer-1050;
+                width:100%;
 
                 @media all and (max-width:1050px) {
                     max-width:100%;
@@ -722,7 +742,7 @@ $border-pt02:#d8d8d8;
 
                 th,td {
                     padding-block: 0.6em;
-                    font-size:$font-txt-16;
+                    @include font-txt-16;
                 }
 
                 th {
@@ -741,7 +761,6 @@ $border-pt02:#d8d8d8;
                 td {
                     flex: 1;
                     min-width: 0;
-                    font-weight: bold;
                     overflow-wrap: anywhere;
                     word-break: normal;
 
@@ -774,7 +793,7 @@ $border-pt02:#d8d8d8;
         &_tit_en {
             @include cantainer-1280;
             color:$txt-tit-pt01;
-            font-size: $font-txt-16;
+            @include font-txt-16;
         }
 
         &_tit {
@@ -792,12 +811,16 @@ $border-pt02:#d8d8d8;
                 font-size:$font-tit-120;
                 margin-right:$space-xxl;
                 color:$txt-tit-pt02;
+
+                @include sp {
+                    margin-right:0;
+                }
             }
         }
 
         .txtArea.top {
             color:$txt-tit-pt01;
-            font-size: $font-txt-16;
+            @include font-txt-16;
             font-weight:bold;
             margin-bottom:$space-sec-100;
 
@@ -861,8 +884,7 @@ $border-pt02:#d8d8d8;
                     }
 
                     .txt {
-                        font-size: $font-txt-15;
-                        color:$txt-defalt-pt02;
+                        @include font-txt-15;
                     }
                 }
             }
@@ -903,8 +925,7 @@ $border-pt02:#d8d8d8;
                     }
                 }
                 .txt {
-                    font-size: $font-txt-16;
-                    color:$txt-defalt-pt02;
+                    @include font-txt-16;
                 }
             }
 
@@ -952,16 +973,26 @@ $border-pt02:#d8d8d8;
             text-align:left;
             margin-top:1em;
 
+            @include sp {
+                text-align:center;
+            }
+
             a {
                 position:relative;
                 display:inline-block;
-                font-size: $font-txt-15;
-                color:$txt-defalt-pt01;
+                @include font-txt-15;
                 background:$bk-pt03;
                 border-radius: 6em;
                 letter-spacing: 0;
                 padding:0.3em 3em 0.3em 1em;
                 font-weight:bold;
+                transition:all .2s;
+
+                @include pc {
+                    &:hover {
+                        filter:brightness(0.8);
+                    }
+                }
             }
 
             .icon {
