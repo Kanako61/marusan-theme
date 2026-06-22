@@ -37,7 +37,7 @@ Template Name: trailerhouse
         <span class="num">1</span>
         <h3 class="item_tit u-align-c">市街化調整区域などにも<br>設置可能</h3>
         <div class="icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-01.svg" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-01.svg" alt="">
         </div>
         <p class="txtArea">建築物が建てられない絶景ポイントなど、唯一無二のロケーションで設置が可能です。</p>
       </li>
@@ -45,7 +45,7 @@ Template Name: trailerhouse
         <span class="num">2</span>
         <h3 class="item_tit u-align-c">低コスト＆<br>迅速な設置</h3>
         <div class="icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-02.svg" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-02.svg" alt="">
         </div>
         <p class="txtArea">建築と比べて、コストを抑えながらスピーディに設置でき、初期投資や施工期間の軽減にもつながります。</p>
       </li>
@@ -53,7 +53,7 @@ Template Name: trailerhouse
         <span class="num">3</span>
         <h3 class="item_tit u-align-c">将来的に<br>移動・売却可能</h3>
         <div class="icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-03.svg" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-03.svg" alt="">
         </div>
         <p class="txtArea">用途や事業フェーズに合わせて、移設や売却など、柔軟な資産活用ができるのが特徴です。</p>
       </li>
@@ -61,7 +61,7 @@ Template Name: trailerhouse
         <span class="num">4</span>
         <h3 class="item_tit u-align-c">減価償却4年<br>固定資産税なし</h3>
         <div class="icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-04.svg" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-icon-04.svg" alt="">
         </div>
         <p class="txtArea">不動産ではなく、車両扱いのため、短期償却による節税効果や固定資産税負担の軽減が期待できます。</p>
       </li>
@@ -74,7 +74,7 @@ Template Name: trailerhouse
 <!--マルサンがつくるトレーラハウス-->
 <section class="marusan_trailerhouse">
   <div class="marusan_trailerhouse_inner">
-    <h2 class="marusan_trailerhouse_tit"><span class="ja">マルサンがつくる<br class="u-none--sp">トレーラーハウス</span><span class="en">Features</span></h2>
+    <h2 class="marusan_trailerhouse_tit"><span class="ja">マルサンがつくる<br>トレーラーハウス</span><span class="en">Features</span></h2>
     <p class="marusan_trailerhouse_txtArea">地元ふくしまから生まれる木造トレーラーハウス。<br class="u-none--sp">長年、木造住宅建築に携わってきた私たちが取り組む新しい形の住まいです。</p>
     <ul class="marusan_trailerhouse_list">
       <li class="marusan_trailerhouse_list_item">
@@ -85,7 +85,7 @@ Template Name: trailerhouse
           <p class="txtArea_txt">時代のニーズに応えた家づくりで培ったさまざまなアイデアを活かし、私たちのトレーラーハウスは、快適で持続可能な暮らしを実現します。</p>
         </div>
         <div class="imgArea">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-img-01.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-img-01.webp" alt="家づくりの総合支援をしてきた私たちならではの商品づくり">
         </div>
       </li>
       <li class="marusan_trailerhouse_list_item">
@@ -97,7 +97,7 @@ Template Name: trailerhouse
           </p>
         </div>
         <div class="imgArea">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-img-02.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-img-02.webp" alt="地域とともに、心地良い時間をデザイン">
         </div>
       </li>
 
@@ -109,7 +109,7 @@ Template Name: trailerhouse
           <p class="txtArea_txt">安全性と快適さを兼ね備えたこのトレーラーハウスは、キャンプやクランピング施設の新しい目玉としても注目され、自然の中で特別な体験を演出します。訪れる人々に新たな楽しみと感動をもたらすことでしょう。</p>
         </div>
         <div class="imgArea">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-img-03.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/features-img-03.webp" alt="木造住宅空間を持ち運びやすく選択肢の一つとして気軽に">
         </div>
       </li>
     </ul>  
@@ -125,7 +125,7 @@ Template Name: trailerhouse
   <div class="sumika products_box">
     <h2 class="products_box_tit">あらゆる木質空間を実現<br class="u-none--pc">するトレーラーハウス</h2>
     <div class="products_box_img">
-      <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/product-sumika.webp" alt="新しいくらしの可能性を">
+      <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/product-sumika.webp" alt="sumika">
     </div>
     <div class="products_txtArea">
       <p class="name">sumika</p>
@@ -137,16 +137,16 @@ Template Name: trailerhouse
         <p class="point u-align-c">POINT</p>
         <h3 class="item_tit u-align-c">オフィスや宿泊施設、<br>離れとしても活用が可能</h3>
         <div class="item_img">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-img-01.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-img-01.webp" alt="オフィスや宿泊施設、離れとしても活用が可能">
         </div>
         <p class="item_txt">カウンターや収納の配置を工夫することで、限られた空間でもあらゆる用途で活用可能です。またオプションでトイレやキッチン等を追加することで生活空間をさらに造り上げることができます。</p>
       </li>
 
       <li class="products_point_list_item">
         <p class="point u-align-c">POINT</p>
-        <h3 class="item_tit u-align-c">オフィスや宿泊施設、<br>離れとしても活用が可能</h3>
+        <h3 class="item_tit u-align-c">あたたかみを感じる<br>木質感あふれる内装</h3>
         <div class="item_img">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-img-02.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-img-02.webp" alt="あたたかみを感じる木質感あふれる内装">
         </div>
         <p class="item_txt">木の温もりを感じられる木質感あふれる内装デザインで、空間全体にやさしさを落ち着きをもたらし、もうひとつの小さな家のように、心からくつろげる居場所として過ごせる空間を提供します。</p>
       </li>
@@ -154,19 +154,19 @@ Template Name: trailerhouse
 
     <ul class="fig_list">
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-01.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-01.webp" alt="">
       </li>
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-02.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-02.webp" alt="">
       </li>
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-03.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-03.webp" alt="">
       </li>
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-04.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-04.webp" alt="">
       </li>
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-05.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/sumika-fig-05.webp" alt="">
       </li>
     </ul>
     <dl>
@@ -231,9 +231,9 @@ Template Name: trailerhouse
 
   <!--meguri-->
   <div class="sumika products_box">
-    <h2 class="products_box_tit">索引免許不要の<br class="u-none--pc">多目的トレーラー</h2>
+    <h2 class="products_box_tit">牽引免許不要の<br class="u-none--pc">多目的トレーラー</h2>
     <div class="products_box_img">
-      <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/product-sumika.webp" alt="新しいくらしの可能性を">
+      <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/product-sumika.webp" alt="meguri">
     </div>
     <div class="products_txtArea">
       <p class="name">meguri</p>
@@ -247,14 +247,14 @@ Template Name: trailerhouse
         <div class="item_img">
           <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-img-01.webp" alt="手軽に移動できる高い可能性">
         </div>
-        <p class="item_txt">全体重量を750KG以下に抑えることで、普通自動車免許のみで索引免許を不要としました。全長も過度に長くせず、取り回しやすいサイズ設計にすることで、より気軽に好きな場所へ空間を持ち運べる仕様としています。</p>
+        <p class="item_txt">全体重量を750KG以下に抑えることで、普通自動車免許のみで牽引免許を不要としました。全長も過度に長くせず、取り回しやすいサイズ設計にすることで、より気軽に好きな場所へ空間を持ち運べる仕様としています。</p>
       </li>
 
       <li class="products_point_list_item">
         <p class="point u-align-c">POINT</p>
         <h3 class="item_tit u-align-c">様々な用途に合わせて<br>アレンジ可能</h3>
         <div class="item_img">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-img-02.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-img-02.webp" alt="様々な用途に合わせてアレンジ可能">
         </div>
         <p class="item_txt">さまざまな用途に合わせてアレンジ可能で、寝台や簡易キッチンなどのオプションも追加できる仕様、簡易飲食やDIYなど、多目的に使い方に応じて自由にカスタマイズできる設計です。</p>
       </li>
@@ -262,13 +262,13 @@ Template Name: trailerhouse
 
     <ul class="fig_list">
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-fig-01.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-fig-01.webp" alt="">
       </li>
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-fig-02.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-fig-02.webp" alt="">
       </li>
       <li class="fig_list_item">
-        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-fig-03.webp" alt="新しいくらしの可能性を">
+        <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/meguri-fig-03.webp" alt="">
       </li>
     </ul>
     <dl>
@@ -337,7 +337,7 @@ Template Name: trailerhouse
     <ul class="plus-One_list">
       <li class="plus-One_list_item">
         <div class="imgArea">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-01.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-01.webp" alt="暮らしに+1">
         </div>
         <div class="txtArea">
           <h3 class="plus-One_tit">暮らしに+1</h3>
@@ -346,7 +346,7 @@ Template Name: trailerhouse
       </li>
       <li class="plus-One_list_item">
         <div class="imgArea">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-02.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-02.webp" alt="災害対策に+1">
         </div>
         <div class="txtArea">
           <h3 class="plus-One_tit">災害対策に+1</h3>
@@ -355,7 +355,7 @@ Template Name: trailerhouse
       </li>
       <li class="plus-One_list_item">
         <div class="imgArea">
-          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-03.webp" alt="新しいくらしの可能性を">
+          <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/plus-one-img-03.webp" alt="観光・事業に+1">
         </div>
         <div class="txtArea">
           <h3 class="plus-One_tit">観光・事業に+1</h3>
@@ -370,7 +370,7 @@ Template Name: trailerhouse
 <section class="exhibition">
   <div class="exhibition_inner">
     <div class="imgArea">
-      <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/exhibition-img.webp" alt="新しいくらしの可能性を">
+      <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/exhibition-img.webp" alt="展示場案内">
     </div>
     <div class="txtArea">
       <h2 class="exhibition_tit">展示場案内</h2>
