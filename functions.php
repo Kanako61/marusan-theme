@@ -181,7 +181,12 @@ function my_custom_lazyblock_handlebars_helper ( $handlebars )
 add_action( 'lzb_handlebars_object', 'my_custom_lazyblock_handlebars_helper' );
 
 
-
+//feedページにX-Robots-Tag:noindex,followを設定
+add_action('template_redirect', function(){
+    if ( is_feed() && headers_sent() === false ) {
+        header( 'X-Robots-Tag: noindex, follow', true );
+    }
+});
 
 
 

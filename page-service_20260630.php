@@ -174,7 +174,7 @@ Template Name: service
     <li id="service_05">
       <dl class="other-precut_list_dl">
         <dt>TAPOS®(テイポス)</dt>
-        <dd>従来の木造軸組工法（大入れ蟻掛け等）は木材のめり込み方向に力がかかるため、柔らかいスギ材は梁・桁などの横架材として強度不足と見なされ、国産材シェアが低い課題がありました。<br>「TAPOS®」は、大径化するスギ材を梁・桁へ積極活用することを目指し、兵庫県立農林水産技術総合センターが開発した特許技術(※)です。<br>当社は全国で7社目、東北地方では初めての「TAPOS®」許諾契約工場として当技術の普及に力を入れております。<br>詳しくは弊社営業担当までお問い合わせください。<br><br>■主な特徴とメリット<br>・仕口強度が「3倍」に向上<br>・梁高さ(梁成)に応じて耐力がさらにUP<br>・材料経費・材積の節減<br>・施工性の向上(掛矢で"一発"施工)<br><span class="text-small u-mt3per">※特許第6340499号<br><a href="https://hyogo-nourinsuisangc.jp/sinrin/images/HyogoTajimaTAPOS.pdf">※TAPOS®技術概要資料</a></span></dd>  
+        <dd>当社は全国で7社目、東北地方では初めての「TAPOS®」許諾契約工場です。梁仕口をV字（テーパー）加工することで、これまでの在来仕口と比較して高いせん断耐力を実現しました。詳しくは弊社営業担当までお問い合わせください。<br><span class="text-small u-mt3per">※TAPOS®は兵庫県立農林水産技術総合センター森林林業技術センターの特許技術です。</span></dd>  
       </dl>
 
       <div class="other-precut_list_img">
