@@ -12,7 +12,7 @@ $(".hamburger_button").click(function () {
 
 
 // PCサイズでのみhoverイベントを有効にする
-if (window.innerWidth > 900) {
+if (window.innerWidth > 1024) {
   $('.menu-item-object-page').hover(
       function() {
           $(this).addClass('active');
@@ -29,7 +29,7 @@ if (window.innerWidth > 900) {
 const menuLinks = document.querySelectorAll('.global-nav__menu a');
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
-    if (window.innerWidth <= 900) { // モバイル表示の時だけ動作
+    if (window.innerWidth <= 1024) { // モバイル表示の時だけ動作
       $('.hamburger_button').removeClass('active');
       $('.l-site_header').removeClass('active');
     }
@@ -40,11 +40,11 @@ menuLinks.forEach(link => {
 //要素追加
 jQuery(document).ready(function($) {
   // 900px以下の場合のみ実行
-  if ($(window).width() <= 900) {
+  if ($(window).width() <= 1024) {
       $('.menu-item-has-children').prepend('<span class="plus"></span>');
   }
 
-  if ($(window).width() <= 900) {
+  if ($(window).width() <= 1024) {
     $('.menu-item-has-children .plus').click(function() {
         $(this).parent('.menu-item-has-children').toggleClass('active');
     });

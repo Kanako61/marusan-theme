@@ -2,7 +2,7 @@
 .menu-global-container {
     transition: transform .6s ease-out;
 
-    @media all and (max-width:900px) {
+    @media all and (max-width:1024px) {
         display: none;
         margin-left:0;
     }
@@ -10,6 +10,7 @@
     .global-nav__menu {
         position:relative;
         display:flex;
+        align-items: center;
         color:$font-default-c;
         margin:0;
 
@@ -35,12 +36,57 @@
                     font-size:1.4rem;
                     padding:2em 1em;
                 }
+
+
             }
         }
 
+        .menu-item--trailer {
+            a {
+                padding:1.15em 5.5em 1.15em 1em;
+                background-color:#d3c189;
+
+                @media all and (min-width:1025px) {
+                    text-align: center;
+                    line-height: 1.4;
+
+                    &:after {
+                        content:'';
+                        display: block;
+                        background-image: url(assets/images/common/nav_trailerhouse.svg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-color:initial;
+                        position:absolute;
+                        top:45%;
+                        left:7em;
+                        transform: translateY(-50%);
+                        width:4em;
+                        height:3em;
+                        z-index:2;
+                    }
+
+                    &:hover {
+                        background:#c1a95e;
+                    }
+                }
+
+                @media all and (max-width:1280px) {
+                    padding:1.5em 5.5em 1.5em 1em;
+
+                }
+            }
+
+            .u-none--sp {
+                @media all and (max-width:1024px) {
+                   display:none;
+
+                }
+            }
+        }
 
         /*PC時サブメニュー*/
-        @media all and (min-width:901px) {
+        @media all and (min-width:1025px) {
             .menu-item-object-page:hover, .menu-item-object-category:hover {
                 background:$header-current-nav01;
             }
@@ -84,7 +130,7 @@
         }
 
         /*sp時サブメニュー*/
-        @media all and (max-width:900px) {
+        @media all and (max-width:1024px) {
             .menu-item-has-children {
                 position:relative;
 
@@ -216,12 +262,30 @@
                     display:inline-block;
                     position:absolute;
                     top:50%;
-                    transform: translate(-50%);
-                    right:0.5em;
+                    transform: translatey(-50%);
+                    right:1em;
                     width:15px;
                     height:13px;
                     background-image:url(assets/images/common/arrow-icon-w.svg);
                     background-size: cover;
+                }
+            }
+        }
+        .menu-item--trailer {
+            a {
+                &:before {
+                    content:'';
+                    display: block;
+                    background-image: url(assets/images/common/nav_trailerhouse.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color:initial;
+                    position:absolute;
+                    top:50%;
+                    left:10em;
+                    transform: translateY(-50%);
+                    width:4em;
+                    height:3em;
                 }
             }
         }
@@ -241,7 +305,7 @@
     border-radius: 5px;
     z-index: 4;
 
-    @media all and (max-width:900px) {
+    @media all and (max-width:1024px) {
         display: block;
     }
 
@@ -301,7 +365,7 @@
         ul {
             li {
                 a {
-                    @media all and (min-width:901px) {
+                    @media all and (min-width:1025px) {
                         color:#fff;
 
                         &:before {
@@ -320,7 +384,7 @@
     }
 
     /*スクロールしたらグロナビのスタイル変える*/
-    @media all and (min-width:901px) {
+    @media all and (min-width:1025px) {
         .l-site_header:has(+ .main.classActive) {
             background:#fff;
 
@@ -335,7 +399,7 @@
         }
     }
 
-    @media all and (max-width:900px) {
+    @media all and (max-width:1024px) {
         .l-site_header:has(+ .main.classActive) {
             background:none;
 
@@ -356,7 +420,7 @@
 
 
 /*カレント表示*/
-@media all and (min-width:901px) {
+@media all and (min-width:1025px) {
     .l-site_header .current_page_item, .l-site_header .menu-item-object-category.current-menu-item {
         z-index:2;
 
@@ -400,4 +464,13 @@
             }
         }
     }
+
+    .l-site_header .current_page_item.menu-item--trailer {
+        a {
+            background:#c1a95e;
+        }
+    }
 }
+
+
+

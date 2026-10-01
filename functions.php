@@ -4,6 +4,7 @@
  *
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
  */
+
 function my_setup() {
 	add_theme_support( 'title-tag' ); /* タイトルタグ自動生成 */
 	add_theme_support( 'post-thumbnails' ); /* アイキャッチ */
@@ -113,6 +114,10 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'fontawesome.css','https://use.fontawesome.com/releases/v5.6.1/css/all.css');
 	
     wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css');
+
+    if (is_page_template('page-trailerhouse.php')) {
+        wp_enqueue_style('trailerhouse-style', get_template_directory_uri() . '/trailerhouse/assets/css/style.css');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles');
 
@@ -188,6 +193,22 @@ add_action('template_redirect', function(){
     }
 });
 
+//グロナビ、ログイン中のみ表示　公開後にこの記述は消す
+add_filter('wp_nav_menu_objects', function ($items) {
+
+    if (current_user_can('edit_pages')) {
+        return $items;
+    }
+
+    foreach ($items as $key => $item) {
+
+        if (in_array('menu-item--trailer', $item->classes, true)) {
+            unset($items[$key]);
+        }
+    }
+
+    return $items;
+});
 
 
 
