@@ -31,23 +31,43 @@
     box-sizing: border-box;
 }
 
-$font-copy-en: max(42px, vw(82));
-$font-copy-ja: max(18px, vw(24));
+$font-1: 'Lato', sans-serif;
+$font-default: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+$font-2: "Noto Sans JP", sans-serif;
+
+@mixin h2 {
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+$font-copy-en: max(64px, vw(88));
+$font-copy-ja: max(20px, vw(24));
 
 $font-tit-120: clamp(64px, vw(120), 120px);
 $font-tit-62: clamp(48px, vw(62), 62px);
 $font-tit-56: clamp(34px, vw(56), 56px);
+$font-tit-32: clamp(32px, vw(32), 32px);
 $font-tit-24: clamp(18px, vw(24), 24px);
 $font-tit-20: clamp(16px, vw(20), 20px);
 $font-tit-18: clamp(14px, vw(18), 18px);
 
-@mixin font-tit-42 {
-    font-size:clamp(28px, vw(42), 42px);
+@mixin font-tit-40 {
+    font-size:clamp(28px, vw(40), 40px);
 
     @include sp {
-        font-size:clamp(22px, vw(24, 375), 28px);
+        font-size:clamp(22px, vw(28, 375), 28px);
     }
-} 
+}
+
+@mixin font-txt-18 {
+    font-size:18px;
+
+    @include sp {
+        font-size:clamp(13px, vw(14, 375), 14px);
+    }
+}
 
 @mixin font-txt-16 {
     font-size:16px;
@@ -65,7 +85,8 @@ $font-tit-18: clamp(14px, vw(18), 18px);
     }
 }
 
-$font-txt-13:13px;
+$font-txt-14: 14px;
+$font-txt-13: 13px;
 
 @mixin font-dec-16 {
     font-size:16px;
@@ -74,6 +95,14 @@ $font-txt-13:13px;
         font-size:clamp(10px, vw(15, 375), 16px);
     }
 }
+
+$letter-space-en:0.1em;
+
+/* フォント太さ  */
+$font-bold:bold;
+$font-500:500;
+$font-400:400;
+$font-300:300;
 
 /* 余白 */
 $space-xs: 8px;
@@ -97,9 +126,11 @@ $space-sec-160--sp: vw(160px, 375);
 $space-xs--sp: vw(8, 375);
 $space-xss--sp: vw(10, 375);
 $space-s--sp: vw(16, 375);
+$space-xm--sp: vw(20, 375);
 $space-m--sp: vw(24, 375);
 $space-l--sp: vw(32, 375);
 $space-ls--sp: vw(36, 375);
+$space-xls--sp: vw(40, 375);
 $space-xl--sp: vw(48, 375);
 $space-xxl--sp: vw(64, 375);
 
@@ -130,8 +161,8 @@ $space-sec-160--sp:vw(80, 375);
     margin:auto auto;
 }
 
-@mixin cantainer-500 {
-    max-width: 500px;
+@mixin cantainer-700 {
+    max-width: 700px;
     width:80vw;
     margin:auto auto;
 }
@@ -141,6 +172,7 @@ $gap-120: 120px;
 $gap-72: 72px;
 $gap-64: 64px;
 $gap-48: 48px;
+$gap-40: 40px;
 $gap-36: 36px;
 $gap-24: 24px;
 $gap-20: 20px;
@@ -150,20 +182,21 @@ $gap-24--sp: vw(24, 375);
 $gap-20--sp: vw(20, 375);
 
 /*カラー設定*/
-$txt-tit-pt01:#3d6382;
-$num-01:#4caac7;
-$txt-tit-pt02:#c6a478;
+$txt-tit-pt01:#3D6382;
+$num-01:#4CAAC7;
+$txt-tit-pt02:#C6A478;
 $txt-tit-pt03:#ffffff;
-$txt-th-pt03:#6b6b6b;
-$txt-defalt-pt01:#2e2e2e;
+$txt-th-pt03:#6B6B6B;
+$txt-defalt-pt01:#2E2E2E;
 
-$bk-pt01:#dcd5c8;
-$bk-pt02:#fcf8f1;
+$bk-pt01:#DCD5C8;
+$bk-pt02:#F1EEE7;
 $bk-pt03:#ffffff;
-$bk-contact:#3d6c82;
+$bk-pt04:#FCF8F1;
+$bk-contact:#3D6C82;
 
-$border-pt01:#e1eaee;
-$border-pt02:#d8d8d8;
+$border-pt01:#E1EAEE;
+$border-pt02:#D8D8D8;
 
 body {
     p, a, li, dl dt, dl dd {
@@ -178,6 +211,18 @@ body {
 
 .u-align-c {
     text-align:center;
+}
+
+.u-align-c--sp {
+    @include sp {
+        text-align:center;
+    }
+}
+
+.u-align-l--sp {
+    @include sp {
+        text-align:left;
+    }
 }
 
 .u-none--pc {
@@ -198,8 +243,9 @@ body {
 
 .trailerhouse_main {
     h2, h3, h4, p, span, li, dt, dd {
-        line-height:1.4;
-        letter-spacing: 0;
+        font-family: $font-2;
+        line-height:1.5;
+        letter-spacing: 0.05em;
     }
 
     h2, h3, h4 {
@@ -212,8 +258,12 @@ body {
 
         .trailerhouse_pic {
             width:100%;
-            height: clamp(60vh, 100vh, vw(800));
+            height: clamp(100vh, 100vh, vw(800));
             overflow: hidden;
+
+            @include sp {
+                height: vw(661, 375);
+            }
 
             img {
                 display:block;
@@ -243,6 +293,13 @@ body {
 
             .en {
                 font-size: $font-copy-en;
+                font-family: $font-1;
+                letter-spacing: $letter-space-en;
+
+                @include sp {
+                    line-height:1;
+                    margin-bottom:0.3em;
+                }
             }
 
             .ja {
@@ -266,7 +323,7 @@ body {
        }
 
        &_inner {
-            @include cantainer-500;
+            @include cantainer-700;
        }
 
         &_tit {
@@ -278,17 +335,30 @@ body {
 
             .en {
                 font-size:$font-tit-18;
+                font-family: $font-1;
+                letter-spacing:$letter-space-en;
+                font-weight: $font-400;
+
+                @include sp {
+                    margin-bottom:$space-s--sp;
+                }
             }
             .ja {
-                @include font-tit-42;
+                @include font-tit-40;
+                font-weight: $font-500;
             }
         }
 
         .txtArea {
             .u-txt {
-                @include font-txt-15;
+                @include font-txt-16;
                 color:$txt-tit-pt03;
-                line-height:1.8;
+                line-height:2;
+                font-weight: $font-300;
+
+                @include sp {
+                    font-size:16px;
+                }
             }
         }
     }
@@ -298,33 +368,43 @@ body {
         margin:$space-sec-120 auto $space-xxl;
 
         @include sp {
-            margin:$space-xl--sp auto $space-l--sp;
+            margin:$space-xxl--sp auto;
         }
 
         &_inner {
             @include cantainer-1280;
+
+            @include sp {
+                width:80vw;
+            }
         }
 
         &_tit {
-            @include font-txt-16;
+            @include font-txt-18;
             color:$txt-tit-pt01;
-            margin-bottom:$space-m;
+            margin-bottom:$space-ls;
+            font-family: $font-1;
+            letter-spacing:$letter-space-en;
 
             @include sp {
-                margin-bottom:$space-m--sp;
+                margin-bottom:$space-xxl--sp;
             }
         }
 
         &_list {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: $gap-20;
+            gap: $gap-24;
             align-items: stretch;
             margin-bottom:$space-xxl;
 
             @include sp {
-                margin-bottom:$space-l--sp;
-                gap: $gap-20 $gap-10;
+                margin-bottom:$space-xxl--sp;
+                gap: $gap-36 $gap-24;
+            }
+
+            @media all and (max-width:540px) {
+                gap: $gap-36;
             }
 
             &_item {
@@ -332,11 +412,11 @@ body {
                 flex-direction: column;
                 position:relative;
                 border-radius: 1em;
-                border: solid 3px $border-pt01;
+                border: solid 2px $border-pt01;
                 padding:$space-ls $space-s $space-s;
 
                 @include sp {
-                    padding:$space-l $space-s--sp $space-s--sp;
+                    padding:$space-l $space-xm--sp $space-xm--sp;
                 }
 
                 .num {
@@ -349,14 +429,17 @@ body {
                     align-items: center;
                     background:$num-01;
                     color:$txt-tit-pt03;
-                    width:2.5em;
-                    height:2.5em;
+                    width:2em;
+                    height:2em;
                     border-radius: 10em;
-                    @include font-txt-15;
+                    font-family: $font-1;
+                    @include font-txt-18;
+                    box-shadow: 2px 4px 8px rgba(43, 126, 192, 0.2);
 
                     @include sp {
                         width: 2em;
                         height:2em;
+                        font-size:18px;
                     }
                 }
 
@@ -364,6 +447,10 @@ body {
                     font-size: $font-tit-20;
                     line-height:1.4;
                     margin-bottom:$space-s;
+
+                    @include sp {
+                        font-size:20px;
+                    }
                 }
 
                 .icon {
@@ -373,15 +460,16 @@ body {
 
                     img {
                         width:auto;
-                        height:clamp(60px, vw(80), 80px);
+                        height:clamp(80px, vw(104), 104px);
 
-                         @include sp {
-                            height:clamp(50px, vw(140), 140px);
+                        @include sp {
+                            height:104px;
                         }
                     }
                 }
                 .txtArea {
-                    @include font-txt-15;
+                    font-size: $font-txt-14;
+                    font-weight: $font-400;
                     margin-top:auto;
                 }
             }
@@ -390,6 +478,12 @@ body {
         @include sp {
             .features_list {
                 grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media all and (max-width:540px) {
+            .features_list {
+                grid-template-columns: repeat(1, 1fr);
             }
         }
     }
@@ -406,6 +500,10 @@ body {
 
         &_inner {
             @include cantainer-1200;
+
+            @include sp {
+                width:100%;
+            }
         }
 
         &_tit {
@@ -420,40 +518,44 @@ body {
                 width:80vw;
                 margin:0 auto $space-m;
                 flex-direction: column-reverse;
+                text-align:center;
              }
     
             .ja {
-                @include font-tit-42;
+                @include font-tit-40;
                 color:$txt-tit-pt01;
 
                 @include sp {
                     display:block;
                     width:100%;
-                    text-align: left;
                 }
             }
 
             .en {
                 font-size:$font-tit-120;
                 color:$txt-tit-pt03;
+                font-family: $font-1;
+                letter-spacing: 0;
 
                 @include sp {
+                    font-size:80px;
                     display:block;
                     width:100%;
-                    text-align:left;
                 }
             }
         }
 
         &_txtArea {
             @include font-txt-16;
-            font-weight:bold;
             width:96%;
             margin:0 0 $space-sec-120 auto;
+            font-weight: $font-bold;
+            line-height:2;
 
             @include sp {
                 width:80vw;
                 margin:0 auto $space-xxl;
+                font-weight:$font-400;
             }
         }
 
@@ -463,7 +565,7 @@ body {
             gap:$gap-120;
 
             @include sp {
-                gap:$gap-24--sp;
+                gap:$gap-40;
             }
 
             &_item {
@@ -475,7 +577,7 @@ body {
                 z-index:2;
 
                 @include sp {
-                    padding:$space-m--sp;
+                    padding:10vw;
                 }
 
                 &::after {
@@ -486,12 +588,13 @@ body {
                     width: calc(50vw + 50%);
                     height: 100%;
                     background: #fff;
-                    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+                    box-shadow: 40px 20px 20px rgba(234, 228, 214, 1);
                     z-index:-1;
 
                     @include sp {
                         right:0;
                         width:100%;
+                        box-shadow: 20px 8px 12px #EAE4D6;
                     }
                 }
 
@@ -500,14 +603,16 @@ body {
                     padding:$space-xl $space-xl $space-xl 0;
 
                     @include sp {
-                        padding:$space-m--sp;
+                        padding:10vw;
                     }
 
                     &:after {
                         left: calc(50% - 50vw);
+                        box-shadow: -40px 20px 20px rgba(234, 228, 214, 1);
 
                         @include sp {
                             left:0;
+                            box-shadow: 20px 8px 12px #EAE4D6;
                         }
                     } 
                 }
@@ -522,23 +627,30 @@ body {
 
                 .txtArea {
                     max-width:460px;
+                    line-height:1.5;
 
                     @include sp {
                         max-width:none;
                     }
 
                     .en-num {
-                        @include font-dec-16;
+                        font-size:14px;
                         display:block;
                         margin-bottom:$space-m;
                         color:$txt-tit-pt02;
+                        font-family: $font-1;
+                        font-weight:$font-400;
                     }
                     &_tit {
                         font-size:$font-tit-20;
                         margin-bottom:$space-l;
+
+                        @include sp {
+                            font-size:20px;
+                        }
                     }
                     &_txt {
-                        @include font-txt-15;
+                        font-size: $font-txt-14;
                     }
                 }
 
@@ -574,6 +686,8 @@ body {
 
         @include sp {
             padding:$space-sec-80--sp 0 $space-xl--sp;
+            background:#fff;
+            padding:0;
         }
 
         &_tit {
@@ -586,6 +700,18 @@ body {
             top:-0.7em;
             left:50%;
             transform: translatex(-50%);
+            font-family: $font-1;
+            font-weight: $font-bold;
+            letter-spacing: $letter-space-en;
+
+            @include sp {
+                position:relative;
+                top:inherit;
+                left:inherit;
+                transform: translatex(0);
+                font-size:18px;
+                margin-bottom:$space-m--sp;
+            }
         }
         
         &_inner {
@@ -599,7 +725,8 @@ body {
             } 
             
             @include sp {
-                gap:$gap-24--sp;
+                gap:0;
+                width:100%;
             }
         }
         
@@ -611,13 +738,24 @@ body {
                 padding:$space-xl--sp $space-s--sp;
             }
 
+            &:first-child {
+                @include sp {
+                    padding:$space-xl--sp $space-s--sp 0;
+
+                    .trailerhouse_table {
+                        margin-bottom:0;
+                    }
+                }
+            }
+
             &_tit {
-                @include font-tit-42;
+                @include font-tit-40;
                 text-align:center;
                 margin-bottom:$space-l;
+                color:$txt-defalt-pt01;
 
                 @include sp {
-                    font-size:min(28px, vw(24, 375));
+                    font-size:min(28px, vw(28, 375));
                 }
             }
 
@@ -633,10 +771,14 @@ body {
 
                 .name {
                     font-size:$font-tit-24;
+                    font-family: $font-1;
+                    font-weight:$font-bold;
+                    letter-spacing: $letter-space-en;
                 }
 
                 .price {
-                    @include font-txt-15;
+                    @include font-txt-16;
+                    font-family: $font-1;
 
                     .tax {
                         font-size:$font-txt-13;
@@ -657,17 +799,24 @@ body {
                 }
 
                 &_item {
-                    background:$bk-pt02;
+                    background:$bk-pt04;
                     padding:$space-l;
 
+                    @include pc {
+                        width:calc(50% - 12px);
+                    }
+
                     @include sp {
-                        padding:$space-s--sp;
+                        padding:$space-xls--sp $space-xm--sp $space-l--sp;
                     }
 
                     .point {
                         @include font-txt-16;
                         color:$txt-tit-pt02;
                         margin-bottom:$space-m;
+                        font-family: $font-1;
+                        font-size:$font-txt-14;
+                        font-weight: $font-bold;
                     }
 
                     .item_tit {
@@ -677,10 +826,14 @@ body {
 
                     .item_img {
                         margin-bottom:$space-m;
+
+                        & img {
+                            border-radius: 8px;
+                        }
                     }
 
                     .item_txt {
-                        @include font-txt-15;
+                        font-size: $font-txt-14;
                         
                     }
                 }
@@ -733,11 +886,6 @@ body {
                     &:last-child {
                         border-bottom: 1px solid $border-pt02;
                     }
-
-                    @include sp {
-                        flex-direction: column;
-                        gap: 0;
-                    }
                 }
 
                 th,td {
@@ -751,11 +899,6 @@ body {
                     text-align: left;
                     color: $txt-th-pt03;
                     white-space: nowrap;
-
-                    @include sp {
-                        width: auto;
-                        padding-bottom: 0;
-                    }
                 }
 
                 td {
@@ -763,10 +906,7 @@ body {
                     min-width: 0;
                     overflow-wrap: anywhere;
                     word-break: normal;
-
-                    @include sp {
-                        padding-top:0;
-                    }
+                    color:$txt-defalt-pt01;
                 }
             }
 
@@ -793,26 +933,40 @@ body {
         &_tit_en {
             @include cantainer-1280;
             color:$txt-tit-pt01;
-            @include font-txt-16;
+            @include font-txt-18;
+            font-family: $font-1;
+            letter-spacing: $letter-space-en;
+
+            @include sp {
+                text-align: center;
+            }
         }
 
-        &_tit {
+        &_tit_h2 {
             display:flex;
             justify-content: space-between;
             align-items: center;
             color:$txt-tit-pt01;
             margin-bottom:$space-m;
 
+            @include sp {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
             .tit {
-                @include font-tit-42;
+                @include font-tit-40;
             }
 
             .plus {
                 font-size:$font-tit-120;
                 margin-right:$space-xxl;
                 color:$txt-tit-pt02;
+                font-family: $font-1;
+                letter-spacing: 0;
 
                 @include sp {
+                    font-size:80px;
                     margin-right:0;
                 }
             }
@@ -821,11 +975,14 @@ body {
         .txtArea.top {
             color:$txt-tit-pt01;
             @include font-txt-16;
-            font-weight:bold;
+            font-weight:$font-bold;
             margin-bottom:$space-sec-100;
+            line-height: 2;
 
             @include sp {
                 margin-bottom:$space-xl;
+                color:$txt-defalt-pt01;
+                font-weight: $font-400;
             }
         }
 
@@ -876,15 +1033,27 @@ body {
                     padding:$space-l $space-xxl;
 
                     @include sp {
-                        padding:$space-xl--sp $space-ls--sp;
+                        padding:$space-ls--sp $space-xm--sp;
                     }
 
                     .plus-One_tit {
                         font-size:$font-tit-24;
-                    }
+                        color:$txt-tit-pt01;
+                        margin-bottom:$space-m;
+                        vertical-align: middle;
 
+                        @include sp {
+                            font-size:24px;
+                            text-align: center;
+                        }
+
+                        .en {
+                            font-family: $font-1;
+                            font-size: $font-tit-32;
+                        }
+                    }
                     .txt {
-                        @include font-txt-15;
+                        font-size: $font-txt-14;
                     }
                 }
             }
@@ -908,20 +1077,22 @@ body {
             margin-bottom:$space-xxl;
 
             @include sp {
-                flex-direction: column-reverse;
-                gap:$gap-24--sp;
+                flex-direction: column;
+                gap:0;
                 margin-bottom:$space-ls--sp;
 
             }
 
             .txtArea {
+                padding:$space-s 0;
+
                 .exhibition_tit {
-                    @include font-tit-42;
+                    @include font-tit-40;
                     color:$txt-tit-pt01;
                     margin-bottom:$space-xl;
 
                     @include sp {
-                        margin-bottom:$space-l--sp;
+                        margin-bottom:$space-s--sp;
                     }
                 }
                 .txt {
@@ -947,6 +1118,16 @@ body {
     }
 
     /*お問合せリンク*/
+    .contact_link {
+        transition:all .2s;
+
+        @include pc {
+            &:hover {
+                filter:brightness(0.8);
+            }
+        }
+    }
+
     .trailerhouse_contact {
         display:flex;
         justify-content: space-between;
@@ -957,6 +1138,7 @@ body {
         background:$bk-contact;
         padding:2em 3em;
         border-radius: 1em;
+        box-shadow: 8px 12px 24px rgba(31, 99, 154, 0.2);
 
         @include sp {
             flex-direction: column-reverse;
@@ -967,6 +1149,10 @@ body {
             color:$txt-tit-pt03!important;
             font-size:$font-tit-56;
             margin:0;
+            font-family: $font-1;
+            font-weight: $font-bold;
+            letter-spacing: 0;
+            
         }
 
         &_btn {
@@ -977,22 +1163,16 @@ body {
                 text-align:center;
             }
 
-            a {
+            .txt {
                 position:relative;
                 display:inline-block;
-                @include font-txt-15;
+                font-size: $font-txt-14;
                 background:$bk-pt03;
                 border-radius: 6em;
                 letter-spacing: 0;
-                padding:0.3em 3em 0.3em 1em;
-                font-weight:bold;
-                transition:all .2s;
-
-                @include pc {
-                    &:hover {
-                        filter:brightness(0.8);
-                    }
-                }
+                padding:1em 3em 1em 2em;
+                font-weight:$font-bold;
+                letter-spacing: 0.05em;
             }
 
             .icon {
