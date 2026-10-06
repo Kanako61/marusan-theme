@@ -17,7 +17,7 @@
 }
 
 /* フォント設定 */
-@mixin font-size-defalt($sp, $pc) {
+@mixin font-size-default($sp, $pc) {
   font-size: $sp;
 
   @media (min-width: 769px) {
@@ -31,8 +31,8 @@
     box-sizing: border-box;
 }
 
-$font-1: 'Lato', sans-serif;
 $font-default: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+$font-1: 'Lato', sans-serif;
 $font-2: "Noto Sans JP", sans-serif;
 
 @mixin h2 {
@@ -52,6 +52,8 @@ $font-tit-32: clamp(32px, vw(32), 32px);
 $font-tit-24: clamp(18px, vw(24), 24px);
 $font-tit-20: clamp(16px, vw(20), 20px);
 $font-tit-18: clamp(14px, vw(18), 18px);
+
+$font-tit-80--sp : min(80px, (80 / 375 * 100vw));
 
 @mixin font-tit-40 {
     font-size:clamp(28px, vw(40), 40px);
@@ -85,11 +87,17 @@ $font-tit-18: clamp(14px, vw(18), 18px);
     }
 }
 
+$font-txt-24: 24px;
+$font-txt-20: 20px;
+$font-txt-18: 18px;
+$font-txt-16: 16px;
+$font-txt-15: 15px;
 $font-txt-14: 14px;
 $font-txt-13: 13px;
+$font-txt-10: 10px;
 
 @mixin font-dec-16 {
-    font-size:16px;
+    font-size:$font-txt-16;
 
     @include sp {
         font-size:clamp(10px, vw(15, 375), 16px);
@@ -107,10 +115,15 @@ $font-300:300;
 /* 余白 */
 $space-xs: 8px;
 $space-s: 16px;
+$space-xm: 20px;
 $space-m: 24px;
+$space-ms: 28px;
 $space-l: 32px;
 $space-ls: 36px;
+$space-xls: 40px;
 $space-xl: 48px;
+$space-xxlm: 56px;
+$space-xxls: 60px;
 $space-xxl: 64px;
 
 $space-sec-80: 80px;
@@ -119,9 +132,6 @@ $space-sec-120:120px;
 $space-sec-160:160px;
 
 $space-sec-80--sp: vw(80, 375);
-$space-sec-100--sp: vw(100, 375);
-$space-sec-120--sp: vw(120px, 375);
-$space-sec-160--sp: vw(160px, 375);
 
 $space-xs--sp: vw(8, 375);
 $space-xss--sp: vw(10, 375);
@@ -134,34 +144,32 @@ $space-xls--sp: vw(40, 375);
 $space-xl--sp: vw(48, 375);
 $space-xxl--sp: vw(64, 375);
 
-$space-sec-160--sp:vw(80, 375);
-
 /* コンテンツ幅 */
-@mixin cantainer-1280 {
+@mixin container-1280 {
     max-width: 1280px;
     width:90vw;
     margin:auto auto;
 }
 
-@mixin cantainer-1200 {
+@mixin container-1200 {
     max-width: 1200px;
     width:90vw;
     margin:auto auto;
 }
 
-@mixin cantainer-1050 {
+@mixin container-1050 {
     max-width: 1050px;
     width:90vw;
     margin:auto auto;
 }
 
-@mixin cantainer-800 {
+@mixin container-800 {
     max-width: 800px;
     width:100%;
     margin:auto auto;
 }
 
-@mixin cantainer-700 {
+@mixin container-700 {
     max-width: 700px;
     width:80vw;
     margin:auto auto;
@@ -174,6 +182,7 @@ $gap-64: 64px;
 $gap-48: 48px;
 $gap-40: 40px;
 $gap-36: 36px;
+$gap-32: 32px;
 $gap-24: 24px;
 $gap-20: 20px;
 $gap-10: 10px;
@@ -187,7 +196,7 @@ $num-01:#4CAAC7;
 $txt-tit-pt02:#C6A478;
 $txt-tit-pt03:#ffffff;
 $txt-th-pt03:#6B6B6B;
-$txt-defalt-pt01:#2E2E2E;
+$txt-default-pt01:#2E2E2E;
 
 $bk-pt01:#DCD5C8;
 $bk-pt02:#F1EEE7;
@@ -200,15 +209,11 @@ $border-pt02:#D8D8D8;
 
 body {
     p, a, li, dl dt, dl dd {
-        color:$txt-defalt-pt01;
+        color:$txt-default-pt01;
     }
 }
 
 /*レイアウト*/
-@mixin flex-c {
-    display:flex;
-}
-
 .u-align-c {
     text-align:center;
 }
@@ -258,11 +263,12 @@ body {
 
         .trailerhouse_pic {
             width:100%;
-            height: clamp(100vh, 100vh, vw(800));
+            height: min(100vh, vw(800));
             overflow: hidden;
 
             @include sp {
                 height: vw(661, 375);
+                max-height: 100vh;
             }
 
             img {
@@ -319,11 +325,11 @@ body {
        padding:$space-sec-160 0;
 
        @include sp {
-            padding:$space-sec-160--sp 0;
+            padding:$space-sec-80--sp 0;
        }
 
        &_inner {
-            @include cantainer-700;
+            @include container-700;
        }
 
         &_tit {
@@ -331,16 +337,21 @@ body {
             flex-direction: column;
             align-items: center;
             color:$txt-tit-pt03;
-            margin:0 0 $space-ls;
+            margin:0 0 $space-xl;
+
+            @include sp {
+                margin-bottom:$space-xls;
+            }
 
             .en {
                 font-size:$font-tit-18;
                 font-family: $font-1;
                 letter-spacing:$letter-space-en;
                 font-weight: $font-400;
+                margin-bottom:$space-xs;
 
                 @include sp {
-                    margin-bottom:$space-s--sp;
+                    margin-bottom:$space-s;
                 }
             }
             .ja {
@@ -357,7 +368,7 @@ body {
                 font-weight: $font-300;
 
                 @include sp {
-                    font-size:16px;
+                    font-size:$font-txt-16;
                 }
             }
         }
@@ -368,11 +379,11 @@ body {
         margin:$space-sec-120 auto $space-xxl;
 
         @include sp {
-            margin:$space-xxl--sp auto;
+            margin:$space-sec-80 auto $space-xxl;
         }
 
         &_inner {
-            @include cantainer-1280;
+            @include container-1280;
 
             @include sp {
                 width:80vw;
@@ -387,7 +398,7 @@ body {
             letter-spacing:$letter-space-en;
 
             @include sp {
-                margin-bottom:$space-xxl--sp;
+                margin-bottom:$space-xxls;
             }
         }
 
@@ -399,7 +410,6 @@ body {
             margin-bottom:$space-xxl;
 
             @include sp {
-                margin-bottom:$space-xxl--sp;
                 gap: $gap-36 $gap-24;
             }
 
@@ -416,7 +426,7 @@ body {
                 padding:$space-ls $space-s $space-s;
 
                 @include sp {
-                    padding:$space-l $space-xm--sp $space-xm--sp;
+                    padding:$space-xls $space-xm $space-xm;
                 }
 
                 .num {
@@ -439,7 +449,7 @@ body {
                     @include sp {
                         width: 2em;
                         height:2em;
-                        font-size:18px;
+                        font-size:$font-txt-18;
                     }
                 }
 
@@ -449,7 +459,7 @@ body {
                     margin-bottom:$space-s;
 
                     @include sp {
-                        font-size:20px;
+                        font-size:$font-txt-20;
                     }
                 }
 
@@ -495,11 +505,21 @@ body {
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xl--sp 0 $space-sec-80--sp;
+            padding:$space-xxl 0;
         }
 
         &_inner {
-            @include cantainer-1200;
+            @include container-1200;
+            max-width:1180px;
+
+            @include sp {
+                width:100%;
+            }
+        }
+
+        &_lead {
+            max-width:1050px;
+            margin:0 auto;
 
             @include sp {
                 width:100%;
@@ -511,8 +531,7 @@ body {
             justify-content: space-between;
             align-items: center;
             line-height:1.4;
-            width:96%;
-            margin:0 0 $space-m auto;
+            margin:0 auto;
 
              @include sp {
                 width:80vw;
@@ -527,7 +546,6 @@ body {
 
                 @include sp {
                     display:block;
-                    width:100%;
                 }
             }
 
@@ -538,23 +556,22 @@ body {
                 letter-spacing: 0;
 
                 @include sp {
-                    font-size:80px;
+                    font-size:$font-tit-80--sp;
                     display:block;
-                    width:100%;
                 }
             }
         }
 
         &_txtArea {
             @include font-txt-16;
-            width:96%;
-            margin:0 0 $space-sec-120 auto;
+            margin:0 0 $space-sec-120;
             font-weight: $font-bold;
             line-height:2;
 
             @include sp {
                 width:80vw;
                 margin:0 auto $space-xxl;
+                font-size:$font-txt-14;
                 font-weight:$font-400;
             }
         }
@@ -572,12 +589,13 @@ body {
                 position:relative;
                 display:flex;
                 justify-content: space-between;
-                gap:$gap-36;
-                padding:$space-xl 0 $space-xl $space-xxl;
+                gap:$gap-64;
+                padding:$space-xxl;
                 z-index:2;
 
                 @include sp {
                     padding:10vw;
+                    gap:$gap-32;
                 }
 
                 &::after {
@@ -600,7 +618,7 @@ body {
 
                 &:nth-of-type(even) {
                     flex-direction: row-reverse;
-                    padding:$space-xl $space-xl $space-xl 0;
+                    padding:$space-xxl;
 
                     @include sp {
                         padding:10vw;
@@ -634,7 +652,7 @@ body {
                     }
 
                     .en-num {
-                        font-size:14px;
+                        font-size:$font-txt-14;
                         display:block;
                         margin-bottom:$space-m;
                         color:$txt-tit-pt02;
@@ -646,7 +664,8 @@ body {
                         margin-bottom:$space-l;
 
                         @include sp {
-                            font-size:20px;
+                            font-size:$font-txt-20;
+                            margin-bottom:$space-l;
                         }
                     }
                     &_txt {
@@ -655,10 +674,9 @@ body {
                 }
 
                 .imgArea {
-                    margin-top:-10%;
+                    margin-top:-104px;
                     margin-inline: auto;
                     width: 100%;
-                    max-width: 524px;
                     min-width:50%;
                     aspect-ratio: 524 / 394;
                     overflow: hidden;
@@ -685,7 +703,6 @@ body {
         padding:$space-sec-100 0;
 
         @include sp {
-            padding:$space-sec-80--sp 0 $space-xl--sp;
             background:#fff;
             padding:0;
         }
@@ -709,13 +726,13 @@ body {
                 top:inherit;
                 left:inherit;
                 transform: translatex(0);
-                font-size:18px;
-                margin-bottom:$space-m--sp;
+                font-size:$font-txt-18;
+                margin-bottom:$space-xls;
             }
         }
         
         &_inner {
-            @include cantainer-1280;
+            @include container-1280;
             display:flex;
             flex-direction: column;
             gap:$gap-72;
@@ -735,12 +752,12 @@ body {
             padding:$space-sec-100 $space-l;
 
             @include sp {
-                padding:$space-xl--sp $space-s--sp;
+                padding:$space-xxl $space-s--sp;
             }
 
             &:first-child {
                 @include sp {
-                    padding:$space-xl--sp $space-s--sp 0;
+                    padding:$space-xxl $space-s--sp 0;
 
                     .trailerhouse_table {
                         margin-bottom:0;
@@ -752,7 +769,7 @@ body {
                 @include font-tit-40;
                 text-align:center;
                 margin-bottom:$space-l;
-                color:$txt-defalt-pt01;
+                color:$txt-default-pt01;
 
                 @include sp {
                     font-size:min(28px, vw(28, 375));
@@ -763,6 +780,10 @@ body {
                 max-width:530px;
                 width:80%;
                 margin:0 auto;
+
+                @include sp {
+                    margin-bottom:$space-ms;
+                }
             }
 
             .products_txtArea {
@@ -780,8 +801,16 @@ body {
                     @include font-txt-16;
                     font-family: $font-1;
 
+                    @include sp {
+                        font-size:$font-txt-14;
+                    }
+
                     .tax {
                         font-size:$font-txt-13;
+
+                        @include sp {
+                            font-size:$font-txt-10;
+                        }
                     }
                 }
             }
@@ -790,7 +819,7 @@ body {
                 display:flex;
                 gap:$gap-24;
                 margin-bottom:$space-xl;
-                @include cantainer-1050;
+                @include container-1050;
                 width:100%;
 
                 @include sp {
@@ -807,11 +836,10 @@ body {
                     }
 
                     @include sp {
-                        padding:$space-xls--sp $space-xm--sp $space-l--sp;
+                        padding:$space-xls $space-xm--sp $space-l;
                     }
 
-                    .point {
-                        @include font-txt-16;
+                    .point {                        
                         color:$txt-tit-pt02;
                         margin-bottom:$space-m;
                         font-family: $font-1;
@@ -822,10 +850,18 @@ body {
                     .item_tit {
                         font-size:$font-tit-24;
                         margin-bottom:$space-m;
+
+                        @include sp {
+                            font-size:$font-txt-20;
+                        }
                     }
 
                     .item_img {
                         margin-bottom:$space-m;
+
+                        @include sp {
+                            margin-bottom:$space-l;
+                        }
 
                         & img {
                             border-radius: 8px;
@@ -840,7 +876,7 @@ body {
             }
 
             .fig_list {
-                @include cantainer-1050;
+                @include container-1050;
                 display:grid;
                 grid-template-columns: repeat(2, 1fr);
                 margin-top:$space-l;
@@ -856,7 +892,7 @@ body {
                     width:100%;
                     grid-template-columns: 1fr;
                     justify-items: center;
-                    margin-bottom:$space-m--sp;
+                    margin-bottom:$space-l;
                 }
 
                 &_item {
@@ -866,7 +902,7 @@ body {
             }
 
             .trailerhouse_table {
-                @include cantainer-800;
+                @include container-800;
                 margin-bottom:$space-sec-100;
 
                 @media all and (max-width:800px) {
@@ -906,7 +942,7 @@ body {
                     min-width: 0;
                     overflow-wrap: anywhere;
                     word-break: normal;
-                    color:$txt-defalt-pt01;
+                    color:$txt-default-pt01;
                 }
             }
 
@@ -919,11 +955,11 @@ body {
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xl--sp 0;
+            padding:$space-xxl 0;
         }
 
         &_inner {
-            @include cantainer-1050;
+            @include container-1050;
 
             @media all and (max-width:1050px) {
                 max-width:100%;
@@ -931,7 +967,7 @@ body {
         }
 
         &_tit_en {
-            @include cantainer-1280;
+            @include container-1280;
             color:$txt-tit-pt01;
             @include font-txt-18;
             font-family: $font-1;
@@ -939,6 +975,7 @@ body {
 
             @include sp {
                 text-align: center;
+                margin-bottom:$space-xls;
             }
         }
 
@@ -964,10 +1001,12 @@ body {
                 color:$txt-tit-pt02;
                 font-family: $font-1;
                 letter-spacing: 0;
+                line-height: 1;
 
                 @include sp {
-                    font-size:80px;
+                    font-size:$font-tit-80--sp;
                     margin-right:0;
+                    margin-bottom:$space-m;
                 }
             }
         }
@@ -980,8 +1019,11 @@ body {
             line-height: 2;
 
             @include sp {
-                margin-bottom:$space-xl;
-                color:$txt-defalt-pt01;
+                width:80vw;
+                margin-inline:auto;
+                margin-bottom:$space-xxlm;
+                color:$txt-default-pt01;
+                font-size: $font-txt-14;
                 font-weight: $font-400;
             }
         }
@@ -1033,23 +1075,28 @@ body {
                     padding:$space-l $space-xxl;
 
                     @include sp {
-                        padding:$space-ls--sp $space-xm--sp;
+                        padding:$space-l $space-xm--sp;
                     }
 
                     .plus-One_tit {
                         font-size:$font-tit-24;
                         color:$txt-tit-pt01;
                         margin-bottom:$space-m;
-                        vertical-align: middle;
 
                         @include sp {
-                            font-size:24px;
+                            font-size:$font-txt-24;
                             text-align: center;
+                            margin-bottom:$space-l;
+                        }
+
+                        .ja {
+                            vertical-align: middle;
                         }
 
                         .en {
                             font-family: $font-1;
                             font-size: $font-tit-32;
+                            vertical-align: middle;
                         }
                     }
                     .txt {
@@ -1066,11 +1113,11 @@ body {
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xl--sp 0;
+            padding:$space-xxl 0;
         }
 
         &_inner {
-            @include cantainer-1050;
+            @include container-1050;
             display:flex;
             gap:$gap-48;
             padding:0;
@@ -1079,12 +1126,14 @@ body {
             @include sp {
                 flex-direction: column;
                 gap:0;
-                margin-bottom:$space-ls--sp;
-
             }
 
             .txtArea {
                 padding:$space-s 0;
+
+                @include sp {
+                    padding: 0;
+                }
 
                 .exhibition_tit {
                     @include font-tit-40;
@@ -1092,7 +1141,7 @@ body {
                     margin-bottom:$space-xl;
 
                     @include sp {
-                        margin-bottom:$space-s--sp;
+                        margin-bottom:$space-xm;
                     }
                 }
                 .txt {
@@ -1106,6 +1155,10 @@ body {
                 margin:0 auto;
                 aspect-ratio: 770 / 435;
                 overflow: hidden;
+
+                @include sp {
+                    margin-bottom:$space-xm;
+                }
 
                 img {
                     display:block;

@@ -74,8 +74,10 @@ Template Name: trailerhouse
 <!--マルサンがつくるトレーラハウス-->
 <section class="marusan_trailerhouse">
   <div class="marusan_trailerhouse_inner">
-    <h2 class="marusan_trailerhouse_tit"><span class="ja">マルサンがつくる<br>トレーラーハウス</span><span class="en">Features</span></h2>
-    <p class="marusan_trailerhouse_txtArea">地元ふくしまから生まれる木造トレーラーハウス。<br class="u-none--sp">長年、木造住宅建築に携わってきた私たちが取り組む新しい形の住まいです。</p>
+    <div class="marusan_trailerhouse_lead">
+      <h2 class="marusan_trailerhouse_tit"><span class="ja">マルサンがつくる<br>トレーラーハウス</span><span class="en">Features</span></h2>
+      <p class="marusan_trailerhouse_txtArea">地元ふくしまから生まれる木造トレーラーハウス。<br class="u-none--sp">長年、木造住宅建築に携わってきた私たちが取り組む新しい形の住まいです。</p>
+    </div>
     <ul class="marusan_trailerhouse_list">
       <li class="marusan_trailerhouse_list_item">
         <div class="txtArea">
@@ -233,7 +235,7 @@ Template Name: trailerhouse
   </div>
 
   <!--meguri-->
-  <div class="sumika products_box">
+  <div class="meguri products_box">
     <h2 class="products_box_tit">牽引免許不要の<br class="u-none--pc">多目的トレーラー</h2>
     <div class="products_box_img">
       <img src="<?php echo get_template_directory_uri(); ?>/trailerhouse/assets/images/product-meguri.webp" alt="meguri">
