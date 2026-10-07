@@ -1,5 +1,11 @@
 @use "sass:math";
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 @mixin sp {
     @media (max-width: 768px) {
         @content;
@@ -25,23 +31,11 @@
   }
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 $font-default: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
 $font-1: 'Lato', sans-serif;
 $font-2: "Noto Sans JP", sans-serif;
 
-@mixin h2 {
-    font-family: "Noto Serif JP", serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-}
-
+/*フォントサイズ*/
 $font-copy-en: max(64px, vw(88));
 $font-copy-ja: max(20px, vw(24));
 
@@ -52,7 +46,6 @@ $font-tit-32: clamp(32px, vw(32), 32px);
 $font-tit-24: clamp(18px, vw(24), 24px);
 $font-tit-20: clamp(16px, vw(20), 20px);
 $font-tit-18: clamp(14px, vw(18), 18px);
-
 $font-tit-80--sp : min(80px, (80 / 375 * 100vw));
 
 @mixin font-tit-40 {
@@ -96,14 +89,7 @@ $font-txt-14: 14px;
 $font-txt-13: 13px;
 $font-txt-10: 10px;
 
-@mixin font-dec-16 {
-    font-size:$font-txt-16;
-
-    @include sp {
-        font-size:clamp(10px, vw(15, 375), 16px);
-    }
-}
-
+/*字間*/
 $letter-space-en:0.1em;
 
 /* フォント太さ  */
@@ -115,6 +101,7 @@ $font-300:300;
 /* 余白 */
 $space-xs: 8px;
 $space-s: 16px;
+$space-sm: 18px;
 $space-xm: 20px;
 $space-m: 24px;
 $space-ms: 28px;
@@ -185,6 +172,7 @@ $gap-36: 36px;
 $gap-32: 32px;
 $gap-24: 24px;
 $gap-20: 20px;
+$gap-18: 18px;
 $gap-10: 10px;
 
 $gap-24--sp: vw(24, 375);
@@ -197,13 +185,11 @@ $txt-tit-pt02:#C6A478;
 $txt-tit-pt03:#ffffff;
 $txt-th-pt03:#6B6B6B;
 $txt-default-pt01:#2E2E2E;
-
 $bk-pt01:#DCD5C8;
 $bk-pt02:#F1EEE7;
 $bk-pt03:#ffffff;
 $bk-pt04:#FCF8F1;
 $bk-contact:#3D6C82;
-
 $border-pt01:#E1EAEE;
 $border-pt02:#D8D8D8;
 
@@ -1196,6 +1182,7 @@ body {
         @include sp {
             flex-direction: column-reverse;
             padding:2em 2em;
+            gap:$gap-18;
         }
 
         &_tit {
@@ -1205,7 +1192,10 @@ body {
             font-family: $font-1;
             font-weight: $font-bold;
             letter-spacing: 0;
-            
+
+            @include sp {
+                line-height:1;
+            }
         }
 
         &_btn {
@@ -1214,6 +1204,7 @@ body {
 
             @include sp {
                 text-align:center;
+                margin-top:18px;
             }
 
             .txt {

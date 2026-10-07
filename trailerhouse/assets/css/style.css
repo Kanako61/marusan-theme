@@ -1,11 +1,13 @@
 @charset "UTF-8";
-/* フォント設定 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* フォント設定 */
+/*フォントサイズ*/
+/*字間*/
 /* フォント太さ  */
 /* 余白 */
 /* コンテンツ幅 */
@@ -1103,6 +1105,7 @@ body p, body a, body li, body dl dt, body dl dd {
   .trailerhouse_main .trailerhouse_contact {
     flex-direction: column-reverse;
     padding: 2em 2em;
+    gap: 18px;
   }
 }
 .trailerhouse_main .trailerhouse_contact_tit {
@@ -1113,6 +1116,11 @@ body p, body a, body li, body dl dt, body dl dd {
   font-weight: bold;
   letter-spacing: 0;
 }
+@media (max-width: 768px) {
+  .trailerhouse_main .trailerhouse_contact_tit {
+    line-height: 1;
+  }
+}
 .trailerhouse_main .trailerhouse_contact_btn {
   text-align: left;
   margin-top: 1em;
@@ -1120,6 +1128,7 @@ body p, body a, body li, body dl dt, body dl dd {
 @media (max-width: 768px) {
   .trailerhouse_main .trailerhouse_contact_btn {
     text-align: center;
+    margin-top: 18px;
   }
 }
 .trailerhouse_main .trailerhouse_contact_btn .txt {
