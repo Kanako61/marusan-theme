@@ -152,7 +152,14 @@ body p, body a, body li, body dl dt, body dl dd {
   }
 }
 .trailerhouse_main .about_tit .en {
-  font-size: clamp(14px, 1.25vw, 18px);
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .about_tit .en {
+    font-size: clamp(14px, 2.34375vw, 18px);
+  }
+}
+.trailerhouse_main .about_tit .en {
   font-family: "Lato", sans-serif;
   letter-spacing: 0.1em;
   font-weight: 400;
@@ -179,18 +186,13 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .about .txtArea .u-txt {
-    font-size: clamp(13px, 4vw, 16px);
+    font-size: clamp(14px, 4.2666666667vw, 16px);
   }
 }
 .trailerhouse_main .about .txtArea .u-txt {
   color: #ffffff;
   line-height: 2;
   font-weight: 300;
-}
-@media (max-width: 768px) {
-  .trailerhouse_main .about .txtArea .u-txt {
-    font-size: 16px;
-  }
 }
 .trailerhouse_main {
   /* Features */
@@ -218,7 +220,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .features_tit {
-    font-size: clamp(13px, 3.7333333333vw, 14px);
+    font-size: clamp(14px, 2.34375vw, 18px);
   }
 }
 .trailerhouse_main .features_tit {
@@ -266,7 +268,7 @@ body p, body a, body li, body dl dt, body dl dd {
   position: absolute;
   top: -1em;
   left: 50%;
-  transform: translatex(-50%);
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,31 +279,25 @@ body p, body a, body li, body dl dt, body dl dd {
   border-radius: 10em;
   font-family: "Lato", sans-serif;
   font-size: 18px;
-}
-@media (max-width: 768px) {
-  .trailerhouse_main .features_list_item .num {
-    font-size: clamp(13px, 3.7333333333vw, 14px);
-  }
-}
-.trailerhouse_main .features_list_item .num {
   box-shadow: 2px 4px 8px rgba(43, 126, 192, 0.2);
 }
 @media (max-width: 768px) {
   .trailerhouse_main .features_list_item .num {
     width: 2em;
     height: 2em;
-    font-size: 18px;
   }
 }
 .trailerhouse_main .features_list_item .item_tit {
-  font-size: clamp(16px, 1.3888888889vw, 20px);
-  line-height: 1.4;
-  margin-bottom: 16px;
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   .trailerhouse_main .features_list_item .item_tit {
-    font-size: 20px;
+    font-size: clamp(18px, 5.3333333333vw, 24px);
   }
+}
+.trailerhouse_main .features_list_item .item_tit {
+  line-height: 1.4;
+  margin-bottom: 16px;
 }
 .trailerhouse_main .features_list_item .icon {
   text-align: center;
@@ -319,6 +315,13 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .features_list_item .txtArea {
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .features_list_item .txtArea {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
+}
+.trailerhouse_main .features_list_item .txtArea {
   font-weight: 400;
   margin-top: auto;
 }
@@ -398,13 +401,19 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .marusan_trailerhouse_tit .en {
   font-size: clamp(64px, 8.3333333333vw, 120px);
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .marusan_trailerhouse_tit .en {
+    font-size: min(80px, 21.3333333333vw);
+  }
+}
+.trailerhouse_main .marusan_trailerhouse_tit .en {
   color: #ffffff;
   font-family: "Lato", sans-serif;
   letter-spacing: 0;
 }
 @media (max-width: 768px) {
   .trailerhouse_main .marusan_trailerhouse_tit .en {
-    font-size: min(80px, 21.3333333333vw);
     display: block;
   }
 }
@@ -413,7 +422,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .marusan_trailerhouse_txtArea {
-    font-size: clamp(13px, 4vw, 16px);
+    font-size: clamp(14px, 4.2666666667vw, 16px);
   }
 }
 .trailerhouse_main .marusan_trailerhouse_txtArea {
@@ -424,9 +433,14 @@ body p, body a, body li, body dl dt, body dl dd {
 @media (max-width: 768px) {
   .trailerhouse_main .marusan_trailerhouse_txtArea {
     width: 80vw;
-    margin: 0 auto 64px;
+    margin: 0 auto 48px;
     font-size: 14px;
     font-weight: 400;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .trailerhouse_main .marusan_trailerhouse_txtArea {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
   }
 }
 .trailerhouse_main .marusan_trailerhouse_list {
@@ -509,6 +523,13 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .marusan_trailerhouse_list_item .txtArea .en-num {
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .marusan_trailerhouse_list_item .txtArea .en-num {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
+}
+.trailerhouse_main .marusan_trailerhouse_list_item .txtArea .en-num {
   display: block;
   margin-bottom: 24px;
   color: #C6A478;
@@ -516,17 +537,23 @@ body p, body a, body li, body dl dt, body dl dd {
   font-weight: 400;
 }
 .trailerhouse_main .marusan_trailerhouse_list_item .txtArea_tit {
-  font-size: clamp(16px, 1.3888888889vw, 20px);
-  margin-bottom: 32px;
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   .trailerhouse_main .marusan_trailerhouse_list_item .txtArea_tit {
-    font-size: 20px;
-    margin-bottom: 32px;
+    font-size: clamp(18px, 5.3333333333vw, 24px);
   }
+}
+.trailerhouse_main .marusan_trailerhouse_list_item .txtArea_tit {
+  margin-bottom: 32px;
 }
 .trailerhouse_main .marusan_trailerhouse_list_item .txtArea_txt {
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .marusan_trailerhouse_list_item .txtArea_txt {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
 }
 .trailerhouse_main .marusan_trailerhouse_list_item .imgArea {
   margin-top: -104px;
@@ -568,10 +595,10 @@ body p, body a, body li, body dl dt, body dl dd {
   height: auto;
   text-align: center;
   color: #3D6382 !important;
-  font-size: clamp(48px, 4.3055555556vw, 62px);
+  font-size: clamp(48px, 4.4444444444vw, 64px);
   top: -0.7em;
   left: 50%;
-  transform: translatex(-50%);
+  transform: translateX(-50%);
   font-family: "Lato", sans-serif;
   font-weight: bold;
   letter-spacing: 0.1em;
@@ -581,7 +608,7 @@ body p, body a, body li, body dl dt, body dl dd {
     position: relative;
     top: inherit;
     left: inherit;
-    transform: translatex(0);
+    transform: translateX(0);
     font-size: 18px;
     margin-bottom: 40px;
   }
@@ -635,11 +662,6 @@ body p, body a, body li, body dl dt, body dl dd {
   margin-bottom: 32px;
   color: #2E2E2E;
 }
-@media (max-width: 768px) {
-  .trailerhouse_main .products_box_tit {
-    font-size: min(28px, 7.4666666667vw);
-  }
-}
 .trailerhouse_main .products_box_img {
   max-width: 530px;
   width: 80%;
@@ -665,7 +687,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .products_box .products_txtArea .price {
-    font-size: clamp(13px, 4vw, 16px);
+    font-size: clamp(14px, 4.2666666667vw, 16px);
   }
 }
 .trailerhouse_main .products_box .products_txtArea .price {
@@ -676,12 +698,17 @@ body p, body a, body li, body dl dt, body dl dd {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) and (max-width: 768px) {
+  .trailerhouse_main .products_box .products_txtArea .price {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
+}
 .trailerhouse_main .products_box .products_txtArea .price .tax {
   font-size: 13px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 768px) {
   .trailerhouse_main .products_box .products_txtArea .price .tax {
-    font-size: 10px;
+    font-size: clamp(10px, 2.6666666667vw, 13px);
   }
 }
 .trailerhouse_main .products_box .products_point_list {
@@ -710,7 +737,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .products_box .products_point_list_item {
-    padding: 40px 5.3333333333vw 32px;
+    padding: 40px 20px 32px;
   }
 }
 .trailerhouse_main .products_box .products_point_list_item .point {
@@ -718,6 +745,13 @@ body p, body a, body li, body dl dt, body dl dd {
   margin-bottom: 24px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .products_box .products_point_list_item .point {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
+}
+.trailerhouse_main .products_box .products_point_list_item .point {
   font-weight: bold;
 }
 .trailerhouse_main .products_box .products_point_list_item .item_tit {
@@ -727,6 +761,11 @@ body p, body a, body li, body dl dt, body dl dd {
 @media (max-width: 768px) {
   .trailerhouse_main .products_box .products_point_list_item .item_tit {
     font-size: 20px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .trailerhouse_main .products_box .products_point_list_item .item_tit {
+    font-size: clamp(18px, 5.3333333333vw, 24px);
   }
 }
 .trailerhouse_main .products_box .products_point_list_item .item_img {
@@ -742,6 +781,11 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .products_box .products_point_list_item .item_txt {
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .products_box .products_point_list_item .item_txt {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
 }
 .trailerhouse_main .products_box .fig_list {
   max-width: 1050px;
@@ -802,7 +846,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .products_box .trailerhouse_table th, .trailerhouse_main .products_box .trailerhouse_table td {
-    font-size: clamp(13px, 4vw, 16px);
+    font-size: clamp(14px, 4.2666666667vw, 16px);
   }
 }
 .trailerhouse_main .products_box .trailerhouse_table th {
@@ -850,17 +894,17 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One_tit_en {
-    font-size: clamp(13px, 3.7333333333vw, 14px);
+    font-size: clamp(14px, 2.34375vw, 18px);
   }
 }
 .trailerhouse_main .plus-One_tit_en {
   font-family: "Lato", sans-serif;
   letter-spacing: 0.1em;
+  margin-bottom: 40px;
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One_tit_en {
     text-align: center;
-    margin-bottom: 40px;
   }
 }
 .trailerhouse_main .plus-One_tit_h2 {
@@ -868,12 +912,13 @@ body p, body a, body li, body dl dt, body dl dd {
   justify-content: space-between;
   align-items: center;
   color: #3D6382;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One_tit_h2 {
     flex-direction: column-reverse;
     text-align: center;
+    margin-bottom: 24px;
   }
 }
 .trailerhouse_main .plus-One_tit_h2 .tit {
@@ -886,6 +931,13 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .plus-One_tit_h2 .plus {
   font-size: clamp(64px, 8.3333333333vw, 120px);
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .plus-One_tit_h2 .plus {
+    font-size: min(80px, 21.3333333333vw);
+  }
+}
+.trailerhouse_main .plus-One_tit_h2 .plus {
   margin-right: 64px;
   color: #C6A478;
   font-family: "Lato", sans-serif;
@@ -894,7 +946,6 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One_tit_h2 .plus {
-    font-size: min(80px, 21.3333333333vw);
     margin-right: 0;
     margin-bottom: 24px;
   }
@@ -905,12 +956,12 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One .txtArea.top {
-    font-size: clamp(13px, 4vw, 16px);
+    font-size: clamp(14px, 4.2666666667vw, 16px);
   }
 }
 .trailerhouse_main .plus-One .txtArea.top {
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   line-height: 2;
 }
 @media (max-width: 768px) {
@@ -921,6 +972,11 @@ body p, body a, body li, body dl dt, body dl dd {
     color: #2E2E2E;
     font-size: 14px;
     font-weight: 400;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .trailerhouse_main .plus-One .txtArea.top {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
   }
 }
 .trailerhouse_main .plus-One_list {
@@ -973,7 +1029,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One_list_item .txtArea {
-    padding: 32px 5.3333333333vw;
+    padding: 32px 20px;
   }
 }
 .trailerhouse_main .plus-One_list_item .txtArea .plus-One_tit {
@@ -983,7 +1039,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .plus-One_list_item .txtArea .plus-One_tit {
-    font-size: 24px;
+    font-size: clamp(20px, 6.4vw, 24px);
     text-align: center;
     margin-bottom: 32px;
   }
@@ -993,11 +1049,16 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .plus-One_list_item .txtArea .plus-One_tit .en {
   font-family: "Lato", sans-serif;
-  font-size: clamp(32px, 2.2222222222vw, 32px);
+  font-size: clamp(26px, 2.2222222222vw, 32px);
   vertical-align: middle;
 }
 .trailerhouse_main .plus-One_list_item .txtArea .txt {
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .plus-One_list_item .txtArea .txt {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
 }
 .trailerhouse_main {
   /*展示場案内*/
@@ -1044,7 +1105,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .exhibition_inner .txtArea .exhibition_tit {
   color: #3D6382;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
 @media (max-width: 768px) {
   .trailerhouse_main .exhibition_inner .txtArea .exhibition_tit {
@@ -1056,7 +1117,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .exhibition_inner .txtArea .txt {
-    font-size: clamp(13px, 4vw, 16px);
+    font-size: clamp(14px, 4.2666666667vw, 16px);
   }
 }
 .trailerhouse_main .exhibition_inner .imgArea {
@@ -1110,7 +1171,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 .trailerhouse_main .trailerhouse_contact_tit {
   color: #ffffff !important;
-  font-size: clamp(34px, 3.8888888889vw, 56px);
+  font-size: clamp(36px, 3.8888888889vw, 56px);
   margin: 0;
   font-family: "Lato", sans-serif;
   font-weight: bold;
@@ -1118,7 +1179,7 @@ body p, body a, body li, body dl dt, body dl dd {
 }
 @media (max-width: 768px) {
   .trailerhouse_main .trailerhouse_contact_tit {
-    line-height: 1;
+    line-height: 1.1;
   }
 }
 .trailerhouse_main .trailerhouse_contact_btn {
@@ -1135,6 +1196,13 @@ body p, body a, body li, body dl dt, body dl dd {
   position: relative;
   display: inline-block;
   font-size: 14px;
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .trailerhouse_contact_btn .txt {
+    font-size: clamp(14px, 3.7333333333vw, 16px);
+  }
+}
+.trailerhouse_main .trailerhouse_contact_btn .txt {
   background: #ffffff;
   border-radius: 6em;
   letter-spacing: 0;

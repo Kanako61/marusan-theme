@@ -39,14 +39,19 @@ $font-2: "Noto Sans JP", sans-serif;
 $font-copy-en: max(64px, vw(88));
 $font-copy-ja: max(20px, vw(24));
 
-$font-tit-120: clamp(64px, vw(120), 120px);
-$font-tit-62: clamp(48px, vw(62), 62px);
-$font-tit-56: clamp(34px, vw(56), 56px);
-$font-tit-32: clamp(32px, vw(32), 32px);
+$font-tit-64: clamp(48px, vw(64), 64px);
+$font-tit-56: clamp(36px, vw(56), 56px);
+$font-tit-32: clamp(26px, vw(32), 32px);
 $font-tit-24: clamp(18px, vw(24), 24px);
-$font-tit-20: clamp(16px, vw(20), 20px);
-$font-tit-18: clamp(14px, vw(18), 18px);
-$font-tit-80--sp : min(80px, (80 / 375 * 100vw));
+$font-tit-24--sp : clamp(20px, vw(24, 375), 24px);
+
+@mixin font-tit-120 {
+    font-size:clamp(64px, vw(120), 120px);
+
+    @include sp {
+        font-size:min(80px, (80 / 375 * 100vw));
+    }
+}
 
 @mixin font-tit-40 {
     font-size:clamp(28px, vw(40), 40px);
@@ -56,11 +61,19 @@ $font-tit-80--sp : min(80px, (80 / 375 * 100vw));
     }
 }
 
-@mixin font-txt-18 {
+@mixin font-tit-20 {
+    font-size:20px;
+
+    @include sp {
+        font-size:clamp(18px, vw(20, 375), 24px);
+    }
+}
+
+@mixin font-tit-18 {
     font-size:18px;
 
     @include sp {
-        font-size:clamp(13px, vw(14, 375), 14px);
+        font-size:clamp(14px, vw(18, 768), 18px);
     }
 }
 
@@ -68,26 +81,26 @@ $font-tit-80--sp : min(80px, (80 / 375 * 100vw));
     font-size:16px;
 
     @include sp {
-        font-size:clamp(13px, vw(15, 375), 16px);
+        font-size:clamp(14px, vw(16, 375), 16px);
     }
 }
 
-@mixin font-txt-15 {
-    font-size:15px;
+@mixin font-txt-14 {
+    font-size:14px;
 
     @include sp {
-        font-size:clamp(13px, vw(14, 375), 15px);
+        font-size:clamp(14px, vw(14, 375), 16px);
     }
 }
 
-$font-txt-24: 24px;
-$font-txt-20: 20px;
+@mixin font-txt-10 {
+    @include sp {
+        font-size:clamp(10px, vw(10, 375), 13px);
+    }
+}
+
 $font-txt-18: 18px;
-$font-txt-16: 16px;
-$font-txt-15: 15px;
-$font-txt-14: 14px;
 $font-txt-13: 13px;
-$font-txt-10: 10px;
 
 /*字間*/
 $letter-space-en:0.1em;
@@ -99,37 +112,28 @@ $font-400:400;
 $font-300:300;
 
 /* 余白 */
-$space-xs: 8px;
-$space-s: 16px;
-$space-sm: 18px;
-$space-xm: 20px;
-$space-m: 24px;
-$space-ms: 28px;
-$space-l: 32px;
-$space-ls: 36px;
-$space-xls: 40px;
-$space-xl: 48px;
-$space-xxlm: 56px;
-$space-xxls: 60px;
-$space-xxl: 64px;
+$space-8: 8px;
+$space-16: 16px;
+$space-20: 20px;
+$space-24: 24px;
+$space-28: 28px;
+$space-32: 32px;
+$space-36: 36px;
+$space-40: 40px;
+$space-48: 48px;
+$space-56: 56px;
+$space-60: 60px;
+$space-64: 64px;
+
+$space-16--sp: vw(16, 375);
+$space-20--sp: vw(20, 375);
+$space-32--sp: vw(32, 375);
 
 $space-sec-80: 80px;
 $space-sec-100:100px;
 $space-sec-120:120px;
 $space-sec-160:160px;
-
 $space-sec-80--sp: vw(80, 375);
-
-$space-xs--sp: vw(8, 375);
-$space-xss--sp: vw(10, 375);
-$space-s--sp: vw(16, 375);
-$space-xm--sp: vw(20, 375);
-$space-m--sp: vw(24, 375);
-$space-l--sp: vw(32, 375);
-$space-ls--sp: vw(36, 375);
-$space-xls--sp: vw(40, 375);
-$space-xl--sp: vw(48, 375);
-$space-xxl--sp: vw(64, 375);
 
 /* コンテンツ幅 */
 @mixin container-1280 {
@@ -323,21 +327,21 @@ body {
             flex-direction: column;
             align-items: center;
             color:$txt-tit-pt03;
-            margin:0 0 $space-xl;
+            margin:0 0 $space-48;
 
             @include sp {
-                margin-bottom:$space-xls;
+                margin-bottom:$space-40;
             }
 
             .en {
-                font-size:$font-tit-18;
+                @include font-tit-18;
                 font-family: $font-1;
                 letter-spacing:$letter-space-en;
                 font-weight: $font-400;
-                margin-bottom:$space-xs;
+                margin-bottom:$space-8;
 
                 @include sp {
-                    margin-bottom:$space-s;
+                    margin-bottom:$space-16;
                 }
             }
             .ja {
@@ -352,20 +356,16 @@ body {
                 color:$txt-tit-pt03;
                 line-height:2;
                 font-weight: $font-300;
-
-                @include sp {
-                    font-size:$font-txt-16;
-                }
             }
         }
     }
 
     /* Features */
     .features {
-        margin:$space-sec-120 auto $space-xxl;
+        margin:$space-sec-120 auto $space-64;
 
         @include sp {
-            margin:$space-sec-80 auto $space-xxl;
+            margin:$space-sec-80 auto $space-64;
         }
 
         &_inner {
@@ -377,14 +377,14 @@ body {
         }
 
         &_tit {
-            @include font-txt-18;
+            @include font-tit-18;
             color:$txt-tit-pt01;
-            margin-bottom:$space-ls;
+            margin-bottom:$space-36;
             font-family: $font-1;
             letter-spacing:$letter-space-en;
 
             @include sp {
-                margin-bottom:$space-xxls;
+                margin-bottom:$space-60;
             }
         }
 
@@ -393,7 +393,7 @@ body {
             grid-template-columns: repeat(4, 1fr);
             gap: $gap-24;
             align-items: stretch;
-            margin-bottom:$space-xxl;
+            margin-bottom:$space-64;
 
             @include sp {
                 gap: $gap-36 $gap-24;
@@ -409,17 +409,17 @@ body {
                 position:relative;
                 border-radius: 1em;
                 border: solid 2px $border-pt01;
-                padding:$space-ls $space-s $space-s;
+                padding:$space-36 $space-16 $space-16;
 
                 @include sp {
-                    padding:$space-xls $space-xm $space-xm;
+                    padding:$space-40 $space-20 $space-20;
                 }
 
                 .num {
                     position:absolute;
                     top:-1em;
                     left:50%;
-                    transform: translatex(-50%);
+                    transform: translateX(-50%);
                     display:flex;
                     justify-content: center;
                     align-items: center;
@@ -429,29 +429,24 @@ body {
                     height:2em;
                     border-radius: 10em;
                     font-family: $font-1;
-                    @include font-txt-18;
+                    font-size:$font-txt-18;
                     box-shadow: 2px 4px 8px rgba(43, 126, 192, 0.2);
 
                     @include sp {
                         width: 2em;
                         height:2em;
-                        font-size:$font-txt-18;
                     }
                 }
 
                 .item_tit {
-                    font-size: $font-tit-20;
+                    @include font-tit-20;
                     line-height:1.4;
-                    margin-bottom:$space-s;
-
-                    @include sp {
-                        font-size:$font-txt-20;
-                    }
+                    margin-bottom:$space-16;
                 }
 
                 .icon {
                     text-align:center;
-                    margin-bottom:$space-m;
+                    margin-bottom:$space-24;
                     margin-top: auto;
 
                     img {
@@ -464,7 +459,7 @@ body {
                     }
                 }
                 .txtArea {
-                    font-size: $font-txt-14;
+                    @include font-txt-14;
                     font-weight: $font-400;
                     margin-top:auto;
                 }
@@ -491,7 +486,7 @@ body {
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xxl 0;
+            padding:$space-64 0;
         }
 
         &_inner {
@@ -521,7 +516,7 @@ body {
 
              @include sp {
                 width:80vw;
-                margin:0 auto $space-m;
+                margin:0 auto $space-24;
                 flex-direction: column-reverse;
                 text-align:center;
              }
@@ -536,13 +531,12 @@ body {
             }
 
             .en {
-                font-size:$font-tit-120;
+                @include font-tit-120;
                 color:$txt-tit-pt03;
                 font-family: $font-1;
                 letter-spacing: 0;
 
                 @include sp {
-                    font-size:$font-tit-80--sp;
                     display:block;
                 }
             }
@@ -556,8 +550,8 @@ body {
 
             @include sp {
                 width:80vw;
-                margin:0 auto $space-xxl;
-                font-size:$font-txt-14;
+                margin:0 auto $space-48;
+                @include font-txt-14;
                 font-weight:$font-400;
             }
         }
@@ -576,7 +570,7 @@ body {
                 display:flex;
                 justify-content: space-between;
                 gap:$gap-64;
-                padding:$space-xxl;
+                padding:$space-64;
                 z-index:2;
 
                 @include sp {
@@ -604,7 +598,7 @@ body {
 
                 &:nth-of-type(even) {
                     flex-direction: row-reverse;
-                    padding:$space-xxl;
+                    padding:$space-64;
 
                     @include sp {
                         padding:10vw;
@@ -638,24 +632,19 @@ body {
                     }
 
                     .en-num {
-                        font-size:$font-txt-14;
+                        @include font-txt-14;
                         display:block;
-                        margin-bottom:$space-m;
+                        margin-bottom:$space-24;
                         color:$txt-tit-pt02;
                         font-family: $font-1;
                         font-weight:$font-400;
                     }
                     &_tit {
-                        font-size:$font-tit-20;
-                        margin-bottom:$space-l;
-
-                        @include sp {
-                            font-size:$font-txt-20;
-                            margin-bottom:$space-l;
-                        }
+                        @include font-tit-20;
+                        margin-bottom:$space-32;
                     }
                     &_txt {
-                        font-size: $font-txt-14;
+                        @include font-txt-14;
                     }
                 }
 
@@ -699,10 +688,10 @@ body {
             height:auto;
             text-align:center;
             color:$txt-tit-pt01!important;
-            font-size:$font-tit-62;
+            font-size:$font-tit-64;
             top:-0.7em;
             left:50%;
-            transform: translatex(-50%);
+            transform: translateX(-50%);
             font-family: $font-1;
             font-weight: $font-bold;
             letter-spacing: $letter-space-en;
@@ -711,9 +700,9 @@ body {
                 position:relative;
                 top:inherit;
                 left:inherit;
-                transform: translatex(0);
+                transform: translateX(0);
                 font-size:$font-txt-18;
-                margin-bottom:$space-xls;
+                margin-bottom:$space-40;
             }
         }
         
@@ -735,15 +724,15 @@ body {
         
         &_box {
             background:$bk-pt03;
-            padding:$space-sec-100 $space-l;
+            padding:$space-sec-100 $space-32;
 
             @include sp {
-                padding:$space-xxl $space-s--sp;
+                padding:$space-64 $space-16--sp;
             }
 
             &:first-child {
                 @include sp {
-                    padding:$space-xxl $space-s--sp 0;
+                    padding:$space-64 $space-16--sp 0;
 
                     .trailerhouse_table {
                         margin-bottom:0;
@@ -754,12 +743,8 @@ body {
             &_tit {
                 @include font-tit-40;
                 text-align:center;
-                margin-bottom:$space-l;
+                margin-bottom:$space-32;
                 color:$txt-default-pt01;
-
-                @include sp {
-                    font-size:min(28px, vw(28, 375));
-                }
             }
 
             &_img {
@@ -768,13 +753,13 @@ body {
                 margin:0 auto;
 
                 @include sp {
-                    margin-bottom:$space-ms;
+                    margin-bottom:$space-28;
                 }
             }
 
             .products_txtArea {
                 text-align:center;
-                margin-bottom:$space-xl;
+                margin-bottom:$space-48;
 
                 .name {
                     font-size:$font-tit-24;
@@ -788,14 +773,14 @@ body {
                     font-family: $font-1;
 
                     @include sp {
-                        font-size:$font-txt-14;
+                        @include font-txt-14;
                     }
 
                     .tax {
                         font-size:$font-txt-13;
 
                         @include sp {
-                            font-size:$font-txt-10;
+                            @include font-txt-10;
                         }
                     }
                 }
@@ -804,7 +789,7 @@ body {
             .products_point_list {
                 display:flex;
                 gap:$gap-24;
-                margin-bottom:$space-xl;
+                margin-bottom:$space-48;
                 @include container-1050;
                 width:100%;
 
@@ -815,38 +800,38 @@ body {
 
                 &_item {
                     background:$bk-pt04;
-                    padding:$space-l;
+                    padding:$space-32;
 
                     @include pc {
                         width:calc(50% - 12px);
                     }
 
                     @include sp {
-                        padding:$space-xls $space-xm--sp $space-l;
+                        padding:$space-40 $space-20 $space-32;
                     }
 
                     .point {                        
                         color:$txt-tit-pt02;
-                        margin-bottom:$space-m;
+                        margin-bottom:$space-24;
                         font-family: $font-1;
-                        font-size:$font-txt-14;
+                        @include font-txt-14;
                         font-weight: $font-bold;
                     }
 
                     .item_tit {
                         font-size:$font-tit-24;
-                        margin-bottom:$space-m;
+                        margin-bottom:$space-24;
 
                         @include sp {
-                            font-size:$font-txt-20;
+                            @include font-tit-20;
                         }
                     }
 
                     .item_img {
-                        margin-bottom:$space-m;
+                        margin-bottom:$space-24;
 
                         @include sp {
-                            margin-bottom:$space-l;
+                            margin-bottom:$space-32;
                         }
 
                         & img {
@@ -855,7 +840,7 @@ body {
                     }
 
                     .item_txt {
-                        font-size: $font-txt-14;
+                        @include font-txt-14;
                         
                     }
                 }
@@ -865,8 +850,8 @@ body {
                 @include container-1050;
                 display:grid;
                 grid-template-columns: repeat(2, 1fr);
-                margin-top:$space-l;
-                margin-bottom:$space-xl;
+                margin-top:$space-32;
+                margin-bottom:$space-48;
                 justify-content: center;
                 width:100%;
 
@@ -878,7 +863,7 @@ body {
                     width:100%;
                     grid-template-columns: 1fr;
                     justify-items: center;
-                    margin-bottom:$space-l;
+                    margin-bottom:$space-32;
                 }
 
                 &_item {
@@ -897,7 +882,7 @@ body {
 
                 @include sp {
                     width:100%;
-                    margin-bottom:$space-l--sp;
+                    margin-bottom:$space-32--sp;
                 }
 
                 tr {
@@ -941,7 +926,7 @@ body {
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xxl 0;
+            padding:$space-64 0;
         }
 
         &_inner {
@@ -955,13 +940,13 @@ body {
         &_tit_en {
             @include container-1280;
             color:$txt-tit-pt01;
-            @include font-txt-18;
+            @include font-tit-18;
             font-family: $font-1;
             letter-spacing: $letter-space-en;
+            margin-bottom:$space-40;
 
             @include sp {
                 text-align: center;
-                margin-bottom:$space-xls;
             }
         }
 
@@ -970,11 +955,12 @@ body {
             justify-content: space-between;
             align-items: center;
             color:$txt-tit-pt01;
-            margin-bottom:$space-m;
+            margin-bottom:$space-32;
 
             @include sp {
                 flex-direction: column-reverse;
                 text-align: center;
+                margin-bottom:$space-24;
             }
 
             .tit {
@@ -982,17 +968,16 @@ body {
             }
 
             .plus {
-                font-size:$font-tit-120;
-                margin-right:$space-xxl;
+                @include font-tit-120;
+                margin-right:$space-64;
                 color:$txt-tit-pt02;
                 font-family: $font-1;
                 letter-spacing: 0;
                 line-height: 1;
 
                 @include sp {
-                    font-size:$font-tit-80--sp;
                     margin-right:0;
-                    margin-bottom:$space-m;
+                    margin-bottom:$space-24;
                 }
             }
         }
@@ -1001,15 +986,15 @@ body {
             color:$txt-tit-pt01;
             @include font-txt-16;
             font-weight:$font-bold;
-            margin-bottom:$space-sec-100;
+            margin-bottom:$space-sec-80;
             line-height: 2;
 
             @include sp {
                 width:80vw;
                 margin-inline:auto;
-                margin-bottom:$space-xxlm;
+                margin-bottom:$space-56;
                 color:$txt-default-pt01;
-                font-size: $font-txt-14;
+                @include font-txt-14;
                 font-weight: $font-400;
             }
         }
@@ -1017,7 +1002,7 @@ body {
         &_list {
             display:flex;
             flex-direction: column;
-            gap:$space-xl;
+            gap:$space-48;
             width:100%;
             margin:0 auto;
 
@@ -1058,21 +1043,21 @@ body {
 
                 .txtArea {
                     max-width:830px;
-                    padding:$space-l $space-xxl;
+                    padding:$space-32 $space-64;
 
                     @include sp {
-                        padding:$space-l $space-xm--sp;
+                        padding:$space-32 $space-20;
                     }
 
                     .plus-One_tit {
                         font-size:$font-tit-24;
                         color:$txt-tit-pt01;
-                        margin-bottom:$space-m;
+                        margin-bottom:$space-24;
 
                         @include sp {
-                            font-size:$font-txt-24;
+                            font-size:$font-tit-24--sp;
                             text-align: center;
-                            margin-bottom:$space-l;
+                            margin-bottom:$space-32;
                         }
 
                         .ja {
@@ -1086,7 +1071,7 @@ body {
                         }
                     }
                     .txt {
-                        font-size: $font-txt-14;
+                        @include font-txt-14;
                     }
                 }
             }
@@ -1099,7 +1084,7 @@ body {
         padding:$space-sec-120 0;
 
         @include sp {
-            padding:$space-xxl 0;
+            padding:$space-64 0;
         }
 
         &_inner {
@@ -1107,7 +1092,7 @@ body {
             display:flex;
             gap:$gap-48;
             padding:0;
-            margin-bottom:$space-xxl;
+            margin-bottom:$space-64;
 
             @include sp {
                 flex-direction: column;
@@ -1115,7 +1100,7 @@ body {
             }
 
             .txtArea {
-                padding:$space-s 0;
+                padding:$space-16 0;
 
                 @include sp {
                     padding: 0;
@@ -1124,10 +1109,10 @@ body {
                 .exhibition_tit {
                     @include font-tit-40;
                     color:$txt-tit-pt01;
-                    margin-bottom:$space-xl;
+                    margin-bottom:$space-36;
 
                     @include sp {
-                        margin-bottom:$space-xm;
+                        margin-bottom:$space-20;
                     }
                 }
                 .txt {
@@ -1143,7 +1128,7 @@ body {
                 overflow: hidden;
 
                 @include sp {
-                    margin-bottom:$space-xm;
+                    margin-bottom:$space-20;
                 }
 
                 img {
@@ -1194,7 +1179,7 @@ body {
             letter-spacing: 0;
 
             @include sp {
-                line-height:1;
+                line-height:1.1;
             }
         }
 
@@ -1210,7 +1195,7 @@ body {
             .txt {
                 position:relative;
                 display:inline-block;
-                font-size: $font-txt-14;
+                @include font-txt-14;
                 background:$bk-pt03;
                 border-radius: 6em;
                 letter-spacing: 0;
