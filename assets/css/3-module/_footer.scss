@@ -242,6 +242,7 @@
 
     a {
         color:#fff;
+        white-space: nowrap;
     }
 
     &_r_list {
@@ -260,15 +261,15 @@
 
     @media all and (max-width:1000px) {
         flex-direction: row;
-        gap:0.5em;
+        gap:0.5em 3em;
         flex-wrap: wrap;
     }
 
-    li {
-        @media all and (max-width:1000px) {
-            width:8em;
-        }
-    }
+    // li {
+    //     @media all and (max-width:1000px) {
+    //         width:8em;
+    //     }
+    // }
 }
 
 .copyright {

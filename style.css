@@ -1090,6 +1090,7 @@ iframe[src*="youtu.be"] {
 }
 .footerNav a {
   color: #fff;
+  white-space: nowrap;
 }
 .footerNav_r_list {
   font-size: 1.3rem;
@@ -1106,13 +1107,8 @@ iframe[src*="youtu.be"] {
 @media all and (max-width: 1000px) {
   #menu-footer-nav {
     flex-direction: row;
-    gap: 0.5em;
+    gap: 0.5em 3em;
     flex-wrap: wrap;
-  }
-}
-@media all and (max-width: 1000px) {
-  #menu-footer-nav li {
-    width: 8em;
   }
 }
 
