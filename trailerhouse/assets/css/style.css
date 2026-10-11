@@ -1143,11 +1143,13 @@ body p, body a, body li, body dl dt, body dl dd {
   /*お問合せリンク*/
 }
 .trailerhouse_main .contact_link {
+  display: block;
   transition: all 0.2s;
 }
 @media (min-width: 769px) {
   .trailerhouse_main .contact_link:hover {
     filter: brightness(0.8);
+    transform: translatey(-10px);
   }
 }
 .trailerhouse_main .trailerhouse_contact {
