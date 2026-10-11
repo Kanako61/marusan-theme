@@ -65,7 +65,7 @@ $font-tit-24--sp : clamp(20px, vw(24, 375), 24px);
     font-size:20px;
 
     @include sp {
-        font-size:clamp(18px, vw(20, 375), 24px);
+        font-size:clamp(18px, vw(20, 375), 20px);
     }
 }
 
