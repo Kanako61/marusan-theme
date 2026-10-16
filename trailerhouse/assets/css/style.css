@@ -194,6 +194,11 @@ body p, body a, body li, body dl dt, body dl dd {
   line-height: 2;
   font-weight: 300;
 }
+@media (max-width: 768px) {
+  .trailerhouse_main .about .txtArea .u-txt {
+    font-weight: 400;
+  }
+}
 .trailerhouse_main {
   /* Features */
 }
@@ -241,7 +246,7 @@ body p, body a, body li, body dl dt, body dl dd {
   align-items: stretch;
   margin-bottom: 64px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .features_list {
     gap: 36px 24px;
   }
@@ -259,7 +264,7 @@ body p, body a, body li, body dl dt, body dl dd {
   border: solid 2px #E1EAEE;
   padding: 36px 16px 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .features_list_item {
     padding: 40px 20px 20px;
   }
@@ -281,7 +286,7 @@ body p, body a, body li, body dl dt, body dl dd {
   font-size: 18px;
   box-shadow: 2px 4px 8px rgba(43, 126, 192, 0.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .features_list_item .num {
     width: 2em;
     height: 2em;
@@ -308,7 +313,7 @@ body p, body a, body li, body dl dt, body dl dd {
   width: auto;
   height: clamp(80px, 7.2222222222vw, 104px);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .features_list_item .icon img {
     height: 104px;
   }
@@ -325,7 +330,7 @@ body p, body a, body li, body dl dt, body dl dd {
   font-weight: 400;
   margin-top: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .features .features_list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -448,7 +453,7 @@ body p, body a, body li, body dl dt, body dl dd {
   flex-direction: column;
   gap: 120px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list {
     gap: 40px;
   }
@@ -461,7 +466,7 @@ body p, body a, body li, body dl dt, body dl dd {
   padding: 64px;
   z-index: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item {
     padding: 10vw;
     gap: 32px;
@@ -478,7 +483,7 @@ body p, body a, body li, body dl dt, body dl dd {
   box-shadow: 40px 20px 20px rgb(234, 228, 214);
   z-index: -1;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item::after {
     right: 0;
     width: 100%;
@@ -489,7 +494,7 @@ body p, body a, body li, body dl dt, body dl dd {
   flex-direction: row-reverse;
   padding: 64px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item:nth-of-type(even) {
     padding: 10vw;
   }
@@ -498,13 +503,13 @@ body p, body a, body li, body dl dt, body dl dd {
   left: calc(50% - 50vw);
   box-shadow: -40px 20px 20px rgb(234, 228, 214);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item:nth-of-type(even):after {
     left: 0;
     box-shadow: 20px 8px 12px #EAE4D6;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item {
     flex-direction: column;
   }
@@ -516,7 +521,7 @@ body p, body a, body li, body dl dt, body dl dd {
   max-width: 460px;
   line-height: 1.5;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item .txtArea {
     max-width: none;
   }
@@ -563,7 +568,7 @@ body p, body a, body li, body dl dt, body dl dd {
   aspect-ratio: 524/394;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .trailerhouse_main .marusan_trailerhouse_list_item .imgArea {
     margin-top: 0;
   }
@@ -1048,8 +1053,15 @@ body p, body a, body li, body dl dt, body dl dd {
   vertical-align: middle;
 }
 .trailerhouse_main .plus-One_list_item .txtArea .plus-One_tit .en {
-  font-family: "Lato", sans-serif;
   font-size: clamp(26px, 2.2222222222vw, 32px);
+}
+@media (max-width: 768px) {
+  .trailerhouse_main .plus-One_list_item .txtArea .plus-One_tit .en {
+    font-size: clamp(26px, 8.5333333333vw, 32px);
+  }
+}
+.trailerhouse_main .plus-One_list_item .txtArea .plus-One_tit .en {
+  font-family: "Lato", sans-serif;
   vertical-align: middle;
 }
 .trailerhouse_main .plus-One_list_item .txtArea .txt {

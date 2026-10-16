@@ -12,6 +12,12 @@
     }
 }
 
+@mixin tab {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
 @mixin pc {
     @media (min-width: 769px) {
         @content;
@@ -41,7 +47,6 @@ $font-copy-ja: max(20px, vw(24));
 
 $font-tit-64: clamp(48px, vw(64), 64px);
 $font-tit-56: clamp(36px, vw(56), 56px);
-$font-tit-32: clamp(26px, vw(32), 32px);
 $font-tit-24: clamp(18px, vw(24), 24px);
 $font-tit-24--sp : clamp(20px, vw(24, 375), 24px);
 
@@ -58,6 +63,14 @@ $font-tit-24--sp : clamp(20px, vw(24, 375), 24px);
 
     @include sp {
         font-size:clamp(22px, vw(28, 375), 28px);
+    }
+}
+
+@mixin font-tit-32 {
+    font-size:clamp(26px, vw(32), 32px);
+
+    @include sp {
+        font-size:clamp(26px, vw(32, 375), 32px);
     }
 }
 
@@ -356,6 +369,10 @@ body {
                 color:$txt-tit-pt03;
                 line-height:2;
                 font-weight: $font-300;
+
+                @include sp {
+                    font-weight:$font-400;
+                }
             }
         }
     }
@@ -395,7 +412,7 @@ body {
             align-items: stretch;
             margin-bottom:$space-64;
 
-            @include sp {
+            @include tab {
                 gap: $gap-36 $gap-24;
             }
 
@@ -411,7 +428,7 @@ body {
                 border: solid 2px $border-pt01;
                 padding:$space-36 $space-16 $space-16;
 
-                @include sp {
+                @include tab {
                     padding:$space-40 $space-20 $space-20;
                 }
 
@@ -432,7 +449,7 @@ body {
                     font-size:$font-txt-18;
                     box-shadow: 2px 4px 8px rgba(43, 126, 192, 0.2);
 
-                    @include sp {
+                    @include tab {
                         width: 2em;
                         height:2em;
                     }
@@ -453,7 +470,7 @@ body {
                         width:auto;
                         height:clamp(80px, vw(104), 104px);
 
-                        @include sp {
+                        @include tab {
                             height:104px;
                         }
                     }
@@ -466,7 +483,7 @@ body {
             }
         }
 
-        @include sp {
+        @include tab {
             .features_list {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -561,7 +578,7 @@ body {
             flex-direction: column;
             gap:$gap-120;
 
-            @include sp {
+            @include tab {
                 gap:$gap-40;
             }
 
@@ -573,7 +590,7 @@ body {
                 padding:$space-64;
                 z-index:2;
 
-                @include sp {
+                @include tab {
                     padding:10vw;
                     gap:$gap-32;
                 }
@@ -589,7 +606,7 @@ body {
                     box-shadow: 40px 20px 20px rgba(234, 228, 214, 1);
                     z-index:-1;
 
-                    @include sp {
+                    @include tab {
                         right:0;
                         width:100%;
                         box-shadow: 20px 8px 12px #EAE4D6;
@@ -600,7 +617,7 @@ body {
                     flex-direction: row-reverse;
                     padding:$space-64;
 
-                    @include sp {
+                    @include tab {
                         padding:10vw;
                     }
 
@@ -608,14 +625,14 @@ body {
                         left: calc(50% - 50vw);
                         box-shadow: -40px 20px 20px rgba(234, 228, 214, 1);
 
-                        @include sp {
+                        @include tab {
                             left:0;
                             box-shadow: 20px 8px 12px #EAE4D6;
                         }
                     } 
                 }
 
-                @include sp {
+                @include tab {
                     flex-direction: column;
 
                     &:nth-of-type(even) {
@@ -627,7 +644,7 @@ body {
                     max-width:460px;
                     line-height:1.5;
 
-                    @include sp {
+                    @include tab {
                         max-width:none;
                     }
 
@@ -656,7 +673,7 @@ body {
                     aspect-ratio: 524 / 394;
                     overflow: hidden;
 
-                    @include sp {
+                    @include tab {
                         margin-top:0;
                     }
 
@@ -1065,8 +1082,8 @@ body {
                         }
 
                         .en {
+                            @include font-tit-32;
                             font-family: $font-1;
-                            font-size: $font-tit-32;
                             vertical-align: middle;
                         }
                     }
