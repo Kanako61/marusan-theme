@@ -194,44 +194,6 @@ add_action('template_redirect', function(){
 });
 
 
-// トレーラーハウス：ログインユーザーのみグロナビに表示　公開後にこの記述は消す
-add_filter('wp_nav_menu_objects', function ($items) {
-
-    if (is_user_logged_in()) {
-        return $items;
-    }
-
-    foreach ($items as $key => $item) {
-        if (in_array('menu-item--trailer', $item->classes, true)) {
-            unset($items[$key]);
-        }
-    }
-
-    return $items;
-});
-
-
-// トレーラーハウス：ログインユーザーのみページ閲覧可能　公開後にこの記述は消す
-add_action('template_redirect', function () {
-
-    if (is_page('trailerhouse') && !is_user_logged_in()) {
-        wp_safe_redirect(home_url('/'));
-        exit;
-    }
-
-});
-
-
-// トレーラーハウスページを検索エンジンにインデックスさせない
-add_action('wp_head', function () {
-
-    if (is_page('trailerhouse')) {
-        echo '<meta name="robots" content="noindex, nofollow">' . "\n";
-    }
-
-});
-
-
 
 
 
